@@ -1,0 +1,627 @@
+
+\chapter{Funções}
+Esse capítulo será dedicado a apresentar o conceito de função e apresentar algumas funções usuais. Esses conceitos são importantes e servirão de base para o estudo de funções específicas nas aulas posteriores.
+\section{Funções:}
+As funções surgem quando uma quantidade (Grandeza) depende de outra. Por exemplo, podemos dizer que a área de um quadrado está relacionada ao comprimento do lado, isso quer dizer que uma vez conhecido o comprimento do lado, $x$, conseguimos calcular a área usando a função $f$ descrita pela relação $f(x)=x^2$.
+\vspace{0.5cm}
+
+É possível representar uma função de quatro maneiras:
+
+\begin{itemize}
+ \item verbalmente (descrevendo-a com palavras)
+\hspace{2cm}
+\item numericamente (por meio de uma tabela de valores)
+
+\item  visualmente (através de um gráfico)
+
+\item algebricamente (utilizando-se uma fórmula explícita)
+\end{itemize}
+\vspace{0.5cm}
+
+\begin{defin}(\textbf{Função}): Uma \textbf{função} $f:D\to C$ é uma relação que associa a cada elemento $x$ de um conjunto $D$, chamado \textbf{domínio}, um \textit{único} elemento $f(x)$ (ou $y$) de um conjunto $C$, denominado \textbf{contradomínio}.
+\end{defin}
+
+\begin{obs} Quando o domínio de uma função $f$ não for específicado, então o \textbf{domínio} (natural) de $f$ é o conjunto de todos os valores de $x$ para os quais $f$ está definida.
+\end{obs}
+\begin{obs}
+Devemos ter cuidado ao analisarmos o domínio de uma função, quando essa é originada de um problema real. Se, por exemplo, a função $f(x)=x+1$, $f(x)$ representa o valor a ser pago em uma corrida de táxi em função do número de quilômetros rodados $x$, então o domínio de $f$ será $D= \{ x \in \mathbb{R} | x \geq 0 \}$, uma vez que o número de quilômetros rodados é sempre não-negativo.
+\end{obs}
+
+Note que o contradomínio $C$ de uma função $f$ pode ser qualquer conjunto que contenha, dentre outros elementos, os valores de $f(x)$. Sendo assim, em muitas situações estamos interessados em trabalhar apenas com o conjunto que contém apenas os valores gerados por $f$, ao qual damos o nome de \textbf{conjunto imagem}.
+
+\begin{defin}(\textbf{Imagem}) Dada uma \textbf{função} $f:D\to C$, o valor $f(x)$ para $x\in D$ é chamado \textbf{imagem de $x$}. O conjunto de todas as imagens da função $f$ é denominado \textbf{conjunto imagem}(ou simplesmente imagem) e denotado por \textbf{\textit{Im}(f)}. Ou seja,  \textit{Im}(f)$=\{f(x);x \in D\}$.
+\end{defin}
+
+\begin{defin} (\textbf{Gráfico}) o \textbf{gráfico} de $f$ é o conjunto dos pontos $(x,y)$ do plano cartesiano que satisfazem $y=f(x),$ ou seja,  $G(f)=\{(x, f(x)); x\in D\}$.
+\end{defin}
+%\begin{figure}[H]
+%\includegraphics[scale=0.5]{funcao}
+%\end{figure}
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{funcao1}
+\caption{Figura retirada do livro Cálculo 1, James Stewart.}
+\end{figure}
+
+
+\textbf{Quando que uma aplicação não é função?}
+\vspace{0.5cm}
+
+\begin{exe} Verifique se a equação $y^2+x^2-16=0$ permite uma definição de $y$ como função de $x$.
+\end{exe}
+\textcolor{red}{Inicialmente vamos ver se conseguimos explicitar $y$ como função de $x$.
+\begin{eqnarray*}
+y^2 &=&16-x^2 \\
+y= &\pm &\sqrt{16-x^2}
+\end{eqnarray*}
+Logo, para cada $x \in \mathbb{R}$, temos dois valores para $y$. Portanto, a equação $y^2+x^2-16=0$ não permite uma definição de $y$ como função de $x$.}
+\begin{exe}
+Faça o estudo do domínio das seguintes funções \\
+a)$f(x)=1-x^4$ \hspace{1cm}    b)$g(x)=\frac{1}{x+4}$  \hspace{1cm}      c)$h(x)=\sqrt{9-x}$  \hspace{1cm} d)$f(t)=\frac{\sqrt{2+t}}{\sqrt{2t-6}}$   \hspace{1cm}  e)$f(x)=\sqrt[3]{2x-3}$  \hspace{1cm} f)p(x)=$\frac{\sqrt{x-1}}{x^2-5x+6}$ \hspace{1cm} \\ %g)$f(x)= \frac{1}{x^2-4}+ \frac{1}{\sqrt{x+4}}$ \\
+\textcolor{red}{\textbf{a)} Note que $f$ está bem definida para todo $x \in \mathbb{R}$, logo $D(f)= \mathbb{R}$. \\
+\textbf{b)} Nesse caso temos que $g$ está definida quando $x+4 \neq 0 \Rightarrow x \neq -4$, logo $D(g)= \mathbb{R}-\{-4\}$ ou $D(g)= \{ x \in \mathbb{R}| x \neq -4 \}$. \\
+\textbf{c)} Para que $h$ seja bem definida $9-x \geq 0 \Rightarrow  x \leq 9 $, logo $D(h)= \{ x \in \mathbb{R}| x \leq 9 \}$. \\
+\textbf{d)} Para que $f$ esteja bem definida teremos que ter $2+t \geq 0 \Rightarrow t \geq -2$ e $2t-6 >0 \Rightarrow t>3$, fazendo a interseção desses intervalos temos que $D(f)= \{ x \in \mathbb{R}| x \geq 3 \}$. \\
+\textbf{e)} Como o índice a raíz é ímpar, então $D(f)= \mathbb{R}$. \\
+\textbf{f)} Para que $p$ esteja bem definida teremos que ter $x-1 \geq 0 \Rightarrow x \geq 0$ e $x^2-5x+6 \neq 0 \Rightarrow x \neq 2$ e $x \neq 3$, portanto $D(p)= \{ x \in \mathbb{R}| x \geq 1, x \neq 2 \hspace{0,15cm x \neq 3} \}$.
+}
+\end{exe}
+\subsection{Simetria}
+Se uma função $f$ satisfaz $f (–x)$ = $f (x)$ para todo número $x$ em seu domínio, então $f$ é chamada \textbf{função par}. Por outro lado, se $f$ satisfaz $f (–x) = –f (x)$ para cada número $x$ em seu domínio, uma $f$  é \textbf{função ímpar}.
+\begin{exe}
+Verifique se as funções abaixo são par, ímpar ou nem par, nem ímpar \\
+a)$f(x)=1-x^4$  \hspace{1cm}   b)$g(x)=x^5+x$     \hspace{1cm}    c)$h(x)=2x-x^2$ \\
+\textcolor{red}{ \textbf{a)} $f(-x)=1-(-x)^4=1+x^4=f(x)$, logo $f$ é par. \\
+\textbf{b)} $g(-x)=(-x)^5-(-x)= -x^5+x=-(x^5-x)=-g(x)$, logo $g$ é ímpar. \\
+\textbf{c)} Nesse caso temos que $h(1)=2.1-1^2=1$ e $h(-1)=2(-1)-(-1)^2==-3$, logo $h$ não é nem par, nem ímpar.}
+\end{exe}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1.2]{f1}
+\includegraphics[scale=1.2]{f2}
+\includegraphics[scale=1.2]{f3}
+\caption{ Gráfico das funções $f(x)=1-x^4$, $g(x)=x^5+x$ e $h(x)=2x-x^2$, respectivamente.}
+\end{figure}
+
+\subsection{Zeros de função}
+Os valores de $x$ que satisfazem a equação $f(x)=0$ são chamados \textbf{zeros} de $f$. Esses valores correspondem aos interceptos-x do gráfico da função.
+
+\begin{exe} Encontre os zeros das seguintes funções:
+a) $f(x)=x^3+2x^2-5x$   b) $g(x)= \frac{x^2-4}{x+3}$ \\
+\textcolor{red}{\textbf{a)} Para encontrarmos os zeros de $f$ precisamos resolver a equação $x^3+2x^2-5x=0 \Rightarrow x(x^2+2x-5)=0$, portanto $x=0$ ou $x^2+2x-5=0$. Para encontrarmos as raízes de $x^2+2x-5=0$ usamos a fórmula de Bhaskara, uma vez que se trata de uma equação do segundo grau. Com isso, $x^2+2x-5=0 \Rightarrow x=-1+\sqrt{6}$ ou $x=-1-\sqrt{6}$. Logo, $f$ possui três zeros, a saber $x=0$, $x=-1+\sqrt{6}$ e $-1-\sqrt{6}$. \\
+\textbf{b)} Para encontrarmos os zeros de $g$ precisamos resolver a equação $\frac{x^2-4}{x+3}=0 \Rightarrow x^2-4=0 \Rightarrow x=2 \hspace{0,3cm} ou \hspace{0,3cm} x=-2$. Logo $g$ possui dois zeros, a saber $x=-2$ e $x=2$. }
+\end{exe}
+
+\vspace{1cm}
+\subsection{Monotonicidade}
+%\begin{figure}[H]
+%\includegraphics[scale=0.5]{crescente}
+%\end{figure}
+\begin{defin} Seja $f$ uma função definida em um intervalo $I$, dizemos que
+\begin{itemize}
+\item[1.] f é \textbf{crescente} em $I$ se, dados quaisquer $x_1$ e $x_2$ em $I$, tais que $x_1< x_2$, tivermos $f(x_1)< f(x_2)$;
+\item[2.] f é \textbf{decrescente} em $I$ se, dados quaisquer $x_1$ e $x_2$ em $I$, tais que $x_1< x_2$, tivermos $f(x_1)> f(x_2)$;
+\item[3.] f é \textbf{constante} em $I$ se, dados quaisquer $x_1$ e $x_2$ em $I$, tivermos $f(x_1)=f(x_2)$
+\end{itemize}
+\end{defin}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{monoti}
+\caption{$f$ é crescente nos intervalos $(a,b)$ e $(d,e)$, decrescente nos intervalos $(b,c)$ e $(e,g)$ e constante no intervalo $(c,d)$. Figura retirada do livro pré-cálculo do autor Francisco Magalhães Gomes.}
+\end{figure}
+
+\subsection{Função Injetora}
+\begin{defin}(\textbf{Função Injetora}): Uma função $f$, definida em seu domínio $D$ é \textbf{injetora} quando dados quaisquer valores reais $x_1$, $x_2 \in D$, se $x_1 \neq x_2$, então, $f(x_1) \neq f(x_2)$.
+\end{defin}
+
+Em outras palavras, se $f$ é uma função injetora então,
+$$f(x_1)=f(x_2) \Leftrightarrow x_1=x_2$$.
+
+\textbf{Teste da reta horizontal:} Uma função é injetora se e somente se nenhuma reta horizontal intercepta seu gráfico mais de uma vez.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1.4]{injet}
+\caption{Gráfico de uma função que não é injetora, uma vez que $f(x_1)=f(x_2)$ para $x_1 \neq x_2$.}
+\end{figure}
+
+\begin{exe} Verifique se as funções abaixo são injetoras \\
+a) $f(x)=x^2$ \hspace{1cm}  b)$f(x)=x^3$ \hspace{1cm}   c)$y= \frac{3}{5x-2}$ \hspace{1cm} \\  %d)$f(x)=1-x^2$ \\
+\textcolor{red}{\textbf{a)} $f$ não é injetora pois $f(-1)=f(1)=1$. \\
+\textbf{b)} Suponha que $f(x_1)=f(x_2) \Rightarrow x_1^3=x_2^3 \Rightarrow x_1^3= \sqrt[3]{x_2^3} \Rightarrow x_1=x_2$, logo $f$ é injetora. \\
+\textbf{c)} Suponha que $f(x_1)=f(x_2) \Rightarrow \frac{3}{5x_1-2}= \frac{3}{5x_2-2} \Rightarrow 3(5x_1-2)=3(5x_2-2) \Rightarrow 5x_1-2=5x_2-2 \Rightarrow x_1=x_2.$ Logo, $y$ é injetora. }
+\end{exe}
+
+\subsection{Algumas funções usuais}
+
+A seguir serão apresentados algumas funções usuais, onde algumas delas serão estudadas com mais detalhes em aulas posteriores.
+
+\textbf{Exemplo 1 (Função Potência):} A função $f(x)=x^
+n$, onde $n$ é um número natural, é chamada de \textbf{função potência}. A figura  \ref{pot} mostra o gráfico de algumas funções potências.
+
+
+\begin{figure}[h!] \label{pot}
+\centering
+\includegraphics[scale=1.6]{pot1}
+\includegraphics[scale=1.6]{pot2}
+\end{figure}
+
+\begin{itemize}
+\item[•] o domínio de $f$ é $\mathbb{R}$.
+\item[•] O conjunto imagem é $\mathbb{R}$ se o expoente for ímpar e é $[0,\infty]$ se o expoente é par.
+\item[•]Há um único zero em $x=0$.
+\item[•] Quando o expoente é par, $f$ é par, quando o expoente é ímpar, $f$ é ímpar.
+\item[•] Quando o expoente é par, f é decrescente para $x<0$, e crescente para $x>0$, quando o expoente é ímpar, $f$ é crescente em $(- \infty, \infty)$.
+\end{itemize}
+
+\textbf{Exemplo 2 (Função Polinomial):} A função $f(x)=a_nx^
+n+ a_{n-1}x^{n-1}+...+ a_2x^2+a_1x+a_0$. $n$ é um número inteiro não- negativo e $a_1,a_2,...a_n$ são constantes reais.
+
+\begin{itemize}
+\item[•] O domínio de $f$ é $\mathbb{R}$.
+\item[•] Pode ter até $n$ zeros.
+\end{itemize}
+Os exemplos 3 e 4 ilustram exemplos de funções polinomiais.
+
+\textbf{Exemplo 3: (Função do $1^{\circ}$ grau)} É uma função do tipo $f(x)=ax+b$, com $a,b \in \mathbb{R}$. O gráfico de uma função do $1^{\circ}$ grau é uma reta. $a$ é o coeficiente angular da reta e $b$ é a intersecção com o eixo $y$. Para encontrar a equação de uma reta precisamos de dois pontos, em particular se encontrarmos os interceptos com os eixos conseguimos obter a equação da reta.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.35]{Linear1}
+\includegraphics[scale=0.35]{linear2}
+\caption{Gráfico de uma função do primeiro grau.}
+\end{figure}
+
+
+\textbf{Exemplo 4: (Função quadrática)} É uma função polinomial de grau 2. ou seja, tem a forma $f(x)=ax^2+bx+c$, com $a,b,c \in \mathbb{R}$ e $a \neq 0$. O gráfico desse tipo de função é sempre uma parábola e tem concavidade para cima se $a>0$ e concavidade para baixo se $a<0$. O gráfico de uma parábola pode ser construído a partir de translações da parábola $ax^2$. A figura a seguir mostra o exemplo de duas parábolas.
+ \begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{p1}
+\includegraphics[scale=0.8]{p2}
+\caption{Gráfico das funções $y=x^2+x+1$ e $-2x^2+3x+1$.}
+\end{figure}
+
+\textbf{Exemplo 5: (Função raíz)} É uma função do tipo $f(x)=\sqrt[n]{x}$, com $n$ sendo uma constante natural maior que $1$.
+
+\begin{itemize}
+\item[•] O domínio é $\mathbb{R}$ se o índice $n$ é ímpar e é $[0,\infty)$ se o índice é par.
+ \item[•]  O conjunto imagem é $\mathbb{R}$ se o índice $n$ é ímpar e é $[0,\infty)$ se o índice é par.
+ \item[•] há um único zero em $x=0$.
+ \item[•] a função é crescente em todo o domínio.
+ \item[•] quando o índice é ímpar, $f$ é ímpar.
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.9]{raiz}
+\includegraphics[scale=0.9]{raiz-cubica}
+\caption{Gráficos das funções $y=\sqrt{x}$ e $\sqrt[3]{x}$, respectivamente}
+\end{figure}
+\textbf{Exemplo 6: (Função recíproca)}  É uma função do tipo $f(x)=\frac{1}{x^n}$, com $x \neq 0$.
+\begin{itemize}
+\item[•] o domínio inclui todos os valores reais, exceto o zero.
+\item[•] o conjunto imagem é $(-\infty,0) \cup (0, \infty)$ se o expoente é ímpar e $(0, \infty)$ se o expoente é par.
+\item[•] A função não tem zeros.
+\item[•] Quando o expoente é ímpar, a função é decrescente em todos os pontos do domínio. Já quando o expoente é par, $f$ é crescente para $x<0$ e decrescente para $x>0$.
+\item[•] Quando o expoente é par, $f$ é par. Quando o expoente é ímpar, $f$ é ímpar.
+\end{itemize}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{hiperbole}
+\caption{Gráfico da função $\frac{1}{x}$.}
+\end{figure}
+
+\textbf{Exemplo 7: (Função racional)}  É uma função do tipo $f(x)=\frac{p(x)}{q(x)}$, onde $p(x),q(x)$ são polinômios e $q(x) \neq 0$. Por exemplo, a função $\frac{2x^4-x^2+1}{x^2-4}$ é uma função racional e seu domínio é $\{ x \in \mathbb{R} | x \neq \pm 2 \}$.
+
+\textbf{Exemplo 8: (Função exponencial)} É uma função do tipo $f(x)=a^x$. onde $a$ é uma constante positiva.
+
+\begin{itemize}
+\item[•] O domínio de $f$ é $\mathbb{R}$ (ou $(- \infty, \infty)$).
+\item[•] A imagem é $(0, \infty)$.
+\item[•] A função não possui zeros;
+\item[•] se $a>1$, a função é crescente em todo o domínio e se $0<a<1$ a função é decrescente em todo o domínio.
+\item[•] A função não é par nem ímpar.
+\end{itemize}
+A figura a seguir mostra o gráfico das funções $y=2^x$ e $y=(0.5)^x$
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.7]{expone}
+\caption{Gráficos das funções $y=2^x$ e $y=(0.5)^x$. Figura retirada do livro Cálculo 1 do autor James Stewart.}
+\end{figure}
+
+\textbf{Exemplo 9: (funções trigonométricas)} As funções trigonométricas são funções angulares obtidas através do auxílio do círculo trigonométrico. As principais funções trigonométricas são as funções $y= \sin(x)$ e $y=\cos(x)$ e $y=tg(x)$. Essas funções são períodicas, ou seja,  os valores da função $(f(x) = y)$ se repetem para determinados valores da variável $x$, ou seja, para cada período determinado pelos valores de $ x$, iremos obter valores repetidos para a função.
+
+\begin{itemize}
+\item[•] O domínio de ambas funções $y=\sin(x)$ e $y=\cos(x)$ é $\mathbb{R}$.
+\item[•]A Imagem de ambas funções $y=\sin(x)$ e $y=\cos(x)$ é $[-1,1]$, ou seja, $-1 \leq \sin(x) \leq 1$ e $-1 \leq \cos(x) \leq 1$.
+\item[•] A função $y=\sin(x)$ é ímpar e a função $y= \cos(x)$ é par.
+\end{itemize}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.8]{seno}
+\includegraphics[scale=0.8]{cos}
+\caption{Gráfico da função $y=\sin(x)$ e  $y=\cos(x)$, respectivamente.}
+\end{figure}
+
+\textbf{Exemplo 10:(Funções definidas por partes)}: Uma função definida por partes é uma função que tem mais de uma lei para o seu domínio. A função $f(x)=\left\{\begin{array}{cc} x^2-x \,\, se \,\, x < 1\\
+x-1 \,\, se \,\, x \geq1
+\end{array}\right.$ é um exemplo de função definida por partes.
+
+
+\section{Transformação de Funções}
+Nessa seção usaremos translações, expansões e reflexões para fazer o esboço de gráfico de algumas funções a partir de funções já conhecidas (seção anterior). %Segue abaixo o procedimento que deve ser feito em cada situação.
+Abaixo, listamos algumas transformações nas variáveis $x$ e $y$ e como elas afetam o gráfico de um função $y=f(x)$.
+
+\begin{center}
+\begin{tabular}{|l|l|} \hline
+$f(x) \mapsto f(-x)$ & Reflexão em torno do eixo $y$ \\ \hline
+$f(x) \mapsto -f(x)$ & Reflexão em torno do eixo $x$ \\ \hline
+$f(x) \mapsto f(x+a)$ & Translação horizontal  \\
+& direita se $a < 0$, esquerda se $a > 0$ \\ \hline
+$f(x) \mapsto f(x)+a$ & Translação vertical, \\
+& abaixo se $a < 0$, acima se $a > 0$ \\ \hline
+$f(x) \mapsto f(ax)$ & Mudança de escala horizontal \\
+& contração se $a > 1$, expansão se $0<a < 1$ \\ \hline
+$f(x) \mapsto af(x)$ & Mudança de escala vertical, $a>0$ \\
+& expansão se $a >1$, contração se $0<a < 1$ \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Original & Reflexão em $y$ & Reflexão em $x$  \\ \hline
+\includegraphics[scale=0.25]{geral} &
+\includegraphics[scale=0.25]{reflecty} &
+\includegraphics[scale=0.25]{reflectx} \\ \hline
+$y=f(x)$ & $y=f(-x)$ & $y=-f(x)$ \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Translação direita & Translação esquerda & Translação acima & Translação abaixo \\ \hline
+\includegraphics[scale=0.25]{transh} &
+\includegraphics[scale=0.25]{transh2} &
+\includegraphics[scale=0.25]{transv} &
+\includegraphics[scale=0.25]{transv2}\\ \hline
+$y=f(x+a), a< 0$ & $y=f(x+a), a> 0$ & $y=f(x)+a, a>0$ & $y=f(x)+a, a<0$ \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Expansão horizontal & Contração horizontal & Expansão vertical & Contração vertical \\ \hline
+\includegraphics[scale=0.25]{scaleh} &
+\includegraphics[scale=0.25]{scaleh2} &
+\includegraphics[scale=0.25]{scalev} &
+\includegraphics[scale=0.25]{scalev2} \\ \hline
+$y=f(ax), 0<a< 1$ & $y=f(ax), a> 1$ & $y=af(x), a>1$ & $y=af(x), 0<a<1$  \\ \hline
+\end{tabular}
+\end{center}
+
+
+%\begin{figure}[h]
+%\includegraphics[scale=0.5]{desl1}
+%\end{figure}
+%\begin{figure}[h]
+%\includegraphics[scale=0.5]{desl2}
+%\end{figure}
+
+%A figura que segue mostra o resultado dessas transformações.
+%\begin{figure}[h]
+%\includegraphics[scale=0.99]{desl3}
+%\caption{Translações, expansões e reflexões do gráfico de $f$.}
+%\end{figure}
+\begin{exe} A partir do gráfico de $f(x)= \sqrt{x}$, use transformações para obter os gráficos de  \\
+a)$y=\sqrt{x}-1 \hspace{1cm} b) y=\sqrt{x-2} \hspace{1cm} c) y=- \sqrt{x} \hspace{1cm} d)y=2\sqrt{x} \hspace{1cm} e)y= \sqrt{-x}$
+\end{exe}
+\vspace{7cm}
+\subsection{Função composta}
+
+\begin{defin} \label{com}\textbf{Função composta}] Dadas as funções $f $ e $ g$ cujos domínios são $A$ e $B$, respectivamente, definimos a \textbf{função composta} $f \circ g$ por
+$$(f \circ g)(x)= f(g(x))$$
+O domínio de $f \circ g$ é o conjunto dos valores de $x \in B$ tais que $g(x) \in A$
+\end{defin}
+
+\begin{exe} Se $f(x)= x^2$ e $g(x)=x-3$, encontre as compostas $f \circ g$ e $g \circ f$. \\
+\textcolor{red}{Por definição $f \circ g= f(g(x))=f(x-3)=(x-3)^2$ e $g \circ f= g(f(x))=g(x^2)= x^2-3$.}
+\end{exe}
+\begin{exe} Se $f(x)= \frac{x}{x+1}$, $g(x)=x^{10}$ e $h(x)=x+3$, encontre  $f \circ g \circ h$. \\
+\textcolor{red}{$f \circ g \circ h= f(g(h(x)))= f(g(x+3))=f((x+3)^{10})=\frac{(x+3)^{10}}{(x+3)^{10}+1}$.}
+\end{exe}
+%\subsection{Gráfico a partir de funções elementares}
+\begin{obs} \label{obs} Devemos está atentos ao calcularmos o domínio da função composta. Segundo a definição \ref{com} para que sejamos capazes de calcular $f(g(x))$ é preciso que:
+\begin{itemize}
+\item[1.] $x$ pertença ao domínio de $g$;
+\item[2.] $g(x)$(o valor de $g$ em $x$) pertença ao domínio de $f$;
+\end{itemize}
+Para deixar mais clara a definição do domínio da função composta, veremos como obtê-lo de forma prática no exemplo a seguir.
+\end{obs}
+\begin{exe}
+Sejam dadas as funções $f(x)=\frac{1}{x^2-4}$ e $g(x)=\frac{1}{x}$. Obtenha $f(g(x))$ e determine o domínio dessa composta. \\
+\textcolor{red}{$f(g(x))= f(\frac{1}{x})=\frac{1}{\frac{1}{x^2}-4}= \frac{1}{\frac{1-4x^2}{x^2}}= \frac{x^2}{1-4x^2}$. Pela Observação  \ref{obs} para que $f(g(x))$ esteja bem definida temos que ter : \\
+\textbf{1.} $x$ pertença ao domínio de $g$, isto é, $x \neq 0$. \\
+\textbf{2.} $g(x)$ pertença ao domínio de $f$, isto é $1-4x^2 \neq 0 \Rightarrow x \neq -\frac{1}{2}$ e $x \neq \frac{1}{2}$ . \\
+Logo  $D(f(g(x)))= \{ x \in \mathbb{R} | x \neq 0, x \neq -\frac{1}{2}, x \neq \frac{1}{2}\}$}
+\end{exe}
+
+%\begin{example}Sejam dadas as funções $f(x)=\sqrt{6-x}$ e $g(x)=\sqrt{x+1}$.
+%\begin{itemize}
+%\item[a)] Obtenha $f(g(x))$. \\
+%\textcolor{red}{Por definição temos que $f(g(x))=f(\sqrt{x+1})=\sqrt{6-\sqrt{x+1}}$. }
+%\item[b)] Determine o domínio dessa função composta.
+%\textcolor{red}{Pela Observação  \ref{obs} para que $f(g(x))$ esteja bem definida temos que ter : \\
+%\textbf{1.} $x$ pertença ao domínio de $g$, isto é, $x +1  \geq 0 \Rightarrow x \Rightarrow -1$. \\
+%\textbf{2.} $g(x)$ pertença ao domínio de $f$, isto é $x^2-4 \neq 0 %\Rightarrow x \neq -2$ e $x \neq 2$ . \\
+%Logo  $D(f(g(x)))= \{ x \in \mathbb{R} | x \neq 0, x \neq -2, x \neq 2 \}$}}
+%\item[c)] Calcule $f(g(3))$ \\
+%\textcolor{red}{$f(g(3))=\sqrt{6-\sqrt{3+1}}= \sqrt{4}=2$.}
+%\end{itemize}
+%\end{example}
+\section{Exercícios Propostos}
+
+\begin{enumerate}
+\item Uma companhia de turismo cobra $R\$ 1200,00$ por um pacote turístico individual, mas dá um bom desconto quando os turistas viajam em grupo. Se um grupo tem $x$ pessoas, com $x \leq 70$, cada integrante paga apenas
+$$C(x)=1200-12x.$$
+Sabendo que a receita da empresa em cada grupo é dada pelo produto do valor pago por pessoa pelo número de membros do grupo.
+
+\begin{enumerate}
+\item escreva a função $R(x)$ que fornece a receita obtida pela empresa de turismo com o grupo de $x$ pessoas
+\item trace o gráfico da função para $x \in [10,70]$
+\item indique qual o tamanho do grupo fornece a maior receita
+\end{enumerate}
+\item Calcule
+$$\frac{f(x)-f(a)}{x-a}$$
+para as funções e os valores de $a$ fornecidos a seguir. Simplifique os resultados e suponha sempre que os denominadores são diferentes de zero.
+\begin{itemize}
+\item[a)] $f(x)=3x+4, \hspace{1cm} a=2$
+\item[b)] $f(x)=x^2+6, \hspace{1cm} a=4$
+\end{itemize}
+
+\newpage
+\item O gráfico da função $f(x)= \sqrt{-x^2+2x+3}$ é mostrado a seguir. Determine:
+
+\leavevmode \vspace{-\baselineskip}
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{questao_aula1-3}
+\end{center}
+
+\begin{itemize}
+\item[a)] Os valores de $f(0),f(0,5)$ e $f(2)$
+\item[b)] O domínio de $f$
+\item[c)]O conjunto imagem de $f$
+\item[d)] Os zeros de $f$
+\item[e)] Os intervalos de crescimento e decrescimento
+\item[f)] Os pontos de máximo e mínimo absoluto
+\end{itemize}
+
+\item Encontre o domínio das seguintes funções: \\
+a) $f(x)= \frac{1}{x}+ \frac{1}{x+5}$ \hspace{1cm} b) $f(x)= \sqrt{x+2}+ \sqrt{x-5}$ \hspace{1cm} c) $f(x)=\frac{\sqrt{2x-3}}{x^2-5x+4}$ \hspace{1cm} d) $h(x)= \frac{1}{\sqrt[4]{x^2-5x}}$
+
+\item Verifique algebricamente se as funções a seguir são pares, ímpares ou não possuem simetria. \\
+a) $f(x)= x^2-3$ \hspace{1cm} b) $f(x)=-2x$ \hspace{1cm}  c) $f(x)=\frac{1}{x^2+1}$\hspace{1cm} d) $f(x)=2x^5-x^3+x$   \hspace{1cm} e) $y=x \sqrt{x}$ \hspace{1cm} f) $f(x)=2x-1$.
+
+\item  Se $f(x)=x+2$, $g(x)=x^2-4$ e $h(x)=-2x+5$
+\begin{enumerate}
+\item Verifique se cada uma dessas funções são par, ímpar ou nem par nem ímpar
+\item Verifique se essas funções são injetoras
+\item Esboce o gráfico dessas funções, encontre o conjunto imagem e os intervalos de crescimento e decrescimento
+\item Encontre o valor de  $\frac{g(1)-f(0)-h(3)}{h(1)}$
+\item Calcule $g(h(2)))$
+\item A partir do gráfico de $y=2^x$, esboce o gráfico de $y= 2^{f(x)}$
+\end{enumerate}
+
+
+\item (\textbf{Cercando um pasto}) Um fazendeiro pretende usar $400 m$ de cerca para delimitar uma área retangular que servirá de pasto. Responda os itens a seguir , lembrando que a área de um terreno retangular com largura $l$ e profundidade $p$ é dada por $l.p$, e que o perímetro desse terreno retangular é igual a $2l+2p$.
+\begin{itemize}
+\item[a)] Relacione a profundidade com a largura do pasto, considerando o uso dos $400 m$ de cerca.
+\item[b)] Escreva uma função que forneça a área cercada em relação a largura do pasto.
+\item[c)] Calcule a área do pasto, supondo que sua largura é $75m$. Faça o mesmo para uma largura de $150m$.
+\item[d)] Determine o domínio da função área que você obteve.
+\item[e)] Esboce o gráfico da função área.
+\item[f)] Indique os intervalos nos quais a função é crescente e em quais ela é decrescente.
+\item[g)] Com base no gráfico, indique se é possível cercar uma área de $12000 m^2$.
+\item[h)] Ainda com base no gráfico, determine a maior área que pode ser cercada e as dimensões do terreno nesse caso.
+\end{itemize}
+
+\item A partir do gráfico de $f(x)=x^2$, esboce o gráfico das seguintes funções: \\
+a) $g(x)= x^2-3$ \hspace{1cm} b) $h(x)= 3x^2-8$ \hspace{1cm} c)$p(x)=-x^2+6$ \hspace{1cm} d) $q(x)= \frac{1}{2}(x-2)^2$  \\ e) $u(x)=(\frac{1}{4}x)^2$.
+
+\item A partir do gráfico de $f(x)=\sqrt[3]{x}$, esboce o gráfico das seguintes funções: \\
+a) $g(x)= \sqrt[3]{x+3}$ \hspace{1cm} b) $h(x)= \sqrt[3]{3x}$ \hspace{1cm} c)$i(x)=-\sqrt[3]{x}$ \hspace{1cm} d) $j(x)= 3\sqrt[3]{x}$  \hspace{1cm} e) $k(x)=1-\sqrt[3]{x-1}$ \hspace{1cm} f)$l(x) =\sqrt[3]{2x}-1$.
+
+\item Dadas as funções $f$ e $g$ a seguir, defina $f(g(x))$, $g(f(x))$, $f(f(x))$ e $g(g(x))$. \\
+a) $f(x)=4x$, \hspace{0.1cm} $g(x)= \frac{x^2}{4}$ \hspace{1cm} b )$f(x)=\sqrt{x}$, \hspace{0.1cm} $g(x)= \frac{x}{3}$.
+
+\item Dadas as funções $f(x)=\frac{1}{x-4}$ e $g(x)=x^2$,
+\begin{itemize}
+\item[a)]Defina $f(g(x))$ e $g(f(x))$ e seus domínios.
+\item[b)] Calcule $f(g(-3))$ e $g(f(7))$.
+
+\end{itemize}
+\item Na cidade de Salicilina, o número de casos de determinada doença viral varia ao longo do ano, sendo dado aproximadamente por $d(t)=1,9245t^4-53,485t^3+450,18t^2-1081,5t+837,37$, em que $t$ é o mês do ano. Por sua vez, o custo em reais do tratamento dessa doença é dado pela função $c(x)=600x+12000$, em que $x$ é o número de pessoas infectadas.
+\begin{itemize}
+\item[a)] Determine $c(d(t))$.
+\item[b)] Indique o que essa função composta representa.
+\item[c)] Calcule o custo aproximado de tratamento dos salicilinenses infectados no mês de abril. (Use uma calculadora).
+\end{itemize}
+\end{enumerate}
+\subsection{Gabarito:}
+
+\begin{enumerate}
+
+\item
+\begin{enumerate}
+\item$R(x)=x(1200-12x)$
+\item
+\leavevmode \vspace{-\baselineskip}
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{gabarito_aula1-1b}
+\end{center}
+\item$x=50$ \\
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item $3$, se $x \neq 2$
+\item $x+4$, se $x \neq 4$ \\
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item $f(0)=f(2)= \sqrt{3}$ e $f(0,5)=\frac{\sqrt{15}}{2}$
+\item $D(f)= \{ x \in \mathbb{R} | -1 \leq x \leq 3\}$
+\item Note que o valor mínimo de $f$ é $0$ e o valor máximo é $2$, assim, $Im(f)= [0,2]$
+\item $x=-1$ e $x=3$
+\item Pelo gráfico podemos notar que $f$ é crescente no intervalo $[-1,1]$ e decrescente no intervalo $[1,3]$
+\item $(-1,0)$ e $(3,0)$ são os pontos de mínimo absolutos e $(1,2)$ é o ponto de máximo absoluto
+\end{enumerate}
+
+
+
+\item
+\begin{enumerate}
+\item $D(f)=\{ x \in \mathbb{R}| x \neq 0, x \neq -5\}$
+\item $D(f)=\{ x \in \mathbb{R}| x \geq 5\}$
+\item $D(f)=\{ x \in \mathbb{R}| x \geq \frac{3}{2}, x \neq 4\}$
+\item $D(h)=\{ x \in \mathbb{R}| x < 0$ ou $ x > 5\}$   \\
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item par
+\item ímpar
+\item par
+\item ímpar
+\item nem par, nem ímpar
+\item nem par, nem ímpar\\
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item $f$ é nem par, nem ímpar, $g$ é par e $h$ é nem par, nem ímpar
+\item $f$ e $h$ são injetoras e $g$ não é injetora
+\item
+$f$ é sempre crescente, $g$ é decrescente no intevalo $(-\infty,0)$ e crescente no intevalo $(0, \infty)$ e $h$ é sempre decrescente
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.55]{gabarito_aula1-6cI}
+\caption{Gráfico da função $f(x)=x+2$}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.55]{gabarito_aula1-6cII}
+\caption{Gráfico da função $g(x)=x^2-4$}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.55]{gabarito_aula1-6cIII}
+\caption{Gráfico da função $h(x)=-2x+5$}
+\end{figure}
+\newpage
+\item $-\frac{4}{3}$
+\item $g(h(2))=-3$
+\item $ $
+  \begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.55]{gabarito_aula1-6f}
+  \caption{Gráfico da função $f(x)=2^{f(x)}$}
+  \end{figure}
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item $D(f)=\{ x \in \mathbb{R}|  x \neq 3\}$
+\item $f$ não possui zeros
+\item nem par, nem ímpar
+\item Intercepta o eixo $y$ em $x=-\frac{1}{3}$ e não intercepta o eixo $x$, visto que não possui zeros
+\item $x=-2$ e $x=1$\\
+\end{enumerate}
+
+\item
+\begin{enumerate}
+
+\item $p=200-l$
+\item $A(l)=200l-l^2$
+\item $A(75)=9375 m^2$ e $A(150)=7500m^2$
+\item $D=(0,200)$, para chegar nesse domínio você deve impor que $A(l)> 0$
+\item $ $
+        \begin{figure}[H]
+        \centering
+        \includegraphics[height=6cm , width =10cm]{gabarito_aula1-8e}
+        \caption{Gráfico da função $A(l)= 200l-l^2$ }
+        \end{figure}
+\item É crescente no intervalo $(0,100) $ e decrescente no intervalo $(100,200)$
+\item Não, pois a equação $200l-l^2=12000$ não possui solução real
+\item $A_{max}=10000m^2$ e as dimensões são $l=p=100$ \\
+\end{enumerate}
+
+\newpage
+
+\item
+\begin{enumerate}
+    \item $ $
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.55]{gabarito_aula1-9a}
+        \caption{Gráfico da função $g(x)= \sqrt[3]{x+3}$ }
+        \end{figure}
+    \item $ $
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.55]{gabarito_aula1-9b}
+        \caption{Gráfico da função $h(x)= \sqrt[3]{3x}$ }
+        \end{figure}
+    \item$ $
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.55]{gabarito_aula1-9c}
+        \caption{Gráfico da função $i(x)= -\sqrt[3]{x}$ }
+        \end{figure}
+    \newpage
+    \item$ $
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.55]{gabarito_aula1-9d}
+        \caption{Gráfico da função $j(x)= 3\sqrt[3]{x}$ }
+        \end{figure}
+    \item$ $
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.55]{gabarito_aula1-9e}
+        \caption{Gráfico da função $k(x)= 1-\sqrt[3]{x-1}$ }
+        \end{figure}
+    \item $ $
+        \begin{figure}[H]
+        \centering
+        \includegraphics[scale=0.55]{gabarito_aula1-9f}
+        \caption{Gráfico da função $l(x)=\sqrt[3]{2x}-1$ }
+        \end{figure}
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item $f(g(x))=x^2$, $g(f(x))=4x^2$, $f(f(x))=16x$ e $g(g(x))=\frac{x^4}{64}$
+\item $f(g(x))=\sqrt{\frac{x}{3}}$, $g(f(x))=\frac{\sqrt{x}}{3}$, $f(f(x))=\sqrt{\sqrt{x}}$ e $g(g(x))=\frac{x}{9}$\\
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item  $f(g(x))= \frac{1}{x^2-4}$ e $D(f(g))=\{ x \in \mathbb{R}| x \neq -2, x \neq 2 \}$, $g(f(x))=\frac{1}{(x-4)^2}$ e $D(g(f))=\{ x \in \mathbb{R}| x \neq 4\}$ \\
+\item  $f(g(-3))= \frac{1}{5}$ e $g(f(7))= \frac{1}{9}$
+\end{enumerate}
+
+\item
+\begin{enumerate}
+    \item $c(d(t)) = 1154,7t^4 - 32091t^3 + 270108t^2 - 648900t + 514422$
+    \item O valor interno $d(t)$ calcula o número de casos para um determinado mês ($t$).
+    O valor externo $c(d(t))$ calcula o custo total baseado nesse número de casos.
+    \item $d(4) \approx783,33$ pessoas. Como o número de pessoas é inteiro devemos calcular o custo para 784 pessoas. Assim $c(784) = \text{R\$ } 482.400,00$
+\end{enumerate}
+\end{enumerate}
+

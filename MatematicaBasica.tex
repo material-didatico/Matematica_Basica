@@ -1,0 +1,149 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage{ amssymb, amsmath, amsthm, graphicx, amscd, amsfonts,
+color, eucal, epsfig,amstext}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+%\usepackage[dvips]{graphicx}
+%\usepackage{graphicx,color}
+\usepackage{subfigure}
+\usepackage{cancel}
+\usepackage{here}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric, decorations.pathmorphing}
+\usepackage{curves}\curvewarnfalse
+%\usepackage{xypic}
+\usepackage[colorlinks,plainpages,backref]{hyperref}
+\usepackage{pstricks}
+%\usepackage{auto-pst-pdf}
+%\usepackage{pst-node}
+%\usepackage{pst-plot}
+\usepackage[active]{srcltx}
+\usepackage{fancyhdr}
+%\usepackage{ae}
+%Cria links no sumário
+\usepackage{hyperref}
+% O primeiro parágrafo de cada seção inicia à mesma distância da margem que os demais:
+%\usepackage{icomma}
+%Tamanho da margem. Podem ser todas do mesmo tamanho:
+\usepackage[a4paper,margin=15mm]{geometry}
+%Ou cada uma pode ser programada separadamente
+%\usepackage[a4paper,margin=15mm,top=15mm,inner=10mm,outer=10mm]{geometry}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\pordef}{:=}
+%Figura
+\usepackage{epsfig}
+\usepackage{multicol}
+%Muda o nome Capítulo para Aula
+\addto\captionsbrazil{\renewcommand{\chaptername}{Aula}}
+\addto\captionsbrazil{\renewcommand{\partname}{Módulo}}
+
+\usepackage{color}
+\definecolor{red}{rgb}{0.0,0.0,1.0}
+\def\red{\color{red}}
+
+
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{prop}[teorema]{Proposição}
+\newtheorem{defin}[teorema]{Definição}
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{corol}[teorema]{Corolário}
+\newtheorem{obs}[teorema]{Observação}
+\newtheorem{teo}[teorema]{Teorema}
+\newtheorem{exe}[teorema]{Exemplo}
+\newtheorem{exer}[teorema]{Exercício}
+\newtheorem{regra}[teorema]{Regra}
+% Translating mathematical function names to Portuguese
+\let\sin\relax        \DeclareMathOperator{\sin}{sen}
+\let\tan\relax        \DeclareMathOperator{\tan}{tg}
+\let\arcsin\relax     \DeclareMathOperator{\arcsin}{arcsen}
+\let\arctan\relax     \DeclareMathOperator{\arctan}{arctg}
+\DeclareMathOperator{\mmc}{mmc}
+\DeclareMathOperator{\mdc}{mdc}
+\DeclareMathOperator{\sen}{sen}
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\arcsen}{arcsen}
+\DeclareMathOperator{\arctg}{arctg}
+% Common numerical sets
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\I}{\mathbb{I}}
+%para usar o bibtex
+\bibliographystyle{plain}
+\usepackage[all]{xy}
+\setlist[enumerate, 2]{label=\alph*), ref=\alph*}
+ %faz com que as subsecoes aparecam no indice
+%\setsecnumdepth{subsection}
+%\settocdepth{subsection}
+%\maxsecnumdepth{subsection}
+
+\newcommand{\dropsign}[1]{\smash{\llap{\raisebox{-.5\normalbaselineskip}{$#1$\hspace{2\arraycolsep}}}}}%
+
+\graphicspath{{./figs/}}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+
+\begin{center}
+
+%\parbox{1.5cm}
+
+ {\includegraphics[scale=0.5]{logotipocefet}
+
+\vspace{1cm}
+
+\LARGE \textbf{Centro Federal de Ensino Técnico e Tecnológico de Minas Gerais}} \\
+
+\vspace{0.5cm}
+
+{\Large \textbf{Departamento de Matemática}}
+
+\vspace*{3cm}
+
+{\LARGE \textbf{Matemática Básica}}
+
+\vspace{4.5cm}
+
+{\Large \textbf{Camila Ferreira de Souza}} \\
+
+\vspace{0.5cm}
+{\Large \textbf{Jeanne Carmo Amaral}} \\
+\vspace{0.5cm}
+{\Large \textbf{Jônathas Douglas Santos Oliveira}}
+
+\vspace{6cm}
+
+{\Large \textbf{Belo Horizonte} \\ \textbf{2023}}
+
+
+\end{center}
+
+
+\newpage
+\pagenumbering{roman} % aqui come\c ca numera\c c\~ao em romanos min\'usculo
+
+\tableofcontents
+
+\pagestyle{plain}
+\pagenumbering{arabic} % aqui volta numera\c c\~ao para ar\'abicos
+\bigskip
+\include{./input/aula-0}
+\include{./input/aula-1}
+\include{./input/aula-2}
+\include{./input/aula-3}
+\include{./input/aula-4}
+\include{./input/aula-5}
+%\include{aula6}
+%\include{Listadeexercicios}
+
+\end{document}
+
+% Para redimensionar a figura:
+%\begin{figure}
+%  \centering\includegraphics[width=0.8\textwidth,trim={2cm 5cm 12cm 0},clip]{nomedafigura}
+%\end{figure}

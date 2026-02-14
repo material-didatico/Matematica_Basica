@@ -1,0 +1,550 @@
+
+\chapter{Funções definidas por partes e função modular}
+\section{Função definida por partes}
+A tarifa mensal de um plano de telefonia fixa tem duas faixas de preço
+\begin{itemize}
+\item[•] Os clientes que usam até 400 minutos mensais em ligações pagam um valor fixo de $R\$ 40,00$ por mês;
+\item[•] Para cada minuto adicional (ou seja, que excede os 400 minutos, paga-se $R\$ 0,05$).
+
+\end{itemize}
+
+Se consideramos que um cliente fale $x$ minutos por mês, podemos encontrar uma função que fornece o valor a ser pago(por mês) da conta telefônica.
+
+Primeiramente note que se suas ligações ultrapassarem 400 minutos, o tempo adicional equivalerá a $x-400$.
+
+Para determinar a função $f$ que fornece o valor mensal da conta, devemos considerar as duas situações previstas no plano:
+
+\begin{itemize}
+\item[•] Se $x \leq 400$, então $f(x)=40$;
+\item[•] Se $x > 400$, então $f(x)=40+0,05(x-400)$.
+\end{itemize}
+
+Em síntese, temos a seguinte função definida por partes
+$$ f(x)=\left\{\begin{array}{cc} 400  \hspace{3cm}\,\, se \,\, x \leq
+400\\
+40+0,05(x-400) \,\, se \,\, x>400.
+\end{array}\right.$$
+
+\begin{defin} Um função é dita definida por por partes quando são definidas por mais de uma expressão.
+\end{defin}
+
+\begin{exe}\label{exeporparte} A funções descritas a seguir são exemplos de funções definidas por partes.
+\[f(x)=\begin{cases} 2x+3,& \text{ se }x<0,\\
+x^2,& \text{ se }0\leq x<2, \\
+1,& \text{ se }x\geq 2.\end{cases}\]
+
+\[g(x)=\begin{cases}\frac{x^2-4}{2-x},& \text{ se }x\neq 2,\\
+1,& \text{ se }0\leq x=2. \end{cases}\]
+\end{exe}
+
+
+
+\begin{exe}
+	Esboce os gráficos das funções definidas no Exemplo \ref{exeporparte}.
+\end{exe}
+
+\vspace{6cm}
+
+\section{Função modular}
+Antes de definirmos função modular, precisamos do conceito de valor absoluto.
+\begin{defin}  Dado um número real $x$, definimos o \textbf{valor absoluto}(ou módulo) de um número $x$ como
+\[|x|=: \begin{cases}
+x,& \text{ se } x\geq 0,\\
+-x,& \text{ se }x<0.
+\end{cases} \]
+
+Note que o a definição de valor absoluto é feita por partes. Se $x$ é um número positivo, o valor absoluto é seu próprio valor. Logo, $|4|=4$. Em contrapartida, se $x$ é um valor negativo, o valor absoluto é obtido eliminando-se o sinal. Assim, $|-10|=-(-10)=10$.
+\end{defin}
+
+
+\begin{exe}Elimine o módulo das expressões, usando a definição de valor absoluto. \\
+a) $\vert -\frac{3}{2} \vert$ \hspace{1cm} b)$-\vert -5 \vert $ \hspace{1cm} c)$\vert 3-2\sqrt{3} \vert$ \hspace{1cm} d) $\vert 2x+1 \vert$ \hspace{1cm} %e)$\vert x^2-4 \vert$
+\color{red}
+\begin{itemize}
+    \item[a)] $\vert -\frac{3}{2} \vert = - \left(-\frac{3}{2} \right)= \frac{3}{2}$. \\
+    \item[b)] Sabemos que $\vert -5\vert=5$, então $-\vert -5 \vert =-5.$
+    \item[c)] Você deve atentar que $3-2\sqrt{3}<0$, logo $\vert 3-2\sqrt{3} \vert=-(3-2\sqrt{3} )= 2\sqrt{3}-3$.
+    \item[d)] Nes \,\,se caso, usando a definição de módulo, temos:
+    \[|2x+1|= \begin{cases}
+2x+1,& \text{ se } \,\, 2x+ 1 \geq 0\\
+-(2x+1),& \text{ se }2x+1<0
+\end{cases} \]\[= \begin{cases}
+2x+1,& \text{ se } \,\,x\geq -\frac{1}{2}\\
+-2x-1,& \text{ se }\,\,x< -\frac{1}{2}.
+\end{cases} \]
+
+\end{itemize}
+\color{black}
+\end{exe}
+
+
+A seguir seguem algumas propriedades do valor absoluto, considerado $a$ e $b$ números reais.
+
+\begin{itemize}
+\item[•] $\vert a \vert \geq 0$;
+\item[•] $\vert -a \vert = \vert a \vert $;
+\item[•] $\vert ab \vert = \vert a \vert \vert b \vert$;
+\item[•] $\left| \frac{a}{b} \right| = \frac{|a|}{|b|}$, $b \neq 0$;
+\item[•] $\vert a^n \vert= a^n $, se $n$ é par;
+\item[•] $\vert a+b \vert \leq \vert a \vert + \vert b \vert$;
+%adicionado_inicio
+\item[•] $\vert a -b \vert = a-b$, se $a \geq b$;
+\item[•] $\vert a -b \vert = b-a$, se $a \leq b$;
+%adicionado_fim
+\item[•] $\sqrt{a^2}= \vert a \vert$.
+\end{itemize}
+Portanto, \textbf{função modular} ou \textbf{função valor absoluto} é uma função definida por partes, dada por
+ \[f(x):=|x|=: \begin{cases}
+x,& \text{ se } x\geq 0,\\
+-x,& \text{ se }x<0.
+\end{cases} \]
+\begin{figure}[h!]
+\centering
+\includegraphics[width=9cm,height=6cm]{modular}
+\caption{Gráfico da função modular.}
+\label{modulargr}
+\end{figure}
+
+
+A figura \ref{modulargr} mostra o gráfico da  função modular, cujas características são:
+\begin{itemize}
+\item[•] O domínio é $\mathbb{R}$.
+\item[•] O conjunto imagem é $[0, \infty)$.
+\item[•] Há um zero em $x=0$.
+\item[•] A função é decrescente em $(-\infty,0)$ e crescente em $(0, \infty)$.
+\item[•] A função é par.
+\end{itemize}
+\begin{exe} A partir do gráfico de $f(x)= \vert x\vert$ faça o esboço do grafico das funções a seguir
+\begin{itemize}
+\item[a)] $f(x)= \vert x-3 \vert +4$ \\
+\color{red}
+Nesse caso, para construir o gráfico de $f$ basta deslocar o gráfico \ref{modulargr} 3 unidades para a direita e 4 unidades para cima, conforme mostra a figura \ref{mod1}.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=9cm,height=6cm]{mod1}
+    \caption{A função em vermelho tracejada é o gráfico de $|x|$ e a função em azul é o gráfico de $f(x)= \vert x-3 \vert +4$. }
+    \label{mod1}
+\end{figure}
+\color{black}
+
+\item[b)] $f(x)= 2 \vert x \vert -2$ \\
+\color{red}
+Aqui, precisamos expandir o gráfico de $y= \vert x \vert$ verticalmente por um fator $2$ e descer 2 unidades, conforme mostra a figura \ref{mod2}.
+\color{black}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=9cm,height=6cm]{mod2}
+    \caption{A função em vermelho tracejada é o gráfico de $|x|$ e a função em azul é o gráfico de $f(x)= 2 \vert x \vert -2$. }
+    \label{mod2}
+\end{figure}
+\end{itemize}
+\end{exe}
+Ao compormos uma função modular com uma função $f$ qualquer, obtemos o módulo de $f$ que é dado por
+
+\[|f(x)|:= \begin{cases}
+f(x),& \text{ se } f(x)\geq 0,\\
+-f(x),& \text{ se }f(x)<0.
+\end{cases} \]
+
+Em outras palavras, para fazer o esboço do gráfico da função $|f(x)|$, basta considerar os pedaços do gráfico de $f$ que estão abaixo do eixo $x$ e refleti-los com relação ao
+eixo $x$.
+
+Por outro lado se quisermos fazer o esboço do gráfico $f(x)= g(|x|)$, ignoramos a parte do gráfico de $g(x)$ que está à esquerda do eixo y e Refletimos, com relação ao eixo $y$, a
+parte do gráfico de $g(x)$ que está à direita do eixo $y$ e então obtemos o gráfico da nova função. Funções obtidas dessa maneira são sempre pares, já que $f(x) = f(-x)$.
+
+\begin{exe} Faça o esboço do gráfico das seguintes funções:
+\begin{itemize}
+\item[a)] $f(x)= \vert 2x-9 \vert$ \\
+\color{blue}
+Nesse caso, temos que $f(x)=g(h(x))$, onde $g(x)= |x|$ e $h(x)=2x-9$. Portanto, para obtermos o gráfico de $f$, basta construirmos o gráfico de $h(x)=2x-9$ e refletir o pedaço desse gráfico que está abaixo do eixo $x$,com respeito ao eixo $x$. $h(x)$ é uma função linear, cujo gráfico é uma reta, que aprendemos a esboçar no capítulo anterior. A figura \ref{mod3} mostra o gráfico de $f$.
+\color{black}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=9cm,height=6cm]{mod3}
+    \caption{Gráfico de $f(x)=  \vert 2x-9 \vert$. }
+    \label{mod3}
+\end{figure}
+\item[b)] $g(x)=|x^2-3x+2|$ \\
+\color{red}
+Do mesmo modo do item anterior, $g(x)$ é a composição de duas funções, ou seja, $g(x)= p(q(x))$, com $p(x)=|x|$ e $q(x)=|x^2-3x+2|$. Logo, para construir o gráfico de $g$, basta fazermos o esboço do gráfico de $q$ e rebatermos a parte negativa com relação ao eixo $x$. Sabemos que $q(x)$ é uma função quadrática e seu gráfico é uma parábola com convavidade voltada para cima e o procedimento para o esboço do gráfico de $q$ foi apresentado no capítulo anterior. A figura \ref{mod4} mostra o gráfico de $g$.
+\color{black}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=9cm,height=6cm]{mod4}
+    \caption{Gráfico de $g(x)=|x^2-3x+2|$. }
+    \label{mod4}
+\end{figure}
+
+%\item[c)] $f(x)= \vert x-3 \vert + \vert x+4 \vert$
+%\begin{figure}[h!]
+ %   \centering
+ %   \includegraphics[width=9cm,height=6cm]{mod5}
+ %   \caption{Gráfico de $f(x)= \vert x-3 \vert + \vert x+4 \vert$. }
+ %   \label{mod5}
+%\end{figure}
+
+\item[c)] $f(x)= |x|^2-4|x|+3$ \\
+\color{blue}
+Note que $f(x)=g(|x|)$, onde $g(x)=x^2-4x+3$. Para fazer o esboçp do gráfico de $f(x)$, ignoramos a parte do gráfico de $g(x)$ que está à esquerda do eixo $y$ e refletimos, com relação ao eixo $y$, a parte do gráfico de $g(x)$ que está a direita desse eixo. O gráfico de $g$ é uma parábola, com concavidade voltada para cima. Sendo assim, a figura \ref{mod6} apresenta o esboço do gráficode $g$.
+\color{black}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=9cm,height=6cm]{mod6}
+    \caption{Gráfico de $f(x)= |x|^2-4|x|+3$. }
+    \label{mod6}
+\end{figure}
+\end{itemize}
+\end{exe}
+
+\subsection{Equações e Inequações modulares}
+\textbf{Soluções de Equações Modulares} \\
+Dadas as expressões algébrcas $A$ e $B$, as soluções da equação $|A|=B$ devem satisfazer
+$$(B \geq 0) \hspace{1cm} e \hspace{1cm} (A=B \hspace{0,3cm} ou \hspace{0,3cm} -A=B).$$
+\begin{exe} Resolva as seguintes equações modulares: \\
+a)$\vert 5x-2 \vert = 13$ \hspace{1cm} b) $\vert 2x-5 \vert - \vert x-2 \vert = 3x+1$. \\
+\color{red}
+\begin{itemize}
+    \item[a)] Observe que nesse caso temos uma equação do tipo $|A|=B$, com $B>0$. Logo, $5x-2=13$ ou $-(5x-2)=13$, resolvendo essas duas equações obtemos que o conjunto solução da equação pedida é $S= \{-  \frac{11}{5},3 \}$. \\
+    \item[b)] Para resolver essa equação modular, dividiremos a análise dos módulos em etapas. Inicialmente vamos analisar cada módulo separadamente.
+    \begin{itemize}
+        \item[I.] $|2x-5|$ \\
+        \begin{minipage}[t]{.44\textwidth}
+   $|2x-5|=(2x-5)$, se $2x-5 \geq 0 \to x \geq \frac{5}{2}$.
+\end{minipage}
+\begin{minipage}[t]{.44\textwidth}
+ $|2x-5|=-(2x-5)$, se $2x-5 < 0 \to x < \frac{5}{2}$.
+\end{minipage}
+\item[II.] $|x-2|$ \\
+ \begin{minipage}[t]{.44\textwidth}
+   $|x-2|=x-2$, se $x-2 \geq 0 \to x \geq 2$.
+\end{minipage}
+\begin{minipage}[t]{.44\textwidth}
+ $|x-2|=-(x-2)$, se $x-2 < 0 \to x < 2$.
+\end{minipage} \\
+\end{itemize}
+\end{itemize}
+Fazendo a análise nos intevalos \\
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c|c|c|c}
+         & $(-\infty,2)$ & $[2, \frac{5}{2})$ & $[\frac{5}{2}, \infty)$  \\
+         \hline
+       $|2x-5|$  & $-(2x-5)$ & $-(2x-5)$ & $2x-5$ \\
+       \hline
+        $|x-2|$  & $-(x-2)$ & $x-2$ & $x-2$ \\
+        \hline
+         $|2x-5|-|x-2|$  & $-x+3$ & $-3x+7$ & $x-3$ \\
+    \end{tabular}
+  %  \caption{Caption}
+    \label{tab:my_label}
+\end{table}
+%Vamos fazer a análise de cada caso
+\begin{itemize}
+    \item[1] Intervalo $(-\infty, 2)$
+    \begin{eqnarray*}
+    -x+3 &=& 3x+1 \\
+    -4x &=& -2 \\
+    x &=& \frac{1}{2}
+    \end{eqnarray*}
+    Note que $x= \frac{1}{2} $ pertence ao intervalo $(-\infty,2)$.
+    \item[2.] Intervalo $[2, \frac{5}{2})$
+    \begin{eqnarray*}
+    -3x+7 &=& 3x+1 \\
+    -6x &=& -6 \\
+    x &=& 1
+    \end{eqnarray*}
+    Note que $x= 1 $ não pertence ao intervalo $[2,\frac{5}{2})$, logo não pode ser solução da equação.
+
+    \item[3.] Intervalo $[\frac{5}{2}, \infty)$
+    \begin{eqnarray*}
+    x-3 &=& 3x+1 \\
+    -2x &=& 4 \\
+    x &=& -2
+    \end{eqnarray*}
+    Note que $x= -2 $ não pertence ao intervalo $[\frac{5}{2}, \infty)$, logo não pode ser solução da equação.
+
+\end{itemize}
+Portanto a única solução da equação é: $S=\{\frac{1}{2}\}$.
+
+\color{black}
+\end{exe}
+
+\textbf{Soluções de Inequações Modulares} \\
+Dada a constante real $c \geq 0$ e a expressão algébrica $A$, temos:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+ & Inequação & Condição equivalente \\
+\hline
+1. &  $|A|\leq c$ & $-c \leq A \leq c$ \\
+\hline
+2. & $|A| \geq c$ & $A \leq -c \hspace{1cm} ou \hspace{1cm} A \geq c$ \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\begin{exe} Resolva as seguintes Inequações \\
+a)$ \vert  2x+3\vert \geq 4$ \hspace{1cm} b)$\vert 4x^2-1 \vert \leq x+2$ \hspace{1cm} c)$\vert x-3 \vert - \vert 5x-2 \vert  \geq x-2$
+\end{exe}
+\color{red}
+\begin{itemize}
+    \item[a)] Resolver a inequação $ \vert  2x+3\vert \geq 4$  é equivalente resolver as inequações $2x+3 \leq -4$ e $2x+3 \geq 4$.
+    \begin{itemize}
+        \item[1.] $2x+3 \leq -4 \Longrightarrow 2x \leq -7 \Longrightarrow x  \leq -\frac{7}{2}$.
+        \item[2.] $2x+3 \geq 4 \Longrightarrow 2x \geq 1 \Longrightarrow x \geq \frac{1}{2}$.
+    \end{itemize}
+Fazendo a união dos intervalos encontrados obtemos que a solução da inequação pedida é $\{x \in \mathbb{R} | x  \leq -\frac{7}{2} \,\, ou \,\, x \geq \frac{1}{2}  \}$.
+\item[b)] Nesse caso, primeiro temos que impor que $x+2 \geq 0$, isto é $x \geq -2$. Resolver a inequação $\vert 4x^2-1 \vert \leq x+2$ é equivalente resolver a inequação simultânea $-(x+2) \leq 4x^2-1 \leq x+2$.
+\begin{itemize}
+    \item[1.] $-x-2 \leq 4x^2-1 \Longrightarrow 4x^2+x+1 \geq 0$, que é uma inequação do segundo grau (Veja no Cap.2 como resolver), cuja solução é todo o conjunto dos números reais, isto é, $S_1= \{ x \in \mathbb{R} \}$.
+    \item[2.] $4x^2-1 \leq x+2 \Longrightarrow 4x^2-x-3 \leq 0$, cuja solução é $S_2= \{ x \in \mathbb{R}| -\frac{3}{4} \leq x \leq 1 \}$.
+\end{itemize}
+Fazendo a intersecção desses intervalos, temos que a solução geral da inequação modular é $S=\{ x \in \mathbb{R} | -\frac{3}{4} \leq x \leq 1  \}$.
+\end{itemize}
+\color{black}
+\section{Exercícios}
+\begin{enumerate}
+
+\item Elimine o módulo das seguintes expressões:
+
+\begin{minipage}[t]{.44\textwidth}
+\begin{itemize}
+\item[a)] $\vert 8 \vert + \vert -3\vert$
+\item[b)] $|\sqrt{8}-4|$
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{.44\textwidth}
+\begin{itemize}
+\item[c)] $|5x+1|$
+\item[d)]$|x^2-9|$
+\item[e)]  $5-|x|$
+\end{itemize}
+\end{minipage}
+
+\item Resolva as seguintes equações modulares
+
+\begin{minipage}[t]{.44\textwidth}
+\begin{itemize}
+\item[a)] $ \vert 5-4x\vert=1$
+\item[b)] $|\frac{7-4x}{3}|=5+x$
+\item[c)]$|x-7|-|3x-1|=-x+3$
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{.44\textwidth}
+\begin{itemize}
+\item[d)] $|4x^2+1|=10$
+\item[e)]$x^2+3x+1=|3x+8|$
+\item[f)]  $|x|^2-8|x|+7=0$
+\end{itemize}
+\end{minipage}
+
+\item Resolva as seguintes Inequações modulares
+
+\begin{minipage}[t]{.44\textwidth}
+\begin{itemize}
+\item[a)] $ \vert 5x-8\vert \leq 2$
+\item[b)] $|2x-3| \geq 7$
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{.44\textwidth}
+\begin{itemize}
+\item[c)]$|x^2-9|+x \leq 3$
+\item[d)] $|x-2|+ |x+8| \geq 2x+12$
+\end{itemize}
+\end{minipage}
+\item Considere a função $f: \mathbb{R} \to \mathbb{R}$, definida por $f(x)= | 2x-5|$.
+\begin{itemize}
+\item[a)] Encontre os zeros de $f$, caso existam.
+\item[b)] Verifique se $f$ é par, ímpar ou nem par nem ímpar.
+\item[c)] $f$ é injetora?
+\item[d)] Faça o esboço do gráfico de $f$.
+\item[e)] $f$ possui um valor máximo? $f$ possui valor mínimo?
+\end{itemize}
+
+\item Faça o esboço do gráfico da seguintes funções:
+
+\begin{minipage}[t]{.44\textwidth}
+\begin{itemize}
+\item[a)] $ f(x)=|x^2-4x+3|$
+\item[b)] $f(x)= |x|^2-4|x|+3$
+\item[c)] $ f(x)=\left\{\begin{array}{cc} 4x-3 \,\, se \,\, x \geq
+0\\
+x^2-3x+2 \,\, se \,\, x <0
+\end{array}\right.$
+\item[d)] $ f(x)=\left\{\begin{array}{cc} 1+x^2 \,\, se \,\, x \leq
+0\\
+2-x \,\, se \,\, 0 < x \leq 2 \\
+(x-2)^2  \,\,se \,\,  x> 2
+\end{array}\right.$
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{.44\textwidth}
+\begin{itemize}
+\item[e)] $f(x)=|x-5|+1$
+\item[f)]$f(x)= |x-1|+ |2x-4|$
+\item[g)]  $f(x)=\frac{|x|}{x}$
+ \item[h)]$ f(x)=\left\{\begin{array}{cc} 1 \,\, se \,\, x \leq
+1\\
+|x-1| \,\, se \,\, x>1
+\end{array}\right.$
+\end{itemize}
+\end{minipage}
+\item Dada a função $f(x)=\left\{\begin{array}{cc} 1+x^2 \,\, se \,\, x \leq
+0\\
+2-x \,\, se \,\, 0 < x \leq 2 \\
+(x-2^2)^2  \,\,se \,\,  x> 2
+\end{array}\right.$  Calcule o valor da expressão $f(-2)+f(1)-f(4)$.
+
+\item Na cidade de Pindaíba, a conta de água e esgoto tem duas faixas de preço. Quem consome até $10 m^3$ por mês pega um valor fixo de $R\$ 40,00$. Para cada metro cúbico adicional no mês, o consumidor paga $R\$6,50$.
+\begin{itemize}
+\item[a)] Escreva a função $c(v)$ que fornece o custo mensal de água e esgotoem Pindaíba, com relação ao volume de água consumido (em $m^3$).
+\item[b)] Determine o valor da conta de uma casa no qual o consumo mensal é de $16m^3$.
+\item[c)]Trace o gráfico de $c(v)$ para $v$ entre 0 e 20 $m^3$.
+\end{itemize}
+\item Duas locadoras de automóveis oferecem planos
+diferentes para a diária de um veículo econômico. A
+locadora Saturno cobra uma taxa fixa de $R\$ 30,00$, além
+de$ R\$ 0,40$ por quilômetro rodado. Já a locadora
+Mercúrio tem um plano mais elaborado: ela cobra uma
+taxa fixa de $R\$ 90,00$ com uma franquia de $200 km$, ou
+seja, o cliente pode percorrer $200 km$ sem custos adicionais. Entretanto, para cada km rodado além dos $200 km$
+incluídos na franquia, o cliente deve pagar $R\$ 0,60$. \\
+
+a)Determine  função que descreve o custo diário de locação (em reais) de um automóvel em ambas locadoras. \\
+b) Para cada locadora, esboce o gráfico da
+função que descreve o custo diário de locação em
+termos da distância percorrida no dia. \\
+c) Determine para quais intervalos cada locadora tem o
+plano mais barato.
+\end{enumerate}
+
+\section{Gabarito:}
+
+\begin{enumerate}
+
+\item
+    \begin{enumerate}
+        \item $11$
+        \item $4-\sqrt{8}$
+        \item $|5x+1|=\left\{\begin{array}{ll} 5x+1, \,\, se \,\, x \geq -\frac{1}{5}\\-5x-1, \,\, se \,\, x \leq -\frac{1}{5}\end{array}\right.$
+        \item $|x^2-9|=\left\{\begin{array}{ll} x^2-9, \,\, se \,\, x \leq -3 \,\, ou \,\, x \geq 3\\-(x^2-9), \,\, se \,\, -3<x<3\end{array}\right.$
+        \item $5-|x|=\left\{\begin{array}{ll} 5-x \,\, se \,\, x \geq 0\\5+x \,\, se \,\, x < 0\end{array}.\right.$
+    \end{enumerate}
+
+\item
+    \begin{enumerate}
+        \item $S=\{ 1, \frac{3}{2}\}$
+        \item $S=\{x=-\frac{8}{7}, x=22\}$
+        \item $S=\{-1,\frac{5}{3}\}$
+        \item $x=\pm \frac{3}{2}$
+        \item $S=\{-3, \pm\sqrt{7}\}$
+        \item $S=\{\pm 1, \pm 7\}$
+    \end{enumerate}
+
+\item
+    \begin{enumerate}
+        \item $\frac{6}{5} \leq x \leq 2$
+        \item $S= \{ x \in \mathbb{R}| x \leq -2 \,\, ou \,\, x \geq 5\}$
+        \item $S= \{ x \in \mathbb{R}| -4 \leq x \leq -2 \,\, ou \,\, x=3\}$
+        \item $x \leq -1$
+    \end{enumerate}
+
+\item
+    \begin{enumerate}
+        \item $x=\frac{5}{2}$
+        \item Nem par, nem ímpar
+        \item Não é injetora, pois, por exemplo, $f(2)=f(3)=1$
+        \item $ $
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.6\textwidth]{gabarito_aula3-4d}
+                \caption{Gráfico da função $f(x) = |2x - 5|$}
+            \end{figure}
+        \item O valor mínimo é 0 e não possui valor máximo
+    \end{enumerate}
+
+\item
+    \begin{enumerate}
+        \item $ $
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.6\textwidth]{gabarito_aula3-5a}
+                \caption{Gráfico da função $f(x)=|x^2-4x+3|$}
+            \end{figure}
+        \newpage
+        \item $ $
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.6\textwidth]{gabarito_aula3-5b}
+                \caption{Gráfico da função $f(x)=|x|^2-4|x|+3$}
+            \end{figure}
+        \item $ $
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.6\textwidth]{gabarito_aula3-5c}
+                \caption{Gráfico da função definida por partes (Afim e Quadrática)}
+            \end{figure}
+        \item $ $
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.6\textwidth]{gabarito_aula3-5d}
+                \caption{Gráfico da função definida por três partes}
+            \end{figure}
+        \newpage
+        \item $ $
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.6\textwidth]{gabarito_aula3-5e}
+                \caption{Gráfico da função $f(x)=|x-5|+1$}
+            \end{figure}
+        \item $ $
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.6\textwidth]{gabarito_aula3-5f}
+                \caption{Gráfico da função $f(x)=|x-1|+|2x-4|$}
+            \end{figure}
+        \item $ $
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.6\textwidth]{gabarito_aula3-5g}
+                \caption{Gráfico da função $f(x)=\frac{|x|}{x}$}
+            \end{figure}
+        \newpage
+        \item $ $
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.6\textwidth]{gabarito_aula3-5h}
+                \caption{Gráfico da função constante e modular combinadas}
+            \end{figure}
+    \end{enumerate}
+
+\item 6
+
+\item
+    \begin{enumerate}
+        \item $c(v)=\left\{\begin{array}{ll} 40, \,\, se \,\, v \leq 10\\40+6,5(v-10), \,\, se \,\, v \geq 10\end{array}\right.$
+        \item $79$
+        \item $ $
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.6\textwidth]{gabarito_aula3-7c}
+                \caption{Gráfico da função custo $c(v)$}
+            \end{figure}
+    \end{enumerate}
+\newpage
+
+\item
+    \begin{enumerate}
+        \item Saturno: $f(x)=30+0,4x$, Mercúrio: $g(x)=\left\{\begin{array}{ll} 90, \,\, se \,\, x \leq 200 \\ 90+0,6(x-200), \,\, se \,\, x > 200\end{array}\right.$
+        \item $ $
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.6\textwidth]{gabarito_aula3-8b}
+                \caption{Gráfico comparativo das locadoras Saturno e Mercúrio}
+            \end{figure}
+        \item Saturno: $[0,150]\cup[300,\infty)$, Mercúrio: $[150,300]$
+    \end{enumerate}
+
+\end{enumerate}
