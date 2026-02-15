@@ -1,8 +1,20 @@
-\chapter{Introdução ao pensamento Matemático}
+%------------------------------------------------------------------------------%
+\chapter{Introdução ao Pensamento Matemático}
 
-Resolver problemas matemáticos vai além de ''fazer contas''. É necessário saber argumentar e justificar cada passagem e o que estamos assumindo como verdade. Sendo assim, resolver um exercício de matemática consiste na construção de um texto argumentativo onde é fundamental que o aluno pense na resolução como uma redação argumentativa. Pensando nisso, é inevitável que os estudantes tenham em mente alguns conceitos referentes a lógica matemática que irão auxiliar-los na construção do pensamento matemático.
-\section{Proposição, Teoremas }
-Uma \textbf{Proposição} é uma oração afirmativa, cujo o valor lógico é falso ou verdadeiro, sem dar espaço para uma terceira alternativa. Considere, como exemplo, as seguintes proposições:
+Resolver problemas matemáticos vai além de ``fazer contas''. É necessário saber
+argumentar e justificar cada passagem e o que estamos assumindo como verdade.
+Sendo assim, resolver um exercício de matemática consiste na construção de um
+texto argumentativo onde é fundamental que o aluno pense na resolução como uma
+redação argumentativa. Pensando nisso, é inevitável que os estudantes tenham em
+mente alguns conceitos referentes a lógica matemática que irão auxiliar-los na
+construção do pensamento matemático.
+
+%------------------------------------------------------------------------------%
+\section{Proposição, Teoremas}
+
+Uma \textbf{Proposição} é uma oração afirmativa, cujo o valor lógico é falso ou
+verdadeiro, sem dar espaço para uma terceira alternativa. Considere, como
+exemplo, as seguintes proposições:
 \begin{exe}
 \begin{enumerate}
     \item[a)] Todo triângulo é retângulo;
@@ -12,261 +24,389 @@ Uma \textbf{Proposição} é uma oração afirmativa, cujo o valor lógico é fa
     \item[e)] Se $a>1$ então $a^2<a$.
 \end{enumerate}
 \end{exe}
-Note que as afirmações $a)$, $d)$ e $e)$ são falsas. Para verificar que, de fato, que uma proposição é falsa, utilizamos o que chamamos de \textbf{contraexemplos}. \textit{Contraexemplos} são casos que contrariam uma proposição, ou seja, um exemplo que refuta uma determinada afirmação universal.
+Note que as afirmações $a)$, $d)$ e $e)$ são falsas. Para verificar que, de
+fato, que uma proposição é falsa, utilizamos o que chamamos de
+\textbf{contraexemplos}. \textit{Contraexemplos} são casos que contrariam uma
+proposição, ou seja, um exemplo que refuta uma determinada afirmação universal.
 
-Um triângulo cujos ângulos interno são $120^{\circ}$, $40^{\circ}$ e $20^{\circ}$ não é um triângulo retângulo, uma vez que não possui um ângulo interno de $90^{\circ}$. Logo esse contra-exemplo refuta a proposição $a)$ mostrando que tal afirmação é falsa. Para verificar a veracidade da afirmação $d)$ teríamos que consultar o registro de todos os brasileiros e verficar se nasceu no Rio de Janeiro,
-mas isto é falso pois o conhecido escritor Graciliano Ramos é um
-brasileiro nascido em Alagoas. Do mesmo modo, se escolhermos $a=2$, podemos ver que $a^2=4 > a$ e, portanto, esse contraexemplo contradiz a afirmação feita em $e)$, mostrando que essa também é falsa.
+Um triângulo cujos ângulos interno são $120^{\circ}$, $40^{\circ}$ e
+$20^{\circ}$ não é um triângulo retângulo, uma vez que não possui um ângulo
+interno de $90^{\circ}$. Logo esse contra-exemplo refuta a proposição $a)$
+mostrando que tal afirmação é falsa. Para verificar a veracidade da afirmação
+$d)$ teríamos que consultar o registro de todos os brasileiros e verficar se
+nasceu no Rio de Janeiro, mas isto é falso pois o conhecido escritor Graciliano
+Ramos é um brasileiro nascido em Alagoas. Do mesmo modo, se escolhermos $a=2$,
+podemos ver que $a^2=4 > a$ e, portanto, esse contraexemplo contradiz a
+afirmação feita em $e)$, mostrando que essa também é falsa.
 
-Por outro lado, as proposições $b)$ e $c)$ são verdadeiras e para nos convencermos precisaríamos demonstrar usando argumentos matemáticos. Adiante falaremos mais um pouco sobre isso. Observe que a proposição $e)$ é do tipo ''Se $P$, então $Q$'', onde $P$ e $Q$ são sentenças. No item $e)$, por exemplo, temos que \\
-$P: a>1$ \\
-$Q: a^2<a$. \\
-Isso significa que estamos assumindo que $P$ é verdade e usando este fato devemos verificar se $Q$ é verdade ou não.
-Uma \textbf{proposição condicional} ou \textbf{implicativa} é uma nova proposição formada a partir de duas proposições P e Q, que é escrita na forma:
-$$ Se \hspace{0,15cm}P, \hspace{0,15cm} ent\tilde{a}o  \hspace{0,15cm}Q \hspace{0,15cm} ou \hspace{0,15cm} P \hspace{0,15cm} implica \hspace{0,15cm} Q$$
-Denotamos a expressão $P \hspace{0,15cm} implica \hspace{0,15cm} Q$ por $P \Rightarrow Q $
+Por outro lado, as proposições $b)$ e $c)$ são verdadeiras e para nos
+convencermos precisaríamos demonstrar usando argumentos matemáticos. Adiante
+falaremos mais um pouco sobre isso. Observe que a proposição $e)$ é do tipo
+``Se $P$, então $Q$'', onde $P$ e $Q$ são sentenças. No item $e)$, por exemplo,
+temos que 
+\begin{gather*}
+  P: a>1
+  Q: a^2<a.
+\end{gather*}
+Isso significa que estamos assumindo que $P$ é verdade e usando este fato
+devemos verificar se $Q$ é verdade ou não. Uma \textbf{proposição condicional}
+ou \textbf{implicativa} é uma nova proposição formada a partir de duas
+proposições P e Q, que é escrita na forma:
+\[
+  Se 
+  \hspace{0,15cm}P, 
+  \hspace{0,15cm} ent\tilde{a}o  
+  \hspace{0,15cm}Q 
+  \hspace{0,15cm} ou 
+  \hspace{0,15cm} P 
+  \hspace{0,15cm} implica 
+  \hspace{0,15cm} Q
+\]
+Denotamos a expressão 
+$P \hspace{0,15cm} implica \hspace{0,15cm} Q$ por $P \Rightarrow Q $
 
-No caso, a sentença P é chamada de \textbf{hipótese}
-e a sentença Q é denominada de \textbf{tese} e a validade da hipótese  implica na veracidade da tese.
+No caso, a sentença P é chamada de \textbf{hipótese} e a sentença Q é
+denominada de \textbf{tese} e a validade da hipótese implica na veracidade da
+tese.
 
-A $\textbf{recíproca}$ de uma proposição condicional ou implicatiava é a proposição :
-$$ Se \hspace{0,15cm}Q, \hspace{0,15cm} ent\tilde{a}o   \hspace{0,15cm}P \hspace{0,15cm} ou \hspace{0,15cm} Q \hspace{0,15cm} \Rightarrow \hspace{0,15cm} P$$
-A \textbf{Contrapositiva} ou \textbf{Contrarecíproca} de uma afirmação condicional é a expressão :
-$$ Se \hspace{0,15cm} \sim Q, \hspace{0,15cm} ent\tilde{a}o  \hspace{0,15cm} \sim P \hspace{0,15cm} ou \hspace{0,15cm}  \sim Q \hspace{0,15cm} \Rightarrow \hspace{0,15cm} \sim P$$
-Vale ressaltar que a contrapositiva tem o mesmo valor lógico da proposição a ela associada, ou seja, dizer que $P \Rightarrow Q$ é o mesmo que dizer $\sim Q \Rightarrow \sim P$.
-Vamos chamar o modo em enunciamos uma proposição de \textbf{forma  positiva}.
+A $\textbf{recíproca}$ de uma proposição condicional ou implicatiava é a
+proposição :
+\[ 
+  Se 
+  \hspace{0,15cm}Q, 
+  \hspace{0,15cm} ent\tilde{a}o   
+  \hspace{0,15cm}P 
+  \hspace{0,15cm} ou 
+  \hspace{0,15cm} Q 
+  \hspace{0,15cm} \Rightarrow 
+  \hspace{0,15cm} P
+\]
+A \textbf{Contrapositiva} ou \textbf{Contrarecíproca} 
+de uma afirmação condicional é a expressão :
+\[ 
+  Se 
+  \hspace{0,15cm} \sim Q, 
+  \hspace{0,15cm} ent\tilde{a}o 
+  \hspace{0,15cm} \sim P 
+  \hspace{0,15cm} ou 
+  \hspace{0,15cm}  \sim Q 
+  \hspace{0,15cm} \Rightarrow 
+  \hspace{0,15cm} \sim P
+\]
+Vale ressaltar que a contrapositiva tem o mesmo valor lógico da proposição a
+ela associada, ou seja, dizer que $P \Rightarrow Q$ é o mesmo que dizer $\sim Q
+\Rightarrow \sim P$. Vamos chamar o modo em enunciamos uma proposição de
+\textbf{forma  positiva}.
 
 Para que fique claro, considere a seguinte proposição:
-$$Se \hspace{0,15cm} como \hspace{0,15cm} laranja \hspace{0,15cm} ent\tilde{a}o \hspace{0,15cm} gosto \hspace{0,15cm} de \hspace{0,15cm} fruta.$$
-Na proposição enunciada acima temos que a hipótese é ''como laranja'' e a tese é ''gosto de frutas''. Por outro lado a recíproca dessa proposição é:
-$$Se \hspace{0,15cm} gosto \hspace{0,15cm} de \hspace{0,15cm} frutas \hspace{0,15cm} ent\tilde{a}o  \hspace{0,15cm} como \hspace{0,15cm} laranja .$$
+\[
+  Se 
+  \hspace{0,15cm} como 
+  \hspace{0,15cm} laranja 
+  \hspace{0,15cm} ent\tilde{a}o 
+  \hspace{0,15cm} gosto 
+  \hspace{0,15cm} de 
+  \hspace{0,15cm} fruta.
+\]
+Na proposição enunciada acima temos que a hipótese é ``como laranja'' e a tese
+é ``gosto de frutas''. Por outro lado a recíproca dessa proposição é:
+\[
+  Se
+  \hspace{0,15cm} gosto
+  \hspace{0,15cm} de
+  \hspace{0,15cm} frutas 
+  \hspace{0,15cm} ent\tilde{a}o 
+  \hspace{0,15cm} como 
+  \hspace{0,15cm} laranja.
+\]
 
 Por fim, a contrapositiva é:
-$$Se \hspace{0,15cm} n\tilde{a}o \hspace{0,15cm} gosto \hspace{0,15cm} de \hspace{0,15cm} frutas \hspace{0,15cm} ent\tilde{a}o \hspace{0,15cm} n\tilde{a}o \hspace{0,15cm} como \hspace{0,15cm}laranja .  $$
+\[
+  Se 
+  \hspace{0,15cm} n\tilde{a}o 
+  \hspace{0,15cm} gosto 
+  \hspace{0,15cm} de 
+  \hspace{0,15cm} frutas 
+  \hspace{0,15cm} ent\tilde{a}o 
+  \hspace{0,15cm} n\tilde{a}o 
+  \hspace{0,15cm} como 
+  \hspace{0,15cm}laranja. 
+\]
 
-Mais a frente veremos que a forma contrapositiva de uma proposição poderá ser, eventualmente, uma forma indireta muito eficaz de verificar resultados em Matemática.
+Mais a frente veremos que a forma contrapositiva de uma proposição poderá ser,
+eventualmente, uma forma indireta muito eficaz de verificar resultados em
+Matemática.
 
-A teoria matemática é construída pelo \textbf{Modelo Axiomático}, isso significa que partimos de alguns conceitos primitivos e afirmações básicas (\textbf{axiomas ou postulados}) que aceitamos como verdadeiras, isto é, sem que sejam demonstradas. Os conceitos de ponto, reta e plano são conceitos primitivos. Quando afirmamos que ''Por dois pontos passam uma única reta'', temos um exemplo de um axioma. A partir desses conceitos, todos os outros conceitos podem ser definidos e todas as outras proposições demonstradas. Assim, \textbf{definições}  conceitos dados em função de termos considerados previamente conhecidos.
+A teoria matemática é construída pelo \textbf{Modelo Axiomático}, isso
+significa que partimos de alguns conceitos primitivos e afirmações básicas
+(\textbf{axiomas ou postulados}) que aceitamos como verdadeiras, isto é, sem
+que sejam demonstradas. Os conceitos de ponto, reta e plano são conceitos
+primitivos. Quando afirmamos que ``Por dois pontos passam uma única reta'',
+temos um exemplo de um axioma. A partir desses conceitos, todos os outros
+conceitos podem ser definidos e todas as outras proposições demonstradas.
+Assim, \textbf{definições}  conceitos dados em função de termos considerados
+previamente conhecidos.
 
-Existem apenas duas categorias de enunciados: as proposições
-primitivas (axiomas), que são proposições aceitas sem demonstração (não havendo preocupação se
-são evidentes ou não); e as proposições demonstradas (teoremas, proposições, corolários e
-lemas) por meio de raciocínios logicamente corretos, a partir dos postulados e definições pertinentes.
+Existem apenas duas categorias de enunciados: as proposições primitivas
+(axiomas), que são proposições aceitas sem demonstração (não havendo
+preocupação se são evidentes ou não); e as proposições demonstradas (teoremas,
+proposições, corolários e lemas) por meio de raciocínios logicamente corretos,
+a partir dos postulados e definições pertinentes.
 
-Nesse sentido, entendemos por \textbf{demonstração} Matemática, o processo de raciocínio lógico e dedutivo para checar a veracidade de uma proposição condicional. Nesse processo são usados argumentos válidos e definições, ou seja, aqueles
-que concluam afirmações verdadeiras a partir de fatos que também
+Nesse sentido, entendemos por \textbf{demonstração} Matemática, o processo de
+raciocínio lógico e dedutivo para checar a veracidade de uma proposição
+condicional. Nesse processo são usados argumentos válidos e definições, ou
+seja, aqueles que concluam afirmações verdadeiras a partir de fatos que também
 são verdadeiros.
 
-As proposições que podem ser demonstradas são chamadas de $\textbf{Teoremas}$. Em geral, denominamos de Teorema apenas certas proposições que são de grande importância matemática, chamando-se simplesmente de proposição ao resto das proposições verdadeiras que admitem uma demonstração. Para que um Teorema seja verificado, as hipóteses tem que ser cuidadosamente satisfeitas. Um famoso Teorema é o \textit{Teorema de Pitágoras}, que enunciaremos a seguir:
+As proposições que podem ser demonstradas são chamadas de $\textbf{Teoremas}$.
+Em geral, denominamos de Teorema apenas certas proposições que são de grande
+importância matemática, chamando-se simplesmente de proposição ao resto das
+proposições verdadeiras que admitem uma demonstração. Para que um Teorema seja
+verificado, as hipóteses tem que ser cuidadosamente satisfeitas. Um famoso
+Teorema é o \textit{Teorema de Pitágoras}, que enunciaremos a seguir:
 
-\begin{teo} (Teorema de Pitágoras:) Em um triângulo retângulo a
-soma dos quadrados dos catetos é igual ao quadrado da hipotenusa.
+\begin{teo} (Teorema de Pitágoras:) 
+  Em um triângulo retângulo a
+  soma dos quadrados dos catetos é igual ao quadrado da hipotenusa.
 \end{teo}
 
-Note que o teorema de Pitágoras não está na forma ''Se P então Q''. No entanto, podemos reecrevê-lo nesse formato.
+Note que o teorema de Pitágoras não está na forma ``Se P então Q''. No entanto,
+podemos reecrevê-lo nesse formato.
 
 \begin{teo}
-Se T é um triângulo retângulo
-de catetos $b$ e $c$ e hipotenusa $a$, então $a^2=b^2+c^2$.
+  Se T é um triângulo retângulo
+  de catetos $b$ e $c$ e hipotenusa $a$, então $a^2=b^2+c^2$.
 \end{teo}
-No Teorema de Pitágoras temos que as hipóteses são ''T é um triângulo retângulo
-de catetos $b$ e $c$ e hipotenusa $a$'' e a tese é ''$a^2=b^2+c^2$ ''.
-Existem algumas sentenças que são diretas consequências de um determinado teorema são chamadas de \textbf{Corolários}, já resultados auxiliares que são usados para demonstrar uma determinada proposição ou teorema são chamados de \textbf{Lemas}.
 
-Quando em uma sentença temos que $P \Rightarrow Q$ e $Q \Rightarrow P$, escrevemos $P \Leftrightarrow Q$ e o símbolo $\Leftrightarrow$ é lido como ''se e somente se''. Em algumas proposições e teoremas matemáticos vale a recíproca, mas nem sempre isso é verdade.
+No Teorema de Pitágoras temos que as hipóteses são ``T é um triângulo retângulo
+de catetos $b$ e $c$ e hipotenusa $a$'' e a tese é ``$a^2=b^2+c^2$ ''. Existem
+algumas sentenças que são diretas consequências de um determinado teorema são
+chamadas de \textbf{Corolários}, já resultados auxiliares que são usados para
+demonstrar uma determinada proposição ou teorema são chamados de
+\textbf{Lemas}.
+
+Quando em uma sentença temos que $P \Rightarrow Q$ e $Q \Rightarrow P$,
+escrevemos $P \Leftrightarrow Q$ e o símbolo $\Leftrightarrow$ é lido como ``se
+e somente se''. Em algumas proposições e teoremas matemáticos vale a recíproca,
+mas nem sempre isso é verdade.
+
+%------------------------------------------------------------------------------%
 \section{Tipos de demonstração:}
-Como já vimos anteriormente, a demonstração  é um processo construído afim de constatar a autenticidade de uma proposição. Dunrante o processo de demonstração as hipóteses são assumidas e através de definições, deduções feitas a partir das hipóteses ou uso de outros resultados e axiomas temos o objetivo de chegar ao resultado, isto é, chegar a tese. Aqui serão apresentadas 3 tipos de demonstrações, a saber:
+
+Como já vimos anteriormente, a demonstração  é um processo construído afim de
+constatar a autenticidade de uma proposição. Dunrante o processo de
+demonstração as hipóteses são assumidas e através de definições, deduções
+feitas a partir das hipóteses ou uso de outros resultados e axiomas temos o
+objetivo de chegar ao resultado, isto é, chegar a tese. Aqui serão apresentadas
+3 tipos de demonstrações, a saber:
 \begin{enumerate}
     \item Demonstração direta;
     \item Demonstração pela contrapositiva;
     \item Demonstração por contradição ou redução ao absurdo.
 \end{enumerate}
+
+%------------------------------------------------------------------------------%
 \subsection{Demonstração direta}
-A demonstração direta é aquela que, por meio de uma sequência lógica , parte das hipóteses e com argumentações coerentes concluímos a veracidade da tese.
+
+A demonstração direta é aquela que, por meio de uma sequência lógica, parte
+das hipóteses e com argumentações coerentes concluímos a veracidade da tese.
+
 \begin{prop} \label{par}
-Se $x$ é par, então $x^2$ é par.
+  Se $x$ é par, então $x^2$ é par.
 \end{prop}
+
 \begin{proof}
-Essa proposição nos diz que se um número $x$ é par, então o seu quadrado também é par. Note que dizemos que um número inteiro é par, se ele tem o formato $2k$, com $k \in \mathbf{Z}$ e dizemos que um número inteiro é ímpar, se ele tem o formato $2k+1$, com $k \in \mathbf{Z}$.
-Vamos inicialmente destacar a hipótese e a tese dessa proposição:
-$$Hip\acute{o}tese: x \hspace{0.15cm}  \acute{e} \hspace{0.15cm} par.$$
-$$Tese: x^2 \hspace{0.15cm}  \acute{e} \hspace{0.15cm} par.$$
-Assim, partindo da tese, se $x$ é um número par, então $x=2k$, onde $k$ é algum número inteiro. Assim,
-$$x^2= x.x= (2k)(2k)= 4k^2=2(2k^2)$$
-Chamando $p=2k^2$, e notando que $2k^2$ é um número inteiro, temos que $x^2=2p$, então podemos concluir que $x^2$ é, também, um número par.
+  Essa proposição nos diz que se um número $x$ é par, então o seu quadrado
+  também é par. Note que dizemos que um número inteiro é par, se ele tem o
+  formato $2k$, com $k \in \mathbf{Z}$ e dizemos que um número inteiro é ímpar,
+  se ele tem o formato $2k+1$, com $k \in \mathbf{Z}$. Vamos inicialmente
+  destacar a hipótese e a tese dessa proposição:
+  \[
+    Hip\acute{o}tese: x \hspace{0.15cm}  \acute{e} \hspace{0.15cm} par.
+  \]
+  \[
+    Tese: x^2 \hspace{0.15cm}  \acute{e} \hspace{0.15cm} par.
+  \]
+  Assim, partindo da tese, se $x$ é um número par, então $x=2k$, onde $k$ é algum
+  número inteiro. Assim,
+  \[
+    x^2= x.x= (2k)(2k)= 4k^2=2(2k^2)
+  \]
+  Chamando $p=2k^2$, e notando que $2k^2$ é um número inteiro, temos que
+  $x^2=2p$, então podemos concluir que $x^2$ é, também, um número par.
 \end{proof}
 
 Agora vamos provar o famoso Teorema de Pitágoras
+
 \begin{teo}
-Se T é um triângulo retângulo
-de catetos $b$ e $c$ e hipotenusa $a$, então $a^2=b^2+c^2$.
+  Se T é um triângulo retângulo
+  de catetos $b$ e $c$ e hipotenusa $a$, então $a^2=b^2+c^2$.
 \end{teo}
+
 \begin{proof}
-Aqui já sabemos que as hipótese são que $T$ é um triângulo retângulo de catetos $b$ e $c$ e hipotenusa $a$ e a tese, que é o resultado que queremos chegar é  $a^2=b^2+c^2$. Logo, considere um triângulo retângulo T conforme a figura  \ref{pita}:
-\begin{figure}[H]
-    \centering
-    \includegraphics{teo-de-pitagoras}
-    \caption{Triângulo T}
-    \label{pita}
-\end{figure}
-A partir disto, vamos pegar 4 triângulos iguais os da figura \ref{pita} e posicionar estes triângulos de modo que formem um quadrado de lado $b+c$. Note que formamos também um quadrado interno de lados cujos lados são as hipotenusas $a$ dos triângulos, conforme ilustra a fugura \ref{pita1}.
+  Aqui já sabemos que as hipótese são que $T$ é um triângulo retângulo de
+  catetos $b$ e $c$ e hipotenusa $a$ e a tese, que é o resultado que queremos
+  chegar é  $a^2=b^2+c^2$. Logo, considere um triângulo retângulo T conforme a
+  figura  \ref{pita}:
 
-\begin{figure}[H]
-    \centering
-    \includegraphics{teorema-de-pitagoras-quadrado}
-    \caption{Quadrado formado pela junção de 4 triângulos retângulos iguais.}
-    \label{pita1}
-\end{figure}
+  \begin{figure}[h]
+      \centering
+      \includegraphics{teo-de-pitagoras}
+      \caption{Triângulo T}
+      \label{pita}
+  \end{figure}
 
-Podemos calcular a área desse quadrado formado de duas formas. A primeira é notando que o lado desse quadrado é $b+c$, assim:
-\begin{eqnarray} \label{eqpi}
-A_{quadrado}=(b+c)^2=b^2+2bc+c^2
-\end{eqnarray}
-Por outro lado, podemos calcular a área desse quadrado maior somando a área dos 5 objetos que o compõem: 4 triângulos retângulos iguais e um quadrado menor de lado $a$. Ora,
-$$A_{triângulo}=\frac{bc}{2}$$
-$$A_{quadrado \hspace{0.15cm} menor}=a^2$$
-Assim,
-\begin{eqnarray}\label{eqpi2}
-A_{quadrado}=4\frac{bc}{2}+a^2= 2bc+a^2
-\end{eqnarray}
-Igualando as expressões obtidas em (\ref{eqpi}) e (\ref{eqpi2}) chegamos que :
-\begin{eqnarray*}
-b^2+2bc+c^2= 2bc+a^2
-\end{eqnarray*}
-organizando os termos e fazendo os cancelamentos necessários, obtemos :
-$$a^2=b^2+c^2.$$
+  A partir disto, vamos pegar 4 triângulos iguais os da figura \ref{pita} e
+  posicionar estes triângulos de modo que formem um quadrado de lado $b+c$.
+  Note que formamos também um quadrado interno de lados cujos lados são as
+  hipotenusas $a$ dos triângulos, conforme ilustra a fugura \ref{pita1}.
+  
+  \begin{figure}[h]
+      \centering
+      \includegraphics{teorema-de-pitagoras-quadrado}
+      \caption{Quadrado formado pela junção de 4 triângulos retângulos iguais.}
+      \label{pita1}
+  \end{figure}
+  
+  Podemos calcular a área desse quadrado formado de duas formas. A primeira é
+  notando que o lado desse quadrado é $b+c$, assim:
+  \begin{equation} \label{eqpi}
+    A_{quadrado}=(b+c)^2=b^2+2bc+c^2
+  \end{equation}
+  Por outro lado, podemos calcular a área desse quadrado maior somando a
+  área dos 5 objetos que o compõem: 4 triângulos retângulos iguais e
+  um quadrado menor de lado $a$.
+  Ora,
+  \[
+    A_{triangulo}=\frac{bc}{2}
+  \]
+  \[
+    A_{quadrado \hspace{0.15cm} menor}=a^2
+  \]
+  Assim,
+  \begin{equation}\label{eqpi2}
+    A_{quadrado}=4\frac{bc}{2}+a^2= 2bc+a^2
+  \end{equation}
+  Igualando as expressões obtidas em (\ref{eqpi}) e (\ref{eqpi2}) chegamos que:
+  \[
+    b^2+2bc+c^2= 2bc+a^2
+  \]
+  organizando os termos e fazendo os cancelamentos necessários, obtemos:
+  \[
+    a^2=b^2+c^2.
+  \]
 \end{proof}
+
+%------------------------------------------------------------------------------%
 \subsection{Demonstração por contraposição}
-Sabemos que as proposições $P \Rightarrow Q$ e $\sim Q \Rightarrow \sim P$ são equivalentes, ou seja, $P \Rightarrow Q \Leftrightarrow \sim Q \Rightarrow \sim P$. Nesse caso então iremos demonstrar de forma direta a sentença $\sim Q \Rightarrow \sim P$, que implica na demonstração de $P \Rightarrow Q$. Vamos demonstrar as proposições que seguem:
-\begin{prop}
-Se $X^2$ é par, então $X$ é par
-\end{prop}
-\begin{proof}
-Inicialmente é importante observar, que nesse caso fica difícil fazer a demonstração direta (Verifique!). Vamos demonstrar a veracidade dessa afirmação usando a contrapositiva. Nesse caso, temos:
-$$P : X^2 \hspace{0.15cm} \acute{e} \hspace{0.15cm} par. $$
-$$ Q: X \hspace{0.15cm}  \acute{e} \hspace{0.15cm} par.$$
-Sendo assim,
-$$ \sim Q: X \hspace{0.15cm}  \acute{e} \hspace{0.15cm} \acute{i}mpar.$$
-$$ \sim P : X^2 \hspace{0.15cm}  \acute{e} \hspace{0.15cm} \acute{i}mpar. $$
 
-Assumindo que $X$ é ímpar, temos que $X=2k+1$, $k \in \mathbf{Z}$. Assim,
-$$X^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1$$
-Chamando $p=2k^2+2k$ e notando que $2k^2+2k$ é um número inteiro, temos que $X^2=2p+1$, que é o mesmo que dizer que $X^2$ é ímpar.
-\end{proof}
-\subsection{Demonstração por redução ao absurdo ou por contradição}
-O método de redução ao absurdo, utiliza a negação da tese para chegar a uma contradição da hipótese ou de alguma verdade matemática e é baseado na \textit{lei do terceiro excluído} que diz que uma afirmação que não pode ser falsa, deverá ser consequentemente verdadeira. Vamos ver na prática como essa técnica funciona na prática provando a demonstração que segue:
+Sabemos que as proposições $P \Rightarrow Q$ e $\sim Q \Rightarrow \sim P$ são
+equivalentes, ou seja, $P \Rightarrow Q \Leftrightarrow \sim Q \Rightarrow \sim
+P$. Nesse caso então iremos demonstrar de forma direta a sentença $\sim Q
+\Rightarrow \sim P$, que implica na demonstração de $P \Rightarrow Q$. Vamos
+demonstrar as proposições que seguem:
+
 \begin{prop}
-Se $a$ e $b$ são números reais não-negativos, então $\frac{a+b}{2} \geq \sqrt{ab}$.
+  Se $X^2$ é par, então $X$ é par
 \end{prop}
+
 \begin{proof}
-Inicialmente, vamos destacar a hipótese e a tese:
-$$Hip\acute{o}tese: a,b \in \mathbf{R}_{+}$$
-$$Tese: \frac{a+b}{2} \geq \sqrt{ab}$$
-Começamos a demonstração negando a tese até chegar em algum absurdo. Assim, vamos supor que $\frac{a+b}{2} < \sqrt{ab}$. Desta maneira
-$$\frac{a+b}{2} < \sqrt{ab} \Rightarrow a+b < 2 \sqrt{ab} \Rightarrow a-2\sqrt{ab}+b <0 \Rightarrow (\sqrt{a}-\sqrt{b})^2 <0$$
-Deste modo essa conclusão é um absurdo, já que nenhum número real ao quadrado pode ser negativo. Portanto, $\frac{a+b}{2} < \sqrt{ab}$ é falsa e $\frac{a+b}{2} \geq \sqrt{ab}$ é verdadeira.
+  Inicialmente é importante observar, que nesse caso fica difícil fazer a
+  demonstração direta (Verifique!). Vamos demonstrar a veracidade dessa
+  afirmação usando a contrapositiva. Nesse caso, temos:
+  \[ 
+    P : X^2 \hspace{0.15cm} \acute{e} \hspace{0.15cm} par. 
+  \]
+  \[ 
+    Q: X \hspace{0.15cm}  \acute{e} \hspace{0.15cm} par.
+  \]
+  Sendo assim,
+  \[ 
+    \sim Q: X \hspace{0.15cm}  \acute{e} \hspace{0.15cm} \acute{i}mpar.
+  \]
+  \[ 
+    \sim P : X^2 \hspace{0.15cm}  \acute{e} \hspace{0.15cm} \acute{i}mpar. 
+  \]
+  Assumindo que $X$ é ímpar, temos que $X=2k+1$, $k \in \mathbf{Z}$. Assim,
+  \[
+    X^2
+    =(2k+1)^2
+    =4k^2+4k+1
+    =2(2k^2+2k)+1
+  \]
+  Chamando $p=2k^2+2k$ e notando que $2k^2+2k$ é um número inteiro, temos que
+  $X^2=2p+1$, que é o mesmo que dizer que $X^2$ é ímpar.
+\end{proof}
+
+%------------------------------------------------------------------------------%
+\subsection{Demonstração por redução ao absurdo ou por contradição}
+
+O método de redução ao absurdo, utiliza a negação da tese para chegar a uma
+contradição da hipótese ou de alguma verdade matemática e é baseado na
+\textit{lei do terceiro excluído} que diz que uma afirmação que não pode ser
+falsa, deverá ser consequentemente verdadeira. Vamos ver na prática como essa
+técnica funciona na prática provando a demonstração que segue:
+
+\begin{prop}
+  Se $a$ e $b$ são números reais não-negativos, então $\frac{a+b}{2} \geq
+  \sqrt{ab}$.
+\end{prop}
+
+\begin{proof}
+  Inicialmente, vamos destacar a hipótese e a tese:
+  \[
+    Hip\acute{o}tese: a,b \in \mathbf{R}_{+}
+  \]
+  \[
+    Tese: \frac{a+b}{2} \geq \sqrt{ab}
+  \]
+  Começamos a demonstração negando a tese até chegar em algum absurdo. Assim,
+  vamos supor que $\frac{a+b}{2} < \sqrt{ab}$. Desta maneira
+  \[
+    \frac{a+b}{2} < \sqrt{ab} 
+    \Rightarrow a+b < 2 \sqrt{ab} 
+    \Rightarrow a-2\sqrt{ab}+b <0 
+    \Rightarrow (\sqrt{a}-\sqrt{b})^2 <0
+  \]
+  Deste modo essa conclusão é um absurdo, já que nenhum número real ao quadrado
+  pode ser negativo. Portanto, $\frac{a+b}{2} < \sqrt{ab}$ é falsa e
+  $\frac{a+b}{2} \geq \sqrt{ab}$ é verdadeira.
 \end{proof}
 
 Vamos usar a redução ao absurdo para provar a seguinte proposição:
+
 \begin{prop}
-$\sqrt{2}$ é irracional.
+  $\sqrt{2}$ é irracional.
 \end{prop}
+
 \begin{proof}
-Vamos negar a tese, ou seja, vamos supor que $\sqrt{2}$ é racional. Isso significa dizer que podemos escrever $\sqrt{2}$ na forma de fração irredutível, isto é, $\sqrt{2}=\frac{p}{q}$, com $p$ e $q$ primos entre si (não possui divisores comuns além do 1). Dessa maneira
-$$\sqrt{2}=\frac{p}{q} \Rightarrow 2=\frac{p^2}{q^2} \Rightarrow p^2=2q^2$$
-onde a última igualdade nos diz que $p$ é um número par, em outras palavras $p=2k$, $k \in \mathbf{Z}$. Assim, retornando para a última igualdade
-$$p^2=2q^2 \Rightarrow (2k)^2=2q^2 \Rightarrow 4k^2=2q^2 \Rightarrow q^2=2k^2$$
-Dessa maneira concluímos que $q$ também é um número par. Ora, sendo $p$ e $q$ números pares, então $2$ é um divisor comum de $p$ e $q$, o que é um absurdo, visto que estamos supondo de $p$ e $q$ são primos entre si. Portanto, é um absurdo supor que $\sqrt{2}$ é racional e sendo assim, $\sqrt{2}$ é irracional.
+  Vamos negar a tese, ou seja, vamos supor que $\sqrt{2}$ é racional. Isso
+  significa dizer que podemos escrever $\sqrt{2}$ na forma de fração
+  irredutível, isto é, $\sqrt{2}=\frac{p}{q}$, com $p$ e $q$ primos entre si
+  (não possui divisores comuns além do 1). Dessa maneira
+  \[
+    \sqrt{2}=\frac{p}{q} 
+    \Rightarrow 2=\frac{p^2}{q^2} 
+    \Rightarrow p^2=2q^2
+  \]
+  onde a última igualdade nos diz que $p$ é um número par, em outras palavras
+  $p=2k$, $k \in \mathbf{Z}$. Assim, retornando para a última igualdade
+  \[
+    p^2=2q^2 
+    \Rightarrow (2k)^2=2q^2 
+    \Rightarrow 4k^2=2q^2 
+    \Rightarrow q^2=2k^2
+  \]
+  Dessa maneira concluímos que $q$ também é um número par. Ora, sendo $p$ e $q$
+  números pares, então $2$ é um divisor comum de $p$ e $q$, o que é um absurdo,
+  visto que estamos supondo de $p$ e $q$ são primos entre si. Portanto, é um
+  absurdo supor que $\sqrt{2}$ é racional e sendo assim, $\sqrt{2}$ é
+  irracional.
 \end{proof}
-\section{Exercícios}
-\begin{enumerate}
-    \item Nos Teoremas e proposições a seguir, destaque a hipótese e a tese.
-    \begin{enumerate}
-        \item Se $a,b$ e $c$ são lados de um triângulo e $\hat{A}$ o ângulo oposto ao lado $a$, então $a^2 = b^2 + c^2 - 2bc \cos \hat{A}$
-        \item Toda função diferenciável em $x=a$ é contínua em $x=a$. (Ou de modo equivalente: Se $f$ é uma função diferenciável então $f$ é uma função contínua em $x=a$.)
-        \item Se $T$ é um triângulo equilátero então $Q$ é um triângulo isósceles (Ou de modo equivalente : Todo triângulo equilátero é isósceles).
-        \item Se $x=1$, então $x^2=1$
-    \end{enumerate}
-   \item Para as sentenças a seguir, dê a recíproca e a contrapositiva das proposições que seguem:
-   \begin{enumerate}
-       \item Se $k$ é um número par primo então $k=2$.
-       \item Toda função diferenciável em $x=a$ é contínua em $x=a$
-        \item Se $T$ é um triângulo équilátero então $T$ é um triângulo isósceles (Ou de modo equivalente : Todo triângulo equilátero é isósceles).
-        \item Se $x=1$, então $x^2=1$
-   \end{enumerate}
-   \item A recíproca da proposição apresentada na questão anterior, item $e$ é verdadeira? Justifique.
-    \item Demonstre, de duas maneiras diferentes, as seguintes proposições. Em cada item, você deve escolher dois tipos de demonstração para fazer dentre: demonstração direta, redução ao absurdo e usando a contrapositiva.
-    \begin{enumerate}
-        \item A soma de dois números pares é sempre um número par.
-        \item A soma de dois números ímpares é sempre um número par.
-        \item O produto de dois números ímpares é sempre um número ímpar.
-        \item Se $x^2$ é ímpar, então $x$ é ímpar.
-        \item Se $x+y$ é divisível por $2$ então $x-y$ é divisível por $2$.
-    \end{enumerate}
-     \item Demonstre, usando redução ao absurdo, que $\sqrt{3}$ é um número irracional.
-     \item Todas as proposições abaixo são falsas. Dê um contra-exemplo que invalide cada uma das afirmações.
-     \begin{enumerate}
-         \item Em todo triângulo, de lados $a,b$ e $c$, e com $a$ sendo o maior lado, vale que $a^2=b^2+c^2$.
-         \item Se $a$ e $b$ são números não-negativos então $\sqrt{a+b}= \sqrt{a}+ \sqrt{b}$.
-         \item Se $a$ é um número real qualquer, então $a^2>a$.
-         \item Todo número natural ímpar é primo.
-         \item Todo triângulo é retângulo.
-     \end{enumerate}
-\end{enumerate}
-\section{Gabarito}
 
-\begin{enumerate}
-    \item
-    \begin{enumerate}
-        \item Hipótese: $a$, $b$ e $c$ são lados de um triângulo e $\hat{A}$ é o ângulo oposto ao lado $a$ \\ Tese: $a^2 = b^2 + c^2 - 2bc \cos \hat{A}$
-        \item Hipótese: $f$ é uma função diferenciável em $x=a$ \\ Tese: $f$ é uma função contínua em $x=a$
-        \item Hipótese: $T$ é um triângulo equilátero \\ Tese: $T$ é um triângulo isósceles
-        \item Hipótese: $x=1$ \\ Tese: $x^2=1$
-    \end{enumerate}
+%------------------------------------------------------------------------------%
 
-    \item
-    \begin{enumerate}
-        \item Recíproca: Se $k=2$, então $k$ é um número par primo \\ Contrapositiva: Se $k \neq 2$, então $k$ não é um número par primo
-        \item Recíproca: Se $f$ é contínua em $x=a$, então $f$ é diferenciável em $x=a$ \\ Contrapositiva: Se $f$ não é contínua em $x=a$, então $f$ não é diferenciável em $x=a$
-        \item Recíproca: Se $T$ é isósceles, então $T$ é equilátero \\ Contrapositiva: Se $T$ não é isósceles, então $T$ não é equilátero
-        \item Recíproca: Se $x^2=1$, então $x=1$ \\ Contrapositiva: Se $x^2 \neq 1$, então $x \neq 1$
-    \end{enumerate}
+\input{01/exercicios}
 
-    \item
-    Não. A recíproca afirma que se $x^2=1$ então $x=1$. Contudo, se $x = -1$, temos que $x^2 = 1$. Assim,  $x=\pm 1 \neq 1$, portanto a recíproca é falsa
-
-\item
-\begin{enumerate}
-    \item
-        Demonstração Direta: Sejam $n = 2k$ e $m = 2j$. A soma é $n + m = 2k + 2j = 2(k + j)$, que é par \\
-        Redução ao Absurdo: Suponha que $2k + 2j = 2p + 1$. Então $2(k + j - p) = 1$, o que é uma contradição (par igual a ímpar)
-
-    \item
-        Demonstração Direta: Sejam $n = 2k + 1$ e $m = 2j + 1$. A soma é $(2k + 1) + (2j + 1) = 2(k + j + 1)$, que é par \\
-        Redução ao Absurdo: Suponha que $2k+1 + 2j+1 = 2p + 1$. Então $2(k + j - p +1) = 1$, o que é uma contradição (par igual a ímpar)
-
-    \item
-        Demonstração Direta: Sejam $n = 2k + 1$ e $m = 2j + 1$. O produto é $4kj + 2k + 2j + 1 = 2(2kj + k + j) + 1$, que é ímpar \\
-        Redução ao Absurdo: Suponha que o produto seja par ($2p$). Então $2(2kj+k+j) + 1 = 2p \Rightarrow 1 = 2(p - 2kj - k - j)$, o que é uma contradição (par igual a ímpar)
-
-    \item
-        Usando a Contrapositiva: Se $x=2k$, então $x^2 = 4k^2 = 2(2k^2)$, que é par. Provada a contrapositiva, a original é verdadeira \\
-        Redução ao Absurdo: Suponha que $x$ é par. Então $x^2 = (2k)^2 = 2(2k^2)$ que é par, o que contradiz a hipótese de $x^2$ ser ímpar
-
-    \item
-        Demonstração Direta: Se $x + y = 2k$, então $x - y = (x + y) - 2y = 2k - 2y = 2(k - y)$, que é divisível por 2 \\
-        Redução ao Absurdo: Suponha que $x - y$ seja ímpar ($2j+1$). Somando com $x+y=2k$, teríamos $2x = 2(k+j)+1$, o que é uma contradição (par igual a ímpar)
-\end{enumerate}
-
-    \item
-    Redução ao absurdo: Suponha $\sqrt{3} = \frac{p}{q}$ irredutível. Então $3 = \frac{p^2}{q^2} \Rightarrow p^2 = 3q^2$. Logo, $p = 3k$ \\ Substituindo: $(3k)^2 = 3q^2 \Rightarrow 3k^2 = q^2$. Logo, $q$ também é múltiplo de 3, contradizendo a irredutibilidade
-
-    \item
-    \begin{enumerate}
-        \item Contraexemplo: Triângulo de lados $a=5, b=4, c=2$. Temos $5^2 \neq 4^2 + 2^2$
-        \item Contraexemplo: $a=9, b=16$. Temos $\sqrt{9+16}=5$, mas $\sqrt{9}+\sqrt{16}=7$
-        \item Contraexemplo: $a=0.5$. Temos $0.5^2 = 0.25$, e $0.25 < 0.5$
-        \item Contraexemplo: $n=9$ é ímpar, mas não é primo (é divisível por 3)
-        \item Contraexemplo: Triângulo equilátero possui todos os ângulos iguais a $60^\circ$
-    \end{enumerate}
-\end{enumerate}
+%------------------------------------------------------------------------------%

@@ -1,731 +1,700 @@
+%------------------------------------------------------------------------------%
 \chapter{Funções Inversas e funções logarítmicas}
+
+%------------------------------------------------------------------------------%
 \section{Funções Inversas}
 
-Retomaremos ao Exemplo \ref{ex 1} para introduzir a ideia de função Inversa e posteriormente definiremos a função logarítmica que é a inversa da função exponencial .
+Retomaremos ao Exemplo \ref{ex 1} para introduzir a ideia de função Inversa e
+posteriormente definiremos a função logarítmica que é a inversa da função
+exponencial.
 
 \begin{exe}
-Considerando a situação descrita no Exemplo \ref{ex 1}, se Heloísa não saldar parte de sua dívida, em que momento ela deverá o dobro do valor que pegou emprestado?
+  Considerando a situação descrita no Exemplo \ref{ex 1}, se Heloísa não saldar
+  parte de sua dívida, em que momento ela deverá o dobro do valor que pegou
+  emprestado?
 \end{exe}
 
-Já vimos que o valor a ser pago por Heloísa, $f(x)$, após $x$ meses que ela contraiu o empréstimo é dado por $1000.1,06^{x}$.
-Essa função nos permite calcular o valor da imagem $f(x)$, dado que temos o valor do dominio $x$. Observe que o problema proposto nos pergunta qual o valor $x$ do domínio que é levado no valor $f(x)=2000$ da imagem.  Nosso problema será facilmente resolvido se tivermos uma função que dado o valor de $f(x)$ ela nos da o valor de $x$. Essa função é chamada função inversa, a qual passaremos a definir agora.
+Já vimos que o valor a ser pago por Heloísa, $f(x)$, após $x$ meses que ela
+contraiu o empréstimo é dado por $1000.1,06^{x}$.
+Essa função nos permite calcular o valor da imagem $f(x)$, dado que temos o
+valor do dominio $x$. Observe que o problema proposto nos pergunta qual o valor
+$x$ do domínio que é levado no valor $f(x)=2000$ da imagem.  Nosso problema
+será facilmente resolvido se tivermos uma função que dado o valor de $f(x)$ ela
+nos da o valor de $x$. Essa função é chamada função inversa, a qual passaremos
+a definir agora.
 
-A primeira pergunta a ser feita é: será que todas as funções possuem inversas? Vamos observar duas situações em que as funções não possuem função inversa
+A primeira pergunta a ser feita é: será que todas as funções possuem inversas?
+Vamos observar duas situações em que as funções não possuem função inversa
 
 \begin{exe}
+  \begin{description}
+    \item[1:] Na função $f: A\to B$ a seguir não existe $x\in A$ tal que
+      $f(x)=a$. Logo, não é possível definir uma função inversa já que não
+      teríamos como definir $f^{-1}(a)$.
+  
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=0.5\textwidth,trim={1cm 1cm 1cm 1cm},clip]{fun1}
+    \end{figure}
+  
+    \item[2:] Na função $h: C\to D$ a seguir $h(3)=b=h(4)$. Logo, não é possível
+      definir uma função inversa já que tem dois possíveis valores para
+      $h^{-1}(b)$.
+  
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=0.5\textwidth,trim={1cm 1cm 1cm 1cm},clip]{fun3}
+    \end{figure}
 
-	\begin{description}
-	\item[1:] Na função $f: A\to B$ a seguir não existe $x\in A$ tal que $f(x)=a$. Logo, não é possível definir uma função inversa já que não teríamos como definir $f^{-1}(a)$.
-	\begin{figure}[h]
-		\centering\includegraphics[width=0.5\textwidth,trim={1cm 1cm 1cm 1cm},clip]{fun1}
-	\end{figure}
-
-
-	\item[2:] Na função $h: C\to D$ a seguir $h(3)=b=h(4)$. Logo, não é possível definir uma função inversa já que tem dois possíveis valores para $h^{-1}(b)$.
-	\begin{figure}[h]
-		\centering\includegraphics[width=0.5\textwidth,trim={1cm 1cm 1cm 1cm},clip]{fun3}
-	\end{figure}
-	\end{description}
+  \end{description}
 \end{exe}
 
-Para definirmos a inversa de uma função $f$, nenhuma das situação acima podem acontecer, uma função em que não ocorre essas situações é uma função bijetora, cuja definição formal é dada por
+Para definirmos a inversa de uma função $f$, nenhuma das situação acima podem
+acontecer, uma função em que não ocorre essas situações é uma função bijetora,
+cuja definição formal é dada por
 
 \begin{defin}\label{defbijetora}
-	Uma função $f:A\to B$ é dita \textbf{bijetora} se satisfaz  as seguintes condições:
-	\begin{enumerate}
-		\item quaisquer elementos distintos de $A$ são levados por $f$ em elementos distintos de $B$, isto é, se para todo $x,y\in A$ tal que $x\neq y$, tem-se que $f(x)\neq f(y)$.
-		\item se todo elemento $y\in B$ possui um representante $x\in A$ tal que $f(x)=y$.
-	\end{enumerate}
-	Ou seja, $f$ é bijetora se para todo $y\in B$ existe um \textbf{único} $x\in A$ tal que $f(x)=y$.
+  Uma função $f:A\to B$ é dita \textbf{bijetora} se satisfaz  as seguintes
+  condições:
+  \begin{enumerate}
+    \item quaisquer elementos distintos de $A$ são levados por $f$ em elementos
+      distintos de $B$, isto é, se para todo $x,y\in A$ tal que $x\neq y$,
+      tem-se que $f(x)\neq f(y)$.
+  
+    \item se todo elemento $y\in B$ possui um representante $x\in A$ tal que
+      $f(x)=y$.
+  \end{enumerate} 
+  Ou seja, $f$ é bijetora se para todo $y\in B$ existe um
+  \textbf{único} $x\in A$ tal que $f(x)=y$.
 \end{defin}
-\begin{obs}
-	\begin{enumerate}
-		\item Uma função $f:A\to B$ que satisfaz o Item $1$ da Definição \ref{defbijetora} é dita \textbf{injetora.}
-		\item Uma função $f:A\to B$ que satisfaz o Item $2$ da Definição \ref{defbijetora} é dita \textbf{sobrejetora.}
-	\end{enumerate}
-\end{obs}
-
-
-Quando uma função $f:A\to B$ é bijetora, é possível definir uma função $g:B\to A$ que, de certa forma, desfaz o que a $f$ faz. Como para cada $y\in B$ existe um único $x\in A$ tal que $f(x)=y$, definimos  $g(y)=x$ em que $f(x)=y$. Essa função assim definida é chamada função inversa de $f$ e denotada por $f^{-1}$. Segue que
-\[f^{-1}(y)=x \Longleftrightarrow f(x)=y.\]
-\begin{obs}
-	Veja que pela definição de função, para que a função inversa esteja bem definida, é necessário que $f:A\to B$ seja bijetiva. Pois nesse caso, a sobrejetividade de $f$ garante que $f^{-1}(y)$ está definida para todo $y\in B$ e a injetividade garante que o valor $f^{-1}(y)$ é único.
-\end{obs}
 
 \begin{obs}
-Note que se consideramos a função $f$ definida na sua imagem, ou seja $f: D(A) \longrightarrow Im(A)$, então para que $f$ possua inversa, é necessário apenas que $f$ seja injetora.
+  \begin{enumerate}
+    \item Uma função $f:A\to B$ que satisfaz o Item $1$ da Definição
+      \ref{defbijetora} é dita \textbf{injetora.}
+
+    \item Uma função $f:A\to B$ que satisfaz o Item $2$ da Definição
+      \ref{defbijetora} é dita \textbf{sobrejetora.}
+  \end{enumerate}
 \end{obs}
+
+Quando uma função $f:A\to B$ é bijetora, é possível definir uma função $g:B\to
+A$ que, de certa forma, desfaz o que a $f$ faz. Como para cada $y\in B$
+existe um único $x\in A$ tal que $f(x)=y$, definimos  $g(y)=x$ em que
+$f(x)=y$. Essa função assim definida é chamada função inversa de $f$ e
+denotada por $f^{-1}$. Segue que
+\[
+  f^{-1}(y)=x \Longleftrightarrow f(x)=y.
+\]
+
+\begin{obs}
+  Veja que pela definição de função, para que a função inversa esteja bem
+  definida, é necessário que $f:A\to B$ seja bijetiva. Pois nesse caso, a
+  sobrejetividade de $f$ garante que $f^{-1}(y)$ está definida para todo $y\in
+  B$ e a injetividade garante que o valor $f^{-1}(y)$ é único.
+\end{obs}
+
+\begin{obs}
+  Note que se consideramos a função $f$ definida na sua imagem, ou seja $f:
+  D(A) \longrightarrow Im(A)$, então para que $f$ possua inversa, é necessário
+  apenas que $f$ seja injetora.
+\end{obs}
+
 \begin{exe}
-	\begin{description}
+  \begin{description}
+    \item[3:] A função $g:C\to B$ é bijetora e sua inversa $g^{-1}:B\to C$ está
+      bem definida.
 
-		\item[3:] A função $g:C\to B$ é bijetora e sua inversa $g^{-1}:B\to C$ está bem definida.
-		\begin{figure}[h]
-			\begin{center}
-				\includegraphics[width=0.46\textwidth,trim={1cm 1cm 1cm 1cm},clip]{fun2}
-				\includegraphics[width=0.46\textwidth,trim={1cm 1cm 1cm 1cm},clip]{fun6}
-			\end{center}
-		\end{figure}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=0.46\textwidth,trim={1cm 1cm 1cm 1cm},clip]{fun2}
+      \includegraphics[width=0.46\textwidth,trim={1cm 1cm 1cm 1cm},clip]{fun6}
+    \end{figure}
 
-	\end{description}
+  \end{description}
 \end{exe}
 
 \begin{obs}
-	A função inversa possui as seguintes propriedades:
-	\begin{description}
-		\item[1:] $f^{-1}(f(x))=x, \forall~ x \in D(f).$
-		\item[2:] $f(f^{-1}(x))=x, \forall~ x \in D(f^{-1}).$
-	\end{description}
+  A função inversa possui as seguintes propriedades:
+  \begin{description}
+    \item[1:] $f^{-1}(f(x))=x, \forall~ x \in D(f).$
+    \item[2:] $f(f^{-1}(x))=x, \forall~ x \in D(f^{-1}).$
+  \end{description}
 \end{obs}
 
-\begin{exe}A função
+\begin{exe}
+  A função
+  \begin{align}
+    &f:\R\rightarrow\R \nonumber \\
+    &x\rightarrow x^2
+  \end{align}
+  não é bijetiva (observe por exemplo que f(1)=f(-1)=1), mas restringindo o seu
+  domínio, temos a função bijetiva
+  \begin{align}
+    &f:[0.\infty)\rightarrow[0.\infty) \nonumber \\
+    &x\rightarrow x^2
+  \end{align}
+  cuja função inversa é dada por
+  \begin{align}
+    &f:[0,\infty)\rightarrow[0,\infty) \nonumber \\
+    & x\rightarrow \sqrt{x}.
+  \end{align}
+\end{exe}
 
-	\begin{align}
-	&f:\R\rightarrow\R \nonumber \\
-	&~~~~~ x\rightarrow x^2
-	\end{align}
-não é bijetiva (observe por exemplo que f(1)=f(-1)=1), mas restringindo o seu domínio, temos a função bijetiva
-
-	\begin{align}
-&f:[0.\infty)\rightarrow[0.\infty) \nonumber \\
-&~~~~~ x\rightarrow x^2
-\end{align}
-
-cuja função inversa é dada por
-	\begin{align}
-&f:[0,\infty)\rightarrow[0,\infty) \nonumber \\
-&~~~~~ x\rightarrow \sqrt{x}.
-\end{align}
-
-	\end{exe}
-
-Como encontrar a função inversa de uma função bijetiva? Se $y=f(x)$ possuir inversa, escreva $x=f(y)$ e isole $y$ na última equação.
+Como encontrar a função inversa de uma função bijetiva? Se $y=f(x)$ possuir
+inversa, escreva $x=f(y)$ e isole $y$ na última equação.
 
 \begin{exer}
-	Encontre, caso existam, as funções inversas das funções a seguir. Caso não exista(m), justifique. Suponha que essas funções tenham domínio e contradomínio todo o conjunto dos números reais.
-	\begin{enumerate}
-		\item $f(x)=x^3+4$ \\
-		\color{red}
-		Vamos verificar que $f$ é bijetora.
-		\begin{itemize}
-		    \item[1.] $f$ é injetora. \\
-		    Suponha que $f(x_1)=f(x_2)$ para $x_1, x_2 \in \mathbb{R}$. Assim,  $$(x_1)^3+4=(x_2)^3+4 \Longrightarrow (x_1)^3=(x_2)^3 \Longrightarrow \sqrt[3]{x_1}= \sqrt[3]{x_2} \Longrightarrow x_1=x_2$$
-		 Logo, $f$ é injetora.
-		 \item[2.] $f$ é sobrejetora, uma vez que seu conjunto imagem é todo o conjunto dos números reais, que é igual ao contradomínio.
-		\end{itemize}
-		Para encontrarmos uma expressão para a função inversa, bastra trocarmos $x$ por $y$ na função e depois isolarmos $y$. Portanto,
-		$$x=y^3+4 \Longrightarrow y^3=x-4 \Longrightarrow y= \sqrt[3]{x-4}$$
-		Assim, $f$ possui inversa e $f^{-1}(x)=\sqrt[3]{x-4}$.
-		\color{black}
-		\item $g(x)=x^4-7$. \\
-		\color{red} A função $g$ não é injetora, uma vez que $g(1)=g(-1)=-6$, logo não possui inversa;
-		\color{black}
-	\end{enumerate}
+  Encontre, caso existam, as funções inversas das funções a seguir. Caso não
+  exista(m), justifique. Suponha que essas funções tenham domínio e
+  contradomínio todo o conjunto dos números reais.
+
+  \begin{enumerate}
+    \item $f(x)=x^3+4$ \\
+      Vamos verificar que $f$ é bijetora.
+      \begin{itemize}
+          \item[1.] $f$ é injetora. \\
+            Suponha que $f(x_1)=f(x_2)$ para $x_1, x_2 \in \mathbb{R}$. Assim,
+            \[(x_1)^3+4=(x_2)^3+4 \Rightarrow (x_1)^3=(x_2)^3 \Rightarrow
+            \sqrt[3]{x_1}= \sqrt[3]{x_2} \Rightarrow x_1=x_2\] Logo, $f$ é
+            injetora.
+
+          \item[2.] $f$ é sobrejetora, uma vez que seu conjunto imagem é todo o
+              conjunto dos números reais, que é igual ao contradomínio.
+      \end{itemize}
+      Para encontrarmos uma expressão para a função inversa, bastra trocarmos $x$
+      por $y$ na função e depois isolarmos $y$. Portanto,
+      \[
+        x=y^3+4 
+        \Rightarrow y^3=x-4 
+        \Rightarrow y= \sqrt[3]{x-4}
+      \]
+      Assim, $f$ possui inversa e $f^{-1}(x)=\sqrt[3]{x-4}$.
+
+    \item $g(x)=x^4-7$. \\
+     A função $g$ não é injetora, uma vez que $g(1)=g(-1)=-6$,
+     logo não possui inversa;
+  \end{enumerate}
 \end{exer}
 
+%------------------------------------------------------------------------------%
 \subsection{Gráfico das funções inversas}
 
-
-%O próximo objetivo é explorar as relações entre os gráficos de $f$ e de sua função inversa $f^{-1}$.
-%Se $(a,b)$ for um ponto no gráfico $y = f(x)$, então $(b,a)$ será um ponto do gráfico de $y=f^{-1}(x)$. O efeito geométrico de inverter as coordenadas de um ponto é refletir aquele ponto sobre a reta $y = x$.
-%\begin{figure}[h]
-%	\begin{center}
-%	\centering\includegraphics[width=1\textwidth,trim={0cm 10cm 10cm 0cm},clip]{funinv1}
-%	\end{center}
-%\end{figure}
-%
-%Em resumo, inverter as coordenadas de um ponto no gráfico de $f$ produz um ponto no gráfico de $f^{-1}$. Analogamente inverter as coordenadas de um ponto no gráfico de $f^{-1}$ produz um ponto no gráfico de  $f$ logo os gráficos de $y = f(x)$ e $y = f^{-1}(x)$ são simétricos um do outro em relação a reta $y=x$.
-%
-%	\begin{figure}[h]
-%		\centering\includegraphics[width=0.5\textwidth,trim={0cm 10cm 10cm 0cm},clip]{funinv2}
-%	\end{figure}
-
-
-
-
-O próximo objetivo é explorar as relações entre os gráficos de $f$ e de sua função inversa $f^{-1}$.
-Se $(a,b)$ for um ponto no gráfico $y = f(x)$, então $(b,a)$ será um ponto do gráfico de $y=f^{-1}(x)$. O efeito geométrico de inverter as coordenadas de um ponto é refletir aquele ponto sobre a reta $y = x$. Em resumo, inverter as coordenadas de um ponto no gráfico de $f$ produz um ponto no gráfico de $f^{-1}$. Analogamente inverter as coordenadas de um ponto no gráfico de $f^{-1}$ produz um ponto no gráfico de  $f$ logo os gráficos de $y = f(x)$ e $y = f^{-1}(x)$ são simétricos um do outro em relação a reta $y=x$, conforme ilustra a figura \ref{invespelho}.
+O próximo objetivo é explorar as relações entre os gráficos de $f$ e de sua
+função inversa $f^{-1}$. Se $(a,b)$ for um ponto no gráfico $y = f(x)$, então
+$(b,a)$ será um ponto do gráfico de $y=f^{-1}(x)$. O efeito geométrico de
+inverter as coordenadas de um ponto é refletir aquele ponto sobre a reta $y =
+x$. Em resumo, inverter as coordenadas de um ponto no gráfico de $f$ produz um
+ponto no gráfico de $f^{-1}$. Analogamente inverter as coordenadas de um ponto
+no gráfico de $f^{-1}$ produz um ponto no gráfico de  $f$ logo os gráficos de
+$y = f(x)$ e $y = f^{-1}(x)$ são simétricos um do outro em relação a reta
+$y=x$, conforme ilustra a figura \ref{invespelho}.
 
 \begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.6]{inversaespelho}
-	\caption{Comparação do gráfico de $f(x)$ e $f^{-1}(x)$. Note que o gráfico de $f^{-1}(x)$ é o espelho do gráfico de $f(x)$, com relação a reta $y=x.$}
-	\label{invespelho}
+  \centering
+  \includegraphics[scale=0.6]{inversaespelho}
+  \caption{Comparação do gráfico de $f(x)$ e $f^{-1}(x)$. Note que o gráfico de
+  $f^{-1}(x)$ é o espelho do gráfico de $f(x)$, com relação a reta $y=x.$}
+  \label{invespelho}
 \end{figure}
 
+%------------------------------------------------------------------------------%
 \section{Função Logarítmica}
 
-
-Se considerarmos a função exponencial $f: \mathbb{R} \Longrightarrow \mathbb{R_{+}^{*}}$, definida por $f(x)=a^x$, $a>0$ e $a \neq 1$, então temos que $f$ é uma bijeção sobre a sua imagem, portanto possui inversa. Sua inversa é denominada \textbf{função logarítmica na base $a$}, $a>0 \mbox{ e }a\neq 1$.
+Se considerarmos a função exponencial $f: \mathbb{R} \Rightarrow
+\mathbb{R_{+}^{*}}$, definida por $f(x)=a^x$, $a>0$ e $a \neq 1$, então temos
+que $f$ é uma bijeção sobre a sua imagem, portanto possui inversa. Sua inversa
+é denominada \textbf{função logarítmica na base $a$}, $a>0 Rightarrow\text{ e
+}a\neq 1$.
 \begin{align}
-&\log_a:\mathbb{R_{+}^{*}} \rightarrow\R
-\nonumber \\&~~~~~~~~~~~~~x\rightarrow \log_a x
+    &\log_a:\mathbb{R_{+}^{*}} \rightarrow\R
+    \nonumber \\&x\rightarrow \log_a x
 \end{align}
 e é definida por
-\[\log_a x=y\Leftrightarrow a^y=x.\]
+\[
+  \log_a x=y\Leftrightarrow a^y=x.
+\]
 
 Vamos fazer alguns exemplos de cálculo de logaritmos,
+
 \begin{exe}
-\begin{enumerate}
- \item Encontre $\log_2 8$: \\
-\color{red}
-Usando a definição de logaritmo temos:
-\[
-\log_2 8=x\Leftrightarrow 2^x=8\Leftrightarrow x=3.\]
-Ou seja, $\log_2 8=3$.
-\color{black}
-\item Encontre $\log_{\frac{1}{81}}9$ \\
-\color{red}
-Mais uma vez, usando a definição de logaritmo:
-$$\log_{\frac{1}{81}}9 =y \iff \left( \frac{1}{81}\right)^y=9 \iff (9^{-2})^y=9 \iff 9^{-2y}=9 \iff-2y=1 \iff y=-\frac{1}{2}$$
-\color{black}
-\end{enumerate}
+  \begin{enumerate}
+      \item Encontre $\log_2 8$: \\
+        Usando a definição de logaritmo temos:
+        \[
+          \log_2 8=x\Leftrightarrow 2^x=8\Leftrightarrow x=3.
+        \]
+        Ou seja, $\log_2 8=3$.
+
+      \item Encontre $\log_{\frac{1}{81}}9$ \\
+        Mais uma vez, usando a definição de logaritmo:
+        \[
+          \log_{\frac{1}{81}}9 
+          = y \iff \left( \frac{1}{81}\right)^y
+          = 9 \iff (9^{-2})^y
+          = 9 \iff 9^{-2y}=9 \iff-2y
+          = 1 \iff y
+          = -\frac{1}{2}
+        \]
+  \end{enumerate}
 \end{exe}
 
-
 \begin{obs}
-\begin{enumerate}
+  \begin{enumerate}
     \item \textit{Condição de existência do logaritmo:}
-A partir da definição de logaritmos, temos que $a>0 \mbox{ e }a\neq 1$ e $b > 0$. Portanto, não são definidos, por exemplo, os seguintes logarítmos:
-\end{enumerate}
-\begin{itemize}
-    \item $\log_{4}(-12)$   \item $\log_{1}144$ \item $\log_{0}8$ \item $\log_{-3}81$ \item $\log_{4}0 $ \item $\log_{-6} -36$
-\end{itemize}
-\item Note que o valor $\log_ba$ é um expoente.
-\item Segue diretamente da definição que $\log_{a}1=0$, para todo $a>0$ e $a \neq 1$.
-\item \textit{Logaritmo na base 10}: Quando a base do logaritmo for 10, podemos omiti-la. Log, $\log 3$ é o logaritmo de $3$ na base $10$.
+      A partir da definição de logaritmos, temos que $a>0 \text{ e }a\neq 1$ e $b
+      > 0$. Portanto, não são definidos, por exemplo, os seguintes logarítmos:
+    \begin{itemize}
+      \item $\log_{4}(-12)$   
+      \item $\log_{1}144$ 
+      \item $\log_{0}8$ 
+      \item $\log_{-3}81$ 
+      \item $\log_{4}0 $ 
+      \item $\log_{-6} -36$
+    \end{itemize}
+
+  \item Note que o valor $\log_ba$ é um expoente.
+  
+  \item Segue diretamente da definição que $\log_{a}1=0$, 
+    para todo $a>0$ e $a \neq 1$.
+
+  \item \textit{Logaritmo na base 10}: Quando a base do logaritmo for 10,
+    podemos omiti-la. Log, $\log 3$ é o logaritmo de $3$ na base $10$.
+
+  \end{enumerate}
 \end{obs}
 
+%------------------------------------------------------------------------------%
 \section{Gráfico da função logarítmica e propriedades}
-Como $a^0 = 1$ e $a^1 = a$, temos que $\log_a 1 = 0$ e $\log_a a = 1$. Portanto, o gráfico de toda função logarítmica contém os pontos $(1, 0)$ e $(a, 1)$. Além disso, sendo a função logarítmica $g(x)=\log_{a}x$ a inversa da função $g(x)=a^x$, então o gráfico de $f$ é o espelho do gráfico de $g$, com relação a reta $y=x$. A figura \ref{doislog} ilustra essa situação, mostrando o esboço do gráfico das funções $g(x)=2^x$ e $\log_{2}x$.
+
+Como $a^0 = 1$ e $a^1 = a$, temos que $\log_a 1 = 0$ e $\log_a a = 1$.
+Portanto, o gráfico de toda função logarítmica contém os pontos $(1, 0)$ e $(a,
+1)$. Além disso, sendo a função logarítmica $g(x)=\log_{a}x$ a inversa da
+função $g(x)=a^x$, então o gráfico de $f$ é o espelho do gráfico de $g$, com
+relação a reta $y=x$. A figura \ref{doislog} ilustra essa situação, mostrando o
+esboço do gráfico das funções $g(x)=2^x$ e $\log_{2}x$.
 
 \begin{figure}[h!]
     \centering
     \includegraphics[scale=0.8]{doiselogdedois}
-    \caption{Em vermelho, o gráfico da função $g(x)=2^x$; em azul, o gráfico de $\log_{2}x$ e em preto tracejato a reta $y=x$..}
+    \caption{Em vermelho, o gráfico da função $g(x)=2^x$; em azul, o gráfico de
+      $\log_{2}x$ e em preto tracejato a reta $y=x$..}
     \label{doislog}
 \end{figure}
 
 A função logarítmica pode ser classificada em crescente ou decrescente:
 \begin{description}
-	\item[1:] Se $a>1$ a função $f(x)=\log_a x$ é crescente pois
-	$x<y\Leftrightarrow \log_ax<\log_ay$ e o seu gráfico tem o formato das curvas a seguir:
-	\begin{figure}[h]
-		\begin{center}
-			\includegraphics[width=0.4\textwidth,trim={0 1cm 9cm 1cm},clip]{log1}
-		\end{center}
-		\caption{ Gráfico de $f(x)=\log_2x$ (traço contínuo) e $g(x)=\log_4x$ (tracejato).}
-	\end{figure}
+  \item[1:] Se $a>1$ a função $f(x)=\log_a x$ é crescente pois
+    $x<y\Leftrightarrow \log_ax<\log_ay$ e o seu gráfico tem o formato das
+    curvas a seguir:
 
-	\item[2:] Se $0<a<1$ a função $f(x)=\log_ax$ é descrescente pois
-	$x<y\Leftrightarrow \log_ax>\log_ay$ e o seu gráfico tem o formato das curvas a seguir:
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=0.4\textwidth,trim={0 1cm 9cm 1cm},clip]{log1}
+      \caption{Gráfico de $f(x)=\log_2x$ (traço contínuo) 
+               e $g(x)=\log_4x$ (tracejato).}
+    \end{figure}
 
-    %corrigir
+  \item[2:] Se $0<a<1$ a função $f(x)=\log_ax$ é descrescente pois
+    $x<y\Leftrightarrow \log_ax>\log_ay$ e o seu gráfico tem o formato das
+    curvas a seguir:
 
-	\begin{figure}[h]
-		\begin{center}
-			\includegraphics[width=0.4\textwidth,trim={0 1cm 9cm 3cm},clip]{log2}
-		\end{center}
-		\caption{ Gráfico de $f(x)=\log_{1/2}x$ (traço contínuo) e $g(x)=\log_{1/4}x$ (tracejato).}
-	\end{figure}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=0.4\textwidth,trim={0 1cm 9cm 3cm},clip]{log2}
+      \caption{Gráfico de $f(x)=\log_{1/2}x$ (traço contínuo) e 
+               $g(x)=\log_{1/4}x$ (tracejato).}
+    \end{figure}
+
 \end{description}
+
 \begin{obs}
-    Note que o gráfico de $f(x)= \log_{a}x$ não intercepta o eixo $y$, o que faz sentido, uma vez que o gráfico da sua inversa $y=a^x$ não intercepta o eixo x.
+    Note que o gráfico de $f(x)= \log_{a}x$ não intercepta o eixo $y$, o que
+    faz sentido, uma vez que o gráfico da sua inversa $y=a^x$ não intercepta o
+    eixo $x$.
 \end{obs}
+
+%------------------------------------------------------------------------------%
 \subsection{Procedimento para esboçar o gráfico de $\log_{a}x$.}
-Para esboçar o gráfico de $f(x)=5$, é comum escolhermos 5  valores covenientes para $x$, a saber as potências de $a$, $a^{-2},a^{-1}, a^0, a^1,a^2$ e construirmos uma tabela, da forma que fizemos com a função exponencial e, por conseguinte, marcamos os pontos no gráfico. A escolha desses valores para $x$ é feita de modo a facilitar o cálculo dos logaritmos.
+
+Para esboçar o gráfico de $f(x)=5$, é comum escolhermos 5  valores covenientes
+para $x$, a saber as potências de $a$, $a^{-2},a^{-1}, a^0, a^1,a^2$ e
+construirmos uma tabela, da forma que fizemos com a função exponencial e, por
+conseguinte, marcamos os pontos no gráfico. A escolha desses valores para $x$ é
+feita de modo a facilitar o cálculo dos logaritmos.
 
 \begin{exe}
-    Vamos esboçar o gráfico da função $f(x)=\log_{3}x$. Escolhendo $x=3^{-2},3^{-1}, 3^0, 3^1,3^2$, podemos montar a tabela \ref{logdedois}: \\
-
+    Vamos esboçar o gráfico da função $f(x)=\log_{3}x$. Escolhendo
+    $x=3^{-2},3^{-1}, 3^0, 3^1,3^2$, podemos montar a tabela \ref{logdedois}:
 \end{exe}
-\color{red}
+
 \begin{table}[h!]
     \centering
     \caption{Tabela de valores para o gráfico de $f(x)=\log_{3}x$.}
-\begin{tabular}{|c|c|c|}
-\hline
-$x$ & $f(x)=\log_{3}x$& $(x,f(x))$  \\
-\hline
-$\frac{1}{9} =3^{-2}$& $\frac{1}{9}=3^{-2}$ & $(\frac{1}{9},-2)$ \\
-\hline
-$\frac{1}{3}=3^{-1}$ & $f(3)=\log_{3}3^{-1}=-1$ & $(\frac{1}{3},-11)$ \\
-\hline
-$1=3^0$ & $f(3)=\log_{3}1=0$ & $(1,0)$ \\
-\hline
-3 & $f(3)=\log_{3}3=1$ & $(3,1)$  \\
-\hline
-$9=3^2$ & $f(9)=\log_{3}9=\log_3{3^2}=2$ & $(9,2)$  \\
-\hline
-\end{tabular}
-\label{logdedois}
+    \label{logdedois}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      $x$ & $f(x)=\log_{3}x$& $(x,f(x))$  \\
+      \hline
+      $\frac{1}{9} =3^{-2}$& $\frac{1}{9}=3^{-2}$ & $(\frac{1}{9},-2)$ \\
+      \hline
+      $\frac{1}{3}=3^{-1}$ & $f(3)=\log_{3}3^{-1}=-1$ & $(\frac{1}{3},-11)$ \\
+      \hline
+      $1=3^0$ & $f(3)=\log_{3}1=0$ & $(1,0)$ \\
+      \hline
+      3 & $f(3)=\log_{3}3=1$ & $(3,1)$  \\
+      \hline
+      $9=3^2$ & $f(9)=\log_{3}9=\log_3{3^2}=2$ & $(9,2)$  \\
+      \hline
+    \end{tabular}
 \end{table}
 
 A figura \ref{logdedois1} apresenta o gráfico  de $y=\log_3x$.
+
 \begin{figure}[h!]
     \centering
     \includegraphics{logde3}
     \caption{Esboço do gráfico da função $y=\log_3x$.}
     \label{logdedois1}
 \end{figure}
-\color{black}
+
+%------------------------------------------------------------------------------%
 \subsection{Propriedades}
-Assim como as funções exponenciais, as funções logarítmicas também possuem uma lista de propriedades importantes, que decorrem da definição: Sejam $x, y,z\in\R$ em que $x,y > 0$, então
+
+Assim como as funções exponenciais, as funções logarítmicas também possuem uma
+lista de propriedades importantes, que decorrem da definição: Sejam $x,
+y,z\in\R$ em que $x,y > 0$, então
 \begin{description}
-	\item[P.1] $\log_a (x\cdot y)=\log_a x+\log_a y.$
-	\item[P.2] $\log_a \big(\frac{x}{y}\big)=\log_a x-\log_a y.$
-	\item[P.3] $\log_a (x^z)=z\log_a x.$
+  \item[P.1] $\log_a (x\cdot y)=\log_a x+\log_a y.$
+  \item[P.2] $\log_a \big(\frac{x}{y}\big)=\log_a x-\log_a y.$
+  \item[P.3] $\log_a (x^z)=z\log_a x.$
 \end{description}
-\color{red}
-Provaremos a primeira propriedade e as demais serão deixadas como exercício. Sejam $p = \log_a (x\cdot y)$, $log_a x=m$ e $\log_a y=n$. Segue da definição de logaritmo que $a^p = xy$, $a^m = x$, $a^n = y$. Portanto substituindo as duas últimas igualdades na primeira obtemos
-\[a^p = a^m.a^n=a^{m+n}.\]
+Provaremos a primeira propriedade e as demais serão deixadas como exercício.
+Sejam $p = \log_a (x\cdot y)$, $log_a x=m$ e $\log_a y=n$. Segue da definição
+de logaritmo que $a^p = xy$, $a^m = x$, $a^n = y$. Portanto substituindo as
+duas últimas igualdades na primeira obtemos
+\[
+  a^p = a^m.a^n=a^{m+n}.
+\]
 Logo, $p=m+n$ e verifica-se a propriedade.
-\color{black}
-\begin{exer} Mostre as propriedades \textbf{P.1} e \textbf{P.2} das funções logarítmicas.
+
+\begin{exer} 
+  Mostre as propriedades \textbf{P.1} e \textbf{P.2} das funções logarítmicas.
 \end{exer}
-\begin{exe}
-Usando o fato de que $\log2=0,301$, $\log3=0,477$ e $\log 5= 0,699$ e as propriedades do logaritmo, calcule:
-\begin{enumerate}
-    \item[a)] $\log30$ \\
-    \color{red}
-    $$\log 30= \log(2.3.5)\stackrel{\textbf{P.1}}{=}\log 2+ \log 3+ \log 30 =0,301+ 0,477+ 0,699=1,477$$
-    \color{black}
-    \item[b)] $\log0,333...$ \\
-    \color{red}
-    $$\log 0,333...= \log \left( \frac{1}{3}\right)\stackrel{\textbf{P.2}}{=} \log 1- \log 3 =0-0,477=-0,477$$
-    \color{black}
-    \item[c)] $\log 64$ \\
-     \color{red}
-    $$\log 64= \log 2^6\stackrel{\textbf{P.3}}{=} 6\log2=6.0,301=1,806$$
-     \color{black}
-     \item[d)] $\log \sqrt[7]{2,5}$ \\
-     \color{red}
-     $$\log \sqrt[7]{2,5}= \log (2,5)^{\frac{1}{7}} \stackrel{\textbf{P.3}}{=} \frac{1}{7} \log \left(\frac{5}{2} \right) \frac{1}{7} \stackrel{\textbf{P.2}}{=} (\log 5-\log 2)= \frac{1}{7}(0,699-0,301) \approx 0,057 $$
-     \color{black}
-\end{enumerate}
-\end{exe}
 
 \begin{exe}
-    Nesse exercício, vamos resolver a equação exponencial $2^{x-6}=6$, dado que $\log_3 2= 1,58$. \\
-    \color{red}
-    Inicialmente, devemos notar que não conseguimos resolver essa equação conforme resolvemos algumas na parte de equações exponenciais, uma vez que, não conseguimos deixar $6$ na base $2$. Para esses casos, a função logarítmica é de extrema importância. \\
-    Sendo assim, vamos aplicar o a função $\log_2 x$ em ambos os lados da equação. Com isso,
-    $$2^{x-6}=6  \Longrightarrow \log_2(2^{x-6})= \log_2 6   \stackrel{\textbf{P.3}}{\Longrightarrow} (x-6) \log_22= \log(2.3) \stackrel{\textbf{P.1}}{\Longrightarrow} (x-6) = \log_22 +\log_2 3 \Longrightarrow  x=6+1+1,58 \Longrightarrow x=8,58 $$
-    \color{black}
-\end{exe}
-Os dois próximos exemplos mostram que devemos usar a condição de existência do logaritmo para encontrar o domínio de algumas funções que envolvem logaritmo.
-
-\begin{exe}
-Encontre o domínio da seguinte função $f(x)= \log{(x^2-5x+6)}$ \\
-\color{red}
-A base do logaritmo em questão é $10$, com isso, maior que zero e diferente de um. Portanto, como não existe logaritmo de números menores ou iguais a zero teremos que impor que
-$$x^2-5x+6 >0$$
-Que é uma inequação do segundo grau cuja solução é $S=\{ x \in \mathbb{R}| x<2 \,\, ou \,\, x>3\}$. Logo, $D(f)=\{ x \in \mathbb{R}| x<2 \,\, ou \,\, x>3\}$.
-\color{black}
-\end{exe}
-
-\begin{exe}
-  Para quais valores de $x$ é possível calcular o logaritmo  $y=\log_{x+1}(-x^2+2x+8)$? \\
-  \color{red}
-  Usando a condição de existência dos logaritmos, precisamos impor duas coisas:
+  Usando o fato de que $\log2=0,301$, $\log3=0,477$ e $\log 5= 0,699$ e as
+  propriedades do logaritmo, calcule:
   \begin{enumerate}
-      \item $-x^2+2x+8>0$ \\
-      Nesse caso, temos uma inequação do segundo grau, cuja a equação associada $-x^2+2x+8=0$ possui raízes $x=-2$ e $x=4$. O estudo do sinal é apresentado na figura \ref{parablog}
+    \item[a)] $\log30$ \\
+      \[
+        \log 30
+        = \log(2.3.5)
+        \stackrel{\textbf{P.1}}{=}\log 2+ \log 3+ \log 30 
+        =0,301+ 0,477+ 0,699=1,477
+      \]
+
+    \item[b)] $\log0,333...$ \\
+      \[
+        \log 0,333...
+        = \log \left( \frac{1}{3}\right)
+        \stackrel{\textbf{P.2}}{=} \log 1- \log 3 
+        = 0-0,477
+        =-0,477
+      \]
+
+    \item[c)] $\log 64$ \\
+      \[
+        \log 64
+        = \log 2^6
+        \stackrel{\textbf{P.3}}{=} 6\log2
+        =6.0,301
+        =1,806
+      \]
+
+    \item[d)] $\log \sqrt[7]{2,5}$ \\
+      \[
+        \log \sqrt[7]{2,5}
+        = \log (2,5)^{\frac{1}{7}} 
+        \stackrel{\textbf{P.3}}{=} \frac{1}{7} \log \left(\frac{5}{2} \right) \frac{1}{7} 
+        \stackrel{\textbf{P.2}}{=} (\log 5-\log 2)
+        = \frac{1}{7}(0,699-0,301) 
+        \approx 0,057 
+      \]
+
+  \end{enumerate}
+\end{exe}
+
+\begin{exe}
+    Nesse exercício, vamos resolver a equação exponencial $2^{x-6}=6$, dado que
+    $\log_3 2= 1,58$. 
+    
+    Inicialmente, devemos notar que não conseguimos resolver essa equação
+    conforme resolvemos algumas na parte de equações exponenciais, uma vez que,
+    não conseguimos deixar $6$ na base $2$. Para esses casos, a função
+    logarítmica é de extrema importância. 
+    
+    Sendo assim, vamos aplicar o a função $\log_2 x$ em ambos os lados da
+    equação. Com isso,
+    \[
+      2^{x-6}=6  
+      \Rightarrow \log_2(2^{x-6})= \log_2 6  
+      \stackrel{\textbf{P.3}}{\Rightarrow} (x-6) \log_2 2 = \log(2.3) 
+      \stackrel{\textbf{P.1}}{\Rightarrow} (x-6) = \log_2 2 +\log_2 3 
+      \Rightarrow  x=6+1+1,58 
+      \Rightarrow x=8,58 
+    \]
+\end{exe}
+
+Os dois próximos exemplos mostram que devemos usar a condição de existência do
+logaritmo para encontrar o domínio de algumas funções que envolvem logaritmo.
+
+\begin{exe}
+  Encontre o domínio da seguinte função $f(x)= \log{(x^2-5x+6)}$ 
+
+  A base do logaritmo em questão é $10$, com isso, maior que zero e diferente
+  de um. Portanto, como não existe logaritmo de números menores ou iguais a
+  zero teremos que impor que
+  \[
+    x^2-5x+6 >0
+  \]
+  Que é uma inequação do segundo grau cuja solução é 
+  $S=\{ x \in \mathbb{R}| x<2 \,\, ou \,\, x>3\}$. 
+  Logo, 
+  $D(f)=\{ x \in \mathbb{R}| x<2 \,\, ou \,\, x>3\}$.
+\end{exe}
+
+\begin{exe}
+  Para quais valores de $x$ é possível calcular o logaritmo 
+  $y=\log_{x+1}(-x^2+2x+8)$? 
+
+  Usando a condição de existência dos logaritmos,
+  precisamos impor duas coisas:
+  \begin{enumerate}
+      \item $-x^2+2x+8>0$ 
+
+      Nesse caso, temos uma inequação do segundo grau, cuja a equação associada
+      $-x^2+2x+8=0$ possui raízes $x=-2$ e $x=4$. O estudo do sinal é
+      apresentado na figura \ref{parablog}
+
       \begin{figure}[h!]
           \centering
           \includegraphics[scale=0.7]{parabolalog}
           \caption{Estudo do sinal para inequação $-x^2+2x+8>0$.}
           \label{parablog}
       \end{figure}
-      Assim, afim de que $-x^2+2x+8>0$, devemos ter $-2<x<4$.
-    Além disso
-    \item $x+1>0 \Longrightarrow x > -1$ e $x+1 \neq 1 \Longrightarrow x \neq 0$ \\
-    Fazendo a intersecção desses intervalos, temos que $y=\log_{x+1}(-x^2+2x+8)$ exista para todo $\{ x \in \mathbb{R}| -1<x<4, \,\, x \neq 0\}$.
+
+      Assim, afim de que $-x^2+2x+8>0$, devemos ter $-2<x<4$. Além disso
+
+    \item $x+2>0 \Rightarrow x > -1$ e $x+1 \neq 1 \Rightarrow x \neq 0$ 
+
+      Fazendo a intersecção desses intervalos, temos que
+      $y=\log_{x+1}(-x^2+2x+8)$ exista para todo $\{ x \in \mathbb{R}| -1<x<4,
+      \,\, x \neq 0\}$.
+
   \end{enumerate}
-  \color{black}
 \end{exe}
+
+%------------------------------------------------------------------------------%
 \subsection{Mudança de base}
+
 Sejam $a,b \in (0,1)\cup(1,\infty)$ e $x\in(0,\infty)$, então
-\[\log_{b} x=\frac{\log_a x}{\log_a b}\]
+\[
+  \log_{b} x=\frac{\log_a x}{\log_a b}
+\]
+
 \begin{proof}
-Se $z=\log_bx$, então $b^z=x$ e $\log_a(b^z)=\log_ax$. Mas $\log_a(b^z)=z\log_a b$ e portanto
-	\[\ds z=\frac{\log_a (b^z)}{\log_a b}=\frac{\log_a x}{\log_a b}.\]
+  Se $z=\log_bx$, então $b^z=x$ e $\log_a(b^z)=\log_ax$. 
+  Mas $\log_a(b^z)=z\log_a b$ e portanto
+  \[ 
+    z=\frac{\log_a (b^z)}{\log_a b}=\frac{\log_a x}{\log_a b}.
+  \]
 \end{proof}
 
 \begin{exe}
-    Determine o valor da expressão $\log_725.\log_549$. \\
-    \color{red}
-    Para resolver esse exercício, vamos passar $\log_725$ para base $5$, usando mudança de base. Assim,
-    $$\log_725.\log_549= \frac{\log_525}{\log_57}. \log_57^2 \stackrel{\textbf{P.3}}{=} \frac{\log_55^2}{\cancel{\log_57}}. 2\cancel{\log_57} \stackrel{\textbf{P.3}}{=} 4\log_55 =4$$
-    \color{black}
+    Determine o valor da expressão $\log_725.\log_549$. 
+
+    Para resolver esse exercício, vamos passar $\log_725$ para base $5$, usando
+    mudança de base. Assim,
+    \[
+      \log_725.\log_549 
+      = \frac{\log_525}{\log_57}. \log_57^2 
+      \stackrel{\textbf{P.3}}{=} \frac{\log_55^2}{\cancel{\log_57}}. 2\cancel{\log_57} 
+      \stackrel{\textbf{P.3}}{=} 4\log_55 
+      = 4
+    \]
 \end{exe}
 
 \begin{exe}
-    Escreve a expressão  $\log_7 12- \log_7 3$ na base 10. \\
-        \color{red}
-    Para resolver esse exercício, vamos primeiro fazer algumas manipulações algébricas antes de fazer a mudança de base. Assim,
-    $$\log_7 12- \log_7 3\stackrel{\textbf{P.2}}{=}
-    \log_7\frac{12}{3}= \log_74=\frac{\log4}{\log7}$$
-    \color{black}
+    Escreve a expressão  $\log_7 12- \log_7 3$ na base 10.
+
+    Para resolver esse exercício, vamos primeiro fazer algumas manipulações
+    algébricas antes de fazer a mudança de base. Assim,
+    \[
+      \log_7 12- \log_7 3
+      \stackrel{\textbf{P.2}}{=} \log_7\frac{12}{3}
+      = \log_74=\frac{\log4}{\log7}
+    \]
 \end{exe}
 
-
+%------------------------------------------------------------------------------%
 \subsection{O número de Euler}
 
-Uma base em especial é a mais utilizada em textos científicos, essa base recebe o nome de \textbf{número de Euler}:
+Uma base em especial é a mais utilizada em textos científicos, essa base recebe
+o nome de \textbf{número de Euler}:
+
 \[e=2,71828182\cdots.\]
-As principais funções exponenciais do curso serão $f(x)=e^x$ e $g(x)=e^{-x}$. O logaritmo com base $e$ recebe o nome de \textbf{logaritmo neperiano} ou \textbf{logaritmo natural} e é denotado simplesmente por $\ln$, ou seja
-\[\ln x=\log_e x.\]
-\section{Equações Logarítmicas
-}
+As principais funções exponenciais do curso serão $f(x)=e^x$ e $g(x)=e^{-x}$. O
+logaritmo com base $e$ recebe o nome de \textbf{logaritmo neperiano} ou
+\textbf{logaritmo natural} e é denotado simplesmente por $\ln$, ou seja
+\[
+  \ln x = \log_e x.
+\]
+
+%------------------------------------------------------------------------------%
+\section{Equações Logarítmicas}
+
 \begin{exe}
-Resolva as seguintes equações logarítimicas
-\begin{itemize}
-    \item[a)] $\log_{x-1}6=1$ \\
-    \color{red}
-    Inicialmente, ao tentarmos resolver uma equação logarítimica devemos analisar a condição de existência do logaritmo. Como a base de um logarítimo é sempre maior que zero e diferente de um, temos que impor que a solução da inequação deve satisfazer $x-1>0 \Longrightarrow x>1$. Note que não precisamos fazer nenhuma restrição para o logaritimando, visto que $b=6>0$. \\
-    Agora, para encontrar a solução da equação, basta aplicarmos a definição de logarítmo.
-    $$\log_{x-1}6=1 \Leftrightarrow  (x-1)^1=6 \Longrightarrow x=7  $$
-    Uma vez que $x=7>1$ e $x\neq1$ satisfaz a condição de existência, então a solução da equação é $S=\{ 7\}$.
-    \color{black}
-    \item[b)] $\log_{x+2}(2x^2+x)=1$
-    \\
-    \color{red} Para analisarmos as condições de existência devemos impor que
-    \begin{enumerate}
-    \item[1.] $2x^2+x>0$;
-    \item[2.]$x+2>0$
-    \item[3.]$x+2 \neq 1$.
-    \end{enumerate}
-    Não é necessário resolver essas inequações, basta testarmos se os valores que serão encontrados satisfazem essas desigualdades. \\
-    Aplicando a definição de Logarítimo, temos:
-    $$(x+2)^1 =2x^2+x \Longrightarrow 2x^2=2 \Longrightarrow x=-1 \,\, ou \,\, x=1$$
-    Vamos verificar se esses valores encontrados satisfazem as condições de existência. \\
-     \textbf{Para x=-1}
-    \begin{enumerate}
-    \item[1.] $2.(-1)^2+(-1)=1 >0$
-    \item[2.] $-1+2=1>0$
-    \item[3.] $-1+2=1$
-    \end{enumerate}
-    Logo, como $x=-1$ não satisfaz a terceira condição de existência então não é uma solução para a equação dada. \\
- \textbf{Para x=1}
- \begin{enumerate}
- \item[1.] $2.1^2+1=3 >0$
-    \item[2.] $1+2=3>0$
-    \item[3.] $1+2=3$
-    \end{enumerate}
-     Logo, $x=1$ é uma solução (a única) solução da equação dada.
-    \color{black}
-    \item[c)] $\log_2x+ \log_2(x-2)= \log_28$ \\
-    \color{red}
-    A condições de existência são dadas por
-    \begin{enumerate}
-        \item[1.] $x>0$;
-        \item[2.] $x-2>0$.
-       % \item[3.] $x-2 \neq 1$
-    \end{enumerate}
-Para encontrarmos valores que satisfação a equação dada, usamos a propriedade $P_1$ e depois a definição de logarítmo.
 
-\[\log_2x+ \log_2(x-2)= \log_28 \Longrightarrow \log_2x(x-2)= \log_{2}8 \]
-
-Usando o fato de que a função logarítmica é injetora chegamos que
-$$x(x-2)=8 \Longrightarrow x^2-2x-8=0 \Longrightarrow x=-2 \,\, e \,\, x=4$$
-Vamos verificar se os valores encontrados satisfazem as condições de existência. \\
-\textbf{Para $x=-2$:}
-\begin{enumerate}
-    \item[1.] $-2<0$
-\end{enumerate}
-Como $x=-2$ já não satisfaz a primeira condição de existência, então não pode ser uma soluçãi da equação dada. \\
-\textbf{Para $x=4$: }
-\begin{enumerate}
-    \item[1.] $4>0$;
-    \item[2.] $4-2=2>0$;
-   % \item[3.] $4-2=2 \neq 1$.
-\end{enumerate}
-Logo $x=4$ é a única solução da equação dada.
-    \color{black}
-    \item[d)] $\log_3 (5x^2-6x+16)= \log_3(4x^2+4x-5)$ \\
-    \color{red}
-    As condições de existência nesse caso são:
-    \begin{enumerate}
-        \item[1.] $5x^2-6x+16>0$;
-        \item[2.] $4x^2+4x-5>0$;
-     %   \item[3.] $4x^2+4x-5 \neq 1$
-    \end{enumerate}
-    Como temos uma igualdade de logarítmos na mesma base, para encontramos os possíveis valores que satisfazem a equação dada basta igualarmos os logaritimandos, considerando o fato de que a função logarítmica é injetora. Assim,
-    $$5x^2-6x+16=4x^2+4x-5 \Longrightarrow x^2-10x+21=0 \Longrightarrow x=3 \,\, ou \,\, x=7$$
-    Vamos verificar se os valores encontrados satisfazem as condições de existência. \\
-    \textbf{Para $x=3$:}
-    \begin{enumerate}
-        \item[1.]$5.3^2-6.3+16=43>0$;
-        \item[2.] $4.3^2+4.3-5=47>0$;
-       % \item[3.] $4.3^2+4.3-5=47 \neq 1$.
-    \end{enumerate}
-Logo $x=3$ é uma solução para a equação dada. \\
-\textbf{Para $x=7$}: \\
-\begin{enumerate}
-        \item[1.]$5.7^2-6.7+16=219>0$;
-        \item[2.] $4.7^2+4.7-5=219>0$;
-      %$  \item[3.] $4.7^2+4.7-5=219 \neq 1$.
-    \end{enumerate}
-Logo, $x=7$ também é uma solução para a equação dada. Assim, o conjunto solução da equação é $S=\{3,7\}$.
-\end{itemize}
-\color{black}
+    Resolva as seguintes equações logarítimicas
+    \begin{itemize}
+    
+        \item[a)] $\log_{x-1}6=1$ 
+    
+            Inicialmente, ao tentarmos resolver uma equação logarítimica devemos
+            analisar a condição de existência do logaritmo. Como a base de um
+            logarítimo é sempre maior que zero e diferente de um, temos que impor
+            que a solução da inequação deve satisfazer $x-1>0 \Rightarrow x>1$.
+            Note que não precisamos fazer nenhuma restrição para o logaritimando,
+            visto que $b=6>0$. 
+    
+            Agora, para encontrar a solução da equação, basta aplicarmos a
+            definição de logarítmo.
+            \[ 
+              \log_{x-1}6=1 \Leftrightarrow  (x-1)^1=6 \Rightarrow x=7  
+            \]
+    
+            Uma vez que $x=7>1$ e $x\neq1$ satisfaz a condição de existência, então
+            a solução da equação é $S=\{ 7\}$.
+    
+        \item[b)] $\log_{x+2}(2x^2+x)=1$
+    
+            \begin{enumerate}
+                \item[1.] $2x^2+x>0$;
+                \item[2.]$x+2>0$
+                \item[3.]$x+2 \neq 1$.
+            \end{enumerate}
+            Não é necessário resolver essas inequações, basta testarmos se os
+            valores que serão encontrados satisfazem essas desigualdades. 
+    
+            Aplicando a definição de Logarítimo, temos:
+            \[
+              (x+2)^1 =2x^2+x 
+              \Rightarrow 2x^2=2 
+              \Rightarrow x=-1 \,\, ou \,\, x=1
+            \]
+            Vamos verificar se esses valores encontrados satisfazem as
+            condições de existência. 
+    
+            \textbf{Para x=-1}
+    
+            \begin{enumerate}
+                \item[1.] $2.(-1)^2+(-1)=1 >0$
+                \item[2.] $-1+2=1>0$
+                \item[3.] $-1+2=1$
+            \end{enumerate}
+    
+            Logo, como $x=-1$ não satisfaz a terceira condição de existência
+            então não é uma solução para a equação dada. 
+    
+            \textbf{Para x=1}
+           
+            \begin{enumerate}
+               \item[1.] $2.1^2+1=3 >0$
+               \item[2.] $1+2=3>0$
+               \item[3.] $1+2=3$
+            \end{enumerate}
+           
+            Logo, $x=1$ é uma solução (a única) solução da equação dada.
+    
+        \item[c)] $\log_2x+ \log_2(x-2)= \log_28$ 
+    
+            A condições de existência são dadas por
+            \begin{enumerate}
+                \item[1.] $x>0$;
+                \item[2.] $x-2>0$.
+            \end{enumerate}
+    
+            Para encontrarmos valores que satisfação a equação dada, usamos a
+            propriedade $P_1$ e depois a definição de logarítmo.
+            \[
+              \log_2x+ \log_2(x-2)= \log_28 \Rightarrow \log_2x(x-2)= \log_{2}8 
+            \]
+            Usando o fato de que a função logarítmica é injetora chegamos que
+            \[
+              x(x-2)=8 \Rightarrow x^2-2x-8=0 \Rightarrow x=-2 \,\, e \,\, x=4
+            \]
+            Vamos verificar se os valores encontrados satisfazem as condições
+            de existência. 
+    
+            \textbf{Para $x=-2$:}
+            \begin{enumerate}
+                \item[1.] $-2<0$
+            \end{enumerate}
+    
+            Como $x=-2$ já não satisfaz a primeira condição de existência,
+            então não pode ser uma soluçãi da equação dada. 
+    
+            \textbf{Para $x=4$: }
+            \begin{enumerate}
+                \item[1.] $4>0$;
+                \item[2.] $4-2=2>0$;
+            \end{enumerate}
+    
+            Logo $x=4$ é a única solução da equação dada.
+    
+        \item[d)] $\log_3 (5x^2-6x+16)= \log_3(4x^2+4x-5)$ 
+    
+            As condições de existência nesse caso são:
+            \begin{enumerate}
+                \item[1.] $5x^2-6x+16>0$;
+                \item[2.] $4x^2+4x-5>0$;
+            \end{enumerate}
+    
+            Como temos uma igualdade de logarítmos na mesma base, para
+            encontramos os possíveis valores que satisfazem a equação dada
+            basta igualarmos os logaritimandos, considerando o fato de que a
+            função logarítmica é injetora. Assim,
+            \[
+              5x^2-6x+16=4x^2+4x-5 
+              \Rightarrow x^2-10x+21=0 
+              \Rightarrow x=3 \,\, ou \,\, x=7
+            \]
+            Vamos verificar se os valores encontrados satisfazem as condições
+            de existência. 
+    
+            \textbf{Para $x=3$:}
+            \begin{enumerate}
+                \item[1.]$5.3^2-6.3+16=43>0$;
+                \item[2.] $4.3^2+4.3-5=47>0$;
+            \end{enumerate}
+    
+            Logo $x=3$ é uma solução para a equação dada. 
+    
+            \textbf{Para $x=7$}: 
+            \begin{enumerate}
+                    \item[1.]$5.7^2-6.7+16=219>0$;
+                    \item[2.] $4.7^2+4.7-5=219>0$;
+                \end{enumerate}
+            
+            Logo, $x=7$ também é uma solução para a equação dada. Assim, o conjunto
+            solução da equação é $S=\{3,7\}$.
+    
+    \end{itemize}
 \end{exe}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Exercícios }
-\begin{enumerate}
-\item Use a definição de logarítmo e as propriedades para calcular o valor de A
-$$A= \log_3{27}-\log1+ \log_{\frac{1}{5}}{125}$$
-\item Assumindo que $\log2=0,3$, $\log3=0,47$ e $log5=0,69$, calcule o valor de :
-\begin{enumerate}
-    \item $\log(\frac{2}{5})$
-    \item $\log12+\log20-\log\sqrt{5}$
-    \item $\log1800-\log30$
-\end{enumerate}
-\item Resolva as equações logarítimicas abaixo
+%------------------------------------------------------------------------------%
 
-\begin{enumerate}
-	\item $4-\log_2{(1-3x)}=3$
-	\item $2\log{x}=\log{3x}+\log{(x-4)}$
-	\item $2^{2x + 1} - 3.2^{x + 2} = 32$
-	 \item $\log_{25} (2x-1)=\frac{1}{2}$
-          \item $(\log_4x)^2-2 \log_4x-3=0$
-\end{enumerate}
-\vspace{0,2cm}
+\input{06/exercicios}
 
-\item Resolva as inequações abaixo
-\begin{enumerate}
-	\item $\ln(x^2-2x-2)\geq 0$
-	 \item  $\log_{\frac{1}{2}}(x^2-4) \geq \log_{\frac{1}{2}}(2x)$
-	 \item $\log_{\frac{1}{3}}(x^2-2) \geq \log_{\frac{1}{3}}(3x)+1$
-        \item $\ln(6x+5) \geq \ln(8x-12)$
-\end{enumerate}
-
-\vspace{0,2cm}
-
-\item Considere as funções $f(x)=\log_{2}\sqrt[3]{x} $ e  $g(x)=\frac{-x^2+9}{x+2}$
-
-\begin{enumerate}
-	\item Encontre $f\circ g$
-	\item Calcule $f\circ g (-1)$
-	\item Encontre o domínio da função $f\circ g$
-\end{enumerate}
-\vspace{0,2cm}
-\item Determine o domínio de $f\circ g$, onde $f(x)=\ln(x-5)$ e $g(x)=x^3-7x-1$
-\vspace{0,2cm}
-
-\item Considere $f(x)=\ln(x-2)$
-
-\begin{enumerate}
-	\item Esboce o gráfico de $f$
-	\item Justifique que $f$ é invertível
-	\item Encontre a inversa de $f$ exibindo seu domínio e sua imagem
-	\item Esboce o gráfico de $f^{-1}$
-\end{enumerate}
-
-    \item Faça o estudo do domínio da função $f(x)= \ln(-x^2+2x+3)$
-   \item Considere a função $f(x)=\log_2(4-x^2)$ e responda o que se pede
-    \begin{enumerate}
-        \item Qual o domínio e a imagem de $f$?
-        \item A equação $f(x)=1$ possui solução? Justifique sua resposta
-        \item $f$ é injetora? Justifique sua resposta
-        \item Quanto a simetria, $f$ é par, ímpar ou nem par, nem ímpar. Justifique sua resposta
-        \end{enumerate}
-    \item  Faça o esboço do gráfico das funções : $f(x)= \left( \frac{1}{3} \right)^x$ e $g(x)=\log_{\frac{1}{3}}(x)$,  de duas maneira diferentes A primeira levando em consideração que $g(x)=f^{-1}(x)$, a segunda marcando pontos
-
-     \item A partir do gráfico de $y=\log_2(x)$, faça o esboço do gráfico da função $y=\log_2(x-1)+2$
-	\item Sabendo que $\log_3(7x-1) = 3$ e que $\log_2(y^3 + 3) = 7$, pode-se afirmar que $\log_y(x^2 + 9)$ é igual a:
-	\begin{enumerate}
-		\item $6$
-		\item $2$
-		\item $4$
-		\item $-2$
-		\item $-4$
-	\end{enumerate}
-
-	\item A soma $\log_{10}\frac23+\log_{10}\frac34+\cdots+\log_{10}\frac{18}{19}+\log_{10}\frac{19}{20}$
-	é igual a
-	\begin{enumerate}
-		\item $-\log_{10}20$
-		\item $-1$
-		\item $\log_{10}2$
-		\item $1$
-		\item $2$
-	\end{enumerate}
-
-	\item O valor da expressão $\log_3(5)\cdot\log_{125}(27)$ é:
-
-	\begin{enumerate}
-		\item $2/3$
-		\item $2$
-		\item $1$
-		\item $3/2$
-		\item um número irracional
-	\end{enumerate}
-
-	\item O conjunto solução da equação $\log_2(x + 1) + \log_2(x-3) = 5$ é:
-	\begin{enumerate}
-		\item $ S = \{7\}$
-		\item $S = \{7, - 5\}$
-		\item $S = \{17,3\}$
-		\item $S = \{7/2\}$
-	\end{enumerate}
-
-	\item Na expressão $\ln 8-\ln 2 + 2\ln x = 0$, o valor de $x$ é:
-
-	\item Considere as afirmações dadas abaixo, referentes a funções exponenciais e logarítmicas
-	\begin{enumerate}
-		\item[I.] $\{x\in\mathbb{R};\ln x\geq 0\}=[1,\infty)$
-
-		\item[II.] Se $8^{-2x}=27$, então $2^{-2x}=3$
-
-		\item[III.] $\log_{10}\sqrt{10000^3}=9/2$
-	\end{enumerate}
-
-	A alternativa correta é:
-	\begin{enumerate}
-		\item[(a)] Somente a afirmativa II é verdadeira
-		\item[(b)] Somente a afirmativa I é verdadeira
-		\item[(c)] Somente a afirmativa III é verdadeira
-		\item[(d)] Somente as afirmativas I e II são verdadeiras
-		\item[(e)] Somente as afirmativas I e III são verdadeiras
-	\end{enumerate}
-
-
-	\item Considere as afirmações dadas abaixo, referentes a funções exponenciais e logarítmicas
-	\begin{enumerate}
-		\item[I.] O valor de $\log_{0,25} 32$ é igual a $5/2$
-
-		\item[II.] O valor de $x$ que satisfaz à equação $4^x-2^x = 56$ é $x = 3$
-
-		\item[III.] As funções $y=\log (x^2)$ e $y=2\log (x)$ são iguais
-	\end{enumerate}
-
-	A alternativa correta é:
-	\begin{enumerate}
-		\item[(a)] Somente a afirmativa II é verdadeira
-		\item[(b)] Somente a afirmativa I é verdadeira
-		\item[(c)] Somente a afirmativa III é verdadeira
-		\item[(d)] Nenhuma afirmativa é verdadeira
-		\item[(e)] Somente as afirmativas I e III são verdadeiras
-	\end{enumerate}
- \item  Um vírus de um computador se espalha segundo a função $$c(t)= \frac{6500}{1+a.2^{bt}}$$
-    Em que $c(t)$ é o número de computadores infectados no instante $t$ (em horas), contando a partir do momento em que a infecção foi detectada. Sabendo que $c(0)=100$, $c(3)=500$ e que $\log_2 3=1,5850$, determine as constantes $a$ e $b$ e o número de computadores infectados para $t=6$
-
-    \item Faça o esboço do gráfico da função $f(x)=2^{x+1}$ e da sua inversa. Você deve inicialmente encontrar a inversa e depois fazer o esboço no mesmo plano cartesiano
-\end{enumerate}
-\subsection{Gabarito:}
-\begin{enumerate}
-    \item $A=0$
-    \item
-    \begin{enumerate}
-\item $-0,39$
-\item $2,015$
-\item $1,76$
-\end{enumerate}
-\item
-\begin{enumerate}
-\item $x = -\frac{1}{3}$
-\item $x = 6$
-\item $x = 3$
-\item $x = 3$
-\item $x = 64$ ou $x = \frac{1}{4}$
-\end{enumerate}
-\item
-\begin{enumerate}
-\item $S=\{x \in \mathbb{R} : x \leq -1 \text{ ou } x \geq 3 \}$
-\item $S=\{x \in \mathbb{R} : 2<x\leq1+\sqrt{5} \}$
-\item $S=\{x \in \mathbb{R} : \sqrt{2} <x\leq2 \}$
-\item $S=\{x \in \mathbb{R} : \frac{3}{2}<x\leq \frac{17}{2}\}$
-\end{enumerate}
-\item
-\begin{enumerate}
-\item $f\circ g(x) = \log_2\sqrt[3]{\frac{-x^2+9}{x+2}}$
-\item $f\circ g(-1) = \log_2\sqrt[3]{\frac{8}{(-1)+2}}=\log_2\sqrt[3]{\frac{8}{1}}= \log_2 2 = 1$
-\item O domínio de $f\circ g(x)$ é $x\in (-\infty,-3)\cup (-2,3)$
-\end{enumerate}
-\item $D =\{x \in \mathbb{R}: -2<x<-1 \,\, \text{ou} \,\,x>3 \}$
-
-\item
-\begin{enumerate}
-    \item \leavevmode \vspace{-\baselineskip}
-        \begin{center}
-        \includegraphics[width=0.5\textwidth]{gabarito_aula3-7ad}
-        \end{center}
-    \item $f$ é apenas crescente, logo é invertível.
-    \item A inversa de $f$ é $f^{-1}(x) = e^x+2$, com domínio $(-\infty,\infty)$
-    \item
-\end{enumerate}
-\item $D =\{x \in \mathbb{R}: -1<x<3 \}$
-\item
-\begin{enumerate}
-\item Domínio: $(-2, 2)$. Imagem: $(-\infty, \log_2 4)$
-\item Sim, a equação $f(x)=1$ possui solução. As soluções são $x=-\sqrt{2}$ ou $x=\sqrt{2}$
-\item Não, $f$ não é injetora, pois para todo $x$ em $(-2,2)$ temos $f(x)=f(-x)$
-\item A função $f$ é par. $\log_2(4-x^2)=\log_2(4-(-x)^2)$, portanto $f(x)=f(-x)$
-\end{enumerate}
-\item
-        \leavevmode \vspace{-\baselineskip}
-        \begin{center}
-        \includegraphics[width=0.5\textwidth]{gabarito_aula4-10}
-        \end{center}
-
-\item
-        \leavevmode \vspace{-\baselineskip}
-        \begin{center}
-        \includegraphics[width=0.5\textwidth]{gabarito_aula4-11}
-        \end{center}
-
-\item letra b)
-\item letra b)
-\item letra c)
-\item letra a)
-\item $x =\frac{1}{2}$
-\item letra e)
-\item letra a)
-\item $a = 64$; $b = -0,805$; $c(6) \approx2018,17$, como o número e computadores infectados é inteiro, o número de computadores infectados após $6$ horas é $2019$
-\item
-    \leavevmode \vspace{-\baselineskip}
-        \begin{center}
-        \includegraphics[width=0.5\textwidth]{gabarito_aula4-20}
-        \end{center}
-\end{enumerate}
-
-%\begin{center}
-%	\textbf{Gabarito}
-%\end{center}
-
-%\begin{enumerate}
-%\item
-%\begin{enumerate}
-%	\item $x=-\frac{1}{3}.$
-%	\item $x=6.$
-%	\item $x=3.$
-%\end{enumerate}
-%	\item $\{x\in\R; x\leq -1\mbox{ ou } x\geq 3\}.$
-%	\item
-%\begin{enumerate}
-%	\item $f\circ g (x)=\log_{2}\sqrt[3]{\frac{-x^2+9}{x+2}}.$
-%	\item $x=1.$
-%	\item D=$\{x\in\R; x\leq -1\mbox{ ou } x\geq 3\}.$
-%\end{enumerate}
-%	\item
-%	\item
-%	\item $b$.
-%	\item $b$.
-%	\item $c$.
-%	\item $b$.
-%	\item $\sqrt{2}/2$.
-%	\item $d$.
-%	\item $e$.
-	%\item $c$.
-	%\item $c$.
-	%\item $d$.
-	%\item $b$.
-%	\item $d$.
-
-%\end{enumerate}
-
-
-
-
+%------------------------------------------------------------------------------%
