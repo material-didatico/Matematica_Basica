@@ -1,25 +1,46 @@
-\documentclass[a4paper,10pt, draft]{report}
+%------------------------------------------------------------------------------%
+%\documentclass[cc=by-nc-sa,draft]{nice-booklet}
+\documentclass[cc=by-nc-sa]{nice-booklet}
 
 \usepackage{matematicabasica}
 
+\title{Matemática Básica}
+
+\author{
+  Camila F. de Souza      \\
+  Jeanne C. Amaral        \\
+  Jônathas D. S. Oliveira \\
+  José R. V. Costa        \\
+  Luis A. D'Afonseca
+}
+
+\institute{
+    Centro Federal de Educação Tecnológica
+    de Minas Gerais --
+    \href{https://www.cefetmg.br}{CEFET-MG}
+}
+
+\coverArt{00/figs/capa}
+\coverArtCredit{%
+  \href{https://unsplash.com/pt-br/fotografias/bola-redonda-preta-e-prateada-MrWOCGKFVDg}{Imagem}
+  de \href{https://unsplash.com/pt-br/@nuvaproductions}{Javier Miranda}
+  baixada de \href{https://unsplash.com}{Unsplash}
+}
+
+\bookInformation{
+  Esta apostila é \dots
+}
+
+%------------------------------------------------------------------------------%
 \begin{document}
 
-\begin{center}
-  \LARGE 
-  \textbf{Centro Federal de Ensino Técnico e Tecnológico de Minas Gerais} \\
-  \Large 
-  \textbf{Departamento de Matemática} \\
-  \textbf{Matemática Básica} \\
-  \textbf{Camila Ferreira de Souza} \\
-  \textbf{Jeanne Carmo Amaral} \\
-  \textbf{Jônathas Douglas Santos Oliveira} \\
-  \textbf{Belo Horizonte} \\ 
-  \textbf{2023}
-\end{center}
+\frontmatter
 
 \include{00/prefacio}
 
 \tableofcontents
+
+\mainmatter
 
 \include{01/pensamento}
 \include{02/funcoes}
@@ -29,4 +50,11 @@
 \include{06/logaritmos}
 \include{07/trigonometria}
 
+\backmatter
+
+\WriteAnswers
+\printbibliography
+\printindex
+
 \end{document}
+%------------------------------------------------------------------------------%

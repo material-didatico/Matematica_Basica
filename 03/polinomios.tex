@@ -8,7 +8,7 @@ Conforme vimos no capítulo anterior uma função polinomial tem a forma
 onde $n$ é um número inteiro não negativo e é o grau do polinômio e
 $a_1,a_2,...a_n$ são constantes reais, com $a_n \neq 0$.
 
-\begin{exe}
+\begin{example}
   Vejamos alguns exemplos de polinômios:
   \begin{enumerate}
     \item Uma função Afim é um polinômio de grau 1:
@@ -18,9 +18,9 @@ $a_1,a_2,...a_n$ são constantes reais, com $a_n \neq 0$.
     \item Um polinômio de grau sete:
     $f(x)=x^7-1$ tem coeficientes $a_0=-1$ e $a_7=1$.
   \end{enumerate}
-\end{exe}
+\end{example}
 
-\begin{obs}
+\begin{observation}
   \begin{enumerate}
     \item A função $f(x)=2x+\frac{3}{x^2}+\frac{4}{x}=2x+3x^{-2}+4x^{-1}$ não é
       uma função polinomial, pois os expoentes não podem ser negativos.
@@ -29,10 +29,10 @@ $a_1,a_2,...a_n$ são constantes reais, com $a_n \neq 0$.
       porque os expoentes não podem ser fracionários.
 
   \end{enumerate}
-\end{obs}
+\end{observation}
 
 %------------------------------------------------------------------------------%
-\section{Função Afim ou do $1^{\circ}$ grau}
+\section{Função Afim ou do 1\textsuperscript{o} grau}
 
 Não sei se você já observou, mas o preço a pagar por uma corrida de táxi
 depende do número de quilômetros que se percorre, além disso, adicionamos a
@@ -42,30 +42,30 @@ R\$0.90$, então o valor a ser pago por uma corrida de táxi é dado pela funç�
 $f(x)=0,90x+4,70$. Essa função é um exemplo de função afim, que será estudada
 neste capítulo.
 
-Uma função é dita \textbf{Afim} (ou do $1^{\circ}$ grau)
+Uma função é dita \emph{Afim} (ou do 1\textsuperscript{o} grau)
 se puder ser escrita na forma
 \begin{equation}\label{eqretageral}
   f(x)=ax+b, \text{ em que } a,b\in\R,~a\neq 0.
 \end{equation}
 
 As funções $y=3x-5$, $y=3x$, $y=-6x-1989$ são exemplos de funções do
-$1^{\circ}$ grau.
+1\textsuperscript{o} grau.
 
-Os coeficientes $a$ e $b$ recebem o nome respectivamente de \textbf{coeficiente
-angular} e \textbf{coeficiente linear}. O coeficiente angular determina a
+Os coeficientes $a$ e $b$ recebem o nome respectivamente de \emph{coeficiente
+angular} e \emph{coeficiente linear}. O coeficiente angular determina a
 inclinação da reta e o coeficiente linear determina o lugar em que a reta toca
 o eixo $y$ uma vez que $(0,b)\in G(f)$. Considere uma função $f(x)=ax+b$ e
 sejam $P$ e $Q$ dois pontos quaisquer do gráfico de $f$, ou seja, $P=(x_1,y_1)$
 e $Q=(x_2,y_2)$ satisfazendo $y_1=ax_1+b$ e $y_2=ax_2+b$, conforme o gráfico:
 
-\begin{figure}[h]
+\begin{figure}
   \centering\includegraphics[width=0.6\textwidth,trim={0 0 9cm 1cm},clip]{reta2}
 \end{figure}
 
 Segue que a divisão da variação em $y$ pela variação em $x$ nos fornece
 \begin{equation}\label{eqdelta}
   \frac{\Delta y}{\Delta x}
-  = \frac{y_2-y_1}{x_2-x_1} 
+  = \frac{y_2-y_1}{x_2-x_1}
   = \frac{ax_2-ax_1}{x_2-x_1}
   = a.
 \end{equation}
@@ -76,11 +76,11 @@ reta em relação ao eixo $x$.
 Se $(x,y)$ é um ponto genérico dessa reta, então $\frac{y-y_1}{x-x_1}=a$ que
 pode ser reescrito como
 \begin{equation}\label{eqdareta}
-  y-y_1 = a(x-x_1) 
-  \Rightarrow 
+  y-y_1 = a(x-x_1)
+  \Rightarrow
   y = a(x-x_1)+y_1.
 \end{equation}
-Quando $b=0$, dizemos que a função é \textbf{Linear}.
+Quando $b=0$, dizemos que a função é \emph{Linear}.
 
 %------------------------------------------------------------------------------%
 \subsection{Como determinar a equação de uma reta dado dois pontos}
@@ -92,22 +92,22 @@ pontos determinam uma única reta, então se tivermos dois pontos de uma reta
 $P=(x_1,y_1)$ e $Q=(x_2,y_2)$ podemos determinar essa equação de duas maneiras
 práticas:
 
-\textbf{1{$^\circ$} modo:} Como $P=(x_1,y_1)$ e $Q=(x_2,y_2)$ pertencem a reta,
+\emph{1\textsuperscript{o} modo:} Como $P=(x_1,y_1)$ e $Q=(x_2,y_2)$ pertencem a reta,
 então suas coordenadas satisfazem a equação \ref{eqretageral}, com isso podemos
-encontrar $a$ e $b$ resolvendo o sistema 
+encontrar $a$ e $b$ resolvendo o sistema
 \[
-  \begin{cases} 
+  \begin{cases}
     ax_1+b=y_1 \\
-    ax_2+b=y_2 
+    ax_2+b=y_2
   \end{cases}.
 \]
 
-\textbf{2{$^\circ$} modo:} Encontramos o coeficiente angular através a
+\emph{2\textsuperscript{o} modo:} Encontramos o coeficiente angular através a
 expressão $a= \frac{y_2-y_1}{x_2-x_1}$ e depois encontramos o coeficiente
 linear $b$ através de uma da equação $y=ax+b$, substituindo um dos pontos dados
 $P$ e $Q$.
 
-\begin{obs}
+\begin{observation}
   \begin{enumerate}
     \item Se $r$ e $s$ são duas retas paralelas então ambas possuem o mesmo
       coeficiente angular.
@@ -118,33 +118,33 @@ $P$ e $Q$.
         a_r=-\frac{1}{a_s}.
       \]
   \end{enumerate}
-\end{obs}
+\end{observation}
 
-\begin{exe}
+\begin{example}
   Determine a equação da reta que passa pelos pontos $P=(2,1)$ e $Q=(3,-1)$.
   (Faça dos dois modos).
-\end{exe}
+\end{example}
 
-\textbf{$1^{\circ}$ modo:} Como $P$ e $Q$ pertencem a reta que estamos
+\emph{1\textsuperscript{o} modo:} Como $P$ e $Q$ pertencem a reta que estamos
 querendo encontrar ($y=ax+b$), então precisamos resolver o sistema
 \[
   \begin{cases}
     2a+b=1 \\
     3a+b=-1
-  \end{cases}, 
+  \end{cases},
 \]
 cuja solução é $a=-2$ e $b=5$, logo a equação da reta pedida é $y=-2x+5$.
 
-\textbf{$2^{\circ}$ modo:} O coeficiente angular da reta pedida é
+\emph{2\textsuperscript{o} modo:} O coeficiente angular da reta pedida é
 \[
   a= \frac{y_2-y_1}{x_2-x_1}=\frac{-1-1}{3-2}=-2
-\]. 
+\].
 Como a reta passa pelos pontos $P$ e $Q$, podemos escolher qualquer um desses
 pontos para substituir na equação da reta $y=-2x+b$, para encontrarmos o valor
 d $b$. Substituindo o ponto $P$, temos que $1=-2.2+b \to b=5$  e a equação da
-reta pedida é $y=-2x+5$. 
+reta pedida é $y=-2x+5$.
 
-\begin{exe}\label{ex1}
+\begin{example}\label{ex1}
   O número de veículos de uma cidade cresceu linearmente a partir do ano
   $2000.$ Sabendo que a cidade tinha 150 mil veículos em 2004  e 210 mil
   veículos em 2012,
@@ -159,7 +159,7 @@ reta pedida é $y=-2x+5$.
       no enunciado $P=(4,150)$, que quer dizer que em $x=4$ (ano de 2004) a
       cidade tinha $150$ mil veículos e  $Q=(12,210)$, que quer dizer que em
       $x=12$ (ano de 2012) a cidade tinha $210$ mil veículos. Logo, o
-      coeficiente angular dessa reta será 
+      coeficiente angular dessa reta será
       \[
         a
         = v\frac{y_2-y_1}{x_2-x_1}
@@ -173,31 +173,31 @@ reta pedida é $y=-2x+5$.
       logo a equação da reta pedida é $y=7,5x+120$.
 
     \item[b)]determine aproximadamente o número de veículos no ano 2000. \\
-    
+
       O ano 2000 corresponde a $x=0$, então $y=7,5\cdot0+120=120$. Logo em 2000
       o número de veículos era 120 mil.
 
     \item[c)] determine em que ano a cidade tera 360 mil veículos. \\
-    
+
       Nesse caso basta substituirmos $y$ por $360$, na equação encontrada, logo
       $360=7,5x+120 \to x=32$. Logo, a cidade terá $360 $ veículos no ano
       $2032$.
 
   \end{itemize}
-\end{exe}
+\end{example}
 
 %------------------------------------------------------------------------------%
 \subsection{Zero e Monotonicidade da função Afim}
 
 Para determinarmos o zero de uma função afim, basta resolver a equação
-$ax+b=0$, supondo que $a \neq 0$, temos que o zero de uma função do $1^{\circ}$
+$ax+b=0$, supondo que $a \neq 0$, temos que o zero de uma função do 1\textsuperscript{o}
 grau é $x=-\frac{b}{a}$.
 
 Quanto a monotonicidade de uma função afim se $a>0$ a função é sempre
 crescente, se $a<0$ a função é sempre decrescente, se $a=0$ a função é
 constante.
 
-\begin{figure}[h!]
+\begin{figure}
   \centering
   \includegraphics[scale=0.35]{linear1}
   \includegraphics[scale=0.35]{linear2}
@@ -206,27 +206,28 @@ constante.
 %------------------------------------------------------------------------------%
 \subsection{Gráfico de uma função Afim}
 
-Como já sabemos que o gráfico de uma função do $1^{\circ}$ grau é uma reta,
+Como já sabemos que o gráfico de uma função do 1\textsuperscript{o} grau é uma reta,
 precisamos de apenas dois pontos pertencentes a essa reta para o esboço do
 gráfico. Em particular, se tivermos os interceptos com os eixos coordenados
 $(-\frac{b}{a},0)$ e $(0,b)$ conseguimos fazer o esboço do gráfico com muita
 facilidade.
 
-\begin{exe} 
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.3]{rlin1}
+  \includegraphics[scale=0.3]{rlin2}
+  \includegraphics[scale=0.3]{rlin3}
+  \caption{Gráfico das funções $f(x)=2x-6$, $g(x)=-x-4$ e $h(x)=2x$.}
+\end{figure}
+
+\begin{example}
   Construa o gráfico das funções $f(x)=2x-6$, $g(x)=-x-4$ e $h(x)=2x$.
-  \begin{figure}[h!]
-      \centering
-      \includegraphics[scale=0.3]{rlin1}
-      \includegraphics[scale=0.3]{rlin2}
-      \includegraphics[scale=0.3]{rlin3}
-      \caption{Gráfico das funções $f(x)=2x-6$, $g(x)=-x-4$ e $h(x)=2x$.}
-  \end{figure}
-\end{exe}
+\end{example}
 
 %------------------------------------------------------------------------------%
 \subsection{Algumas retas particulares:}
 
-\begin{figure}[h]
+\begin{figure}
   \begin{center}
   \includegraphics[scale=0.3]{cons1}
   \includegraphics[scale=0.3]{cons2}
@@ -237,11 +238,11 @@ facilidade.
 %------------------------------------------------------------------------------%
 \section{Função do segundo grau ou função quadrática}
 
-Uma função é dita \textbf{quadrática} se pode ser escrita na forma de um
-polinômio do $2^{\circ}$ grau $f(x)=ax^2+bx+c$, \text{ em que } $a,b,c\in\R,
+Uma função é dita \emph{quadrática} se pode ser escrita na forma de um
+polinômio do 2\textsuperscript{o} grau $f(x)=ax^2+bx+c$, \text{ em que } $a,b,c\in\R,
 a\neq 0$. O gráfico de uma função quadrática é uma parábola e é possível
-esboçá-lo a partir de sua(s) raíz(es), caso exista(m), ou das coordenadas do
-vértice. 
+esboçá-lo a partir de sua(s) raiz(es), caso exista(m), ou das coordenadas do
+vértice.
 
 %------------------------------------------------------------------------------%
 \subsection{Encontrando zeros e as coordenadas do vértice da parábala:}
@@ -270,7 +271,7 @@ Resumindo:
     \frac{-b-\sqrt{\Delta}}{2a}$ e $x_2=\frac{-b+\sqrt{\Delta}}{2a}.$
 
   \item Se $\Delta = 0$, a equação possui uma única raiz real de multiplicidade
-    2 (raíz dupla): $x_1=\frac{-b}{2a}=x_2.$
+    2 (raiz dupla): $x_1=\frac{-b}{2a}=x_2.$
 
 \end{itemize}
 
@@ -302,47 +303,62 @@ figura a seguir ilustra o que foi discutido nessa seção.
   \end{tabular}
 \end{center}
 
-\begin{obs} 
+\begin{observation}
   Se tivermos as coordenadas dos vértices, os zeros e o interceptos com o eixo
   $y$ podemo fazer o esboço do gráfico de uma equação do segundo grau com muita
   facilidade.
-\end{obs}
+\end{observation}
 
-\begin{exe} 
+\begin{figure} \label{parab}
+  \centering
+  \includegraphics[scale=0.7]{parab1} \caption{Gráfico da função $f(x)=x^2-5x+6$.}
+\end{figure}
+
+\begin{example}
   Considere a seguinte função $f(x)=x^2-5x+6$. Encontre os zeros, as
   coordenadas do vértice, o intercepto com o eixo y e use esses dados para
-  fazer o esboço do gráfico de $f$. \\
+  fazer o esboço do gráfico de $f$.
 
-  \textbf{ZEROS:} Para encontrarmos os zeros precisamos resolver a equação
+  \emph{ZEROS:} Para encontrarmos os zeros precisamos resolver a equação
   $f(x)=0 \to x^2-5x+6=0$, cujo $\Delta = (-5)^2-4.1.6=1$ e $x=\frac{-(-5) \pm
   \sqrt{1}}{2.1} \to x=2$ ou $x=3$, portanto temos os pontos $P_1=(2,0)$ e
-  $P_2=(3,0)$, esses pontos são os interceptos com o eixo $x$. \\
+  $P_2=(3,0)$, esses pontos são os interceptos com o eixo $x$.
 
-  \textbf{VÉRTICES:} $x_v= \frac{-b}{2a}= \frac{-(-5)}{2.1}=\frac{5}{2}$ e
+  \emph{VÉRTICES:} $x_v= \frac{-b}{2a}= \frac{-(-5)}{2.1}=\frac{5}{2}$ e
   $y_v=\frac{-\Delta}{4a}=\frac{-1}{4.1}=-\frac{1}{4}$, logo $V=\left(
-  \frac{5}{2}, -\frac{1}{4}\right)$. \\
-  
-  \textbf{INTERCEPTO COM O EIXO y:} Para encontrarmos o intercepto com o eixo
+  \frac{5}{2}, -\frac{1}{4}\right)$.
+
+  \emph{INTERCEPTO COM O EIXO y:} Para encontrarmos o intercepto com o eixo
   $x$, temos que encontrar $f(0)=0^2-5.0+6=6$, logo temos o ponto $P_4=(0,6)$.
   A figura \ref{parab} mostra o gráfico dessa função.
-  
-  \begin{figure}[h!] \label{parab} \centering
-  \includegraphics[scale=0.7]{parab1} \caption{Gráfico da função
-  $f(x)=x^2-5x+6$.} \end{figure} \end{exe}
+\end{example}
 
-\begin{exe}Faça o esboço das parábolas a seguir:
+\begin{figure} \label{parab2}
+  \centering
+  \includegraphics[scale=0.7]{parab2}
+  \caption{Gráfico da função $f(x)=x^2-x+2$.}
+\end{figure}
+
+
+\begin{figure} \label{parab3}
+  \centering
+  \includegraphics[scale=0.6]{parab3}
+  \caption{Gráfico da função $f(x)=-x^2+4x$.}
+\end{figure}
+
+\begin{example}Faça o esboço das parábolas a seguir:
   \begin{enumerate}
     \item $y=x^2-x+2$ \\
-    
-      \textbf{ZEROS:} Para encontrarmos os zeros precisamos resolver a equação
-      $f(x)=0 \to x^2-x+2=0$, cujo $\Delta = (-1)^2-4.1.2=-7 <0$, logo a função
-      não possui zeros, com isso não intercepta o eixo $x$. \\
 
-      \textbf{VÉRTICE:} $x_v= \frac{-b}{2a}= \frac{-(-1)}{2.1}=\frac{1}{2}$ e
+      \emph{ZEROS:} Para encontrarmos os zeros precisamos resolver a equação
+      $f(x)=0 \to x^2-x+2=0$, cujo $\Delta = (-1)^2-4.1.2=-7 <0$, logo a função
+      não possui zeros, com isso não intercepta o eixo $x$.
+
+      \emph{VÉRTICE:} $x_v= \frac{-b}{2a}= \frac{-(-1)}{2.1}=\frac{1}{2}$ e
       $y_v=\frac{-\Delta}{4a}=\frac{-(-7)}{4.1}=\frac{7}{4}$, logo $V=\left(
-      \frac{1}{2}, \frac{7}{4}\right)$. \\
-    
-      \textbf{INTERCEPTO COM O EIXO y:} Para encontrarmos o intercepto com o
+      \frac{1}{2}, \frac{7}{4}\right)$.
+
+      \emph{INTERCEPTO COM O EIXO y:} Para encontrarmos o intercepto com o
       eixo $x$, temos que encontrar $f(0)=0^2-0+2=2$, logo temos o ponto
       $P_1=(0,2)$. A figura \ref{parab2} mostra o gráfico dessa função. Note
       que temos apenas 2 pontos para marcar no gráfico, para que possamos ter
@@ -350,38 +366,26 @@ figura a seguir ilustra o que foi discutido nessa seção.
       já temos o ponto $P_1$, cuja coordenada $x$ está (na reta real) antes do
       $x_v$, vamos calcular $f(2)=4$ e daí temos o ponto $P_2=(2,4)$.
 
-    \begin{figure}[h!] \label{parab2}
-        \centering
-        \includegraphics[scale=0.7]{parab2}
-        \caption{Gráfico da função $f(x)=x^2-x+2$.}
-    \end{figure}
+    \item $y=-x^2+4x$.
 
-    \item $y=-x^2+4x$. \\
-
-      \textbf{ZEROS:}
+      \emph{ZEROS:}
       Para encontrarmos os zeros precisamos resolver a equação $f(x)=0 \to
       -x^2+4x=0$, como essa equação é incompleta ($c=0$), vamos resolver
       fatorando, ou seja $-x^2+4x=x(-x+4) \to x=0 $ ou $x=4$. Portanto, temos
-      os ponto $P_1=(0,0)$ e $P_2=(4,0)$.\\
+      os ponto $P_1=(0,0)$ e $P_2=(4,0)$.
 
-      \textbf{VÉRTICE:} 
+      \emph{VÉRTICE:}
       $x_v= \frac{-b}{2a}= \frac{-4}{2.(-1}=2$ e
       $y_v=\frac{-\Delta}{4a}=-\frac{16}{4.(-1)}=4$, logo $V=\left(
-      2,4\right)$. \\
-    
-      \textbf{INTERCEPTO COM O EIXO x:} 
-      Para encontrarmos o intercepto com o eixo $x$, temos que encontrar
-      $f(0)=-0^2+4.0=0$, logo temos o ponto $P_4=P_1=(0,0)$. \\
-    
-      A figura \ref{parab2} mostra o gráfico dessa função.
+      2,4\right)$.
 
-      \begin{figure}[h!] \label{parab3}
-        \centering
-        \includegraphics[scale=0.6]{parab3}
-        \caption{Gráfico da função $f(x)=-x^2+4x$.}
-      \end{figure}
+      \emph{INTERCEPTO COM O EIXO x:}
+      Para encontrarmos o intercepto com o eixo $x$, temos que encontrar
+      $f(0)=-0^2+4.0=0$, logo temos o ponto $P_4=P_1=(0,0)$.
+
+      A figura \ref{parab2} mostra o gráfico dessa função.
   \end{enumerate}
-\end{exe}
+\end{example}
 
 %------------------------------------------------------------------------------%
 \section{Inequação do Segundo Grau}
@@ -389,110 +393,115 @@ figura a seguir ilustra o que foi discutido nessa seção.
 Para resolver uma inequação do segundo grau, você deve resolver a equação do
 segundo grau correspondente e fazer o estudo do sinal.
 
-\begin{exe}Resolva a inequação $x^2-5x+6>0$ \\
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{ineq1}
+  \caption{Estudo do sinal para a inequação $x^2-5x+6>0$. }
+  \label{ineq}
+\end{figure}
+
+\begin{example}
+  Resolva a inequação $x^2-5x+6>0$
 
   Inicialmente devemos resolver a equação do segundo grau $x^2-5x+6=0$, cujas
   raízes, obtidas pela fórmula de Bhaskara são $x=2$ e $x=3$. Portanto, temos
   uma parábola com concavidade para cima ($a>0$) e tocando o eixo $x$ em dois
   pontos. Então ``fora da parábola'' colocamos o sinal de $a$ e dentro sinal
   contrário a $a$ como mostra a figura \ref{ineq}.
-  
-  \begin{figure}[h!]
-      \centering
-      \includegraphics[width=0.6\textwidth]{ineq1}
-      \caption{Estudo do sinal para a inequação $x^2-5x+6>0$. }
-      \label{ineq}
-  \end{figure}
 
-  Logo, a solução da inequação é $\{ x \in \mathbf{R} | x< 2 \,\, ou \,\, x>3 \}$.
-\end{exe}
-  
-\begin{exe}
-  Encontre os valores de $x$ que satisfazem a desigualdade $9 \leq x^2$. \\
-  
+  Logo, a solução da inequação é $\{ x \in \R | x< 2 \,\, ou \,\, x>3 \}$.
+\end{example}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{ineq2}
+  \caption{Estudo do sinal para a inequação $-x^2+9 \leq 0$. }
+  \label{ineq1}
+\end{figure}
+
+\begin{example}
+  Encontre os valores de $x$ que satisfazem a desigualdade $9 \leq x^2$.
+
   Note que $9 \leq x^2 $ é equivalente a $ -x^2+9 \leq 0$. Portanto, precisamos
   resolver a inequação do segundo grau $-x^2+9 \leq 0$. A equação do segundo
   grau correspondente é $-x^2+9=0$, onde $a=-1$, $b=0$ e $c=9$. As raízes dessa
   equação são $x=-3$ e $x=3$. O estudo do final é mostrado na figura
   \ref{ineq1}.
 
-  \begin{figure}[h!]
-      \centering
-      \includegraphics[width=0.6\textwidth]{ineq2}
-      \caption{Estudo do sinal para a inequação $-x^2+9 \leq 0$. }
-      \label{ineq1}
-  \end{figure}
-  
-  Logo, a solução pedida é $\{ x \in \mathbf{R}| x \leq -3 \,\, ou  \,\, x \geq 3 \}$.
-\end{exe}
+  Logo, a solução pedida é $\{ x \in \R| x \leq -3 \,\, ou  \,\, x \geq 3 \}$.
+\end{example}
 
 %------------------------------------------------------------------------------%
 \section{Divisão de polinômios}
 
- Dividir um polinômio $f(x)$ de grau $n$ por um polinômio $g(x)\neq 0$ de grau
- menor que $n$ é encontrar dois polinômios $q(x)$ e $r(x)$ tais que
- \begin{enumerate}
+Dividir um polinômio $f(x)$ de grau $n$ por um polinômio $g(x)\neq 0$ de grau
+menor que $n$ é encontrar dois polinômios $q(x)$ e $r(x)$ tais que
+\begin{enumerate}
   \item $f(x)=g(x)\cdot q(x)+ r(x)$ e
   \item O grau de $r(x)$ é menor que o grau de $g(x)$.
- \end{enumerate}
+\end{enumerate}
 
-\begin{exe}
+\begin{example}
   Dividiremos $f(x)=6x^3-2x^2+x+3$ por $g(x)=x^2-x+1$:
   \[
     \begin{array}{r|r}
       \dropsign{-} 6x^3 - 2x^2 + \phantom{6}x + 3 & x^2 - \phantom{6}x + 1 \\ \cline{2-2}
-      6x^3 - 6x^2 + 6x \phantom{{}+3} & 6x + 4 \\ \cline{1-1} \\[\dimexpr-\normalbaselineskip+\jot]
-      \dropsign{-} 4x^2 - 5x + 3 \\
-      4x^2 - 4x + 4 \\ \cline{1-1} \\[\dimexpr-\normalbaselineskip+\jot]
-      -  x - 1
+      6x^3 - 6x^2 + 6x \phantom{{}+3}             & 6x + 4                 \\ \cline{1-1}
+                                                  &  \\[\dimexpr-\normalbaselineskip+\jot]
+      \dropsign{-} 4x^2 - 5x + 3                  &  \\
+      4x^2 - 4x + 4                               &  \\ \cline{1-1}
+                                                  &  \\[\dimexpr-\normalbaselineskip+\jot]
+      -  x - 1                                    &
     \end{array}
   \]
   Logo, $6x^3-2x^2+x+3=(x^2-x+1)(6x+4)-x-1$.
-\end{exe}
+\end{example}
 
 %------------------------------------------------------------------------------%
 \section{Produtos notáveis}
 
 Alguns produtos de expressões algébricas são encontrados tão frequentemente,
-que são chamados de \textbf{produtos notáveis}. Embora possamos calcular esses
+que são chamados de \emph{produtos notáveis}. Embora possamos calcular esses
 produtos usando a propriedade distributiva, acabamos, com o uso, decorando as
 fórmulas empregadas em sua obtenção. Segue abaixo alguns casos de produtos
 notáveis. Em todos os casos considere que $a$ e $b$ são números reais,
-variáveis ou expressões álgebricas. \\
+variáveis ou expressões algébricas.
 \begin{enumerate}
-  \item \textbf{ Quadrado da soma de dois termos}
+  \item \emph{ Quadrado da soma de dois termos}
     \[
       (a+b)^2= a^2+2ab+b^2
     \]
-  \item \textbf{ Quadrado da diferença de dois termos}
+  \item \emph{ Quadrado da diferença de dois termos}
     \[
       (a-b)^2= a^2-2ab+b^2
     \]
-  \item \textbf{ Produto da soma pela diferença}
+  \item \emph{ Produto da soma pela diferença}
     \[
       (a+b)(a-b)=a^2-b^2
     \]
-  \item \textbf{ Cubo da soma de dois termos:}
+  \item \emph{ Cubo da soma de dois termos:}
     \[
       (a+b)^3=a^3+3a^2b+3ab^2+b^3
     \]
-  \item \textbf{  Cubo da diferença de dois termos:}
+  \item \emph{  Cubo da diferença de dois termos:}
     \[
       (a-b)^3=a^3-3a^2b+3ab^2-b^3
     \]
 \end{enumerate}
 
-\begin{exe} Calcule os produtos notáveis
+\begin{example} Calcule os produtos notáveis
 \begin{itemize}
-  \item[a)] $(2x+5)^2$ \\
+  \item[a)] $(2x+5)^2$
+
     Nesse caso temos o quadrado da soma de dois termos (Caso 1), então
     \[
-      (2x+5)^2 
+      (2x+5)^2
       =(2x)^2+2\cdot2x\cdot5+5^2
       = 4x^2+20x+25
     \]
 
-  \item[b)] $(x-2)(x+2)$ \\
+  \item[b)] $(x-2)(x+2)$
+
     Aqui temos o produto da soma pela diferença,logo (Caso 3):
     \[
       (x-2)(x+2)
@@ -500,15 +509,17 @@ variáveis ou expressões álgebricas. \\
       =x^2-4
     \]
 
-  \item[c)] $(y+4)^3$ \\
+  \item[c)] $(y+4)^3$
+
     Usando a fórmula do cubo da soma de dois termos (Caso 4),
     \[
       (y+4)^3
-      = y^3+3\cdot y^2\cdot4+3\cdot y\cdot4^2+4^3 
+      = y^3+3\cdot y^2\cdot4+3\cdot y\cdot4^2+4^3
       = y^3+12y^2+48y+64
     \]
-  
-  \item[d)] $(5-\frac{4}{y})^2$ \\
+
+  \item[d)] $(5-\frac{4}{y})^2$
+
     Aqui temos o quadrado da diferença de dois termos (Caso 2), portanto:
     \[
       (5-\frac{4}{y})^2
@@ -516,7 +527,8 @@ variáveis ou expressões álgebricas. \\
       = 25-\frac{40}{y}+\frac{16}{y^2}.
     \]
 
-  \item[e)] $(\sqrt[3]{x}-1)^3$ \\
+  \item[e)] $(\sqrt[3]{x}-1)^3$
+
     Nesse caso temos o cubo da diferença, então:
     \[
       (\sqrt[3]{x}-1)^3
@@ -524,7 +536,7 @@ variáveis ou expressões álgebricas. \\
       =x-3\sqrt[3]{x^2}+ 3 \sqrt[3]{x}-1
     \]
 \end{itemize}
-\end{exe}
+\end{example}
 
 %------------------------------------------------------------------------------%
 \section{Fatoração:}
@@ -533,16 +545,16 @@ Na seção anterior, usamos a propriedade distributiva para expandir uma
 expressão algébrica (produtos notáveis). Nessa seção faremos o processo
 inverso, tomaremos uma expressão algébrica expressa na forma expandida e
 reescreveremos em produtos de fatores mais simples, a esse processo daremos o
-nome de \textbf{fatoração}. A seguir serão apresentados algumas maneiras de
+nome de \emph{fatoração}. A seguir serão apresentados algumas maneiras de
 fatorar expressões algébricas.
 
-\textbf{Fator Comum:}
+\emph{Fator Comum:}
 \[
   ax+bx=x(a+b)
 \]
 
-\begin{exe} 
-  Fatore a expressão $3x^2-6x$. \\
+\begin{example}
+  Fatore a expressão $3x^2-6x$.
 
   Primeiramente identificamos o fator comum, note que podemos escrever :
   \[
@@ -554,36 +566,36 @@ fatorar expressões algébricas.
     3x^2-6x=3x(x-2),
   \]
   que é a forma fatorada do polinômio.
-\end{exe}
+\end{example}
 
-\textbf{Agrupamento:}
+\emph{Agrupamento:}
 \[
   ax+bx+ay+by=x(a+b)+y(a+b)=(a+b)(x+y)
 \]
 
-\begin{exe} 
-  Fatore a expressão $2xy-12x+3by-18b$. 
+\begin{example}
+  Fatore a expressão $2xy-12x+3by-18b$.
 
   Note que $2x$ é fator comum dos dois primeiros termos e $3b$ é fator comum
-  nos útimos dois. Portanto colocando em evidência, chegamos que :
-  \[ 
+  nos últimos dois. Portanto, colocando em evidência, chegamos que :
+  \[
     2xy-12x+3by-18b= 2x(y-6)+3b(y-6)
   \]
-  
+
   Agora temos que $(y-6)$ é fator comum. Colocando em evidência, obtemos:
   \[
     2xy-12x+3by-18b= 2x(y-6)+3b(y-6)=(y-6)(2x+3b)
-  \] 
+  \]
   que é a forma fatorada do polinômio.
-\end{exe}
+\end{example}
 
-\textbf{Diferença de dois quadrados:}
+\emph{Diferença de dois quadrados:}
 \[
   a^2-b^2=(a+b)(a-b)
 \]
 
-\begin{exe} 
-  Suponha que precisamos fatorar a expressão $4x^2-9$. 
+\begin{example}
+  Suponha que precisamos fatorar a expressão $4x^2-9$.
 
   Bata notar que
   \[
@@ -593,145 +605,146 @@ fatorar expressões algébricas.
   \[
     4x^2-9=(2x)^2-3^2=(2x-3)(2x+3).
   \]
-\end{exe}
+\end{example}
 
-\textbf{Trinômio quadrado perfeito:}
+\emph{Trinômio quadrado perfeito:}
 \[
   a^2\pm 2ab+ b^2=(a \pm b)^2
 \]
 
-\begin{exe} 
-  Fatorea expressão $x^2+4x-4$. 
+\begin{example}
+  Fatore a expressão $x^2+4x-4$.
 
   Basta notar que
   \[
     x^2-4x+4=x^2-2\cdot2x+2^2=(x-2)^2.
   \]
-\end{exe}
+\end{example}
 
-\textbf{Soma e Diferença de dois cubos:}
+\emph{Soma e Diferença de dois cubos:}
 \[
   a^3 \pm b^3=(a \pm b)(a^2 \mp ab+b^2)
 \]
 
-\begin{exe} 
+\begin{example}
 
-  Fatore o polinômio $27x^3+64$ 
+  Fatore o polinômio $27x^3+64$
 
   Se notarmos que $27x^3+64= (3x)^3+4^3$ então
   \[
     27x^3+64= (3x)^3+4^3=(3x+4)(9x^2-12x+16)
   \]
   é a forma fatorada do polinômio $27x^3+64$.
-\end{exe}
+\end{example}
 
-\textbf{Fatoração de polinômios usando suas raízes} \\
+\emph{Fatoração de polinômios usando suas raízes} \\
 Seja $f(x)$ um polinômio de grau $n$ e $a\in\R$. Sabemos que a divisão de
 $f(x)$ por $x-a$ nos fornece um polinômio $q(x)$ de grau $n-1$ e resto $f(a)$,
 ou seja,
 \[
   f(x)=(x-a)q(x)+f(a).
 \]
-Logo, um polinômio $f(x)$ de grau $n$ possui uma raíz real $a\in\R$, se e
+Logo, um polinômio $f(x)$ de grau $n$ possui uma raiz real $a\in\R$, se e
 somente se, $f(x)=(x-a)q(x)$ em que $q(x)$ possui grau $n-1$.
 
 Um polinômio $f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_0$ possui n raízes reais
-$r_1,r_2,\cdots,r_n$ se e somente se pode ser escrito na \textbf{forma
+$r_1,r_2,\cdots,r_n$ se e somente se pode ser escrito na \emph{forma
 fatorada} $f(x)=a_n(x-r_1)(x-r_2)\cdots(x-r_n).$ A dificuldade em fatorar um
 polinômio é exatamente em encontrar suas raízes. Para polinômios de grau $1$ e
 $2$ essa missão é simples, mas para polinômios de graus maiores é mais
 complicado. Temos uma ferramenta para determinar raízes de alguns polinômios
 que possuem raízes racionais:
 
-\begin{teo} \label{teo}
-  Seja $f(x)=a_nx_n+a_{n-1}x^{n-1}+\cdots a_0$ um polinômio com coeficientes \\
+\begin{teorema}{}{teo:} \label{teo}
+  Seja $f(x)=a_nx_n+a_{n-1}x^{n-1}+\cdots a_0$ um polinômio com coeficientes
   $a_n,a_{n-1}, a_{n-2},\cdots,a_0$ inteiros.
-  Se essa equação possui uma raíz racional na forma $\frac{p}{q}$, com $p$ e
+  Se essa equação possui uma raiz racional na forma $\frac{p}{q}$, com $p$ e
   $q$ números inteiros e $\frac{p}{q}$ fração irredutível então $a_0$ é
   divisível por $p$ e $a_n$ é divisível por $q$.
-\end{teo}
+\end{teorema}
 
-\begin{obs}
+\begin{observation}
 \begin{enumerate}
-  \item O teorema \ref{teo} não garante que a equação polinomial tenha raízes
+  \item O Teorema \ref{teo} não garante que a equação polinomial tenha raízes
     racionais, mas caso elas existam, o teorema permite identificar todas as
     raízes racionais do polinômio.
 
   \item Se $a_n = 1$ e os outros coeficientes são todos inteiros, as
     candidatas as raízes do polinômio são inteiras.
-\end{enumerate} 
-\end{obs}
+\end{enumerate}
+\end{observation}
 
-\begin{exe} 
+\begin{example}
   Queremos fatorar o polinômio $f(x)=x^3-3x+2$. Pelo Teorema acima, as
   possíveis raízes inteiras de $f$ são $\{\pm1,\pm2\}$ que são os divisores de
-  $a_0=2$. Como $f(1)=1-3+2=0$, $1$ é uma raíz de $f$. Dividindo
+  $a_0=2$. Como $f(1)=1-3+2=0$, $1$ é uma raiz de $f$. Dividindo
   $f(x)=x^3-3x+2$ por $x-1$ obtemos $x^2+x-2$ que pode ser reescrito como
   $(x-1)(x+2)$. Logo, $f$ pode ser fatorado como $f(x)= (x-1)^2(x+2)$.
-\end{exe}
+\end{example}
 
-\begin{exe}
+\begin{example}
   Fatore os seguintes polinômios:
-  a) $p(x)=x^3-9x^2+26x-24$. \hspace{1cm} 
-  b) $p(x)=2x^2-10x+12$  \hspace{1cm}  
-  c) $p(x)= 4x^4-34x^2-18$ (Equação Biquadrada) \\
-\end{exe}
-a) Nesse item, temos um polinômio de grau 3, vamos verificar se esse polinômio
-possui raízes racionais. Segundo Teorema \ref{teo}, essas possíveis raízes tem
-a forma $\frac{p}{q}$, onde $p$ são os divisores do termo independente, no caso
-os divisores de $-24$ e $q$ são os divisores do coeficiente do termo de maior
-grau, no caso $1$. Logo, as possíveis raízes inteiras são $\{ \pm 1, \pm 2, \pm
-3, \pm 4, \pm 6, \pm 8, \pm 12, \pm 24\}$. Vamos testar alguns desses valores
-para tentarmos encontrar uma raíz racional. Note que $p(1)=1-9+26-24-6=-6 \neq
-0$, logo $x=1$ não é uma raíz. $p(2)=8-36+52-24=0$, logo $x=2$ é uma raíz. De
-posse dessa raíz vamos dividir o polinômio $p(x)$ por $x-2$.
-\[
-  \begin{array}{r|r}
-    \dropsign{-} x^3-9x^2+26x-24 & x-2 \\ \cline{2-2}
-    \dropsign{-}( x^3-2x^2)  & x^2-7x+12 \\ \cline{1-1} \\[\dimexpr-\normalbaselineskip+\jot]
-    \dropsign{-} -7x^2+26x-24 \\
-    (-7x^2+14x) \\ \cline{1-1} \\[\dimexpr-\normalbaselineskip+\jot]
-    12x-24 \\
-    \dropsign{-} (12x-24)
-  \\  \cline{1-1}
-    0
-  \end{array}
-\]
+  a) $p(x)=x^3-9x^2+26x-24$. \hspace{1cm}
+  b) $p(x)=2x^2-10x+12$  \hspace{1cm}
+  c) $p(x)= 4x^4-34x^2-18$ (Equação Biquadrada)
 
-Para encontrar as outras raízes, basta resolver a equação $x^2-7x+12=0$, cujas
-as raízes (por Bhaskara) são $x=3$ e $x=4$. Logo o polinômio fatorado é
-$p(x)=(x-2)(x-3)(x-4)$. \\
+  a) Nesse item, temos um polinômio de grau 3, vamos verificar se esse polinômio
+  possui raízes racionais. Segundo Teorema \ref{teo}, essas possíveis raízes tem
+  a forma $\frac{p}{q}$, onde $p$ são os divisores do termo independente, no caso
+  os divisores de $-24$ e $q$ são os divisores do coeficiente do termo de maior
+  grau, no caso $1$. Logo, as possíveis raízes inteiras são $\{ \pm 1, \pm 2, \pm
+  3, \pm 4, \pm 6, \pm 8, \pm 12, \pm 24\}$. Vamos testar alguns desses valores
+  para tentarmos encontrar uma raiz racional. Note que $p(1)=1-9+26-24-6=-6 \neq
+  0$, logo $x=1$ não é uma raiz. $p(2)=8-36+52-24=0$, logo $x=2$ é uma raiz. De
+  posse dessa raiz vamos dividir o polinômio $p(x)$ por $x-2$.
+  \[
+    \begin{array}{r|r}
+      \dropsign{-} x^3-9x^2+26x-24 & x-2       \\ \cline{2-2}
+      \dropsign{-}( x^3-2x^2)      & x^2-7x+12 \\ \cline{1-1}
+                                   &  \\[\dimexpr-\normalbaselineskip+\jot]
+      \dropsign{-} -7x^2+26x-24    &  \\
+      (-7x^2+14x)                  &  \\ \cline{1-1}
+                                   &  \\[\dimexpr-\normalbaselineskip+\jot]
+      12x-24                       &  \\
+      \dropsign{-} (12x-24)        &  \\ \cline{1-1}
+      0                            &
+    \end{array}
+  \]
 
-b) Nesse caso temos um poliômio de grau $2$, cujas raízes podem ser encontradas
-facilmente, usando a fórmula de Bhaskara. As raízes são $x=2$ e $x=3$ e o
-polinômio fatorado é $p(x)=2(x-2)(x-3)$. \\
+  Para encontrar as outras raízes, basta resolver a equação $x^2-7x+12=0$, cujas
+  as raízes (por Bhaskara) são $x=3$ e $x=4$. Logo o polinômio fatorado é
+  $p(x)=(x-2)(x-3)(x-4)$.
 
-c) Para encontrarmos os zeros de $p$ precisamos resolver a equação $p(x)=0$.
-Uma equação biquadrada tem a forma $ax^4+bx^2+c=0$, para resolvermos fazemos a
-mudança de variável $y=x^2$. No nosso, ao fazermos essa mudança, chegamos na
-equação $4y^2-34y-18=0 \Rightarrow 2y^2-17y-9=0$, que é uma equação do segundo
-grau e, para resolvermos usando  a fórmula de Bhaskara.
+  b) Nesse caso temos um poliômio de grau $2$, cujas raízes podem ser encontradas
+  facilmente, usando a fórmula de Bhaskara. As raízes são $x=2$ e $x=3$ e o
+  polinômio fatorado é $p(x)=2(x-2)(x-3)$.
 
-\begin{align}
-  \Delta &= (-17)^2-4.2.(-9)=361 \\
-  y&= \frac{17 \pm \sqrt{361}}{4,
-  } \\
-  y& =9 \,\, ou \,\, y=-\frac{1}{2}
-\end{align}
+  c) Para encontrarmos os zeros de $p$ precisamos resolver a equação $p(x)=0$.
+  Uma equação biquadrada tem a forma $ax^4+bx^2+c=0$, para resolvermos fazemos a
+  mudança de variável $y=x^2$. No nosso, ao fazermos essa mudança, chegamos na
+  equação $4y^2-34y-18=0 \Rightarrow 2y^2-17y-9=0$, que é uma equação do segundo
+  grau e, para resolvermos usando  a fórmula de Bhaskara.
 
-Se $y=9 \Rightarrow x^2=9 \Rightarrow x=3$ ou $x=-3$. Se $y=-\frac{1}{2}
-\Rightarrow x^2=-\frac{1}{2}$, que não tem solução real, pois o polinômio
-$x^2+\frac{1}{2}$ é irredutível, logo ele ``entrará'' dessa forma na fatoração.
-Logo, o polinômio fatorado é $p(x)= 4(x-3)(x+3)(x^2+\frac{1}{2})$.
+  \begin{align}
+    \Delta & = (-17)^2-4.2.(-9)=361         \\
+    y      & = \frac{17 \pm \sqrt{361}}{4}  \\
+    y      & = 9 \text{ ou } y=-\frac{1}{2}
+  \end{align}
+
+  Se $y=9 \Rightarrow x^2=9 \Rightarrow x=3$ ou $x=-3$. Se $y=-\frac{1}{2}
+  \Rightarrow x^2=-\frac{1}{2}$, que não tem solução real, pois o polinômio
+  $x^2+\frac{1}{2}$ é irredutível, logo ele ``entrará'' dessa forma na fatoração.
+  Logo, o polinômio fatorado é $p(x)= 4(x-3)(x+3)(x^2+\frac{1}{2})$.
+\end{example}
 
 %------------------------------------------------------------------------------%
 \subsection{Simplificação de expressões:}
 
-A fatoração é muito útil para simplificar expressões. Nessa ssubseção usaremos
+A fatoração é muito útil para simplificar expressões. Nessa subseção usaremos
 os casos de fatoração, expostos anteriormente, para simplificar expressões.
 Vejamos os exemplos a seguir:
 
-\begin{exe}
+\begin{example}
   Simplifique as expressões, fatorando os termos, caso necessário. Suponha
   sempre que os denominadores são não nulos.
   \begin{minipage}[t]{.44\textwidth}
@@ -747,58 +760,59 @@ Vejamos os exemplos a seguir:
     \item[f)] $\left(\frac{x^2-4x-12}{x+2} \right) \left( \frac{2x+1}{x-6}\right)$
     \end{itemize}
   \end{minipage}
-\end{exe}
 
-a) No numerador vamos colocar o número $2$ em evidência, uma vez que é comum a
-todos os membros. Assim
+  a) No numerador vamos colocar o número $2$ em evidência, uma vez que é comum a
+  todos os membros. Assim
+  \[
+    \frac{2x-6}{x-3}= \frac{2\cancel{(x-3)}}{\cancel{x-3}} \stackrel{x \neq 3}{=}2.
+  \]
 
-\[\frac{2x-6}{x-3}= \frac{2\cancel{(x-3)}}{\cancel{x-3}} \stackrel{x \neq 3}{=}2.\]
+  Note que, podemos cancelar o termo $x-3$, pois é nos dito no enunciado que os
+  denominadores são não nulos, ou seja, $x-3 \neq 0 \to x \neq 3$.
 
-Note que, podemos cancelar o termo $x-3$, pois é nos dito no enunciado que os
-denominadores são não nulos, ou seja $x-3 \neq 0 \to x \neq 3$.
+  b) Nesse caso, vamos colocar $x^2$ em evidência no numerador.
+  \[
+    \frac{x^2+x^4}{3x^3}
+    = \frac{\cancel{x^2}(1+x^2)}{3\cancel{x^2}\cdot x}
+    \stackrel{x \neq 0}{=}\frac{1+x^2}{3x}.
+  \]
 
-b) Nesse caso, vamos colocar $x^2$ em evidência no numerador.
-\[
-  \frac{x^2+x^4}{3x^3} 
-  = \frac{\cancel{x^2}(1+x^2)}{3\cancel{x^2}\cdot x}
-  \stackrel{x \neq 0}{=}\frac{1+x^2}{3x}.
-\]
+  c) Nesse exercício devemos notar que no numerador temos uma diferença de dois
+  quadrados, uma vez que $x^2-9=x^2-3^2= (x-3)(x+3)$. Além disso, podemos colocar
+  o termo $x$ em evidência no denominador, ou seja, $x^2-3x=x(x-3)$. Logo,
+  \[
+    \frac{x^2-9}{x^2-3x}
+    = \frac{\cancel{(x-3)}(x+3)}{x\cancel{(x-3)}}
+    = \stackrel{x \neq 3}{=} \frac{x+3}{x}.
+  \]
+  Mais uma vez vale ressaltar que para fazermos o cancelamento do termo $x-3$,
+  teríamos que ter a informação (ou supor) que $x-3 \neq 0 \to x \neq 3$. Como no
+  enunciado temos a informação que o denominador é não nulo, temos que $x^2-3x
+  \neq 0 \to x(x-3) \neq 0 \to x \neq 0 \,\, e \,\, x\neq 3$.
 
-c) Nesse exercício devemos notar que no numerador temos uma diferença de dois
-quadrados, uma vez que $x^2-9=x^2-3^2= (x-3)(x+3)$. Além disso, podemos colocar
-o termo $x$ em evidência no denominador, ou seja, $x^2-3x=x(x-3)$. Logo,
-\[
-  \frac{x^2-9}{x^2-3x}
-  = \frac{\cancel{(x-3)}(x+3)}{x\cancel{(x-3)}}
-  = \stackrel{x \neq 3}{=} \frac{x+3}{x}.
-\]
-Mais uma vez vale ressaltar que para fazermos o cancelamento do termo $x-3$,
-teríamos que ter a informação (ou supor) que $x-3 \neq 0 \to x \neq 3$. Como no
-enunciado temos a informação que o denominador é não nulo, temos que $x^2-3x
-\neq 0 \to x(x-3) \neq 0 \to x \neq 0 \,\, e \,\, x\neq 3$. 
+  d) Inicialmente, devemos lembrar que se temos um polinômio de grau 2, do tipo
+  $p(x)= ax^2+bx+c$, a sua forma fatorada é $p(x)=a(x-r_1)(x-r_2)$, onde $r_1$ e
+  $r_2$, onde $r_1$ e $r_2$ são suas raízes, podendo acontecer que $r_1=r_2$.
+  Quando o polinômio não tiver raízes, dizemos que ele é irredutível, ou seja,
+  não conseguimos fatorá-lo. Sendo assim, como no numerador, é um polinômio de
+  grau 2, cujas raízes são $r_1=1$ e $r_2=4$ (confira usando Bháskara). Portanto,
+  sua forma fatorada é $x^2-5x+4=1(x-1)(x-4)=(x-1)(x-4)$. Logo,
+  \[
+    \frac{x^2-5x+4}{x-4}
+    =\frac{\cancel{(x-4)}(x-1)}{\cancel{x-4}}
+    \stackrel{x \neq 4}{=} x-1.
+  \]
 
-d) Inicialmente, devemos lembrar que se temos um polinômio de grau 2, do tipo
-$p(x)= ax^2+bx+c$, a sua forma fatorada é $p(x)=a(x-r_1)(x-r_2)$, onde $r_1$ e
-$r_2$, onde $r_1$ e $r_2$ são suas raízes, podendo acontecer que $r_1=r_2$.
-Quando o polinômio não tiver raízes, dizemos que ele é irredutível, ou seja,
-não conseguimos fatorá-lo. Sendo assim, como no numerador, é um polinômio de
-grau 2, cujas raízes são $r_1=1$ e $r_2=4$ (confira usando Bháskara). Portanto,
-sua forma fatorada é $x^2-5x+4=1(x-1)(x-4)=(x-1)(x-4)$. Logo,
-\[
-  \frac{x^2-5x+4}{x-4}
-  =\frac{\cancel{(x-4)}(x-1)}{\cancel{x-4}}
-  \stackrel{x \neq 4}{=} x-1. 
-\]
-
-e) Como $x^2-4x-12$ é um polinômio de grau $2$, cujas raízes são $x=-2$ e
-$x=6$, sendo assim, a forma fatorada é $x^2-4x-12=(x+2)(x-6)$. Portanto,
-\[
-  \left(\frac{x^2-4x-12}{x+2} \right) 
-  \left( \frac{2x+1}{x-6}\right)
-  = \left(\frac{(x+2)(x-6)}{x+2} \right) 
-  \left( \frac{2x+1}{x-6}\right) 
-  \stackrel{x \neq -2, x \neq 6}{=}2x+1.
-\]
+  e) Como $x^2-4x-12$ é um polinômio de grau $2$, cujas raízes são $x=-2$ e
+  $x=6$, sendo assim, a forma fatorada é $x^2-4x-12=(x+2)(x-6)$. Portanto,
+  \[
+    \left(\frac{x^2-4x-12}{x+2} \right)
+    \left( \frac{2x+1}{x-6}\right)
+    = \left(\frac{(x+2)(x-6)}{x+2} \right)
+    \left( \frac{2x+1}{x-6}\right)
+    \stackrel{x \neq -2, x \neq 6}{=}2x+1.
+  \]
+\end{example}
 
 %------------------------------------------------------------------------------%
 

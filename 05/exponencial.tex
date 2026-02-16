@@ -4,13 +4,13 @@
 %------------------------------------------------------------------------------%
 \section{Potências}
 
-\begin{defin}\label{def:exp}
-  Seja $a$ um \textbf{número real positivo} chamado \textbf{base}. Definimos
+\begin{definicao}{}{def:}\label{def:exp}
+  Seja $a$ um \emph{número real positivo} chamado \emph{base}. Definimos
   para todo $n\in\N$,
   \[
     a^n:=a.a.a.\cdots.a \quad~~~(n\text{ vezes}).
   \]
-\end{defin}
+\end{definicao}
 
 Em particular, $a^1=a$. Segue da Definição \ref{def:exp} que para todo
 $m, n\in\N$ as seguintes propriedades são válidas:
@@ -31,27 +31,27 @@ Faremos essa extensão gradualmente:
 \begin{enumerate}
   \item Como definir $a^0$?
 
-    Fazendo $m=0$ e $n=1$ em \textbf{P.1} temos que
+    Fazendo $m=0$ e $n=1$ em \emph{P.1} temos que
     \[
       a^0.a^1=a^{0+1}=a^1
     \]
     Como $a\neq 0$, dividimos ambos os lados da equação por $a=a^1$ e
-    concluímos que $a^0=1$ . Portanto, definimos $a^0:=1$. 
+    concluímos que $a^0=1$ . Portanto, definimos $a^0:=1$.
     \footnote{
       Observe que $0^0$ é uma expressão não definida, ou seja, $0^0$ não é um
-      número real. 
+      número real.
     }
 
   \item Como definir $a^{-m}$ para $m$ inteiro positivo?
 
-    Novamente aplicando a propriedade \textbf{P.1} e utilizando que $a^0=1$,
+    Novamente aplicando a propriedade \emph{P.1} e utilizando que $a^0=1$,
     temos que \[a^{-m}\cdot a^{m}=a^{-m+m}=a^0=1.\] Portanto, definimos
     \begin{equation}
       \label{def: nun neg}
       a^{-m}:=\frac{1}{a^m}.
     \end{equation}
 
-    \begin{exe}
+    \begin{example}
     \begin{enumerate}
       \item $3^{-2}=\frac{1}{3^2}=\frac{1}{9}.$
       \item $\left(\frac{2}{3}\right)^{-3}
@@ -61,7 +61,7 @@ Faremos essa extensão gradualmente:
         =\left(\frac{3}{2}\right)^{3}
         =\frac{27}{8}$.
     \end{enumerate}
-    \end{exe}
+    \end{example}
 
     Observem que se $a$ e $b$ são números positivos, então
     \[
@@ -71,30 +71,30 @@ Faremos essa extensão gradualmente:
   \item Como definir $a^x$ para $x\in\mathbb{Q}$?
 
     Inicialmente faremos um exemplo: Considerando $x=n/2$, segue de
-    \textbf{P.2} que
-    \[ 
+    \emph{P.2} que
+    \[
       a^{n/2}.a^{n/2}=(a^{n/2})^2=a^{2\cdot n/2}=a^n.
     \]
     Como o produto de $a^{n/2}$ por ele mesmo resultou em $a^n$, concluímos que
     $ a^{n/2}=\sqrt{a^n}.$
 
-    De forma análoga, a propriedade \textbf{P.2} pode ser utilizada para
+    De forma análoga, a propriedade \emph{P.2} pode ser utilizada para
     definir $a^{n/m}$ para todo $n/m\in\mathbb{Q}$, a partir da função
     $f(x)=\sqrt[m]{x}$. Como $a^n$ já está definida para todo $n\in\mathbb{N}$
     e ao multiplicarmos $a^{n/m}$ por si mesmo $m$ vezes, obtemos
-    \[ 
+    \[
       a^{n/m}.\cdots.a^{n/m}=(a^{n/m})^m=a^{m \cdot n/m}=a^n,
     \]
     temos que $a^{n/m}:=\sqrt[m]{a^n}$.
 
-    \begin{exe}
+    \begin{example}
     \begin{enumerate}
       \item $3^{\frac{5}{2}}=\sqrt{3^5}=\sqrt{3^4\cdot 3}=9\sqrt{3}$.
       \item $\left(\frac{2}{3}\right)^{-\frac{2}{3}}
         =\left(\frac{3}{2}\right)^{\frac{2}{3}}
         =\sqrt[3]{\frac{9}{4}}$.
     \end{enumerate}
-    \end{exe}
+    \end{example}
 
   \item Como definir $a^x$ para $x\in\mathbb{I}$?
 
@@ -107,8 +107,8 @@ Faremos essa extensão gradualmente:
     converge para $x$ (estudaremos com mais detalhe a ideia de limite no
     próximo módulo, nesse momento, apenas note que quando $n$ é muito grande o
     número $x_n$ fica muito próximo do número irracional $x$) e escrevemos:
-    \[ 
-      \lim_{n\rightarrow\infty}x_n=x. 
+    \[
+      \lim_{n\rightarrow\infty}x_n=x.
     \]
 
     Para cada $x_n$, $a^{x_n}$ já foi definido. A sequência $y_n=a^{x_n}$
@@ -116,7 +116,7 @@ Faremos essa extensão gradualmente:
     $a^{x_n}$ ficam muito próximos de um número real que chamaremos de $a^x$).
     Definimos então
     \[
-      a^{x}=\lim_{n\rightarrow\infty}a^{x_n}. 
+      a^{x}=\lim_{n\rightarrow\infty}a^{x_n}.
     \]
 \end{enumerate}
 
@@ -146,14 +146,14 @@ números reais.
 Antes de definirmos as funções exponenciais, apresentaremos um exemplo para
 termos noção como essas funções aparecem no dia a dia.
 
-\begin{exe}
+\begin{example}
   \label{ex 1}
   Heloísa contraiu um empréstimo de $R\$1.000,00$ em um banco que cobra $6\%$
   de juros ao mês. Se Heloísa não saldar sua dívida, quanto ela deverá ao banco
   após quatro meses? E após um número $x$ arbitrário de meses?
 
   Observe que após um mês que o empréstimo foi contraído a dívida de Heloísa é
-  
+
   \begin{align*}
     1000+(1000\cdot \frac{6}{100})
     & = 1000+1000\cdot 0,06\\
@@ -176,12 +176,12 @@ termos noção como essas funções aparecem no dia a dia.
   \[
     1000 \cdot (1,06)^x.
   \]
-\end{exe}
+\end{example}
 
-\begin{defin}
+\begin{definicao}{}{def:}
   \label{def:exp:1}
   A função exponencial com  base $a$ é definida por
-  
+
   \begin{align}
   &f:\R\rightarrow\R \nonumber \\
   &x\rightarrow a^x
@@ -193,10 +193,10 @@ termos noção como essas funções aparecem no dia a dia.
     $f(x)=1$. Para $a\leq 0$, vimos na seção anterior que não faz sentido essa
     definição.
   }
-\end{defin}
+\end{definicao}
 
 Segue que a função assim definida satisfaz as seguintes propriedades: Para todo
-$x,y\in\R$, 
+$x,y\in\R$,
 \footnote{
   As três primeiras propriedades estão listadas acima para
   os naturais, aqui estendemos para os reais.
@@ -215,17 +215,17 @@ depender do valor de $a$:
     crescente\footnote{$x<y\Leftrightarrow a^x<a^y$} e o seu gráfico tem o
     formato das curvas a seguir:
 
-  \begin{figure}[h]
+  \begin{figure}
     \centering
     \includegraphics[width=0.45\textwidth,trim={0 1cm 9cm 3cm},clip]{exp1}
     \caption{ Gráfico de $f(x)=2^x$ (traço contínuo) e $g(x)=4^x$ (tracejato).}
   \end{figure}
-  
+
   \item[2:] Se $0<a<1$ a função $f(x)=a^x$ é
     descrescente\footnote{$x<y\Leftrightarrow a^x>a^y$} e o seu gráfico tem o
     formato das curvas a seguir:
-  
-  \begin{figure}[h]
+
+  \begin{figure}
     \centering
     \includegraphics[width=0.45\textwidth,trim={0 1cm 9cm 3cm},clip]{exp2}
     \caption{ Gráfico de $f(x)=2^{-x}=\big(\frac{1}{2}\big)^x$ (traço
@@ -243,18 +243,18 @@ valores (3 ou 5 pontos) estratégicos para $x$ e montamos uma tabelinha com
 esses valores e sua imagem pela função. É comum escolhermos os valores
 $x=-2,-1,0,1,2$. Vamos observar os seguintes exemplos.
 
-\begin{exe}
+\begin{example}
   Nesse exemplo, vamos fazer o esboço do gráfico da função $f(x)=2^x$. Para
   isso, vamos escolher os valores $x=-2,-1,0,1,2$ e montar uma tabela com 3
   colunas: A primeira coluna esses valores de $x$, a segunda coluna com a
   imagem desses valores pela função $f(x)=2^x$ e a terceira com o par ordenado
   $(x,f(x))$. A tabela \ref{2el} mostra esses valores e a figura \ref{2eleva}
   mostra o gráfico de $f$.
-\end{exe}
+\end{example}
 
 \begin{table}
     \centering
-    \caption{Tabela de valores para o gráfico de 
+    \caption{Tabela de valores para o gráfico de
       $f(x)=\left(\frac{1}{2}\right)^x$.}
     \label{2el}
     \begin{tabular}{|c|c|c|}
@@ -274,14 +274,14 @@ $x=-2,-1,0,1,2$. Vamos observar os seguintes exemplos.
     \end{tabular}
 \end{table}
 
-\begin{figure}[h!]
+\begin{figure}
     \centering
     \includegraphics{2elevado-1}
     \caption{Esboço do gráfico da função $y=2^x$.}
     \label{2eleva}
 \end{figure}
 
-\begin{exe}
+\begin{example}
   Nesse exemplo, vamos fazer o esboço do gráfico da função $f(x)=\left(
   \frac{1}{2}\right)^x$. Para isso, vamos escolher, novamente, os valores
   $x=-2,-1,0,1,2$ e construir uma tabela com 3 colunas: A primeira coluna esses
@@ -289,11 +289,11 @@ $x=-2,-1,0,1,2$. Vamos observar os seguintes exemplos.
   $\left( \frac{1}{2}\right)^x$ e a terceira com o par ordenado $(x,f(x))$. A
   tabela \ref{2meioel} mostra esses valores e a figura \ref{meioeleva} mostra o
   gráfico de $f$.
-\end{exe}
+\end{example}
 
-\begin{table}[h!]
+\begin{table}
     \centering
-    \caption{Tabela de valores para o gráfico de 
+    \caption{Tabela de valores para o gráfico de
       $f(x)=\left(\frac{1}{2}\right)^x$.}
     \label{2meioel}
     \begin{tabular}{|c|c|c|}
@@ -313,7 +313,7 @@ $x=-2,-1,0,1,2$. Vamos observar os seguintes exemplos.
     \end{tabular}
 \end{table}
 
-\begin{figure}[h!]
+\begin{figure}
     \centering
     \includegraphics{meioelevado}
     \caption{Esboço do gráfico da função $y=\left(\frac{1}{2}\right)^x$.}
@@ -327,17 +327,17 @@ $x=-2,-1,0,1,2$. Vamos observar os seguintes exemplos.
 \subsection{Equações exponenciais}
 
 As equações em que a incógnita aparece nos expoentes são chamadas de
-\textit{Equações exponenciais}. A seguir serão apresentados alguns exemplos de
+\emph{Equações exponenciais}. A seguir serão apresentados alguns exemplos de
 equações exponenciais, juntamente com as resoluções. Para resolvê-las usaremos
 o fato de que a função exponencial é injetora, isto é:
 \[
     a^{x_1}=a^{x_2} \Rightarrow x_1=x_2.
 \]
 
-\begin{exe}
+\begin{example}
     Resolva as seguintes equações  exponenciais:
     \begin{enumerate}
-      \item $\left( \frac{1}{3}\right)^x=81$ 
+      \item $\left( \frac{1}{3}\right)^x=81$
 
         A ideia para resolver uma equação exponencial desse tipo, tranformamos
         a equação numa igualdade de potências de mesma base:
@@ -354,10 +354,10 @@ o fato de que a função exponencial é injetora, isto é:
         injetora então basta igualar os expoentes, o que implica que $x=3$.
         Logo, $S=\{ 3 \}$.
 
-      \item $ \left( \frac{1}{2} \right)^x=\sqrt[3]{4}$ 
+      \item $ \left( \frac{1}{2} \right)^x=\sqrt[3]{4}$
 
         Note que
-        \[ 
+        \[
           \left( \frac{1}{2} \right)^x
           = \sqrt[3]{4} \Rightarrow 2^{-x}
           = (2^2)^{\frac{1}{3}} \Rightarrow 2^{-x}
@@ -366,7 +366,7 @@ o fato de que a função exponencial é injetora, isto é:
         \]
         Logo, $S=\{ \frac{-2}{3} \}$
 
-      \item $2^{x-3}+2^{x-1}+2^x=52$ 
+      \item $2^{x-3}+2^{x-1}+2^x=52$
 
         Nesse caso, não conseguimos transformar a equação em uma igualdade de
         mesma base. Desse modo, vamos reescrever a equação, usando as
@@ -379,12 +379,12 @@ o fato de que a função exponencial é injetora, isto é:
           2^x \left( \frac{1}{8}+ \frac{1}{2}+1\right)
           =52 \Rightarrow 2^x. \frac{13}{8}
           =52 \Rightarrow 2^x
-          = 32 
+          = 32
         \]
         Portanto, colocando $32$ na base $2$ temos $2^x=2^5 \Rightarrow x=5$.
         Logo, a solução da equação é $S=\{5 \}$.
-    
-      \item $2^{2x}-9.2^x+8=0$ 
+
+      \item $2^{2x}-9.2^x+8=0$
 
         Do mesmo modo do item anterior, , não conseguimos transformar a equação
         em uma igualdade de mesma base. Vamos reescrever a equação da seguinte
@@ -404,11 +404,11 @@ o fato de que a função exponencial é injetora, isto é:
         \end{enumerate}
         Logo o conjunto solução da equação é $S=\{0,3 \}$.
     \end{enumerate}
-\end{exe}
+\end{example}
 
 %------------------------------------------------------------------------------%
 \subsection{Inequações Exponenciais}
-    
+
 Para resolvermos uma Inequação exponencial do tipo $a^{f(x)} \leq a^{g(x)}$ (ou
 $a^{f(x)} \geq a^{g(x)}$), devemos lembrar que a função $y=a^x$ é crescente se
 $a>1$ e decrescente se $0 < a< 1$. Portanto, antes de tudo, observamos a
@@ -423,11 +423,11 @@ condições:
       conta da função exponencial ser decrescente quando $0< a< 1$.
 \end{enumerate}
 
-\begin{exe} 
+\begin{example}
   Resolva as seguintes Inequações Exponenciais:
   \begin{enumerate}
-    \item $\left( \frac{1}{2} \right)^{2x+2} 
-      < \left( \frac{1}{2} \right)^{x^2-1} $ 
+    \item $\left( \frac{1}{2} \right)^{2x+2}
+      < \left( \frac{1}{2} \right)^{x^2-1} $
 
       Note que nesse caso temos uma inequação exponencial e como as bases de ambos
       os membros são iguais( $a=\frac{1}{2}$) basta montarmos uma inequação com
@@ -448,21 +448,21 @@ condições:
       \Rightarrow x> 4$. Logo, a solução da inequação pedida é $S= \{ x \in
       \mathbb{R}| x>4 \}$.
   \end{enumerate}
-\end{exe}
+\end{example}
 
-\begin{exe}
+\begin{example}
   Determine o domínio D da função $f(x)= \sqrt{5^x-125}$.
-  
+
   A fim de que exista $f(x)$, devemos ter $5^x-125 \geq 0$, uma vez que, não
   existe raíz quadrada de número negativo. Assim,
   \[
-    5^x-125 \geq 0 
-    \Rightarrow 5^x \geq 125 
+    5^x-125 \geq 0
+    \Rightarrow 5^x \geq 125
     \Rightarrow 5^x \geq 5^3
     \Rightarrow x \geq 3
   \]
   Assim, o domínio da função é D=$\{ x \in \mathbb{R}| x \geq 3 \}.$
-\end{exe}
+\end{example}
 
 %------------------------------------------------------------------------------%
 
