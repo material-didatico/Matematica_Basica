@@ -1,0 +1,154 @@
+%------------------------------------------------------------------------------%
+\section{Proposição, Teoremas}
+
+Uma \emph{Proposição} é uma oração afirmativa, cujo valor lógico é falso ou
+verdadeiro, sem dar espaço para uma terceira alternativa. Considere, como
+exemplo, as seguintes proposições:
+\begin{enumerate}[label=\alph*)]
+    \item Todo triângulo é retângulo;
+    \item A soma de todos os ângulos de um triângulo é \ang{180};
+    \item A soma de dois números pares é sempre um número par;
+    \item Todo Brasileiro é carioca;
+    \item Se $a>1$ então $a^2<a$.
+\end{enumerate}
+Note que as afirmações (a), (d) e (e) são falsas. Para verificar que, de
+fato, que uma proposição é falsa, utilizamos o que chamamos de
+\emph{contraexemplos}. \emph{Contraexemplos} são casos que contrariam uma
+proposição, ou seja, um exemplo que refuta uma determinada afirmação universal.
+
+Um triângulo cujos ângulos interno são \ang{120}, \ang{40} e
+\ang{20} não é um triângulo retângulo, uma vez que não possui um ângulo
+interno de \ang{90}. Logo esse contra-exemplo refuta a proposição (a)
+mostrando que tal afirmação é falsa. Para verificar a veracidade da afirmação
+(d) teríamos que consultar o registro de todos os brasileiros e verificar se
+nasceu no Rio de Janeiro, mas isto é falso, pois o conhecido escritor Graciliano
+Ramos é um brasileiro nascido em Alagoas. Do mesmo modo, se escolhermos $a=2$,
+podemos ver que $a^2=4 > a$ e, portanto, esse contraexemplo contradiz a
+afirmação feita em (e), mostrando que essa também é falsa.
+
+Por outro lado, as proposições (b) e (c) são verdadeiras e para nos
+convencermos precisaríamos demonstrar usando argumentos matemáticos. Adiante
+falaremos mais um pouco sobre isso. Observe que a proposição (e) é do tipo
+``Se $P$, então $Q$'', onde $P$ e $Q$ são sentenças. No item (e), por exemplo,
+temos que
+\begin{gather*}
+  P\colon a>1 \\
+  Q\colon a^2<a.
+\end{gather*}
+Isso significa que estamos assumindo que $P$ é verdade e usando este fato
+devemos verificar se $Q$ é verdade ou não. Uma \emph{proposição condicional}
+ou \emph{implicativa} é uma nova proposição formada a partir de duas
+proposições P e Q, que é escrita na forma:
+\[
+  \text{Se }       P,
+  \text{ então }   Q
+  \text{ ou }      P
+  \text{ implica } Q
+\]
+Denotamos a expressão
+$P$ implica $Q$ por $P \Rightarrow Q$
+
+No caso, a sentença P é chamada de \emph{hipótese} e a sentença $Q$ é
+denominada de \emph{tese} e a validade da hipótese implica na veracidade da
+tese.
+
+A \emph{recíproca} de uma proposição condicional ou implicativa é a
+proposição:
+\[
+  \text{Se }     Q,
+  \text{ então } P
+  \text{ ou }    Q \Rightarrow P
+\]
+A \emph{Contrapositiva} ou \emph{Contrarecíproca}
+de uma afirmação condicional é a expressão :
+\[
+  \text{Se }     \sim Q,
+  \text{ então } \sim P
+  \text{ ou }    \sim Q
+  \Rightarrow    \sim P
+\]
+Vale ressaltar que a contrapositiva tem o mesmo valor lógico da proposição a
+ela associada, ou seja, dizer que $P \Rightarrow Q$ é o mesmo que dizer
+$\sim Q \Rightarrow \sim P$.
+Vamos chamar o modo em enunciamos uma proposição de
+\emph{forma  positiva}.
+
+Para que fique claro, considere a seguinte proposição:
+\[
+  \text{Se como laranja então gosto de fruta.}
+\]
+Na proposição enunciada acima temos que a hipótese é ``como laranja''
+e a tese é ``gosto de frutas''.
+Por outro lado a recíproca dessa proposição é
+\[
+  \text{Se gosto de frutas então como laranja.}
+\]
+
+Por fim, a contrapositiva é
+\[
+  \text{Se não gosto de frutas então não como laranja.}
+\]
+
+Mais a frente veremos que a forma contrapositiva de uma proposição poderá ser,
+eventualmente, uma forma indireta muito eficaz de verificar resultados em
+Matemática.
+
+A teoria matemática é construída pelo \emph{Modelo Axiomático}, isso
+significa que partimos de alguns conceitos primitivos e afirmações básicas
+(\emph{axiomas ou postulados}) que aceitamos como verdadeiras, isto é, sem
+que sejam demonstradas. Os conceitos de ponto, reta e plano são conceitos
+primitivos. Quando afirmamos que ``Por dois pontos passam uma única reta'',
+temos um exemplo de um axioma. A partir desses conceitos, todos os outros
+conceitos podem ser definidos e todas as outras proposições demonstradas.
+Assim, \emph{definições}  conceitos dados em função de termos considerados
+previamente conhecidos.
+
+Existem apenas duas categorias de enunciados: as proposições primitivas
+(axiomas), que são proposições aceitas sem demonstração (não havendo
+preocupação se são evidentes ou não); e as proposições demonstradas (teoremas,
+proposições, corolários e lemas) por meio de raciocínios logicamente corretos,
+a partir dos postulados e definições pertinentes.
+
+Nesse sentido, entendemos por \emph{demonstração} Matemática, o processo de
+raciocínio lógico e dedutivo para checar a veracidade de uma proposição
+condicional. Nesse processo são usados argumentos válidos e definições, ou
+seja, aqueles que concluam afirmações verdadeiras a partir de fatos que também
+são verdadeiros.
+
+As proposições que podem ser demonstradas são chamadas de \emph{Teoremas}.
+Em geral, denominamos de Teorema apenas certas proposições que são de grande
+importância matemática, chamando-se simplesmente de proposição ao resto das
+proposições verdadeiras que admitem uma demonstração. Para que um Teorema seja
+verificado, as hipóteses tem que ser cuidadosamente satisfeitas. Um famoso
+Teorema é o \emph{Teorema de Pitágoras}, que enunciaremos a seguir:
+
+%------------------------------------------------------------------------------%
+\begin{teorema}{Teorema de Pitágoras}{teo:pitagoras}
+  Em um triângulo retângulo a
+  soma dos quadrados dos catetos é igual ao quadrado da hipotenusa.
+\end{teorema}
+%------------------------------------------------------------------------------%
+
+Note que o teorema de Pitágoras não está na forma ``Se P então Q''. No entanto,
+podemos reescrevê-lo nesse formato.
+
+%------------------------------------------------------------------------------%
+\begin{teorema}{Teorema de Pitágoras no Gradado}{teo:pitagoras-quadrado}
+  Se $T$ é um triângulo retângulo
+  de catetos $b$ e $c$ e hipotenusa $a$, então $a^2=b^2+c^2$.
+\end{teorema}
+%------------------------------------------------------------------------------%
+
+No Teorema de Pitágoras temos que as hipóteses são ``T é um triângulo retângulo
+de catetos $b$ e $c$ e hipotenusa $a$'' e a tese é ``$a^2=b^2+c^2$ ''. Existem
+algumas sentenças que são diretas consequências de um determinado teorema são
+chamadas de \emph{Corolários}, já resultados auxiliares que são usados para
+demonstrar uma determinada proposição ou teorema são chamados de
+\emph{Lemas}.
+
+Quando em uma sentença temos que $P \Rightarrow Q$ e $Q \Rightarrow P$,
+escrevemos $P \Leftrightarrow Q$ e o símbolo $\Leftrightarrow$ é lido como ``se
+e somente se''. Em algumas proposições e teoremas matemáticos vale a recíproca,
+mas nem sempre isso é verdade.
+
+%------------------------------------------------------------------------------%

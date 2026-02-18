@@ -1,0 +1,110 @@
+%------------------------------------------------------------------------------%
+\section{Demonstração direta}
+
+A demonstração direta é aquela que, por meio de uma sequência lógica, parte
+das hipóteses e com argumentações coerentes concluímos a veracidade da tese.
+
+%------------------------------------------------------------------------------%
+\begin{proposicao}{Quadrado de número par}{prop:par}
+  Se $x$ é par, então $x^2$ é par.
+\end{proposicao}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{proof}
+  Essa proposição nos diz que se um número $x$ é par, então o seu quadrado
+  também é par. Note que dizemos que um número inteiro é par, se ele tem o
+  formato $2k$, com $k \in \Z$ e dizemos que um número inteiro é ímpar,
+  se ele tem o formato $2k+1$, com $k \in \Z$. Vamos inicialmente
+  destacar a hipótese e a tese dessa proposição:
+  \[
+    \text{Hipótese: } x \text{ é par}.
+  \]
+  \[
+    \text{Tese: } x^2 \text{ é par}.
+  \]
+  Assim, partindo da tese, se $x$ é um número par, então $x=2k$,
+  onde $k$ é algum número inteiro. Assim,
+  \[
+    x^2
+    = xx
+    = (2k)(2k)
+    = 4k^2
+    = 2(2k^2)
+  \]
+  Chamando $p=2k^2$, e notando que $2k^2$ é um número inteiro, temos que
+  $x^2=2p$, então podemos concluir que $x^2$ é, também, um número par.
+\end{proof}
+%------------------------------------------------------------------------------%
+
+Agora vamos provar o famoso Teorema de Pitágoras
+
+%------------------------------------------------------------------------------%
+\begin{teorema}{Teorema de Pitágora}{teo:teorema-pitagoras-novamente}
+  Se $T$ é um triângulo retângulo
+  de catetos $b$ e $c$ e hipotenusa $a$, então $a^2=b^2+c^2$.
+\end{teorema}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{figure}[h]
+  \centering
+  \includegraphics{teo-de-pitagoras}
+  \caption{Triângulo $T$}
+  \label{pita}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{figure}[h]
+  \centering
+  \includegraphics{teorema-de-pitagoras-quadrado}
+  \caption{Quadrado formado pela junção de 4 triângulos retângulos iguais.}
+  \label{pita1}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{proof}
+  Aqui já sabemos que as hipótese são que $T$ é um triângulo retângulo de
+  catetos $b$ e $c$ e hipotenusa $a$ e a tese, que é o resultado que queremos
+  chegar é  $a^2=b^2+c^2$. Logo, considere um triângulo retângulo T conforme a
+  Figura~\ref{pita}:
+
+  A partir disto, vamos pegar 4 triângulos iguais os da Figura~\ref{pita} e
+  posicionar estes triângulos de modo que formem um quadrado de lado $b+c$.
+  Note que formamos também um quadrado interno de lados cujos lados são as
+  hipotenusas $a$ dos triângulos, conforme ilustra a Figura~\ref{pita1}.
+
+  Podemos calcular a área desse quadrado formado de duas formas. A primeira é
+  notando que o lado desse quadrado é $b+c$, assim:
+  \begin{equation}
+    \label{eqpi}
+    A_{\text{quadrado}} = (b+c)^2=b^2+2bc+c^2
+  \end{equation}
+  Por outro lado, podemos calcular a área desse quadrado maior somando a
+  área dos 5 objetos que o compõem: 4 triângulos retângulos iguais e
+  um quadrado menor de lado $a$.
+  Ora,
+  \begin{gather*}
+    A_{\text{triangulo}} = \frac{bc}{2} \\
+    A_{\text{quadrado menor}} = a^2
+  \end{gather*}
+  Assim,
+  \begin{equation}\label{eqpi2}
+    A_{\text{quadrado}}
+    = 4\frac{bc}{2}+a^2
+    = 2bc+a^2
+  \end{equation}
+  Igualando as expressões obtidas em (\ref{eqpi}) e (\ref{eqpi2})
+  chegamos que
+  \[
+    b^2+2bc+c^2= 2bc+a^2
+  \]
+  organizando os termos e fazendo os cancelamentos necessários, obtemos
+  \[
+    a^2=b^2+c^2.
+  \]
+\end{proof}
+%------------------------------------------------------------------------------%
+

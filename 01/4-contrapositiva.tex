@@ -1,0 +1,51 @@
+%------------------------------------------------------------------------------%
+\section{Demonstração por contraposição}
+
+Sabemos que as proposições
+\[
+  P \Rightarrow Q \quad\text{ e }\quad \sim Q \Rightarrow \sim P
+\]
+são equivalentes, ou seja,
+\[
+  P \Rightarrow Q \quad\Leftrightarrow\quad \sim Q \Rightarrow \sim P.
+\]
+Nesse caso então iremos demonstrar de forma direta a sentença
+$\sim Q \Rightarrow \sim P$,
+que implica na demonstração de $P \Rightarrow Q$. Vamos
+demonstrar as proposições que seguem:
+
+%------------------------------------------------------------------------------%
+\begin{proposicao}{Número é par se seu quadrado for par}{prop:par_quadrado}
+  Se $x^2$ é par, então $x$ é par.
+\end{proposicao}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{proof}
+  Inicialmente é importante observar, que nesse caso fica difícil fazer a
+  demonstração direta (Verifique!). Vamos demonstrar a veracidade dessa
+  afirmação usando a contrapositiva. Nesse caso, temos:
+  \[
+    P\colon x^2 \text{ é par}.
+  \]
+  \[
+    Q\colon x \text{ é par}.
+  \]
+  Sendo assim,
+  \[
+    \sim Q\colon x \text{ é ímpar}.
+  \]
+  \[
+    \sim P\colon x^2 \text{ é ímpar}.
+  \]
+  Assumindo que $x$ é ímpar, temos que $x=2k+1$, $k \in \Z$. Assim,
+  \[
+    x^2
+    = (2k+1)^2
+    = 4k^2+4k+1
+    = 2(2k^2+2k)+1
+  \]
+  Chamando $p=2k^2+2k$ e notando que $2k^2+2k$ é um número inteiro, temos que
+  $x^2=2p+1$, que é o mesmo que dizer que $x^2$ é ímpar.
+\end{proof}
+

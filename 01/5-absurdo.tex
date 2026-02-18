@@ -1,0 +1,84 @@
+%------------------------------------------------------------------------------%
+\section{Demonstração por redução ao absurdo ou por contradição}
+
+O método de redução ao absurdo, utiliza a negação da tese para chegar a uma
+contradição da hipótese ou de alguma verdade matemática e é baseado na
+\emph{lei do terceiro excluído} que diz que uma afirmação que não pode ser
+falsa, deverá ser consequentemente verdadeira. Vamos ver na prática como essa
+técnica funciona na prática provando a demonstração que segue:
+
+%------------------------------------------------------------------------------%
+\begin{proposicao}{Desigualdade das Médias}{prop:desigualdade_medias}
+  Se $a$ e $b$ são números reais não-negativos, então
+  \[
+    \frac{a+b}{2} \geq \sqrt{ab}.
+  \]
+\end{proposicao}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{proof}
+  Inicialmente, vamos destacar a hipótese e a tese:
+  \[
+    \text{Hipótese: } a, b \in \R_{+}
+  \]
+  \[
+    \text{Tese: } \frac{a+b}{2} \geq \sqrt{ab}
+  \]
+  Começamos a demonstração negando a tese até chegar em algum absurdo.
+  Assim, vamos supor que \(\frac{a+b}{2} < \sqrt{ab}\).
+  Desta maneira
+  \begin{align*}
+    \frac{a+b}{2} & < \sqrt{ab} \\
+    a+b & < 2 \sqrt{ab} \\
+    a-2\sqrt{ab}+b & <0 \\
+    (\sqrt{a}-\sqrt{b})^2 & <0 \\
+  \end{align*}
+  Deste modo essa conclusão é um absurdo, já que nenhum número real ao quadrado
+  pode ser negativo. Portanto,
+  \[
+    \frac{a+b}{2} < \sqrt{ab}
+  \]
+  é falsa e
+  \[
+    \frac{a+b}{2} \geq \sqrt{ab}
+  \]
+  é verdadeira.
+\end{proof}
+%------------------------------------------------------------------------------%
+
+Vamos usar a redução ao absurdo para provar a seguinte proposição.
+
+%------------------------------------------------------------------------------%
+\begin{proposicao}{Irracionalidade de raiz de 2}{prop:raiz_2}
+  O número $\sqrt{2}$ é irracional.
+\end{proposicao}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{proof}
+  Vamos negar a tese, ou seja, vamos supor que $\sqrt{2}$ é racional. Isso
+  significa dizer que podemos escrever $\sqrt{2}$ na forma de fração
+  irredutível, isto é, $\sqrt{2}=\sfrac{p}{q}$, com $p$ e $q$ primos entre si
+  (não possui divisores comuns além do 1). Dessa maneira
+  \[
+    \sqrt{2}=\frac{p}{q}
+    \quad\Rightarrow\quad 2=\frac{p^2}{q^2}
+    \quad\Rightarrow\quad p^2=2q^2
+  \]
+  onde a última igualdade nos diz que $p$ é um número par, em outras palavras
+  $p=2k$, $k \in \Z$. Assim, retornando para a última igualdade
+  \[
+    p^2=2q^2
+    \quad\Rightarrow\quad (2k)^2=2q^2
+    \quad\Rightarrow\quad 4k^2=2q^2
+    \quad\Rightarrow\quad q^2=2k^2
+  \]
+  Dessa maneira concluímos que $q$ também é um número par. Ora, sendo $p$ e $q$
+  números pares, então $2$ é um divisor comum de $p$ e $q$, o que é um absurdo,
+  visto que estamos supondo de $p$ e $q$ são primos entre si. Portanto, é um
+  absurdo supor que $\sqrt{2}$ é racional e sendo assim, $\sqrt{2}$ é
+  irracional.
+\end{proof}
+%------------------------------------------------------------------------------%
+
