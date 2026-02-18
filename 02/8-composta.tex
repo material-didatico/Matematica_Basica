@@ -1,0 +1,105 @@
+%------------------------------------------------------------------------------%
+\section{Função composta}
+
+%------------------------------------------------------------------------------%
+\begin{definicao}{Função composta}{def:funcao_composta}
+  Dadas as funções $f$ e $ g$ cujos domínios são $A$ e $B$, respectivamente,
+  definimos a \emph{função composta}\index{Função!composta} $f \circ g$ por
+  \[
+    (f \circ g)(x)= f(g(x))
+  \]
+  O domínio de $f \circ g$ é o conjunto dos valores de $x \in B$
+  tais que $g(x) \in A$
+\end{definicao}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Se $f(x)= x^2$ e $g(x)=x-3$, encontre as compostas
+  $f \circ g$ e $g \circ f$.
+
+  \solution
+  Por definição
+  $f \circ g= f(g(x))=f(x-3)=(x-3)^2$ e
+  $g \circ f= g(f(x))=g(x^2)= x^2-3$.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Se
+  $f(x) = \frac{x}{x+1}$,
+  $g(x) = x^{10}$ e
+  $h(x) = x+3$,
+  encontre  $f \circ g \circ h$.
+
+  \solution
+  \[
+    f \circ g \circ h
+    = f(g(h(x)))
+    = f(g(x+3))
+    = f((x+3)^{10})
+    = \frac{(x+3)^{10}}{(x+3)^{10}+1}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{observation}
+  Devemos está atentos ao calcularmos o domínio da função composta. Segundo a
+  definição~\ref{def:funcao_composta}
+  para que sejamos capazes de calcular $f(g(x))$ é preciso que:
+  \begin{enumerate}
+    \item $x$ pertença ao domínio de $g$;
+    \item $g(x)$ (o valor de $g$ em $x$) pertença ao domínio de $f$;
+  \end{enumerate}
+\end{observation}
+%------------------------------------------------------------------------------%
+
+Para deixar mais clara a definição do domínio da função composta, veremos
+como obtê-lo de forma prática no exemplo a seguir.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Sejam dadas as funções
+  \[
+    f(x) = \frac{1}{x^2-4} \quad\text{ e }\quad
+    g(x) = \frac{1}{x}.
+  \]
+  Obtenha $f(g(x))$ e determine o domínio dessa composta.
+
+  \solution
+  \[
+    f(g(x))
+    = f\left(\frac{1}{x}\right)
+    = \frac{1}{\dfrac{1}{x^2}-4}
+    = \frac{1}{\dfrac{1-4x^2}{x^2}}
+    = \frac{x^2}{1-4x^2}.
+  \]
+  Pela Observação,
+  para que $f(g(x))$ esteja bem definida temos que ter:
+  \begin{enumerate}
+    \item $x$ pertença ao domínio de $g$, isto é, $x \neq 0$.
+    \item $g(x)$ pertença ao domínio de $f$, isto é
+    \[
+      1-4x^2 \neq 0
+      \quad\Rightarrow\quad
+      x \neq -\frac{1}{2}
+      \quad\text{ e }\quad
+      x \neq \frac{1}{2}.
+    \]
+  \end{enumerate}
+  Logo
+  \[
+    D(f(g(x)))
+    = \left\{
+        x \in \R \st
+        x \neq 0,\;
+        x \neq -\frac{1}{2},\;
+        x \neq  \frac{1}{2}
+    \right\}
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%

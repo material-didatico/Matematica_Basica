@@ -1,0 +1,42 @@
+%------------------------------------------------------------------------------%
+\section{Função Injetora}
+
+\begin{definicao}{}{def:}(\emph{Função Injetora}):
+  Uma função $f$, definida em seu domínio $D$ é \emph{injetora} quando dados
+  quaisquer valores reais $x_1$, $x_2 \in D$, se $x_1 \neq x_2$, então, $f(x_1)
+  \neq f(x_2)$.
+\end{definicao}
+
+Em outras palavras, se $f$ é uma função injetora então,
+\[
+  f(x_1)=f(x_2) \Leftrightarrow x_1=x_2.
+\]
+
+\emph{Teste da reta horizontal:}
+Uma função é injetora se e somente se nenhuma reta
+horizontal intercepta seu gráfico mais de uma vez.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=1.4]{injet}
+  \caption{Gráfico de uma função que não é injetora,
+  uma vez que $f(x_1)=f(x_2)$ para $x_1 \neq x_2$.}
+\end{figure}
+
+\begin{example}
+  Verifique se as funções abaixo são injetoras \\
+  a) $f(x)=x^2$ \hspace{1cm}
+  b) $f(x)=x^3$ \hspace{1cm}
+  c) $y= \frac{3}{5x-2}$ \\
+
+  \emph{a)} $f$ não é injetora pois $f(-1)=f(1)=1$. \\
+
+  \emph{b)} Suponha que $f(x_1)=f(x_2) \Rightarrow x_1^3=x_2^3 \Rightarrow
+  x_1^3= \sqrt[3]{x_2^3} \Rightarrow x_1=x_2$, logo $f$ é injetora. \\
+
+  \emph{c)} Suponha que $f(x_1)=f(x_2) \Rightarrow \frac{3}{5x_1-2}=
+  \frac{3}{5x_2-2} \Rightarrow 3(5x_1-2)=3(5x_2-2) \Rightarrow 5x_1-2=5x_2-2
+  \Rightarrow x_1=x_2.$ Logo, $y$ é injetora.
+\end{example}
+
+%------------------------------------------------------------------------------%

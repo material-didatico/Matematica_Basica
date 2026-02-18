@@ -1,0 +1,232 @@
+%------------------------------------------------------------------------------%
+\section{Funções}
+
+As funções surgem quando uma quantidade (Grandeza) depende de outra. Por
+exemplo, podemos dizer que a área de um quadrado está relacionada ao
+comprimento do lado, isso quer dizer que uma vez conhecido o comprimento do
+lado, $x$, conseguimos calcular a área usando a função $f$ descrita pela
+relação $f(x)=x^2$.
+
+É possível representar uma função de quatro maneiras:
+\begin{description}
+  \item[verbalmente]     descrevendo-a com palavras
+  \item[numericamente]   por meio de uma tabela de valores
+  \item[visualmente]     através de um gráfico
+  \item[algebricamente]  utilizando-se uma fórmula explícita
+\end{description}
+
+%------------------------------------------------------------------------------%
+\begin{definicao}{Função}{def:funcao}
+  Uma \emph{função}\index{Função} $f\colon D \to C$
+  é uma relação que associa a cada elemento $x$
+  de um conjunto $D$, chamado \emph{domínio}\index{Domínio},
+  um \emph{único} elemento
+  $f(x)$ (ou $y$) de um conjunto $C$, denominado
+  \emph{contradomínio}\index{Contradomínio}.
+\end{definicao}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{observation}
+  Quando o domínio de uma função $f$ não for especificado, então o
+  \emph{domínio} (natural)\index{Domínio!natural}
+  de $f$ é o conjunto de todos os valores de $x$
+  para os quais $f$ está definida.
+\end{observation}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{observation}
+  Devemos ter cuidado ao analisarmos o domínio de uma função, quando essa é
+  originada de um problema real.
+  Se, por exemplo, a função $f(x)=x+1$, $f(x)$
+  representa o valor a ser pago em uma corrida de táxi em função do número de
+  quilômetros rodados $x$, então o domínio de $f$ será
+  \[
+    D= \left\{ x \in \R \st x \geq 0 \right\},
+  \]
+  uma vez que o número de quilômetros rodados é sempre não-negativo.
+\end{observation}
+%------------------------------------------------------------------------------%
+
+Note que o contradomínio $C$ de uma função $f$ pode ser qualquer conjunto que
+contenha, dentre outros elementos, os valores de $f(x)$. Sendo assim, em muitas
+situações estamos interessados em trabalhar apenas com o conjunto que contém
+apenas os valores gerados por $f$, ao qual damos o nome de
+\emph{conjunto imagem}.
+
+%------------------------------------------------------------------------------%
+\begin{definicao}{Imagem}{def:imagem}
+  Dada uma \emph{função} $f\colon D\to C$, o valor $f(x)$ para $x\in D$ é
+  chamado \emph{imagem}\index{Imagem} de $x$.
+  O conjunto de todas as imagens da função $f$ é
+  denominado \emph{conjunto imagem}\index{Conjunto!Imagem}
+  (ou simplesmente imagem) e denotado por
+  $\Im(f)$, ou seja,
+  \[
+    \Im(f) = \left\{ f(x) \st x \in D \right\}.
+  \]
+\end{definicao}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{definicao}{Gráfico}{def:grafico}
+  O \emph{gráfico}\index{Gráfico} de $f$ é o conjunto dos pontos $(x, y)$
+  do plano cartesiano
+  que satisfazem $y=f(x)$, ou seja,
+  \[
+    G(f) = \left\{ \big(x, f(x)\big) \st x\in D \right\}.
+  \]
+\end{definicao}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \includegraphics[scale=0.5]{funcao1}
+  \caption{Figura retirada do livro Cálculo 1, James Stewart.}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\subsection{Quando uma aplicação não é função?}
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Verifique se a equação $y^2+x^2-16=0$ permite uma definição
+  de $y$ como função de $x$.
+
+  \solution
+  Inicialmente vamos ver se conseguimos explicitar $y$ como função de $x$.
+  \begin{align*}
+    y^2 & = 16-x^2 \\
+    y   & = \pm \sqrt{16-x^2}
+  \end{align*}
+  Logo, para cada $x \in \R$, temos dois valores para $y$. Portanto, a
+  equação $y^2+x^2-16=0$ não permite uma definição de $y$ como função de $x$.
+\end{example}
+%------------------------------------------------------------------------------%
+
+Nos exemplos a seguir vamos explorar como o domínio natural das funções
+pode ser estudado.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Faça o estudo do domínio da Função
+  \(
+    f(x) = 1-x^4
+  \)
+
+  \solution
+  Note que $f$ está bem definida para todo $x \in \R$, logo
+  \[
+    D(f) = \R.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Faça o estudo do domínio da Função
+  \(
+    g(x) = \frac{1}{x+4}
+  \)
+
+  \solution
+  Nesse caso temos que $g$ está definida quando
+  \[
+    x+4 \neq 0 \quad\Rightarrow\quad x \neq -4,
+  \]
+  logo
+  \[
+    D(g) = \R-\left\{-4\right\}
+  \]
+  ou
+  \[
+    D(g) = \left\{ x \in \R \st x \neq -4 \right\}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Faça o estudo do domínio da Função
+  \(
+    h(x) = \sqrt{9-x}
+  \)
+
+  \solution
+  Para que $h$ seja bem definida
+  \[
+    9-x \geq 0 \quad\Rightarrow\quad x \leq 9,
+  \]
+  logo
+  \[
+    D(h) = \left\{ x \in \R \st x \leq 9 \right\}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Faça o estudo do domínio da Função
+  \(
+    f(t) = \frac{\sqrt{2+t}}{\sqrt{2t-6}}
+  \)
+
+  \solution
+  Para que $f$ esteja bem definida teremos que ter
+  \[
+    2+t \geq 0 \quad\Rightarrow\quad t \geq -2
+  \]
+  e
+  \[
+    2t-6 >0 \quad\Rightarrow\quad t>3,
+  \]
+  fazendo a interseção desses intervalos temos que
+  \[
+    D(f) = \left\{ x \in \R \st x \geq 3 \right\}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Faça o estudo do domínio da Função
+  \(
+    f(x) = \sqrt[3]{2x-3}
+  \)
+
+  \solution
+  Como o índice a raiz é ímpar, então
+  \[
+    D(f) = \R.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Faça o estudo do domínio da Função
+  \(
+    p(x) = \frac{\sqrt{x-1}}{x^2-5x+6'}
+  \)
+
+  \solution
+  Para que $p$ esteja bem definida teremos que ter
+  \[
+    x-1 \geq 0 \quad\Rightarrow\quad x \geq 0
+  \]
+  e
+  \[
+    x^2-5x+6 \neq 0 \quad\Rightarrow\quad x \neq 2
+  \]
+  e
+  \[
+    x \neq 3,
+  \]
+  portanto
+  \[
+    D(p) = \left\{ x \in \R \st x \geq 1,\; x \neq 2, x \neq 3 \right\}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
