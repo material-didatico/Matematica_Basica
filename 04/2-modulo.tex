@@ -1,0 +1,286 @@
+%------------------------------------------------------------------------------%
+\section{Função modular}
+
+Antes de definirmos função modular, precisamos do conceito de valor absoluto.
+
+%------------------------------------------------------------------------------%
+\begin{definicao}{}{def:}
+  Dado um número real $x$, definimos o
+  \emph{valor absoluto}\index{valor absoluto},
+  ou \emph{módulo}\index{Módulo} de um dw $x$ como
+  \[
+    \abs{a} = \begin{cases}
+    \hpm x, & \text{ se } x \geq 0, \\
+    -    x, & \text{ se } x <    0.
+    \end{cases}
+  \]
+\end{definicao}
+%------------------------------------------------------------------------------%
+
+Note que a definição de valor absoluto é feita por partes. Se $x$ é um
+número positivo, o valor absoluto é seu próprio valor.
+Logo, $\abs{4}=4$.
+Em contrapartida, se $x$ é um valor negativo, o valor absoluto é obtido
+eliminando o sinal. Assim,
+\[
+  \abs{-10} = -(-10) = 10.
+\]
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Elimine o módulo da expressão
+  \(
+    \abs{-\frac{3}{2}}
+  \)
+  usando a definição de valor absoluto.
+
+  \solution
+  \begin{align*}
+    \abs{-\frac{3}{2}}
+    & = - \left(-\frac{3}{2} \right) \\
+    & = \frac{3}{2}
+  \end{align*}
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Elimine o módulo da expressão
+  \(
+    -\abs{-5}
+  \)
+  usando a definição de valor absoluto.
+
+  \solution
+  Sabemos que $\abs{-5}=5$, então $-\abs{-5} =-5$.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Elimine o módulo da expressão
+  \(
+    \abs{3-2\sqrt{3}}
+  \)
+  usando a definição de valor absoluto.
+
+  \solution
+  Você deve atentar que
+  \[
+    3-2\sqrt{3}<0,
+  \]
+  logo
+  \begin{align*}
+   \abs{3-2\sqrt{3}}
+   & = -\left( 3 - 2\sqrt{3} \right) \\
+   & =  2\sqrt{3}-3.
+  \end{align*}
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Elimine o módulo da expressão
+  \(
+    \abs{2x+1}
+  \)
+  usando a definição de valor absoluto.
+
+  \solution
+  Nesse caso, usando a definição de módulo, temos
+  \begin{align*}
+    \abs{2x+1}
+    & = \begin{cases}
+          \hpm 2x+1,  & \text{ se } 2x + 1 \geq 0 \\
+          -   (2x+1), & \text{ se } 2x + 1 <    0
+        \end{cases}
+    \\[2mm]
+    & = \begin{cases}
+        \hpm 2x+1, & \text{ se } x \geq -\sfrac{1}{2} \\
+        -    2x-1, & \text{ se } x <    -\sfrac{1}{2}
+        \end{cases}
+  \end{align*}
+\end{example}
+%------------------------------------------------------------------------------%
+
+A seguir seguem algumas propriedades do valor absoluto,
+considerado $a$ e $b$ números reais.
+\begin{gather}
+  \abs{a} \geq 0                 \\[2mm]
+  \abs{-a} = \abs{a}             \\[2mm]
+  \abs{ab} = \abs{a} \; \abs{b}  \\[2mm]
+  \abs{\frac{a}{b}} = \frac{\abs{a}}{\abs{b}} \qquad b \neq 0  \\[2mm]
+  \abs{a^n} = a^n \qquad \text{ se } n \text{ é par}           \\[2mm]
+  \abs{a+b} \leq \abs{a} + \abs{b}            \\[2mm]
+  \abs{a-b} = a-b \qquad \text{ se } a \geq b \\[2mm]
+  \abs{a-b} = b-a \qquad \text{ se } a \leq b \\[2mm]
+  \sqrt{a^2} = \abs{a}
+\end{gather}
+
+Portanto,
+\emph{função modular}\index{Função!modulas} ou
+\emph{função valor absoluto}\index{Função!valor absolutos}
+é uma função definida por partes, dada por
+\[
+  f(x)
+  = \abs{x}
+  = \begin{cases}
+  \hpm x, & \text{ se } x \geq 0,\\
+  -    x, & \text{ se } x <    0.
+  \end{cases}
+\]
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[width=9cm,height=6cm]{modular}
+  \caption{Gráfico da função modular.}
+  \label{modulargr}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+A Figura~\ref{modulargr} mostra o gráfico da  função modular,
+cujas características são:
+\begin{itemize}
+  \item O domínio é $\R$.
+  \item O conjunto imagem é $[0, \infty)$.
+  \item Há um zero em $x=0$.
+  \item A função é decrescente em $(-\infty, 0)$
+                 e   crescente em $(0, \infty)$.
+  \item A função é par.
+\end{itemize}
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  A partir do gráfico de $f(x)= \abs{x}$ faça o
+  esboço do gráfico da função
+  $f(x)= \abs{x-3} +4$
+
+  \solution
+  Nesse caso, para construir o gráfico de $f$ basta deslocar o gráfico
+  \ref{modulargr} 3 unidades para a direita e 4 unidades para cima,
+  conforme mostra a figura.
+
+  \IncludeGraphicCentredEx{mod1}[0.5]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  A partir do gráfico de $f(x)= \abs{x}$ faça o
+  esboço do gráfico da função
+  $f(x)= 2 \abs{x} -2$
+
+  \solution
+  Aqui, precisamos expandir o gráfico de $y=\abs{x}$ verticalmente por
+  um fator 2 e descer 2 unidades, conforme mostra a figura.
+
+  \IncludeGraphicCentredEx{mod2}[0.5]
+\end{example}
+%------------------------------------------------------------------------------%
+
+Ao compormos uma função modular com uma função $f$ qualquer,
+obtemos o módulo de $f$ que é dado por
+\[
+  \abs{f(x)} = \begin{cases}
+  \hpm f(x), & \text{ se } f(x) \geq 0,\\
+  -    f(x), & \text{ se } f(x) <    0.
+  \end{cases}
+\]
+
+Em outras palavras, para fazer o esboço do gráfico da função
+$\abs{f(x)}$, basta considerar os pedaços do gráfico de $f$
+que estão abaixo do eixo $x$ e refleti-los com relação ao eixo $x$.
+
+Por outro lado, se quisermos fazer o esboço do gráfico
+\[
+  f(x)= g(\abs{x}),
+\]
+ignoramos a parte do gráfico de $g(x)$ que está à esquerda do eixo $y$
+e refletimos, com relação ao eixo $y$, a parte do gráfico de $g(x)$
+que está à direita do eixo $y$ e então obtemos o gráfico da nova função.
+Funções obtidas dessa maneira são sempre pares, já que $f(x) = f(-x)$.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Faça o esboço do gráfico da função
+  \(
+    f(x)= \abs{2x-9}
+  \).
+
+  \solution
+  Nesse caso, temos que
+  \[
+    f(x) = g\left(h(x)\right),
+    \quad\text{onde}\quad
+    g(x) = \abs{x}
+    \quad\text{e}\quad
+    h(x) = 2x-9.
+  \]
+  Portanto, para obtermos o gráfico de $f$, basta construirmos o gráfico de
+  $h(x)=2x-9$ e refletir o pedaço desse gráfico que está abaixo do eixo
+  $x$,com respeito ao eixo $x$.
+
+  $h(x)$ é uma função linear, cujo gráfico é
+  uma reta, que aprendemos a esboçar no capítulo anterior.
+
+  A figura mostra o gráfico de $f$.
+
+  \IncludeGraphicCentredEx{mod3}[0.5]
+\end{example}
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Faça o esboço do gráfico da função
+  \(
+    g(x) = \abs{x^2-3x+2}
+  \).
+
+  \solution
+  Do mesmo modo do item anterior, $g(x)$ é a composição de duas funções, ou
+  seja,
+  \[
+    g(x) = p(q(x)),
+    \quad\text{com}\quad
+    p(x) = \abs{x}
+    \quad\text{e}\quad
+    q(x) = x^2 - 3x + 2.
+  \]
+  Logo, para construir o gráfico de $g$, basta fazermos o esboço
+  do gráfico de $q$ e rebatermos a parte negativa com relação ao eixo $x$.
+
+  Sabemos que $q(x)$ é uma função quadrática e seu gráfico é uma
+  parábola com concavidade voltada para cima e o procedimento para
+  o esboço do gráfico de $q$ foi apresentado no capítulo anterior.
+
+  A figura mostra o gráfico de $g$.
+
+  \IncludeGraphicCentredEx{mod4}[0.5]
+\end{example}
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Faça o esboço do gráfico da função
+  \(
+    f(x) = \abs{x}^2 - 4\abs{x}+3
+  \).
+
+  \solution
+  Note que
+  \[
+    f(x) = g\left(\abs{x}\right),
+    \quad\text{onde}\quad
+    g(x) = x^2 - 4x + 3.
+  \]
+  Para fazer o esboço do gráfico de $f(x)$, ignoramos a parte do
+  gráfico de $g(x)$ que está à esquerda do eixo $y$ e refletimos,
+  com relação ao eixo $y$, a parte do gráfico de $g(x)$ que está
+  a direita desse eixo.
+
+  O gráfico de $g$ é uma parábola, com concavidade voltada para cima.
+
+  Sendo assim, a figura apresenta o esboço do gráfico de $g$.
+
+  \IncludeGraphicCentredEx{mod6}[0.5]
+\end{example}
+%------------------------------------------------------------------------------%

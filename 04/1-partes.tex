@@ -1,0 +1,66 @@
+%------------------------------------------------------------------------------%
+\section{Função definida por partes}
+
+A tarifa mensal de um plano de telefonia fixa tem duas faixas de preço
+\begin{itemize}
+  \item Os clientes que usam até 400 minutos mensais em ligações
+    pagam um valor fixo de \reais{40} por mês;
+
+  \item Para cada minuto adicional (ou seja, que excede os 400 minutos)
+    paga-se \reais{0.05}.
+\end{itemize}
+
+Se consideramos que um cliente fale $x$ minutos por mês,
+podemos encontrar uma função que fornece o valor a ser pago
+(por mês) da conta telefônica.
+
+Primeiramente note que se suas ligações ultrapassarem 400 minutos, o tempo
+adicional equivalerá a $x-400$.
+
+Para determinar a função $f$ que fornece o valor mensal da conta, devemos
+considerar as duas situações previstas no plano
+\begin{gather*}
+  \text{se } x \leq 400, \text{ então } f(x) = 40; \\
+  \text{se } x    > 400, \text{ então } f(x) = 40+0,05(x-400).
+\end{gather*}
+Em síntese, temos a seguinte função definida por partes
+\[
+  f(x) = \begin{cases}
+  40,            & \text{ se } x \leq 400, \\
+  40+0,05(x-400) & \text{ se } x    > 400.
+  \end{cases}
+\]
+
+%------------------------------------------------------------------------------%
+\begin{definicao}{Função por Partes}{def:funcao-por-partes}
+  Um função é dita definida por partes\index{Função!por partes}
+  quando são definidas por mais de uma expressão.
+\end{definicao}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Esboce o gráfico da função definida por partes
+  \[
+    f(x)=\begin{cases}
+      2x+3, & \text{ se } x < 0,        \\
+      x^2,  & \text{ se } 0 \leq x < 2, \\
+      1,    & \text{ se } x \geq 2.
+    \end{cases}
+  \]
+  {\large \color{red} Gerar o gráfico.}
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Esboce o gráfico da função definida por partes
+  \[
+    g(x) = \begin{cases}
+      \dfrac{x^2-4}{2-x}, & \text{ se } x \neq 2, \\
+      1,                  & \text{ se } x =    2.
+    \end{cases}
+  \]
+  {\large \color{red} Gerar o gráfico.}
+\end{example}
+%------------------------------------------------------------------------------%
