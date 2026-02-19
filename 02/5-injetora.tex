@@ -1,11 +1,13 @@
 %------------------------------------------------------------------------------%
 \section{Função Injetora}
 
+%------------------------------------------------------------------------------%
 \begin{definicao}{}{def:}(\emph{Função Injetora}):
   Uma função $f$, definida em seu domínio $D$ é \emph{injetora} quando dados
   quaisquer valores reais $x_1$, $x_2 \in D$, se $x_1 \neq x_2$, então, $f(x_1)
   \neq f(x_2)$.
 \end{definicao}
+%------------------------------------------------------------------------------%
 
 Em outras palavras, se $f$ é uma função injetora então,
 \[
@@ -16,27 +18,71 @@ Em outras palavras, se $f$ é uma função injetora então,
 Uma função é injetora se e somente se nenhuma reta
 horizontal intercepta seu gráfico mais de uma vez.
 
+%------------------------------------------------------------------------------%
 \begin{figure}
   \centering
   \includegraphics[scale=1.4]{injet}
   \caption{Gráfico de uma função que não é injetora,
   uma vez que $f(x_1)=f(x_2)$ para $x_1 \neq x_2$.}
 \end{figure}
+%------------------------------------------------------------------------------%
 
+%------------------------------------------------------------------------------%
 \begin{example}
-  Verifique se as funções abaixo são injetoras \\
-  a) $f(x)=x^2$ \hspace{1cm}
-  b) $f(x)=x^3$ \hspace{1cm}
-  c) $y= \frac{3}{5x-2}$ \\
+  Verifique se a função \(f(x) = x^2\) é injetora
 
-  \emph{a)} $f$ não é injetora pois $f(-1)=f(1)=1$. \\
-
-  \emph{b)} Suponha que $f(x_1)=f(x_2) \Rightarrow x_1^3=x_2^3 \Rightarrow
-  x_1^3= \sqrt[3]{x_2^3} \Rightarrow x_1=x_2$, logo $f$ é injetora. \\
-
-  \emph{c)} Suponha que $f(x_1)=f(x_2) \Rightarrow \frac{3}{5x_1-2}=
-  \frac{3}{5x_2-2} \Rightarrow 3(5x_1-2)=3(5x_2-2) \Rightarrow 5x_1-2=5x_2-2
-  \Rightarrow x_1=x_2.$ Logo, $y$ é injetora.
+  \solution
+  $f$ não é injetora pois $f(-1)=f(1)=1$.
 \end{example}
+%------------------------------------------------------------------------------%
 
+\emph{Observação sobre Contraexemplos:}
+Muitas vezes, é mais simples demonstrar que uma função \emph{não} possui
+determinada propriedade do que provar que ela possui.
+Para mostrar que uma função não é injetora, por exemplo, basta apresentar um
+\emph{contraexemplo}\index{Contraexemplo}.
+
+Um contraexemplo é um caso específico que invalida uma afirmação geral.
+No exemplo anterior, para mostrar que $f(x)=x^2$ não é injetora,
+bastou encontrar dois elementos distintos ($x_1=1$ e $x_2=-1$)
+que resultam na mesma imagem ($f(1)=f(-1)=1$).
+Se a regra falha para um par, ela deixa de ser válida para todo o domínio.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Verifique se a função \(f(x) = x^3\) é injetora
+
+  \solution
+  Suponha que
+  \[
+    f(x_1)=f(x_2)
+  \]
+  temos então que
+  \begin{align*}
+    x_1^3 & = x_2^3 \\
+    x_1^3 & = \sqrt[3]{x_2^3} \\
+    x_1   & = x_2,
+  \end{align*}
+  logo $f$ é injetora.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Verifique se a função \(y= \frac{3}{5x-2}\) é injetora
+
+  \solution
+  Suponha que
+  \[
+    f(x_1)=f(x_2)
+  \]
+  temos então que
+  \begin{align*}
+   \frac{3}{5x_1-2} & = \frac{3}{5x_2-2} \\
+   3(5x_1-2)        & = 3(5x_2-2) \\
+   5x_1-2           & = 5x_2-2\\
+   x_1              & = x_2.
+  \end{align*}
+  Logo, $y$ é injetora.
+\end{example}
 %------------------------------------------------------------------------------%
