@@ -10,31 +10,86 @@ fórmulas empregadas em sua obtenção. Segue abaixo alguns casos de produtos
 notáveis. Em todos os casos considere que $a$ e $b$ são números reais,
 variáveis ou expressões algébricas.
 
+%------------------------------------------------------------------------------%
 \emph{Quadrado da soma de dois termos}
+
+A expressão $(a + b)^2$ representa a área de um quadrado de lado $(a+b)$.
+Ao expandirmos, vemos que
+\begin{align*}
+  (a+b)^2
+  & = (a+b) (a+b)           \\
+  & = a^2 + ab + ba + b^2   \\
+  & = a^2 + 2ab + b^2.
+\end{align*}
+Assim,
 \begin{equation}
   \label{eq:produto_notavel_1}
   (a+b)^2 = a^2 + 2ab + b^2
 \end{equation}
+Regra Prática: O quadrado do primeiro termo, mais duas vezes o produto do
+primeiro pelo segundo, mais o quadrado do segundo termo.
 
+%------------------------------------------------------------------------------%
 \emph{Quadrado da diferença de dois termos}
+
+Funciona de forma idêntica à soma,
+mas com atenção ao sinal negativo no termo central
+\begin{align*}
+  (a-b)^2
+  & = (a-b) (a-b)         \\
+  & = a^2 - ab - ba + b^2 \\
+  & = a^2 - 2ab + b^2.
+\end{align*}
+Assim,
 \begin{equation}
   \label{eq:produto_notavel_2}
   (a-b)^2 = a^2 - 2ab + b^2
 \end{equation}
+Regra Prática: O quadrado do primeiro termo, menos duas vezes o
+produto do primeiro pelo segundo, mais o quadrado do segundo termo.
 
+%------------------------------------------------------------------------------%
 \emph{Produto da soma pela diferença}
+
+Este é um dos mais úteis para simplificações e fatoração,
+pois os termos centrais se anulam
+\begin{align*}
+  (a+b)(a-b)
+  & = a^2 - ab + ba - b^2 \\
+  & = a^2 - b^2.
+\end{align*}
+Assim,
 \begin{equation}
   \label{eq:produto_notavel_3}
   (a+b)(a-b) = a^2 - b^2
 \end{equation}
+Regra Prática: Resulta sempre na diferença entre os quadrados dos dois termos.
 
+%------------------------------------------------------------------------------%
 \emph{Cubo da soma de dois termos}
+
+Para desenvolvermos o cubo da soma $(a+b)^3$, seguimos os seguintes passos.
+Escrevemos como o produto do quadrado pela base
+\[
+  (a+b)^3 = (a+b)^2 (a+b).
+\]
+Substituímos o resultado já conhecido do quadrado da soma
+\[
+  (a+b)^3 = (a^2 + 2ab + b^2) (a+b).
+\]
+Aplicamos a distributiva termo a termo
+\[
+  (a+b)^3 = a^3 + a^2b + 2a^2b + 2ab^2 + ab^2 + b^3
+\]
+Somamos os termos semelhantes para chegar na fórmula final
 \begin{equation}
   \label{eq:produto_notavel_4}
   (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3
 \end{equation}
 
-\emph{ Cubo da diferença de dois termos}
+%------------------------------------------------------------------------------%
+\emph{Cubo da diferença de dois termos}
+
 \begin{equation}
   \label{eq:produto_notavel_5}
   (a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3

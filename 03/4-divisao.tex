@@ -31,3 +31,58 @@ O grau de $r(x)$ é menor que o grau de $g(x)$.
 \end{example}
 %------------------------------------------------------------------------------%
 
+No exemplo anterior, realizamos a divisão do polinômio
+\[
+  P(x) = 6x^3 - 2x^2 + x + 3
+\]
+pelo divisor
+\[
+  D(x) = x^2 - x + 1.
+\]
+Para tornar o processo mais didático, seguimos as etapas:
+\begin{enumerate}
+    \item \textbf{Primeiro Termo do Quociente:}
+
+    Dividimos o termo de maior grau do dividendo pelo de maior grau do divisor
+    \[
+      \frac{6x^3}{x^2} = 6x.
+    \]
+    Multiplicamos $6x$ por todo o divisor e subtraímos o resultado do dividendo
+    original, obtendo o primeiro resto parcial
+    \[
+      4x^2 - 5x + 3.
+    \]
+
+    \item \textbf{Segundo Termo do Quociente:}
+
+    Repetimos o processo com o novo resto
+    \[
+      \frac{4x^2}{x^2} = 4.
+    \]
+    Multiplicamos 4 pelo divisor e subtraímos novamente. O resultado final
+    dessa operação é
+    \[
+      -x - 1.
+    \]
+
+    \item \textbf{Condição de Parada:}
+
+    Como o grau do resto
+    \[
+      R(x) = -x - 1
+    \]
+    é menor que o grau do divisor
+    \[
+      D(x) = x^2 - x + 1,
+    \]
+    a divisão está concluída.
+
+\end{enumerate}
+Resultado Final:
+A relação fundamental da divisão nos mostra que:
+\[
+  6x^3 - 2x^2 + x + 3 = (x^2 - x + 1)(6x + 4) + (-x - 1)
+\]
+Onde o quociente é $Q(x) = 6x + 4$ e o resto é $R(x) = -x - 1$.
+
+%------------------------------------------------------------------------------%

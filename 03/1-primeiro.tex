@@ -20,7 +20,8 @@ se puder ser escrita na forma
   \label{eqretageral}
   f(x)=ax+b,
 \end{equation}
-em que $a, b \in \R$, $a\neq 0$.
+em que $a, b \in \R$, $a\neq 0$.Uma função quadrática é um polinômio de grau 2:
+\
 
 As funções
 \[
@@ -46,7 +47,9 @@ $y_1=ax_1+b$ e $y_2=ax_2+b$, conforme o gráfico da Figura~\ref{fig:reta2}.
   \centering
   \includegraphics[width=0.6\textwidth,trim={0 0 9cm 1cm},clip]{reta2}
   \caption{???}
-  \label{fig:reta2}
+  \caption{Representação gráfica de uma função afim e a
+          inclinação da reta ($\theta$).}
+  \label{coeficiente}
 \end{figure}
 %------------------------------------------------------------------------------%
 
@@ -58,16 +61,19 @@ Segue que a divisão da variação em $y$ pela variação em $x$ nos fornece
   = a.
 \end{equation}
 Isso quer dizer que podemos obter o valor do coeficiente angular da reta a
-partir de dois pontos quaisquer da reta. Conforme representado na figura acima
-essa razão representa a tangente do ângulo $\theta$ dado pela inclinação da
-reta em relação ao eixo $x$.
-Se $(x, y)$ é um ponto genérico dessa reta, então $\frac{y-y_1}{x-x_1}=a$ que
-pode ser reescrito como
-\begin{equation}\label{eqdareta}
-  y-y_1 = a(x-x_1)
-  \quad\Rightarrow\quad
-  y = a(x-x_1)+y_1.
-\end{equation}
+partir de dois pontos quaisquer da reta.
+Conforme representado na Figura \ref{coeficiente}, essa razão representa
+a tangente do ângulo $\theta$ dado pela inclinação da reta em relação
+ao eixo $x$.
+Se $(x, y)$ é um ponto genérico dessa reta, então
+\[
+  \frac{y-y_1}{x-x_1}=a
+\]
+que pode ser reescrito como
+\begin{gather*}
+  y-y_1 = a(x-x_1)  \nonumber \\
+  y = a(x-x_1)+y_1. \label{eqdareta}
+\end{gather*}
 Quando $b=0$, dizemos que a função é \emph{Linear}\index{Função!linear}.
 
 %------------------------------------------------------------------------------%
@@ -227,15 +233,20 @@ do 1\textsuperscript{o} grau é
 \]
 
 Quanto a monotonicidade de uma função afim se $a>0$ a função é sempre
-crescente, se $a<0$ a função é sempre decrescente, se $a=0$ a função é
-constante.
+crescente, se $a<0$ a função é sempre decrescente. Por definição, uma função do
+1\textsuperscript{o} grau exige que $a \neq 0$. Caso o coeficiente $a$ seja
+igual a zero, a função resulta em $f(x) = b$, sendo classificada apenas como
+uma função constante, não possuindo inclinação nem sendo considerada uma função
+de 1\textsuperscript{o} grau.
 
 %------------------------------------------------------------------------------%
 \begin{figure}
   \centering
   \includegraphics[scale=0.35]{linear1} \qquad
   \includegraphics[scale=0.35]{linear2}
-  \caption{???}
+  \caption{Representação gráfica da monotonicidade da função afim,
+           destacando o comportamento crescente, $a > 0$, e decrescente,
+           $a < 0$, e os respetivos zeros da função \(x = -\frac{b}{a}\).}
 \end{figure}
 %------------------------------------------------------------------------------%
 
@@ -258,6 +269,24 @@ conseguimos fazer o esboço do gráfico com muita facilidade.
   Construa o gráfico da função $f(x)=2x-6$.
 
   \solution
+  \emph{Crescimento}
+
+  Como $a = 2$ ($a > 0$), a função é crescente.
+
+  \emph{Zero da Função (Intercepto no eixo $x$)}
+
+  Fazemos $f(x) = 0$
+  \begin{align*}
+    2x - 6 & = 0 \\
+    2x     & = 6 \\
+    x      & = 3
+  \end{align*}
+  O intercepto no eixo das abscissas é o ponto $(3, 0)$.
+
+  \emph{Intercepto no eixo $y$}
+
+  É o valor do coeficiente linear $b$. Como $b = -6$, o ponto é $(0, -6)$.
+
   \IncludeGraphicCentredEx{rlin1}[0.5]
 \end{example}
 %------------------------------------------------------------------------------%
@@ -267,6 +296,24 @@ conseguimos fazer o esboço do gráfico com muita facilidade.
   Construa o gráfico da função $g(x)=-x-4$.
 
   \solution
+  \emph{Crescimento}
+
+  Como $a = -1$ ($a < 0$), a função é decrescente.
+
+  \emph{Zero da Função (Intercepto no eixo $x$)}
+
+  Fazemos $g(x) = 0$:
+  \begin{align*}
+    -x - 4 & =  0 \\
+    -x     & =  4 \\
+    x      & = -4
+  \end{align*}
+  O intercepto no eixo das abscissas é o ponto $(-4, 0)$.
+
+  \emph{Intercepto no eixo $y$}
+
+  Como $b = -4$, o ponto é $(0, -4)$.
+
   \IncludeGraphicCentredEx{rlin2}[0.5]
 \end{example}
 %------------------------------------------------------------------------------%
@@ -276,6 +323,27 @@ conseguimos fazer o esboço do gráfico com muita facilidade.
   Construa o gráfico da função $h(x)=2x$.
 
   \solution
+  \emph{Crescimento}
+
+  Como $a = 2$ ($a > 0$), a função é crescente.
+
+  \emph{Zero da Função (Intercepto no eixo $x$)}
+
+  \begin{align*}
+    2x & = 0 \\
+     x & = 0.
+  \end{align*}
+  O ponto é $(0, 0)$.
+
+  \emph{Intercepto no eixo $y$}
+
+  Como $b = 0$, o ponto também é $(0, 0)$.
+
+  \emph{Nota Didática}
+
+  Como a reta passa pela origem, utiliza-se um ponto auxiliar,
+  como $x=1$, $h(1)=2$, resultando no ponto $(1, 2)$.
+
   \IncludeGraphicCentredEx{rlin3}[0.5]
 \end{example}
 %------------------------------------------------------------------------------%
