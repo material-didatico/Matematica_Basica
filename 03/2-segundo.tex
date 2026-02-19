@@ -1,0 +1,313 @@
+%------------------------------------------------------------------------------%
+\section{Função do segundo grau ou função quadrática}
+
+Uma função é dita
+\emph{quadrática}\index{Função!quadrática}\index{Função!segundo grau}
+se pode ser escrita na forma de um polinômio do 2\textsuperscript{o} grau
+\[
+  f(x) = ax^2 + bx + c,
+\]
+em que $a, b, c \in \R$ e $a\neq 0$.
+O gráfico de uma função quadrática é uma parábola e é possível
+esboçá-lo a partir de sua(s) raiz(es), caso exista(m),
+ou das coordenadas do vértice.
+
+%------------------------------------------------------------------------------%
+\subsection{Encontrando zeros e as coordenadas do vértice da parábola}
+
+Para que possamos deduzir os zeros de uma função quadrática,
+vamos completar quadrados.
+\begin{align*}
+  ax^2+bx+c & = 0                                   & & \text{colocando $a$ em evidência} \\[2mm]
+  a \left(x^2+\frac{bx}{a}+\frac{c}{a}\right) & = 0 & & \text{sendo } a \neq 0 \\[2mm]
+  x^2+\frac{bx}{a}+\frac{c}{a} & = 0                & & \text{completando quadrado} \\[2mm]
+  \left(x+\frac{b}{2a}\right)^2-\frac{b^2}{4a^2}+\frac{c}{a} & = 0 \\
+  \left(x+\frac{b}{2a}\right)^2 & = \frac{b^2-4ac}{4a^2}
+\end{align*}
+Definindo
+\[
+  \Delta = b^2-4ac
+\]
+temos que a equação $ax^2+bx+c=0$ possui raiz real
+se e somente se $\Delta \geq 0$ e nesse caso
+\[
+  x+\frac{b}{2a} = \pm\frac{\sqrt{\Delta}}{2a}.
+\]
+
+%------------------------------------------------------------------------------%
+\begin{observation}
+Resumindo.
+
+Se $\Delta < 0$, a equação não possui raízes reais (as raízes são
+complexas).
+
+Se $\Delta > 0$, a equação possui duas raízes reais distintas:
+\[
+  x_1 = \frac{-b-\sqrt{\Delta}}{2a} \qquad\text{ e }\qquad
+  x_2 = \frac{-b+\sqrt{\Delta}}{2a}.
+\]
+
+Se $\Delta = 0$, a equação possui uma única raiz real de
+multiplicidade 2 (raiz dupla)
+\[
+  x_1 = \frac{-b}{2a}=x_2.
+\]
+\end{observation}
+%------------------------------------------------------------------------------%
+
+Em ambos os casos, $f(x)=ax^2+bx+c$ pode ser reescrita como
+\[
+  f(x) = a\left( x+\frac{b}{2a} \right)^2 - \frac{\Delta}{4a}.
+\]
+Logo, o gráfico de $f$ pode ser pensado como uma dupla
+translação de
+\[
+  g(x)=ax^2.
+\]
+Transladamos
+\[
+  \frac{-\Delta}{4a}
+\]
+no eixo $y$ e
+\[
+  \frac{-b}{2a}
+\]
+no eixo $x$. Como $g$ possui vértice $(0, 0)$, $f$ possui vértice
+\[
+  (x_v, y_v) = \left(\frac{-b}{2a}, \frac{-\Delta}{4a}\right)
+\]
+e seu gráfico é simétrico em relação à reta $x=x_v$.
+
+Se $a > 0$ então a parábola tem concavidade voltada para cima,
+além disso $f$ tem um único ponto de mínimo dado por
+\[
+  x_v=\frac{-b}{2a}
+\]
+e o valor mínimo é dado por
+\[
+  y_v= \frac{-\Delta}{4a}.
+\]
+Se $a < 0$ então a parábola tem concavidade voltada para baixo,
+além disso $f$ tem um único ponto de máximo dado
+\[
+  x_v=\frac{-b}{2a}
+\]
+e o valor máximo é dado por
+\[
+  y_v= \frac{-\Delta}{4a}.
+\]
+A Figura a seguir ilustra o que foi discutido nessa seção.
+
+%------------------------------------------------------------------------------%
+\begin{center}
+  \begin{tabular}{|c|c|c|}
+  \hline
+   & $a>0$ & $a<0$ \\ \hline
+  $\Delta >0$ & \includegraphics[scale=0.3]{sinq1} & \includegraphics[scale=0.3]{sinq2}  \\
+  \hline
+  $\Delta =0$ & \includegraphics[scale=0.3]{sinq3} & \includegraphics[scale=0.3]{sinq4}  \\
+  \hline
+  $\Delta <0$ & \includegraphics[scale=0.3]{sinq5} & \includegraphics[scale=0.3]{sinq6}  \\
+  \hline
+  \end{tabular}
+\end{center}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{observation}
+  Se tivermos as coordenadas dos vértices, os zeros e o interceptos com o eixo
+  $y$ podemo fazer o esboço do gráfico de uma equação do segundo grau com muita
+  facilidade.
+\end{observation}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Considere a seguinte função
+  \[
+    f(x)=x^2-5x+6.
+  \]
+  Encontre os zeros, as coordenadas do vértice, o intercepto com o eixo $y$
+  e use esses dados para fazer o esboço do gráfico de $f$.
+
+  \solution
+  \emph{Zeros}
+
+  Para encontrarmos os zeros precisamos resolver a equação
+  \begin{align*}
+    f(x) & =0 \\
+    x^2-5x+6 & = 0,
+  \end{align*}
+  cujo
+  \[
+    \Delta = (-5)^2 - 4 \cdot 1 \cdot 6 = 1
+  \]
+  e
+  \[
+    x = \frac{-(-5) \pm \sqrt{1}}{2 \cdot 1}
+  \]
+  obtendo $x=2$ ou $x=3$, portanto temos os pontos $P_1=(2, 0)$ e
+  $P_2=(3, 0)$, esses pontos são os interceptos com o eixo $x$.
+
+  \emph{Vértices}
+
+  \[
+    x_v
+    = \frac{-b}{2a}
+    = \frac{-(-5)}{2 \cdot 1}
+    = \frac{5}{2}
+  \]
+  e
+  \[
+    y_v
+    = \frac{-\Delta}{4a}
+    = \frac{-1}{4 \cdot 1}
+    = -\frac{1}{4},
+  \]
+  logo
+  \[
+    V=\left(\frac{5}{2}, -\frac{1}{4}\right).
+  \]
+
+  \emph{Intercepto com o eixo $y$}
+
+  Para encontrarmos o intercepto com o eixo $y$, temos que encontrar
+  \[
+    f(0) = 0^2 - 5 \cdots 0 + 6 = 6,
+  \]
+  logo temos o ponto $P_4=(0, 6)$.
+
+  \emph{Gráfico}
+
+  O gráfico dessa função está esboçado na imagem a seguir.
+  \IncludeGraphicCentredEx{parab1}[0.5]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Faça o esboço do gráfico da parábola
+  \(
+    y = x^2 - x + 2
+  \).
+
+  \solution
+  \emph{Zeros}
+
+  Para encontrarmos os zeros precisamos resolver a equação
+  \begin{align*}
+    f(x)    & = 0 \\
+    x^2-x+2 & = 0,
+  \end{align*}
+  cujo
+  \[
+    \Delta
+    = (-1)^2-4 \cdot 1 \cdot 2
+    = -7
+    < 0,
+  \]
+  logo a função não possui zeros, com isso não intercepta o eixo $x$.
+
+  \emph{Vértice}
+
+  \[
+    x_v
+    = \frac{-b}{2a}
+    = \frac{-(-1)}{2 \cdot 1}
+    = \frac{1}{2}
+  \]
+  e
+  \[
+    y_v
+    = \frac{-\Delta}{4a}
+    = \frac{-(-7)}{4 \cdot 1}
+    = \frac{7}{4},
+  \]
+  logo
+  \[
+    V = \left(\frac{1}{2}, \frac{7}{4}\right).
+  \]
+
+  \emph{Intercepto com o eixo $y$}
+
+  Para encontrarmos o intercepto com o eixo $y$,
+  temos que encontrar
+  \[
+    f(0) = 0^2 - 0 + 2 = 2,
+  \]
+  logo temos o ponto $P_1=(0, 2)$.
+
+  Note que temos apenas 2 pontos para marcar no gráfico, para que possamos ter
+  uma idea melhor da parábola vamos escolher outro ponto do domínio. Como
+  já temos o ponto $P_1$, cuja coordenada $x$ está (na reta real) antes do
+  $x_v$, vamos calcular $f(2)=4$ e daí temos o ponto $P_2=(2, 4)$.
+
+  \emph{Gráfico}
+
+  O gráfico dessa função está esboçado na imagem a seguir.
+  \IncludeGraphicCentredEx{parab2}[0.5]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Faça o esboço do gráfico da parábola
+  \(
+    y=-x^2+4x
+  \).
+
+  \solution
+  \emph{Zeros}
+
+  Para encontrarmos os zeros precisamos resolver a equação
+  \begin{align*}
+    f(x) & =0 \\
+    -x^2 + 4x = 0,
+  \end{align*}
+  como essa equação é incompleta ($c=0$), vamos resolver fatorando,
+  ou seja,
+  \[
+    -x^2 + 4x = x(-x+4)
+  \]
+  portanto $x = 0$ ou $x = 4$.
+  Assim, temos os ponto $P_1=(0, 0)$ e $P_2=(4, 0)$.
+
+  \emph{Vértice}
+
+  \[
+    x_v
+    = \frac{-b}{2a}
+    = \frac{-4}{2(-1)}
+    = 2
+  \]
+  e
+  \[
+    y_v
+    =  \frac{-\Delta}{4a}
+    = -\frac{16}{4(-1)}
+    = 4,
+  \]
+  logo
+  \[
+    V=\left(2, 4\right).
+  \]
+
+  \emph{Intercepto com o eixo $y$}
+
+  Para encontrarmos o intercepto com o eixo $y$, temos que encontrar
+  \[
+    f(0) = -0^2 + 4 \cdot 0 = 0,
+  \]
+  logo temos o ponto
+  \[
+    P_4 = P_1 = (0, 0).
+  \]
+
+  \emph{Gráfico}
+
+  O gráfico dessa função está esboçado na imagem a seguir.
+  \IncludeGraphicCentredEx{parab3}[0.5]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%

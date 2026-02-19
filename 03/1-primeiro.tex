@@ -1,0 +1,294 @@
+%------------------------------------------------------------------------------%
+\section{Função Afim ou do 1\textsuperscript{o} grau}
+
+Não sei se você já observou, mas o preço a pagar por uma corrida de táxi
+depende do número de quilômetros que se percorre, além disso, adicionamos a
+esse valor uma taxa fixa, a chamada ``bandeirada''. Se considerarmos, por
+exemplo, que a bandeirada custa \reais{4.70} e cada quilômetro rodado custa
+\reais{0.90}, então o valor a ser pago por uma corrida de táxi é dado pela
+função
+\[
+  f(x) = 0,90x + 4,70.
+\]
+Essa função é um exemplo de
+\emph{função afim}\index{Função!afim},
+que será estudada neste capítulo.
+
+Uma função é dita \emph{Afim} (ou do 1\textsuperscript{o} grau)
+se puder ser escrita na forma
+\begin{equation}
+  \label{eqretageral}
+  f(x)=ax+b,
+\end{equation}
+em que $a, b \in \R$, $a\neq 0$.
+
+As funções
+\[
+  y = 3x-5,     \qquad
+  y = 3x        \qquad\text{ e }\qquad
+  y = -6x-1989
+\]
+são exemplos de funções do 1\textsuperscript{o} grau.
+
+Os coeficientes $a$ e $b$ recebem o nome respectivamente de
+\emph{coeficiente angular}\index{Coeficiente!angular} e
+\emph{coeficiente linear}\index{Coeficiente!linear}.
+O coeficiente angular determina a
+inclinação da reta e o coeficiente linear determina o lugar em que a reta toca
+o eixo $y$ uma vez que $(0, b)\in G(f)$.
+Considere uma função $f(x)=ax+b$ e
+sejam $P$ e $Q$ dois pontos quaisquer do gráfico de $f$, ou seja,
+$P=(x_1, y_1)$ e $Q=(x_2, y_2)$ satisfazendo
+$y_1=ax_1+b$ e $y_2=ax_2+b$, conforme o gráfico da Figura~\ref{fig:reta2}.
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth,trim={0 0 9cm 1cm},clip]{reta2}
+  \caption{???}
+  \label{fig:reta2}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+Segue que a divisão da variação em $y$ pela variação em $x$ nos fornece
+\begin{equation}\label{eqdelta}
+  \frac{\Delta y}{\Delta x}
+  = \frac{y_2-y_1}{x_2-x_1}
+  = \frac{ax_2-ax_1}{x_2-x_1}
+  = a.
+\end{equation}
+Isso quer dizer que podemos obter o valor do coeficiente angular da reta a
+partir de dois pontos quaisquer da reta. Conforme representado na figura acima
+essa razão representa a tangente do ângulo $\theta$ dado pela inclinação da
+reta em relação ao eixo $x$.
+Se $(x, y)$ é um ponto genérico dessa reta, então $\frac{y-y_1}{x-x_1}=a$ que
+pode ser reescrito como
+\begin{equation}\label{eqdareta}
+  y-y_1 = a(x-x_1)
+  \quad\Rightarrow\quad
+  y = a(x-x_1)+y_1.
+\end{equation}
+Quando $b=0$, dizemos que a função é \emph{Linear}\index{Função!linear}.
+
+%------------------------------------------------------------------------------%
+\subsection{Como determinar a equação de uma reta dado dois pontos}
+
+Levando em consideração qualquer reta (diferente das retas $x=c$, com $c$
+constante) é determinada pela equação \eqref{eqretageral}, que é a equação da
+reta com coeficiente angular $a$ e coeficiente linear $b$. Além disso, dois
+pontos determinam uma única reta, então se tivermos dois pontos de uma reta
+$P=(x_1, y_1)$ e $Q=(x_2, y_2)$ podemos determinar essa equação de duas maneiras
+práticas:
+
+\emph{1\textsuperscript{o} modo:}
+Como $P=(x_1, y_1)$ e $Q=(x_2, y_2)$ pertencem a reta,
+então suas coordenadas satisfazem a equação \ref{eqretageral}, com isso podemos
+encontrar $a$ e $b$ resolvendo o sistema
+\[
+  \begin{cases}
+    ax_1+b=y_1 \\
+    ax_2+b=y_2
+  \end{cases}
+\]
+
+\emph{2\textsuperscript{o} modo:}
+Encontramos o coeficiente angular através a
+expressão
+\[
+  a = \frac{y_2-y_1}{x_2-x_1}
+\]
+e depois encontramos o coeficiente linear $b$ através de uma da
+equação $y=ax+b$, substituindo um dos pontos dados
+$P$ e $Q$.
+
+%------------------------------------------------------------------------------%
+\begin{observation}
+  Se $r$ e $s$ são duas retas paralelas então ambas possuem o mesmo
+  coeficiente angular.
+\end{observation}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{observation}
+  Se $r$ e $s$ são duas retas perpendiculares, sejam $a_r$ e $a_s$ os
+  coeficientes angulares das retas $r$ e $s$ respectivamente. Temos que
+  \[
+    a_r=-\frac{1}{a_s}.
+  \]
+\end{observation}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Determine a equação da reta que passa pelos pontos $P=(2,1)$ e $Q=(3,-1)$.
+  (Faça dos dois modos).
+
+  \solution
+  \emph{1\textsuperscript{o} modo:}
+
+  Como $P$ e $Q$ pertencem a reta que estamos
+  querendo encontrar ($y=ax+b$), então precisamos resolver o sistema
+  \[
+    \begin{cases}
+      2a+b=1 \\
+      3a+b=-1
+    \end{cases}
+  \]
+  cuja solução é $a=-2$ e $b=5$, logo a equação da reta pedida é $y=-2x+5$.
+
+  \emph{2\textsuperscript{o} modo:}
+
+  O coeficiente angular da reta pedida é
+  \[
+    a
+    = \frac{y_2-y_1}{x_2-x_1}
+    = \frac{-1-1}{3-2}=-2.
+  \]
+  Como a reta passa pelos pontos $P$ e $Q$, podemos escolher qualquer um desses
+  pontos para substituir na equação da reta $y=-2x+b$, para encontrarmos o valor
+  de $b$. Substituindo o ponto $P$, temos que
+  \[
+    1 = -2 \cdot 2+b
+  \]
+  então $b=5$ e a equação da reta pedida é
+  \[
+    y=-2x+5.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}\label{ex1}
+  O número de veículos de uma cidade cresceu linearmente a partir do ano
+  2000. Sabendo que a cidade tinha 150 mil veículos em 2004 e 210 mil
+  veículos em 2012.
+
+  \solution
+  Defina uma função que forneça o número de veículos (em milhares)
+  em relação ao tempo (anos) transcorrido desde o ano 2000.
+
+  Inicialmente vamos considerar que $x=0$ corresponde ao ano 2000, $x=1$
+  corresponde ao ano 2001, $x=2$ corresponde ao ano 2002 e assim
+  sucessivamente. Seja $y$ a quantidade de veículos (cada mil) dessa cidade
+  e que cresce linearmente (a função é uma reta). Temos dois pontos dados
+  no enunciado $P=(4, 150)$, que quer dizer que em $x=4$ (ano de 2004) a
+  cidade tinha 150 mil veículos e $Q=(12, 210)$, que quer dizer que em
+  $x=12$ (ano de 2012) a cidade tinha 210 mil veículos. Logo, o
+  coeficiente angular dessa reta será
+  \[
+    a
+    = \frac{y_2-y_1}{x_2-x_1}
+    = \frac{210-150}{12-4}
+    = \frac{60}{8}
+    = \frac{15}{2}
+    = 7,5
+  \]
+  Para encontrarmos o valor de $b$, substituímos o ponto $P$
+  (poderia ser o $Q$, tanto faz)
+  na equação
+  \[
+    y = 7,5x + b,
+  \]
+  logo
+  \[
+    150 =4 \ddot 7,5 + b
+  \]
+  então $b=120$, logo a equação da reta pedida é
+  \[
+    y = 7,5x + 120.
+  \]
+
+  Determine aproximadamente o número de veículos no ano 2000.
+
+  O ano 2000 corresponde a $x=0$, então
+  \[
+    y = 7,5 \cdot 0 + 120 = 120.
+  \]
+  Logo em 2000 o número de veículos era 120 mil.
+
+  Determine em que ano a cidade tera 360 mil veículos.
+
+  Nesse caso, basta substituirmos $y$ por 360, na equação encontrada, logo
+  \[
+    360 = 7,5x + 120
+  \]
+  então $x=32$. Logo, a cidade terá 360 veículos no ano 2032.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\subsection{Zero e Monotonicidade da função Afim}
+
+Para determinarmos o zero de uma função afim, basta resolver a equação
+$ax+b=0$, supondo que $a \neq 0$, temos que o zero de uma função
+do 1\textsuperscript{o} grau é
+\[
+  x = -\frac{b}{a}.
+\]
+
+Quanto a monotonicidade de uma função afim se $a>0$ a função é sempre
+crescente, se $a<0$ a função é sempre decrescente, se $a=0$ a função é
+constante.
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.35]{linear1} \qquad
+  \includegraphics[scale=0.35]{linear2}
+  \caption{???}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\subsection{Gráfico de uma função Afim}
+
+Como já sabemos que o gráfico de uma função do 1\textsuperscript{o} grau
+é uma reta,
+precisamos de apenas dois pontos pertencentes a essa reta para o esboço do
+gráfico. Em particular, se tivermos os interceptos com os eixos coordenados
+\[
+  \left( -\frac{b}{a}, 0 \right)
+  \quad\text{ e }\quad
+  (0, b)
+\]
+conseguimos fazer o esboço do gráfico com muita facilidade.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Construa o gráfico da função $f(x)=2x-6$.
+
+  \solution
+  \IncludeGraphicCentredEx{rlin1}[0.5]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Construa o gráfico da função $g(x)=-x-4$.
+
+  \solution
+  \IncludeGraphicCentredEx{rlin2}[0.5]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Construa o gráfico da função $h(x)=2x$.
+
+  \solution
+  \IncludeGraphicCentredEx{rlin3}[0.5]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\subsection{Algumas retas particulares:}
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \begin{center}
+  \includegraphics[scale=0.3]{cons1}
+  \includegraphics[scale=0.3]{cons2}
+  \end{center}
+  \caption{Gráfico da reta horizontal $y=b$ e da reta vertical $x=a$.}
+\end{figure}
+%------------------------------------------------------------------------------%

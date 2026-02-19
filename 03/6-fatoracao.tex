@@ -1,0 +1,495 @@
+%------------------------------------------------------------------------------%
+\section{Fatoração}
+
+Na seção anterior, usamos a propriedade distributiva para expandir uma
+expressão algébrica (produtos notáveis). Nessa seção faremos o processo
+inverso, tomaremos uma expressão algébrica expressa na forma expandida e
+reescreveremos em produtos de fatores mais simples, a esse processo daremos o
+nome de \emph{fatoração}\index{Fatoração}.
+A seguir serão apresentados algumas maneiras de fatorar expressões algébricas.
+
+%------------------------------------------------------------------------------%
+\subsection{Fator Comum}
+
+Fator comum
+\[
+  ax + bx = x(a + b)
+\]
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Fatore a expressão $3x^2-6x$.
+
+  \solution
+  Primeiramente identificamos o fator comum, note que podemos escrever
+  \[
+    3x^2 - 6x = 3xx - 2\cdot3x
+  \]
+  Com isso, os fatores 3 e $x$ aparecem nos dois termos.
+  Colocando o termo $3x$ em evidência, obtemos
+  \[
+    3x^2 - 6x = 3x(x-2),
+  \]
+  que é a forma fatorada do polinômio.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\subsection{Agrupamento}
+
+Agrupamento
+\[
+  ax + bx + ay + by
+  = x(a+b) +y(a+b)
+  = (a+b)(x+y)
+\]
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Fatore a expressão $2xy-12x+3by-18b$.
+
+  \solution
+  Note que $2x$ é fator comum dos dois primeiros termos e $3b$ é fator comum
+  nos últimos dois. Portanto, colocando em evidência, chegamos que
+  \[
+    2xy-12x+3by-18b= 2x(y-6)+3b(y-6)
+  \]
+  Agora temos que $(y-6)$ é fator comum. Colocando em evidência, obtemos
+  \[
+    2xy-12x+3by-18b= 2x(y-6)+3b(y-6)=(y-6)(2x+3b)
+  \]
+  que é a forma fatorada do polinômio.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\subsection{Diferença de Dois Quadrados}
+
+Diferença de dois quadrados
+\[
+  a^2 - b^2 = (a+b)(a-b)
+\]
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Suponha que precisamos fatorar a expressão $4x^2-9$.
+
+  \solution
+  Bata notar que
+  \[
+    4x^2 - 9 = (2x)^2 - 3^2
+  \]
+  Portanto,
+  \[
+    4x^2 - 9
+    = (2x)^2 - 3^2
+    =(2x-3)(2x+3).
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\subsection{Trinômio Quadrado Perfeito}
+
+Trinômio quadrado perfeito
+\[
+  a^2 \pm 2ab + b^2
+  = (a \pm b)^2
+\]
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Fatore a expressão $x^2+4x-4$.
+
+  \solution
+  Basta notar que
+  \[
+    x^2 - 4x + 4
+    = x^2 - 2\cdot2x +2^2
+    =(x-2)^2.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\subsection{Soma e Diferença de Dois Cubos}
+
+Soma e diferença de dois cubos
+\[
+  a^3 \pm b^3 =
+  (a \pm b)(a^2 \mp ab + b^2)
+\]
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Fatore o polinômio $27x^3+64$.
+
+  \solution
+  Se notarmos que
+  \[
+    27x^3+64 = (3x)^3+4^3
+  \]
+  então
+  \[
+    27x^3 + 64
+    = (3x)^3+4^3
+    = (3x+4)(9x^2-12x+16)
+  \]
+  é a forma fatorada do polinômio $27x^3+64$.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\subsection{Fatoração de Polinômios Usando Suas Raízes}
+
+Seja $f(x)$ um polinômio de grau $n$ e $a\in\R$.
+Sabemos que a divisão de $f(x)$ por $x-a$ nos fornece um polinômio $q(x)$
+de grau $n-1$ e resto $f(a)$, ou seja,
+\[
+  f(x) = (x-a)q(x) + f(a).
+\]
+Logo, um polinômio $f(x)$ de grau $n$ possui uma raiz real $a\in\R$,
+se e somente se, $f(x)=(x-a)q(x)$ em que $q(x)$ possui grau $n-1$.
+
+Um polinômio
+\[
+  f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_0
+\]
+possui $n$ raízes reais $r_1$, $r_2$, \dots, $r_n$,
+se e somente se, pode ser escrito na \emph{forma fatorada}
+\[
+  f(x) = a_n (x-r_1) (x-r_2) \cdots (x-r_n).
+\]
+
+A dificuldade em fatorar um polinômio é exatamente em encontrar suas raízes.
+Para polinômios de grau 1 e 2 essa missão é simples, mas para polinômios
+de graus maiores é mais complicado.
+Temos uma ferramenta para determinar raízes de alguns polinômios
+que possuem raízes racionais:
+
+%------------------------------------------------------------------------------%
+\begin{teorema}{Fatoração de Polinômios}{teo:fatoracao_polinomios}
+  Seja
+  \[
+    f(x) = a_nx_n + a_{n-1}x^{n-1} + \cdots + a_0
+  \]
+  um polinômio com coeficientes
+  $a_n$, $a_{n-1}$, $a_{n-2}$, \dots, $a_0$ inteiros.
+  Se essa equação possui uma raiz racional na forma $\sfrac{p}{q}$,
+  com $p$ e $q$ números inteiros e $\sfrac{p}{q}$ fração irredutível
+  então $a_0$ é divisível por $p$ e $a_n$ é divisível por $q$.
+\end{teorema}
+%------------------------------------------------------------------------------%
+
+O Teorema~\ref{teo:fatoracao_polinomios} não garante que a equação
+polinomial tenha raízes racionais, mas caso elas existam,
+o teorema permite identificar todas as raízes racionais do polinômio.
+
+Se $a_n = 1$ e os outros coeficientes são todos inteiros, as
+candidatas as raízes do polinômio são inteiras.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Queremos fatorar o polinômio $f(x)=x^3-3x+2$.
+
+  \solution
+  Pelo Teorema~\ref{teo:fatoracao_polinomios}, as
+  possíveis raízes inteiras de $f$ são $\{\pm1, \pm2\}$
+  que são os divisores de $a_0=2$.
+  Como
+  \[
+    f(1) = 1 - 3 + 2 = 0,
+  \]
+  e 1 é uma raiz de $f$. Dividindo
+  \[
+    f(x) = x^3 - 3x + 2
+  \]
+  por $x-1$ obtemos
+  \[
+    x^2 + x - 2
+  \]
+  que pode ser reescrito como
+  \[
+    (x-1)(x+2).
+  \]
+  Logo, $f$ pode ser fatorado como
+  \[
+    f(x) = (x-1)^2(x+2).
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Fatore o polinômio
+  \(
+    p(x) = x^3 - 9x^2 + 26x - 24
+  \)
+
+  \solution
+  Nesse item, temos um polinômio de grau 3, vamos verificar se esse polinômio
+  possui raízes racionais. Segundo Teorema~\ref{teo:fatoracao_polinomios},
+  essas possíveis raízes tem a forma $\sfrac{p}{q}$, onde $p$ são os
+  divisores do termo independente, no caso
+  os divisores de $-24$ e $q$ são os divisores do coeficiente do termo de maior
+  grau, no caso 1. Logo, as possíveis raízes inteiras são
+  \[
+    \{ \pm 1,\, \pm 2,\, \pm 3,\, \pm 4,\, \pm 6,\, \pm 8,\, \pm 12,\, \pm 24\}.
+  \]
+  Vamos testar alguns desses valores
+  para tentarmos encontrar uma raiz racional.
+  Note que
+  \[
+    p(1) = 1 - 9 + 26 - 24 - 6 = -6 \neq 0,
+  \]
+  logo $x=1$ não é uma raiz.
+  \[
+    p(2) = 8 - 36 + 52 - 24 = 0,
+  \]
+  logo $x=2$ é uma raiz.
+  De posse dessa raiz vamos dividir o polinômio $p(x)$ por $x-2$.
+  \[
+    \begin{array}{r|r}
+      \dropsign{-} x^3-9x^2+26x-24 & x-2       \\ \cline{2-2}
+      \dropsign{-}( x^3-2x^2)      & x^2-7x+12 \\ \cline{1-1}
+                                   &  \\[\dimexpr-\normalbaselineskip+\jot]
+      \dropsign{-} -7x^2+26x-24    &  \\
+      (-7x^2+14x)                  &  \\ \cline{1-1}
+                                   &  \\[\dimexpr-\normalbaselineskip+\jot]
+      12x-24                       &  \\
+      \dropsign{-} (12x-24)        &  \\ \cline{1-1}
+      0                            &
+    \end{array}
+  \]
+  Para encontrar as outras raízes, basta resolver a equação
+  \[
+    x^2 - 7x + 12 = 0,
+  \]
+  cujas as raízes (por Bhaskara) são $x=3$ e $x=4$.
+  Logo o polinômio fatorado é
+  \[
+    p(x) = (x-2)(x-3)(x-4).
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Fatore o polinômio
+  \(
+    p(x) = 2x^2 - 10x + 12
+  \)
+
+  \solution
+  Nesse caso temos um polinômio de grau 2, cujas raízes podem ser encontradas
+  facilmente, usando a fórmula de Bhaskara. As raízes são $x=2$ e $x=3$ e o
+  polinômio fatorado é
+  \[
+    p(x) = 2(x-2)(x-3).
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Fatore o polinômio
+  \(
+    p(x) = 4x^4 - 34x^2 - 18
+  \)
+ (Equação Biquadrada)
+
+  \solution
+  Para encontrarmos os zeros de $p$ precisamos resolver a equação $p(x)=0$.
+  Uma equação biquadrada tem a forma
+  \[
+    ax^4 + bx^2 + c = 0,
+  \]
+  para resolvermos fazemos a mudança de variável $y=x^2$.
+  No nosso, ao fazermos essa mudança, chegamos na
+  equação
+  \begin{align*}
+    4y^2 - 34y - 18 & = 0, \\
+    2y^2 - 17y - 9  & = 0,
+  \end{align*}
+  que é uma equação do segundo
+  grau e, para resolvermos usando  a fórmula de Bhaskara.
+  \[
+    \Delta = (-17)^2 - 4 \cdot 2(-9) = 361
+  \]
+  que nos leva a
+  \[
+    y = \frac{17 \pm \sqrt{361}}{4}
+  \]
+  portanto, $y = 9$ ou $y=-\sfrac{1}{2}$.
+  Se $y=9$
+  \begin{align*}
+    x^2 & = 9 \\
+    x   & = \pm 3
+  \end{align*}
+  Se $y=-\sfrac{1}{2}$
+  \[
+    x^2 = -\frac{1}{2},
+  \]
+  que não tem solução real, pois o polinômio $x^2+\sfrac{1}{2}$
+  é irredutível, logo ele ``entrará'' dessa forma na fatoração.
+  Logo, o polinômio fatorado é
+  \[
+    p(x) = 4 (x-3) (x+3) \left(x^2+\frac{1}{2} \right).
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\subsection{Simplificação de Expressões}
+
+A fatoração é muito útil para simplificar expressões. Nessa subseção usaremos
+os casos de fatoração, expostos anteriormente, para simplificar expressões.
+Vejamos os exemplos a seguir.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Simplifique a expressão
+  \[
+    \frac{2x-6}{x-3}
+  \]
+  fatorando os termos, caso necessário.
+  Suponha que o denominador não é nulo.
+
+  \solution
+  No numerador vamos colocar o número 2 em evidência, uma vez que é comum a
+  todos os membros. Assim
+  \[
+    \frac{2x-6}{x-3}
+    = \frac{2\cancel{(x-3)}}{\cancel{x-3}}
+    \stackrel{x \neq 3}{=}2.
+  \]
+  Note que, podemos cancelar o termo $x-3$, pois é nos dito no enunciado que os
+  denominadores são não nulos, ou seja, $x-3 \neq 0$ e portanto $x \neq 3$.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Simplifique a expressão
+  fatorando os termos, caso necessário.
+  \[
+    \frac{x^2+x^4}{3x^3}
+  \]
+  Suponha que o denominador não é nulo.
+
+  \solution
+  Nesse caso, vamos colocar $x^2$ em evidência no numerador.
+  \[
+    \frac{x^2+x^4}{3x^3}
+    = \frac{\cancel{x^2}(1+x^2)}{3\cancel{x^2} x}
+    \stackrel{x \neq 0}{=}\frac{1+x^2}{3x}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Simplifique a expressão
+  fatorando os termos, caso necessário.
+  \[
+    \frac{x^2-9}{x^2-3x}
+  \]
+  Suponha que o denominador não é nulo.
+
+  \solution
+  Nesse exercício devemos notar que no numerador temos uma diferença de dois
+  quadrados, uma vez que
+  \[
+    x^2-9
+    = x^2 - 3^2
+    = (x-3)(x+3).
+  \]
+  Além disso, podemos colocar o termo $x$ em evidência no denominador,
+  ou seja,
+  \[
+    x^2 - 3x = x(x-3).
+  \]
+  Logo,
+  \[
+    \frac{x^2-9}{x^2-3x}
+    = \frac{\cancel{(x-3)}(x+3)}{x\cancel{(x-3)}}
+    = \stackrel{x \neq 3}{=} \frac{x+3}{x}.
+  \]
+  Mais uma vez vale ressaltar que para fazermos o cancelamento do termo $x-3$,
+  teríamos que ter a informação (ou supor) que
+  $x-3 \neq 0$, isto é, $x \neq 3$.
+  Como no enunciado temos a informação que o denominador é não nulo,
+  temos que
+  \begin{align*}
+    x^2 - 3x & \neq 0 \\
+    x(x-3)   & \neq 0 \\
+    x        & \neq 0 \;\text{ e }\; x \neq 3.
+  \end{align*}
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Simplifique a expressão
+  \[
+    \frac{x^2-5x+4}{x-4}
+  \]
+  fatorando os termos, caso necessário.
+  Suponha que o denominador não é nulo.
+
+  \solution
+  Inicialmente, devemos lembrar que se temos um polinômio de grau 2, do tipo
+  \[
+    p(x) = ax^2 + bx + c,
+  \]
+  a sua forma fatorada é
+  \[
+    p(x) = a(x-r_1)(x-r_2),
+  \]
+  onde $r_1$ e $r_2$ são suas raízes, podendo acontecer que $r_1=r_2$.
+  Quando o polinômio não tiver raízes, dizemos que ele é irredutível, ou seja,
+  não conseguimos fatorá-lo. Sendo assim, como no numerador, é um polinômio de
+  grau 2, cujas raízes são $r_1=1$ e $r_2=4$ (confira usando Bhaskara). Portanto,
+  sua forma fatorada é
+  \[
+    x^2 - 5x + 4
+    = 1(x-1)(x-4)
+    = (x-1)(x-4).
+  \]
+  Logo,
+  \[
+    \frac{x^2-5x+4}{x-4}
+    =\frac{\cancel{(x-4)}(x-1)}{\cancel{x-4}}
+    \stackrel{x \neq 4}{=} x-1.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Simplifique a expressão
+  \[
+    \left(\frac{x^2-4x-12}{x+2} \right) \left( \frac{2x+1}{x-6}\right)
+  \]
+  fatorando os termos, caso necessário.
+  Suponha que os denominadores não são nulos.
+
+  \solution
+  Como $x^2-4x-12$ é um polinômio de grau 2, cujas raízes são $x=-2$ e
+  $x=6$, sendo assim, a forma fatorada é
+  \[
+    x^2 - 4x - 12 = (x+2)(x-6).
+  \]
+  Portanto,
+  \begin{align*}
+    \left(\frac{x^2-4x-12}{x+2} \right)
+    \left( \frac{2x+1}{x-6}\right)
+    & = \left(\frac{(x+2)(x-6)}{x+2} \right)
+        \left( \frac{2x+1}{x-6}\right)
+    \\
+    & \stackrel{\substack{x \neq -2\\ x \neq 6}}{=} 2x + 1.
+  \end{align*}
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
