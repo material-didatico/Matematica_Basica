@@ -1,0 +1,98 @@
+%------------------------------------------------------------------------------%
+\section{Inequações Exponenciais}
+
+Para resolvermos uma Inequação exponencial do tipo
+\[
+  a^{f(x)} \leq a^{g(x)} \qquad\text{ ou }\qquad
+  a^{f(x)} \geq a^{g(x)},
+\]
+devemos lembrar que a função $y=a^x$ é crescente se $a>1$ e decrescente
+se $0 < a< 1$.
+Portanto, antes de tudo, observamos a situação das bases dos dois membros e,
+caso as bases sejam diferentes, reduza-as as mesmas bases e depois monte
+uma inequação respeitando as seguintes condições:
+\begin{enumerate}
+    \item Se $a>1$ conserve o sinal original da inequação. Isso se dá pelo fato
+      da função exponencial ser crescente se $a>1$.
+
+    \item Se $0< a< 1$ inverta o sentido da desigualdade. Essa fato, se dá por
+      conta da função exponencial ser decrescente quando $0< a< 1$.
+\end{enumerate}
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Resolva a inequação exponencial
+  \(
+    \left( \frac{1}{2} \right)^{2x+2} <
+    \left( \frac{1}{2} \right)^{x^2-1}
+  \).
+
+  \solution
+  Note que nesse caso temos uma inequação exponencial e como as bases de ambos
+  os membros são iguais
+  \[
+    a = \frac{1}{2}
+  \]
+  basta montarmos uma inequação com os expoentes,
+  invertendo o sentido da desigualdade, visto que $0 < a < 1$.
+
+  Assim, precisamos resolver a seguinte inequação exponencial
+  \begin{align*}
+    2x + 2       & > x^2 - 1 \\
+    x^2 - 2x - 3 & < 0,
+  \end{align*}
+  que é uma inequação do segundo grau, cuja solução é
+  \[
+    S = \left\{ x \in \R \st -1 < x < 3 \right\}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Resolva a inequação exponencial \(2^{x+2} \geq 64\).
+
+  \solution
+  Inicialmente, observamos que $64=2^6$.
+  Portanto, estamos interessado em resolver a inequação
+  \[
+    2^{x+2} \geq 2^6.
+  \]
+  Como já deixamos ambos os membros da desigualdade na mesma base
+  então montamos uma inequação com os expoentes mantendo o sentido
+  da desigualdade original, uma vez que a base $a = 2 > 1$.
+
+  Assim, temos que resolver a seguinte inequação do primeiro grau
+  \begin{align*}
+    x+2 & \geq 6 \\
+    x   & >    4.
+  \end{align*}
+  Logo, a solução da inequação pedida é
+  \[
+    S = \left\{ x \in \R \st x > 4 \right\}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Determine o domínio $D$ da função \(f(x) = \sqrt{5^x-125}\).
+
+  \solution
+  A fim de que exista $f(x)$, devemos ter
+  \[
+    5^x-125 \geq 0,
+  \]
+  uma vez que, não existe raiz quadrada de número negativo. Assim,
+  \begin{align*}
+    5^x-125 & \geq 0   \\
+    5^x     & \geq 125 \\
+    5^x     & \geq 5^3 \\
+    x       & \geq 3
+  \end{align*}
+  Assim, o domínio da função é
+  \[
+    D = \{ x \in \R \st x \geq 3 \}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%

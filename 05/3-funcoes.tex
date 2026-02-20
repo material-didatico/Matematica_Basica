@@ -1,0 +1,106 @@
+%------------------------------------------------------------------------------%
+\section{Funções Exponenciais}
+
+Antes de definirmos as funções exponenciais, apresentaremos um exemplo para
+termos noção como essas funções aparecem no dia a dia.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  \label{ex:funcao_exp_1}
+  Heloísa contraiu um empréstimo de \reais{1000} em um banco que cobra 6\%
+  de juros ao mês. Se Heloísa não saldar sua dívida, quanto ela deverá ao banco
+  após quatro meses? Após um número $x$ arbitrário de meses?
+
+  \solution
+  Observe que após um mês que o empréstimo foi contraído a dívida de Heloísa
+  será
+  \begin{align*}
+    1000 + \left(1000 \; \frac{6}{100}\right)
+    & = 1000+1000\cdot 0,06  \\
+    & = 1000 \, (1+0.06)    \\
+    & = 1000\cdot 1,06.
+  \end{align*}
+  Após dois meses, a dívida será
+  \[
+    (1000 \cdot 1,06) \, 1,06
+    = 1000 \, (1,06)^2
+  \]
+  Após três meses, a dívida será
+  \[
+    \left(1000 \, (1,06)^2\right) \, 1,06
+    = 1000 \, (1,06)^3
+  \]
+  E finalmente, após quatro meses, a dívida será
+  \[
+    \left(1000 \, (1,06)^3\right) \, 1,06
+    = 1000 \, (1,06)^4
+    \approx 1.262,48
+  \]
+  Generalizando a conta acima, após $x$ meses a dívida de Heloísa será
+  \[
+    1000 \, (1,06)^x.
+  \]
+\end{example}
+
+%------------------------------------------------------------------------------%
+\begin{definicao}{Função Exponencial}{def:funcao_exponencial_1}
+  A \emph{função exponencial}\index{Função!exponencial}
+  com base $a$ é definida por
+  \begin{align*}
+    f\colon \R & \to \R \\
+            x  & \to a^x
+  \end{align*}
+  em que $a>0$, $a\neq 1$ é um número real fixo chamado base e
+  $x$ é qualquer número real.
+\end{definicao}
+%------------------------------------------------------------------------------%
+
+Para $a=1$, a função $f(x)=1^x$ é a função constante
+$f(x)=1$. Para $a\leq 0$, vimos na seção anterior que não faz sentido essa
+definição.
+
+Segue que a função assim definida satisfaz as seguintes propriedades, para todo
+$x, y\in\R$,
+\begin{gather}
+  a^x \, a^y = a^{x+y}                                \label{eq:exponencial_1} \\[2mm]
+  \left( a^x \right)^y = a^{xy}                       \label{eq:exponencial_2} \\[2mm]
+  \text{Se } b > 0, \text{ então } (ab)^x = a^x\,b^x  \label{eq:exponencial_3} \\[2mm]
+  \frac{a^x}{a^y} = a^{x-y}                           \label{eq:exponencial_4}
+\end{gather}
+As três primeiras propriedades estão listadas acima para
+os naturais, aqui estendemos para os reais.
+
+A função exponencial pode ser classificada em crescente ou decrescente,
+a depender do valor de $a$.
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[width=0.45\textwidth,trim={0 1cm 9cm 3cm},clip]{exp1}
+  \caption{Gráfico de $f(x)=2^x$ (traço contínuo) e $g(x)=4^x$ (tracejado).}
+  \label{fig:exponencial_crescente}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[width=0.45\textwidth,trim={0 1cm 9cm 3cm},clip]{exp2}
+  \caption{ Gráfico de $f(x)=2^{-x}=\big(\frac{1}{2}\big)^x$ (traço
+    contínuo) e $g(x)=4^{-x}=\big(\frac{1}{4}\big)^x$ (tracejado).}
+  \label{fig:exponencial_decrescente}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+Se $a>1$ a função $f(x)=a^x$ é crescente ($x<y\Leftrightarrow a^x<a^y$)
+e o seu gráfico tem o formato das curvas mostradas na
+Figura~\ref{fig:exponencial_crescente}.
+
+Se $0<a<1$ a função $f(x)=a^x$ é decrescente ($x<y\Leftrightarrow a^x>a^y$)
+e o seu gráfico tem o formato das curvas mostradas na
+Figura~\ref{fig:exponencial_decrescente}.
+
+Note que, uma vez que $a^0=1$, para todo $a\neq 0$, então o gráfico da função
+$a^x$ sempre intercepta o eixo $y$ no ponto $(0, 1)$.
+
+%------------------------------------------------------------------------------%
