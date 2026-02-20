@@ -1,0 +1,189 @@
+%------------------------------------------------------------------------------%
+\section{Função Logarítmica}
+
+Se considerarmos a função exponencial
+$f\colon \R \to \R_+^*$,
+definida por $f(x) = a^x$, $a>0$ e $a \neq 1$, então temos
+que $f$ é uma bijeção sobre a sua imagem, portanto possui inversa.
+Sua inversa é denominada
+\emph{função logarítmica na base $a$}\index{Função!logaritmica},
+$a > 0$ e $a \neq 1$.
+\begin{align*}
+  \log_a\colon \R_{+}^{*} & \to \R        \\
+  x                       & \to \log_a x
+\end{align*}
+e é definida por
+\[
+  \log_a x = y
+  \quad\Leftrightarrow\quad
+  a^y = x.
+\]
+
+Vamos fazer alguns exemplos de cálculo de logaritmos,
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Encontre $\log_2 8$:
+
+  \solution
+  Usando a definição de logaritmo temos
+  \begin{align*}
+    \log_2 8 & = x \\
+    2^x      & = 8 \\
+    x        & = 3
+  \end{align*}
+  ou seja,
+  \[
+    \log_2 8 = 3.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Encontre \(\log_{\sfrac{1}{81}} 9\)
+
+  \solution
+  Mais uma vez, usando a definição de logaritmo
+  \begin{align*}
+    \log_{\sfrac{1}{81}}9          & = y  \\[2mm]
+    \left( \frac{1}{81} \right)^y  & = 9  \\[2mm]
+    \left(9^{-2}\right)^y          & = 9  \\[2mm]
+    9^{-2y}                        & = 9  \\[2mm]
+    -2y                            & = 1  \\[2mm]
+    y                              & = -\frac{1}{2}
+  \end{align*}
+\end{example}
+%------------------------------------------------------------------------------%
+
+\emph{Condição de existência do logaritmo:}
+A partir da definição de logaritmos, temos que
+\[
+  a>0 \text{ e } a \neq 1 \text{ e } b > 0.
+\]
+Portanto, não são definidos, por exemplo, os seguintes logaritmos
+\begin{gather*}
+  \log_{ 4} (-12) \\
+  \log_{ 1}  144  \\
+  \log_{ 0}    8  \\
+  \log_{-3}   81  \\
+  \log_{ 4}    0  \\
+  \log_{-6}  -36
+\end{gather*}
+
+Note que o valor $\log_b a$ é um expoente.
+
+Segue diretamente da definição que $\log_{a}1=0$,
+para todo $a>0$ e $a \neq 1$.
+
+\emph{Logaritmo na base 10}: Quando a base do logaritmo for 10,
+podemos omiti-la. $\log 3$ é o logaritmo de $3$ na base $10$.
+
+%------------------------------------------------------------------------------%
+\subsection{Gráfico da Função Logarítmica}
+
+Como $a^0 = 1$ e $a^1 = a$, temos que $\log_a 1 = 0$ e $\log_a a = 1$.
+Portanto, o gráfico de toda função logarítmica contém os pontos
+$(1, 0)$ e $(a, 1)$.
+Além disso, sendo a função logarítmica $g(x)=\log_{a}x$ a inversa da
+função $g(x)=a^x$, então o gráfico de $f$ é o espelho do gráfico de $g$, com
+relação a reta $y=x$.
+A Figura~\ref{fig:doislog} ilustra essa situação, mostrando o
+esboço do gráfico das funções $g(x)=2^x$ e $\log_{2}x$.
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.8]{doiselogdedois}
+  \caption{Em vermelho, o gráfico da função $g(x)=2^x$; em azul, o gráfico de
+    $\log_{2}x$ e em preto tracejado a reta $y=x$..}
+  \label{fig:doislog}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[width=0.4\textwidth,trim={0 1cm 9cm 1cm},clip]{log1}
+  \caption{Gráfico de $f(x)=\log_2x$ (traço contínuo)
+    e $g(x)=\log_4x$ (tracejado).}
+  \label{fig:grafico_log_crescente}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[width=0.4\textwidth,trim={0 1cm 9cm 3cm},clip]{log2}
+  \caption{Gráfico de $f(x)=\log_{1/2}x$ (traço contínuo) e
+    $g(x)=\log_{1/4}x$ (tracejado).}
+  \label{fig:grafico_log_decrescente}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+A função logarítmica pode ser classificada em crescente ou decrescente.
+
+Se $a>1$ a função $f(x)=\log_a x$ é crescente, pois
+\[
+  x < y
+  \quad\Leftrightarrow\quad
+  \log_a x < \log_a y
+\]
+e o seu gráfico tem o formato das curvas da
+Figura~\ref{fig:grafico_log_crescente}.
+
+Se $0<a<1$ a função $f(x)=\log_ax$ é decrescente, pois
+\[
+  x < y
+  \quad\Leftrightarrow\quad
+  \log_a x > \log_a y
+\]
+e o seu gráfico tem o formato das curvas da
+Figura~\ref{fig:grafico_log_decrescente}.
+
+Note que o gráfico de $f(x) = \log_{a} x$ não intercepta o eixo $y$, o que
+faz sentido, uma vez que o gráfico da sua inversa $y=a^x$ não intercepta o
+eixo $x$.
+
+%------------------------------------------------------------------------------%
+\emph{Procedimento para esboçar o gráfico de $\log_{a}x$.}
+
+Para esboçar o gráfico de $f(x)=5$, é comum escolhermos 5 valores convenientes
+para $x$, a saber as potências de $a$,
+\[
+  a^{-2}, a^{-1}, a^0, a^1, a^2
+\]
+e construirmos uma tabela, da forma que fizemos com a função exponencial e, por
+conseguinte, marcamos os pontos no gráfico. A escolha desses valores para $x$ é
+feita de modo a facilitar o cálculo dos logaritmos.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Esboçar o gráfico da função $f(x)=\log_{3}x$.
+
+  \solution
+  Escolhendo
+  \[
+    x = 3^{-2}, 3^{-1}, 3^0, 3^1, 3^2,
+  \]
+  podemos montar a tabela
+  \begin{ceqn}
+  \[
+    \begin{array}{l<{\quad}>{\quad}l<{\quad}>{\quad}c}       \hline
+      x                     & f(x) = \log_{3} x                 & (x, f(x))           \\ \hline
+      \sfrac{1}{9} = 3^{-2} & f(\sfrac{1}{9}) = 3^{-2}          & (\sfrac{1}{9},  -2) \\
+      \sfrac{1}{3} = 3^{-1} & f(3) = \log_{3} 3^{-1} = -1       & (\sfrac{1}{3}, -11) \\
+      1=3^0                 & f(3) = \log_{3} 1 = 0             & (1, 0)              \\
+      3                     & f(3) = \log_{3} 3 = 1             & (3, 1)              \\
+      9=3^2                 & f(9) = \log_{3} 9 = \log_3{3^2}=2 & (9, 2)              \\ \hline
+    \end{array}
+  \]
+  \end{ceqn}
+  {\large\color{red} Conferir essa tabela!}
+
+  O gráfico de $f$ está na imagem a seguir
+  \IncludeGraphicCentredEx{logde3}[0.5]
+\end{example}
+%------------------------------------------------------------------------------%
+
+

@@ -1,0 +1,287 @@
+%------------------------------------------------------------------------------%
+\section{Propriedades}
+
+Assim como as funções exponenciais, as funções logarítmicas também possuem uma
+lista de propriedades importantes, que decorrem da definição: Sejam
+$x, y, z \in \R$ em que $x, y > 0$, então
+\begin{gather}
+  \log_a (xy)                     = \log_a x + \log_a y \label{eq:log_propriedade_1}\\[3mm]
+  \log_a \left(\frac{x}{y}\right) = \log_a x - \log_a y \label{eq:log_propriedade_2}\\[3mm]
+  \log_a \left(x^z\right)         = z\log_a x           \label{eq:log_propriedade_3}
+\end{gather}
+Provaremos a primeira propriedade e as demais serão deixadas como exercício.
+
+%------------------------------------------------------------------------------%
+\begin{proof}
+  Sejam
+  \[
+    p = \log_a (xy), \quad \log_a x = m \quad\text{ e } \quad \log_a y = n .
+  \]
+  Segue da definição de logaritmo que
+  \[
+    a^p = xy, \quad a^m = x, \quad a^n = y.
+  \]
+  Portanto substituindo as duas últimas igualdades na primeira obtemos
+  \[
+    a^p
+    = a^m \, a^n
+    = a^{m+n}.
+  \]
+  Logo, $p=m+n$ e verifica-se a propriedade~\eqref{eq:log_propriedade_1}.
+\end{proof}
+%------------------------------------------------------------------------------%
+
+Mostre as propriedades~\eqref{eq:log_propriedade_2}
+e~\eqref{eq:log_propriedade_1} das funções logarítmicas.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Usando o fato de que
+  \[
+    \log 2 = 0,301, \quad
+    \log 3 = 0,477  \quad\text{e}\quad
+    \log 5 = 0,699
+  \]
+  e as propriedades do logaritmo, calcule
+  \vspace{-\baselineskip}
+  \begin{mathlist}
+    \item \log 30
+    \item \log 0,333\dots
+    \item \log 64
+    \item \log \sqrt[7]{2,5}
+  \end{mathlist}
+
+  \solution
+  \emph{a)}
+  \begin{align*}
+    \log 30
+    & = \log(2 \cdot 3 \cdot 5)  \\
+    & = \log 2 + \log 3 + \log 5 & \text{propriedade~\eqref{eq:log_propriedade_1}} \\
+    & = 0,301 + 0,477 + 0,699    \\
+    & = 1,477
+  \end{align*}
+
+  \emph{b)}
+  \begin{align*}
+    \log 0,333\dots
+    & = \log\left(\frac{1}{3}\right) \\
+    & = \log 1 - \log 3              & \text{propriedade~\eqref{eq:log_propriedade_2}} \\
+    & = 0 - 0,477                    \\
+    & =-0,477
+  \end{align*}
+
+  \emph{c)}
+  \begin{align*}
+    \log 64
+    & = \log 2^6      \\
+    & = 6 \log 2      & \text{propriedade~\eqref{eq:log_propriedade_3}} \\
+    & = 6 \cdot 0,301 \\
+    & = 1,806
+  \end{align*}
+
+  \emph{d)}
+  \begin{align*}
+    \log \sqrt[7]{2,5}
+    & = \log (2,5)^{\sfrac{1}{7}}                  \\[2mm]
+    & = \frac{1}{7} \log \left(\frac{5}{2} \right) & \text{propriedade~\eqref{eq:log_propriedade_3}} \\[2mm]
+    & = \frac{1}{7} \left(\log 5-\log 2 \right)    & \text{propriedade~\eqref{eq:log_propriedade_2}} \\[2mm]
+    & = \frac{0,699 - 0,301}{7}                    \\[2mm]
+    & \approx 0,057
+  \end{align*}
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+    Resolva a equação exponencial
+    \[
+      2^{x-6} = 6,
+    \]
+    dado que \(\log_3 2 = 1,58\).
+
+    \solution
+    Inicialmente, devemos notar que não conseguimos resolver essa equação
+    conforme resolvemos algumas na parte de equações exponenciais, uma vez que,
+    não conseguimos deixar $6$ na base $2$. Para esses casos, a função
+    logarítmica é de extrema importância.
+
+    Sendo assim, vamos aplicar a função $\log_2 x$ em ambos os lados da
+    equação. Com isso,
+    \begin{align*}
+      2^{x-6}                      & = 6                   \\
+      \log_2 \left(2^{x-6}\right)  & = \log_2 6            \\
+      (x-6) \log_2 2               & = \log_2(2.3)         & \text{propriedade~\eqref{eq:log_propriedade_3}} \\
+      x-6                          & = \log_2 2 + \log_2 3 & \text{propriedade~\eqref{eq:log_propriedade_1}} \\
+      x                            & = 6 + 1 + 1,58        \\
+      x                            & = 8,58
+    \end{align*}
+\end{example}
+%------------------------------------------------------------------------------%
+
+Os dois próximos exemplos mostram que devemos usar a condição de existência do
+logaritmo para encontrar o domínio de algumas funções que envolvem logaritmo.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Encontre o domínio da seguinte função
+  \[
+    f(x) = \log \left( x^2 - 5x + 6 \right)
+  \]
+
+  \solution
+  A base do logaritmo em questão é 10, com isso, maior que zero e diferente
+  de um. Portanto, como não existe logaritmo de números menores ou iguais a
+  zero teremos que impor que
+  \[
+    x^2-5x+6 >0
+  \]
+  Que é uma inequação do segundo grau cuja solução é
+  \[
+    S = \left\{ x \in \R \st x<2 \text{ ou } x>3 \right\}.
+  \]
+  Logo,
+  \[
+    D(f) = \left\{ x \in \R \st x<2 \text{ ou } x>3 \right\}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Para quais valores de $x$ é possível calcular o logaritmo
+  \[
+    y = \log_{x+1} \left( -x^2 + 2x + 8 \right)?
+  \]
+
+  \solution
+  Usando a condição de existência dos logaritmos,
+  precisamos impor que
+  \begin{gather}
+    -x^2 + 2x + 8 > 0 \label{eq:ex_cond_log_1} \\
+    x + 1 > 0         \label{eq:ex_cond_log_2} \\
+    x + 1 \neq 1      \label{eq:ex_cond_log_3}
+  \end{gather}
+  Impondo a condição~\eqref{eq:log_propriedade_1}
+  \[
+    -x^2 + 2x + 8 > 0
+  \]
+  temos uma inequação do segundo grau, cuja equação associada
+  \[
+    -x^2 + 2x + 8 = 0
+  \]
+  possui raízes $x=-2$ e $x=4$.
+  O estudo do sinal é apresentado na figura
+
+  \IncludeGraphicCentredEx{parabolalog}[0.5]
+
+  Assim, a fim de que $-x^2+2x+8>0$, devemos ter
+  \[
+    -2 < x < 4.
+  \]
+  Além disso, precisamos satisfazer a condição~\eqref{eq:log_propriedade_2}
+  \begin{align*}
+    x + 2 & > 0 \\
+    x     & > -1
+  \end{align*}
+  e a condição~\eqref{eq:log_propriedade_3}
+  \begin{align*}
+    x + 1 \neq 1 \\
+    x \neq 0
+  \end{align*}
+  Fazendo a intersecção desses intervalos, temos que
+  \[
+    y = \log_{x+1}\left(-x^2+2x+8\right)
+  \]
+  existe no conjunto
+  \[
+    \left\{ x \in \R \st -1<x<4 \text{ e } x \neq 0 \right\}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\subsection{Mudança de base}
+
+Sejam $a, b \in (0, 1)\cup(1, \infty)$ e $x\in(0, \infty)$, então
+\begin{equation}
+  \label{eq:log_mudanca_base}
+  \log_{b} x=\frac{\log_a x}{\log_a b}
+\end{equation}
+
+%------------------------------------------------------------------------------%
+\begin{proof}
+  Se
+  \[
+    z = \log_b x,
+  \]
+  então
+  \[
+    b^z=x
+  \]
+  e
+  \[
+    \log_a \left(b^z\right) = \log_a x.
+  \]
+  Mas
+  \[
+    \log_a \left(b^z\right) = z \log_a b
+  \]
+  e, portanto
+  \[
+    z=\frac{\log_a (b^z)}{\log_a b}=\frac{\log_a x}{\log_a b}.
+  \]
+\end{proof}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+    Determine o valor da expressão \(\log_7 25\,\log_5 49\).
+
+    \solution
+    Vamos passar $\log_7 25$ para base $5$,
+    usando a mudança de base~\eqref{eq:log_mudanca_base}.
+    Assim,
+    \begin{align*}
+      \log_7 25 \,\log_5 49
+      & = \frac{\log_5 25}{\log_5 7} \, \log_5 7^2                & \text{usando~\eqref{eq:log_mudanca_base}}  \\[2mm]
+      & = \frac{\log_5 5^2}{\cancel{\log_5 7}} 2\cancel{\log_5 7} & \text{usando~\eqref{eq:log_propriedade_3}} \\[2mm]
+      & = 4 \log_5 5                                              & \text{usando~\eqref{eq:log_propriedade_3}} \\[2mm]
+      & = 4
+    \end{align*}
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+    Escreve a expressão $\log_7 12- \log_7 3$ na base 10.
+
+    \solution
+    Vamos primeiro fazer algumas manipulações
+    algébricas antes de fazer a mudança de base. Assim,
+    \begin{align*}
+      \log_7 12 - \log_7 3
+      & = \log_7 \frac{12}{3} & \text{usando~\eqref{eq:log_propriedade_3}} \\[2mm]
+      & = \log_7 4            & \text{usando~\eqref{eq:log_propriedade_3}} \\[2mm]
+      & = \frac{\log 4}{\log 7}
+    \end{align*}
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\subsection{O número de Euler}
+
+Uma base em especial é a mais utilizada em textos científicos, essa base recebe
+o nome de \emph{número de Euler}\index{Número de Euler}
+\[
+  e = 2,718\,281\,82\cdots
+\]
+As principais funções exponenciais do curso serão $f(x)=e^x$ e $g(x)=e^{-x}$.
+O logaritmo com base $e$ recebe o nome de
+\emph{logaritmo neperiano}\index{Logaritmo!neperiano} ou
+\emph{logaritmo natural}\index{Logaritmo!natural}
+e é denotado simplesmente por $\ln$, ou seja,
+\[
+  \ln x = \log_e x.
+\]
+
+%------------------------------------------------------------------------------%

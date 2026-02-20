@@ -1,0 +1,266 @@
+%------------------------------------------------------------------------------%
+\section{Funções Inversas}
+
+Retomaremos ao Exemplo~\ref{ex:funcao_exp_1}, do capítulo anterior,
+para introduzir a ideia de função Inversa e
+posteriormente definiremos a função logarítmica que é a inversa da função
+exponencial.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Considerando a situação descrita no Exemplo~\ref{ex:funcao_exp_1},
+  se Heloísa não saldar parte de sua dívida, em que momento ela deverá o
+  dobro do valor que pegou emprestado?
+\end{example}
+%------------------------------------------------------------------------------%
+
+Já vimos que o valor a ser pago por Heloísa, $f(x)$, após $x$ meses que ela
+contraiu o empréstimo é dado por
+\[
+  1000 \cdot 1,06^{x}.
+\]
+Essa função nos permite calcular o valor da imagem $f(x)$, dado que temos o
+valor do domínio $x$. Observe que o problema proposto nos pergunta qual o valor
+$x$ do domínio que é levado no valor $f(x)=2000$ da imagem.  Nosso problema
+será facilmente resolvido se tivermos uma função que dado o valor de $f(x)$ ela
+nos da o valor de $x$. Essa função é chamada função inversa, a qual passaremos
+a definir agora.
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.9\textwidth,trim={1cm 1cm 1cm 1cm},clip]{fun1}
+    \caption{Função $f(x)$.}
+    \label{fig:funcao_inv_f}
+  \end{subfigure}%
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.9\textwidth,trim={1cm 1cm 1cm 1cm},clip]{fun3}
+    \caption{Função $h(x)$.}
+    \label{fig:funcao_inv_h}
+  \end{subfigure}
+  \caption{Exemplos de funções.}
+  \label{fig:funcoes_inv}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+A primeira pergunta a ser feita é: será que todas as funções possuem inversas?
+Vamos observar duas situações em que as funções não possuem função inversa.
+
+Na função $f\colon A\to B$, da Figura~\ref{fig:funcao_inv_f},
+não existe $x\in A$ tal que $f(x)=a$.
+Logo, não é possível definir uma função inversa já que não
+teríamos como definir $f^{-1}(a)$.
+
+Na função $h\colon C\to D$, da Figura~\ref{fig:funcao_inv_f}, $h(3)=b=h(4)$.
+Logo, não é possível definir uma função inversa já que tem dois possíveis
+valores para $h^{-1}(b)$.
+
+Para definirmos a inversa de uma função $f$, nenhuma das situação acima podem
+acontecer, uma função em que não ocorre essas situações é uma função bijetora,
+cuja definição formal é dada por
+
+%------------------------------------------------------------------------------%
+\begin{definicao}{Função Bijetora}{def:bijetora}
+  Uma função $f\colon A\to B$ é dita \emph{bijetora}\index{Função!bijetora}
+  se satisfaz  as seguintes condições:
+  \begin{enumerate}
+    \item quaisquer elementos distintos de $A$ são levados por $f$ em elementos
+      distintos de $B$, isto é, se para todo
+      \[
+       x, y\in A \text{ tal que } x \neq y, \text{ tem-se que } f(x) \neq f(y);
+      \]
+
+    \item se todo elemento $y \in B$ possui um representante
+      \[
+        x \in A \text{ tal que } f(x)=y.
+      \]
+  \end{enumerate}
+\end{definicao}
+%------------------------------------------------------------------------------%
+
+Ou seja, $f$ é bijetora se para todo $y\in B$ existe um
+\emph{único} $x\in A$ tal que $f(x)=y$.
+
+Uma função $f\colon A\to B$ que satisfaz o Item $1$ da Definição
+\ref{def:bijetora} é dita \emph{injetora}\index{Função!injetora}.
+
+Uma função $f\colon A\to B$ que satisfaz o Item $2$ da Definição
+\ref{def:bijetora} é dita \emph{sobrejetora}\index{Função!sobrejetora}.
+
+Quando uma função $f\colon A\to B$ é bijetora, é possível definir uma
+função $g\colon B \to A$ que, de certa forma, desfaz o que a $f$ faz.
+Como para cada $y\in B$ existe um único $x\in A$ tal que $f(x)=y$,
+definimos  $g(y)=x$ em que $f(x)=y$. Essa função assim definida é
+chamada \emph{função inversa}\index{Função!inversa}
+de $f$ e denotada por $f^{-1}$. Segue que
+\[
+  f^{-1}(y) = x
+  \quad\Leftrightarrow\quad
+  f(x) = y.
+\]
+
+Veja que pela definição de função, para que a função inversa esteja bem
+definida, é necessário que $f\colon A\to B$ seja bijetiva. Pois nesse caso, a
+sobrejetividade de $f$ garante que $f^{-1}(y)$ está definida para todo $y\in
+B$ e a injetividade garante que o valor $f^{-1}(y)$ é único.
+
+Note que se consideramos a função $f$ definida na sua imagem, ou seja
+$f\colon D(A) \to Im(A)$, então para que $f$ possua inversa, é necessário
+apenas que $f$ seja injetora.
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.9\textwidth,trim={1cm 1cm 1cm 1cm},clip]{fun2}
+    \caption{Função $g(x)$.}
+    \label{fig:funcao_inv_g}
+  \end{subfigure}%
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.9\textwidth,trim={1cm 1cm 1cm 1cm},clip]{fun6}
+    \caption{Função $g^{-1}(x)$.}
+    \label{fig:funcao_inv_g_inv}
+  \end{subfigure}
+  \caption{Uma função e sua inversa.}
+  \label{fig:funcao_g_e_inv_g}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+A função $g\colon C\to B$, da Figura~\ref{fig:funcao_inv_g},
+é bijetora e sua inversa $g^{-1}\colon B\to C$,
+Figura~\ref{fig:funcao_inv_g_inv}, está bem definida.
+
+A função inversa possui as seguintes propriedades:
+\begin{align}
+  f^{-1}\left(f(x)\right) & = x, \qquad \forall~ x \in D\left(f\right),  \\[3mm]
+  f\left(f^{-1}(x)\right) & = x, \qquad \forall~ x \in D\left(f^{-1}\right).
+\end{align}
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Determine se a função
+  \begin{align*}
+    f\colon \R & \to \R  \\
+    x          & \to x^2
+  \end{align*}
+  é bijetiva.
+
+  \solution
+  A função $f$ não é bijetiva, pois,
+  \[
+    f(1) = f(-1) = 1.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Determine se a função
+  \begin{align*}
+    g\colon [0, \infty) & \to [0, \infty) \\
+    x                   & \to  x^2
+  \end{align*}
+  é bijetiva.
+
+  \solution
+  A função $g$, com o domínio restringindo, é uma função bijetiva,
+  cuja função inversa é dada por
+  \begin{align*}
+    f\colon [0, \infty) & \to [0, \infty) \\
+    x                   & \to \sqrt{x}.
+  \end{align*}
+\end{example}
+%------------------------------------------------------------------------------%
+
+Como encontrar a função inversa de uma função bijetiva? Se $y=f(x)$ possuir
+inversa, escreva $x=f(y)$ e isole $y$ na última equação.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Encontre, caso exista, a função inversa da Função
+  \(
+    f(x) = x^3 + 4
+  \).
+  Caso não exista, justifique. Suponha que essas funções tenham domínio e
+  contradomínio todo o conjunto dos números reais.
+
+  \solution
+  Vamos verificar se $f$ é bijetora.
+
+  Para verificar se $f$ é injetora, supomos que
+  \[
+    f(x_1) = f(x_2)
+  \]
+  para $x_1, x_2 \in \R$. Assim,
+  \begin{align*}
+    (x_1)^3+4     & = (x_2)^3+4     \\
+    (x_1)^3       & = (x_2)^3       \\
+    \sqrt[3]{x_1} & = \sqrt[3]{x_2} \\
+    x_1           & = x_2
+  \end{align*}
+  Logo, $f$ é injetora.
+
+  $f$ é sobrejetora, uma vez que seu conjunto imagem é todo o
+  conjunto dos números reais, que é igual ao contradomínio.
+
+  Para encontrarmos uma expressão para a função inversa, basta trocarmos $x$
+  por $y$ na função e depois isolarmos $y$. Portanto,
+  \begin{align*}
+    x   & = y^3+4               \\
+    y^3 & = x-4                 \\
+    y   & = \sqrt[3]{x-4}
+  \end{align*}
+  Assim, $f$ possui inversa e
+  \[
+    f^{-1}(x)=\sqrt[3]{x-4}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Encontre, caso exista, a função inversa da Função
+  \(
+    g(x)= x^4 - 7
+  \).
+  Caso não exista, justifique. Suponha que essas funções tenham domínio e
+  contradomínio todo o conjunto dos números reais.
+
+  \solution
+  A função $g$ não é injetora, uma vez que
+  \[
+    g(1) = g(-1) = -6,
+  \]
+  logo não possui inversa.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\subsection{Gráfico das funções inversas}
+
+O próximo objetivo é explorar as relações entre os gráficos de $f$ e de sua
+função inversa $f^{-1}$. Se $(a, b)$ for um ponto no gráfico $y = f(x)$, então
+$(b, a)$ será um ponto do gráfico de $y=f^{-1}(x)$. O efeito geométrico de
+inverter as coordenadas de um ponto é refletir aquele ponto sobre a reta $y =
+x$.
+
+Em resumo, inverter as coordenadas de um ponto no gráfico de $f$ produz um
+ponto no gráfico de $f^{-1}$. Analogamente inverter as coordenadas de um ponto
+no gráfico de $f^{-1}$ produz um ponto no gráfico de  $f$ logo os gráficos de
+$y = f(x)$ e $y = f^{-1}(x)$ são simétricos um do outro em relação a reta
+$y=x$, conforme ilustra a Figura~\ref{fig:invespelho}.
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.6]{inversaespelho}
+  \caption{Comparação do gráfico de $f(x)$ e $f^{-1}(x)$. Note que o gráfico de
+  $f^{-1}(x)$ é o espelho do gráfico de $f(x)$, com relação a reta $y=x.$}
+  \label{fig:invespelho}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%

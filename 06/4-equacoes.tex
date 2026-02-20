@@ -1,0 +1,170 @@
+%------------------------------------------------------------------------------%
+\section{Equações Logarítmicas}
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Resolva a equação logarítmica
+  \(
+    \log_{x-1} 6 = 1
+  \)
+
+  \solution
+  Inicialmente, ao tentarmos resolver uma equação logarítmica devemos
+  analisar a condição de existência do logaritmo. Como a base de um
+  logaritmo é sempre maior que zero e diferente de um, temos que impor
+  que a solução da inequação deve satisfazer
+  \begin{align*}
+    x-1 & > 0 \\
+    x   & > 1.
+  \end{align*}
+  Note que não precisamos fazer nenhuma restrição para o
+  logaritimando, visto que $b=6>0$.
+
+  Agora, para encontrar a solução da equação, basta aplicarmos a
+  definição de logaritmo.
+  \begin{align*}
+    \log_{x-1}6 & = 1  \\
+    (x-1)^1     & = 6  \\
+    x           & = 7
+  \end{align*}
+  Uma vez que $x=7>1$ e $x\neq1$ satisfaz a condição de existência,
+  então a solução da equação é
+  \[
+    S = \{ 7\}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Resolva a equação logarítmica
+  \(
+    \log_{x+2} \left( 2x^2 + x \right) = 1
+  \)
+
+  \solution
+  \begin{align*}
+    2x^2 + x & > 0      \\
+    x+2      & > 0      \\
+    x+2      & \neq 1.
+  \end{align*}
+  Não é necessário resolver essas inequações, basta testarmos se os
+  valores que serão encontrados satisfazem essas desigualdades.
+
+  Aplicando a definição de logaritmo, temos
+  \begin{align*}
+    (x+2)^1 & = 2x^2 + x \\
+    2x^2    & = 2        \\
+    x       & = -1 \text{ ou } x = 1
+  \end{align*}
+  Vamos verificar se esses valores encontrados satisfazem as
+  condições de existência.
+
+  \emph{Para $x=-1$}
+  \begin{align*}
+    2(-1)^2 + (-1) & = 1 > 0 \\
+    -1+2           & = 1 > 0 \\
+    -1+2           & = 1
+  \end{align*}
+  Logo, como $x=-1$ não satisfaz a terceira condição de existência
+  então não é uma solução para a equação dada.
+
+  \emph{Para $x=1$}
+  \begin{align*}
+    2 \cdot 1^2 + 1 & = 3 > 0 \\
+    1+2             & = 3 > 0 \\
+    1+2             & = 3
+  \end{align*}
+  Logo, $x=1$ é uma solução (a única) solução da equação dada.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Resolva a equação logarítmica
+  \(
+    \log_2 x + \log_2(x-2) = \log_2 8
+  \)
+
+  \solution
+  As condições de existência são dadas por
+  \begin{align*}
+    x   & > 0 \\
+    x-2 & > 0.
+  \end{align*}
+  Para encontrarmos valores que satisfação a equação dada, usamos a
+  propriedade $P_1$ e depois a definição de logaritmo.
+  \begin{align*}
+    \log_2 x + \log_2(x-2) & = \log_2 8 \\
+    \log_2 x (x-2)         & = \log_2 8
+  \end{align*}
+  Usando o fato de que a função logarítmica é injetora chegamos que
+  \begin{align*}
+    x(x-2)       & = 8  \\
+    x^2 - 2x - 8 & = 0  \\
+    x            & = -2 \text{ e } x = 4
+  \end{align*}
+  Vamos verificar se os valores encontrados satisfazem as condições
+  de existência.
+
+  \emph{Para $x=-2$}
+  \[
+    -2 < 0
+  \]
+  Como $x=-2$ já não satisfaz a primeira condição de existência,
+  então não pode ser uma solução da equação dada.
+
+  \emph{Para $x=4$}
+  \begin{align*}
+    4       & > 0 \\
+    4-2 = 2 & > 0
+  \end{align*}
+  Logo $x=4$ é a única solução da equação dada.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Resolva a equação logarítmica
+  \(
+    \log_3 \left( 5x^2 - 6x + 16 \right)
+    = \log_3 \left( 4x^2 + 4x - 5 \right)
+  \)
+
+  \solution
+  As condições de existência nesse caso são:
+  \begin{align*}
+    5x^2 - 6x + 16 & > 0 \\
+    4x^2 + 4x -  5 & > 0
+  \end{align*}
+  Como temos uma igualdade de logaritmos na mesma base, para
+  encontramos os possíveis valores que satisfazem a equação dada
+  basta igualarmos os logaritimandos, considerando o fato de que a
+  função logarítmica é injetora. Assim,
+  \begin{align*}
+    5x^2 - 6x + 16 & = 4x^2 + 4x - 5 \\
+    x^2 - 10x + 21 & = 0             \\
+    x              & = 3 \text{ ou } x = 7
+  \end{align*}
+  Vamos verificar se os valores encontrados satisfazem as condições
+  de existência.
+
+  \emph{Para $x=3$}
+  \begin{align*}
+    5 \cdot 3^2 - 6 \cdot 3+16 = 43 & > 0 \\
+    4 \cdot 3^2 + 4 \cdot 3- 5 = 47 & > 0
+  \end{align*}
+  Logo $x=3$ é uma solução para a equação dada.
+
+  \emph{Para $x=7$}
+  \begin{align*}
+    5 \cdot 7^2 - 6 \cdot 7 + 16 = 219 & > 0 \\
+    4 \cdot 7^2 + 4 \cdot 7 -  5 = 219 & > 0
+  \end{align*}
+  Logo, $x=7$ também é uma solução para a equação dada. Assim, o conjunto
+  solução da equação é
+  \[
+    S = \{3, 7\}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
