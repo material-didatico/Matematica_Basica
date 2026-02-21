@@ -1,0 +1,207 @@
+%------------------------------------------------------------------------------%
+\section{Identidades Trigonométricas}
+
+Algumas relações conhecidas como \emph{Identidades Trigonométricas} serão
+fundamentais no curso
+
+%------------------------------------------------------------------------------%
+\emph{Seno da soma}
+\begin{equation}
+  \label{eq:soma_seno}
+  \sin(a + b) = \sin a \cos b + \sin b \cos a.
+\end{equation}
+
+%------------------------------------------------------------------------------%
+\emph{Cosseno da soma}
+\begin{equation}
+  \label{eq:soma_cosseno}
+  \cos(a + b) = \cos a\cos b - \sin b \sin a
+\end{equation}
+
+%------------------------------------------------------------------------------%
+\OnlineBox{https://www.youtube.com/watch?v=MlCZU4zNymo}
+{
+  Para visualizar as demonstrações das identidades~\eqref{eq:soma_seno}
+  e~\eqref{eq:soma_cosseno}, assista ao vídeo disponível neste link.
+}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\emph{Tangente da soma}
+\begin{equation}
+  \label{eq:soma_tangente}
+  \tan(a + b) = \frac{\tan a + \tan b}{1 - \tan a \tan b}.
+\end{equation}
+
+%------------------------------------------------------------------------------%
+\begin{proof}
+  Para demonstrar esse item, usamos a definição de função tangente e
+  as expressões~\eqref{eq:soma_seno} e~\eqref{eq:soma_cosseno}. Assim,
+  \[
+    \tan(a+b)
+    = \frac{\sin(a+b)}{\cos(a+b)}
+    = \frac{\sin a\cos b+\sin b\cos a}{\cos a\cos b-\sin b\sin a}
+  \]
+  Dividindo o numerador e o denominador por $\cos a\cos b$, desde que
+  seja não nulo, temos
+  \[
+    \tan(a+b)
+    = \frac{\;\dfrac{\sin a\cos b+\sin b\cos a}{\cos a\cos b}\;}
+           {\;\dfrac{\cos a\cos b-\sin b\sin a}{\cos a\cos b}\;}
+    = \frac{\tan a+\tan b}{1-\tan a\tan b}
+  \]
+  Portanto, a fórmula para a tangente da soma é
+  \[
+    \tan(a+b)=\frac{\tan a+\tan b}{1-\tan a\tan b}
+  \]
+\end{proof}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\emph{Seno da diferença}
+\begin{equation}
+  \label{eq:diferenca_seno}
+  \sin(a-b)=\sin a\cos b-\sin b\cos a.
+\end{equation}
+
+%------------------------------------------------------------------------------%
+\emph{Cosseno da diferença}
+\begin{equation}
+  \label{eq:diferenca_cosseno}
+  \cos(a-b)=\cos a\cos b+\sin b\sin a.
+\end{equation}
+
+As identidades~\eqref{eq:diferenca_seno} e~\eqref{eq:diferenca_cosseno}
+podem ser demonstrados trocando $b$ por $-b$ nas
+expressões~\eqref{eq:soma_seno} e~\eqref{eq:soma_cosseno},
+respectivamente, e usando que a função seno é ímpar e a função cosseno é par.
+
+%------------------------------------------------------------------------------%
+\emph{Arco duplo: Seno}
+\begin{equation}
+  \label{eq:arco_duplo_seno}
+  \sin(2a) = 2\sin(a)\cos(a).
+\end{equation}
+
+Essa fórmula é muito útil na trigonometria, pois permite calcular o
+valor do seno de um ângulo duplo em termos dos valores de seno e
+cosseno do ângulo original.
+
+%------------------------------------------------------------------------------%
+\begin{proof}
+  Para demonstrá-la, vamos partir da fórmula da adição para o
+  seno~\eqref{eq:soma_seno} , trocando $b$ por $a$. Logo,
+  \begin{align*}
+    \sin(2a)
+    & = \sin(a + a)                      \\
+    & = \sin(a)\cos(a) + \cos(a)\sin(a)  \\
+    & = 2\sin(a)\cos(a)
+  \end{align*}
+  Portanto, a fórmula para o seno do arco duplo é
+  \[
+    \sin(2a) = 2\sin(a)\cos(a)
+  \]
+\end{proof}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\emph{Arco duplo: Cosseno}
+\begin{equation}
+  \label{eq:arco_duplo_cosseno}
+  \cos(2a)=\cos^2(a)-\sin^2(a)
+\end{equation}
+
+%------------------------------------------------------------------------------%
+\begin{proof}
+    Vamos partir da fórmula da adição para o cosseno~\eqref{eq:soma_cosseno}
+    \[
+      \cos(\alpha + \beta)
+      = \cos(\alpha)\cos(\beta) - \sin(\alpha)\sin(\beta)
+    \]
+    Substituindo $\alpha = a$ e $\beta = a$, temos
+    \begin{align*}
+      \cos(2a)
+      = \cos(a + a)                     \\
+      = \cos(a)\cos(a) - \sin(a)\sin(a) \\
+      = \cos^2(a)-\sin^2(a).
+    \end{align*}
+    Portanto, a fórmula para o cosseno do arco duplo é
+    \[
+      \cos(2a) = cos^2(a)-\sin^2(a)
+    \]
+\end{proof}
+%------------------------------------------------------------------------------%
+
+Note que isolando $\sin^2(x)$ na identidade trigonométrica
+\[
+  \sin^2(a) + \cos^2(a) = 1,
+\]
+podemos reescrever a expressão~\eqref{eq:arco_duplo_cosseno} como
+\[
+  \cos(2a) = \cos^2(a) - \left(1 - \cos^2(a)\right)
+\]
+Simplificando, obtemos outra expressão para $\cos(2a)$, que depende
+apenas de cosseno
+\begin{equation}
+  \label{eq:arco_duplo_cosseno_1}
+  \cos(2a) = 2\cos^2(a) - 1
+\end{equation}
+Se isolarmos $\cos^2(x)$ na identidade trigonométrica
+$\sin^2(a) + \cos^2(a) = 1$,
+podemos reescrever a expressão \eqref{eq:arco_duplo_cosseno} como
+\begin{equation}
+  \label{eq:arco_duplo_cosseno_2}
+  \cos(2a) = 1-2\sin^2(a)
+\end{equation}
+Essas expressões serão essenciais para demonstrar as fórmulas de arco
+metade que seguem.
+
+%------------------------------------------------------------------------------%
+\emph{Arco metade: Cosseno}
+\begin{equation}
+  \label{eq:arco_metade_cosseno}
+  \cos^2(x) = \frac{1}{2}\big(1+\cos(2x)\big).
+\end{equation}
+
+%------------------------------------------------------------------------------%
+\begin{proof}
+  Começamos com a fórmula~\eqref{eq:arco_duplo_cosseno_1},
+  \[
+    \cos(2a) = 2\cos^2(a) - 1
+  \]
+  e substituímos $a$ por $\sfrac{x}{2}$ para obter
+  \[
+    \cos(x) = 2\cos^2\left(\frac{x}{2}\right) - 1
+  \]
+  Isolando \(\cos^2\left(\frac{x}{2}\right)\), temos
+  \[
+    \cos^2\left(\frac{x}{2}\right) = \frac{1}{2}(1 + \cos(x))
+  \]
+  Substituindo $\sfrac{x}{2}$ por $x$ e reescrevendo a equação em
+  termos de $\cos(2x)$, temos
+  \[
+    \cos^2(x) = \frac{1}{2}(1 + \cos(2x))
+  \]
+  Portanto,
+  \[
+    \cos^2(x)= \frac{1}{2}(1+\cos(2x))
+  \]
+\end{proof}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\emph{Arco metade: Seno}
+\begin{equation}
+  \label{eq:arco_metade_sseno}
+  \sin^2(x)= \frac{1}{2}\big(1-\cos(2x)\big).
+\end{equation}
+
+%------------------------------------------------------------------------------%
+\begin{proof}
+  Para comprovar esse item, é possível utilizar a mesma abordagem
+  utilizada anteriormente, porém aplicando agora a
+  fórmula~\eqref{eq:arco_duplo_cosseno_2}.
+  Dessa forma, será possível demonstrar de maneira
+  equivalente a veracidade desse item.
+\end{proof}
+%------------------------------------------------------------------------------%

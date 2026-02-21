@@ -1,0 +1,232 @@
+%------------------------------------------------------------------------------%
+\section{Fórmulas de redução ao primeiro quadrante}
+
+Ao trabalharmos com Trigonometria e deparamo-nos com um ângulo que não se
+encontra no primeiro quadrante, sempre podemos reduzi-lo de forma a encontrar o
+ângulo correspondente a esse que esteja justamente no 1\textsuperscript{o} quadrante.
+Usamos esse procedimento em virtude ds simetria encontrada no ciclo
+trigonométrico. Mas precisamos nos atentar para o que ocorre com os sinais das
+funções trigonométricas em cada quadrante. A Tabela~\ref{sinal1} e a
+Figura~\ref{Sinai1} mostram os sinais em cada quadrante.
+
+%------------------------------------------------------------------------------%
+\begin{table}
+  \begin{ceqn}
+  \[
+    \begin{array}{l<{\quad}>{\quad}c<{\quad}>{\quad}c<{\quad}>{\quad}c<{\quad}>{\quad}r}
+      \hline
+      &
+      \text{1\textsuperscript{o} Q} &
+      \text{2\textsuperscript{o} Q} &
+      \text{3\textsuperscript{o} Q} &
+      \text{4\textsuperscript{o} Q} \\ \hline
+      \sin(x) & + & + & - & - \\
+      \cos(x) & + & - & - & + \\
+      \tan(x) & + & - & + & - \\ \hline
+    \end{array}
+  \]
+  \end{ceqn}
+  \caption{Sinais em cada quadrante.}
+  \label{sinal1}
+\end{table}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+    \centering
+    \includegraphics{sinais}
+    \caption{Sinais em cada quadrante.}
+    \label{Sinai1}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[scale=2]{ciclo2p1}
+  \caption{Redução do 2\textsuperscript{o} quadrante para o
+    1\textsuperscript{o} quadrante.}
+  \label{ciclo2p1}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[scale=2]{terp1}
+  \caption{Redução do 3\textsuperscript{o} quadrante para o
+    1\textsuperscript{o} quadrante.}
+  \label{ciclo2p2}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[scale=2]{qp1}
+  \caption{Redução do 4\textsuperscript{o} quadrante para o
+    1\textsuperscript{o} quadrante.}
+  \label{ciclo2p3}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+Se o ângulo com o qual estamos trabalhando for $y$ e ele estiver no
+segundo quadrante, seu correspondente no 1\textsuperscript{o} quadrante será o
+ângulo $x$ tal que
+\[
+  \pi - x = y
+  \quad\text{ ou }\quad
+  \ang{180} - x = y.
+\]
+Você não deve
+se ater as fórmulas, a Figura~\ref{ciclo2p1} mostra que você pode fazer
+essa redução usando o círculo trigonométrico.
+
+Se o ângulo $y$ pertencer ao terceiro quadrante, seu correspondente
+$x$ no primeiro quadrante será dado por
+\[
+  x + \pi = y
+  \quad\text{ ou }\quad
+  \ang{180} + x = y.
+\]
+A Figura~\ref{ciclo2p2} mostra que você pode fazer essa redução
+usando o círculo trigonométrico.
+
+Se o ângulo com o qual estamos trabalhando for $y$ e ele estiver no
+quarto quadrante, seu correspondente no 1\textsuperscript{o} quadrante será o
+ângulo $x$ tal que
+\[
+  2\pi - x = y
+  \quad\text{ ou }\quad
+  3\ang{60} - x = y.
+\]
+A Figura~\ref{ciclo2p3} mostra que você pode fazer essa redução usando o
+círculo trigonométrico.
+
+%------------------------------------------------------------------------------%
+\begin{observation}
+  {\color{red}
+  Tente $n$
+  }
+\end{observation}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[scale=2]{135}
+  \caption{Redução do \ang{135} ao 1\textsuperscript{o} quadrante.}
+  \label{fig:reducao_135}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Reduza o ângulo \ang{135}
+  e calcule os valores de
+  $\sin(x)$, $\cos(x)$ e $\tan(x)$ para esse ângulo.
+
+  \solution
+  O arco $x=\ang{135}$ está no $2^{\circ}$ quadrante, então para
+  reduzirmos ao primeiro quadrante basta usarmos a fórmula
+  \[
+    \ang{180} - x = y.
+  \]
+  Logo,
+  \[
+    y
+    = \ang{180} - \ang{135}
+    = \ang{45}.
+  \]
+
+  Para encontrarmos as relações trigonométricas para esse ângulo, devemos
+  nos atentar para o sinal das funções trigonométricas no quadrante a qual
+  ele pertence. Nesse caso, temos que $x=\ang{135}$ está no segundo
+  quadrante. Assim,
+  \begin{gather*}
+    \sin(\ang{135}) =  \sin(\ang{45}) =  \frac{\sqrt{2}}{2} \\[2mm]
+    \cos(\ang{135}) = -\cos(\ang{45}) = -\frac{\sqrt{2}}{2} \\[2mm]
+    \tan(\ang{135}) = -\tan(\ang{45}) = -1
+  \end{gather*}
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Reduza o ângulo
+  \(\frac{11 \pi}{6}\) rad
+  e calcule os valores de
+  $\sin(x)$, $\cos(x)$ e $\tan(x)$ para esse ângulo.
+
+  \solution
+  Sabendo que
+  \[
+    \pi \text{ rad} = \ang{180},
+  \]
+  então
+  \[
+    \frac{11\pi}{6} \text{ rad}
+    = \frac{11 \cdot 180}{6}
+    = \ang{330}.
+  \]
+  Assim,
+  \[
+    x = \frac{11\pi}{6} \text{ rad}
+  \]
+  está no 4\textsuperscript{o} quadrante.
+  Para reduzirmos ao primeiro quadrante, basta
+  usarmos a fórmula
+  \[
+    y =\ang{360} - x.
+  \]
+  Logo,
+  \[
+    y
+    = \ang{360} - \ang{330}
+    = \ang{30}.
+  \]
+  Observando o sinal de cada função trigonométrica no
+  4\textsuperscript{o} temos
+  \begin{gather*}
+    \sin(\ang{330}) = -\sin(\ang{30}) = -\frac{1}{2}          \\[2mm]
+    \cos(\ang{330}) =  \cos(\ang{30}) =  \frac{\sqrt{3}}{2}   \\[2mm]
+    \tan(\ang{330}) = -\tan(\ang{30}) = -\frac{\sqrt{3}}{3}
+  \end{gather*}
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Reduza o ângulo
+  \(\frac{4\pi}{3}\) rad
+  e calcule os valores de
+  $\sin(x)$, $\cos(x)$ e $\tan(x)$ para esse ângulo.
+
+  \solution
+  Sabendo que
+  \[
+    x
+    = \frac{4 \cdot 180}{3}
+    = \ang{240},
+  \]
+  então $x$ está no 3\textsuperscript{o}
+  quadrante e para reduzirmos ao terceiro quadrante usamos a relação
+  \[
+    y = x-\ang{180}.
+  \]
+  Logo,
+  \[
+    y
+    = \ang{240} - \ang{180}
+    = \ang{60}.
+  \]
+  Assim, observando o sinal de cada função trigonométrica no
+  3\textsuperscript{o} temos
+  \begin{gather*}
+    \sin(\ang{240}) = -\sin(\ang{60}) = -\frac{\sqrt{3}}{2} \\[2mm]
+    \cos(\ang{240}) =  \cos(\ang{60}) =  \frac{1}{2}        \\[2mm]
+    \tan(\ang{240}) = -\tan(\ang{60}) =  \sqrt{3}
+  \end{gather*}
+\end{example}
+%------------------------------------------------------------------------------%
+

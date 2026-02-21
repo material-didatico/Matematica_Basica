@@ -1,0 +1,182 @@
+%------------------------------------------------------------------------------%
+\section{Círculo Trigonométrico Unitário}
+
+Considere o triângulo retângulo de hipotenusa 1,
+apresentado na Figura~\ref{fig:trigon1}.
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth,trim={3cm 13cm 3cm 15cm},clip]{figcirctrig1}
+  \caption{Triângulo retângulo de hipotenusa 1.}
+  \label{fig:trigon1}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+Suponhamos que
+\begin{enumerate}
+  \item o triângulo esteja situado no plano cartesiano,
+
+  \item o vértice associado ao ângulo $\theta$ esteja sobre a origem $(0, 0)$,
+
+  \item o cateto adjacente ao ângulo $\theta$ fique sobre a parte positiva do
+    eixo $x$,
+
+  \item  a hipotenusa do triângulo retângulo meça 1 e o ângulo $\theta$ seja
+    medido no sentido anti-horário a partir do eixo $x$.
+\end{enumerate}
+{\color{red}
+Conforme observação anterior.
+}
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth,trim={2cm 11cm 3cm 160mm},clip]{figcirctrig2}
+  \caption{?}
+  \label{fig:?}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+{\color{red}
+Podemos variar os valores dos ângulos que para dois valores $\theta_1$ e
+$\theta_2$, teremos (???????????)
+}
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6 \textwidth,trim={3cm 165mm 2cm 6cm} ,clip]{figcirctrig3}
+  \caption{?}
+  \label{fig:trigon2}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+Podemos agora definir o círculo trigonométrico unitário
+(conforme Figura~\ref{fig:trigon3}),
+que é o círculo do plano cartesiano de centro na origem $(0, 0)$ e raio 1.
+O eixo $x$ é também chamado de
+\emph{eixo dos cossenos}\index{Eixo!dos cossenos}, já o eixo
+$y$ é também chamado de
+\emph{eixo dos senos}\index{Eixo!dos senos}.
+
+Considere um ponto $A$ sobre o círculo trigonométrico no primeiro quadrante e
+seja $B$ a projeção desse ponto no eixo $x$.  Seja $C$ a interseção do
+segmento de reta que passa por $\overline{OA}$ com a reta $x=1$ e $D=(1, 0)$, ou
+seja, o segmento $\overline{CD}$ encontra-se sobre a reta $x=1$. Seja $\theta$
+o ângulo $A\hat{O}B$. Observe que as coordenadas de $A$ no plano cartesiano são
+$(\cos\theta, \sin\theta)$. Por semelhança de triângulos (triângulos $AOB$ e
+$COD$) vemos que
+\[
+    \frac{\,\abs{\overline{CD}}\,}{1}
+  = \frac{\,\abs{\overline{CD}}\,}{\abs{\overline{OD}}}
+  = \frac{\,\abs{\overline{AB}}\,}{\abs{\overline{OB}}}
+  = \frac{\,\sin\theta\,}{\cos\theta},
+\]
+ou seja,
+\[
+  \abs{\overline{CD}} = \tan\theta.
+\]
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[scale=3]{circtrigonom}
+  \caption{Círculo Trigonométrico Unitário.}
+  \label{fig:trigon3}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+Vemos assim que para $\theta\in(0, \pi/2)$ os valores $\sin\theta$, $\cos\theta$
+e $\tan\theta$ podem ser obtidos a partir das coordenadas dos pontos $A$ e $C$:
+$A=(\cos\theta, \sin\theta)$ e $C=(1, \tan\theta)$. Mas essa construção pode ser
+feita para qualquer $\theta\in\R$ e dessa forma podemos definir as funções
+seno, cosseno e tangente para quaisquer ângulos reais.  Por exemplo, essa
+construção para um ângulo $\theta$ no segundo quadrante pode ser vista na
+Figura~\ref{fig:trigon4}.
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[width=0.4\textwidth,trim={0 1cm 9cm 3cm},clip]{circ5}
+  \caption{Interpretação Geométrica da Tangente de um Ângulo no Segundo Quadrante}
+  \label{fig:trigon4}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+Continuando a construção, podemos dividir o círculo trigonométrico unitário em
+quatro partes iguais, chamadas de quadrantes. No primeiro quadrante estão os
+ângulos entre 0 e \ang{90}, ou equivalentemente, entre 0 e
+$\sfrac{\pi}{2}$. No segundo quadrante estão os ângulos entre \ang{90} e
+\ang{180} (ou entre $\sfrac{\pi}{2}$ e $\pi$). No terceiro quadrante estão
+os ângulos entre \ang{180} e \ang{270} (ou entre $\pi$ e
+$\sfrac{3\pi}{2}$). Por fim, no quarto quadrante estão os ângulos entre
+\ang{270} e $3\ang{60}$ (ou entre $\sfrac{3\pi}{2}$ e $2\pi$). Os ângulos
+$0,\sfrac{\pi}{2}, \pi, \sfrac{3\pi}{2}$ e $2\pi$ são denominados ângulos do
+eixo. Esses ângulos são notáveis e observando a Figura~\ref{fig:trigon3}, podemos
+descobrir o valor do seno, cosseno e tangente desses arcos.
+A Tabela a seguir apresenta esses valores.
+
+%------------------------------------------------------------------------------%
+\begin{ceqn}
+\[
+  \begin{array}{l<{\quad}>{\quad}c<{\quad}>{\quad}c<{\quad}>{\quad}c<{\quad}>{\quad}c<{\quad}>{\quad}r}
+    \hline
+            & 0 & \sfrac{\pi}{2} & \pi & \sfrac{3\pi}{2} & 2\pi \\ \hline
+    \sin(x) & 0 & 1              & 0   & -1              & 0    \\
+    \cos(x) & 1 & 0              & -1  & 0               & 1    \\
+    \tan(x) & 0 & \nexists       & 0   & \nexists        & 0    \\ \hline
+  \end{array}
+\]
+\end{ceqn}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{observation}
+  A \emph{relação fundamental trigonométrica}\index{Relação fundamental trigonométrica}
+  A partir da Figura~\ref{fig:trigon3}, por exemplo, podemos extrair uma relação
+  trigonométrica, que é muito útil. Essa relação é conhecida como
+  relação fundamental trigonométrica e pode ser demonstrada, aplicando
+  o Teorema de Pitágoras ao triângulo de hipotenusa 1 e catetos $\sin(\theta)$
+  e $\cos(\theta)$
+  \[
+    \sin^2(x)+ \cos^2(x)=1
+  \]
+  A partir dessa relação podemos obter duas outras conforme serão mostradas nos
+  exercícios que seguem.
+\end{observation}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Usando a relação fundamental trigonométrica mostre que:
+  \[
+    \tan^2(x)+1 = \sec^2(x),
+  \]
+  quando
+  \[
+    \cos(x) \neq 0
+    \quad\text{ e }\quad
+    1+ \cot^2(x) = \csc^2(x)
+    \quad\text{ se }\quad
+    \sin(x) \neq 0.
+  \]
+
+  \solution
+  Da relação fundamental trigonométrica temos:
+  \begin{equation} \label{eq:relafun}
+    \sin^2(x)+\cos^2(x)=1
+  \end{equation}
+  Sabendo que $\cos(x) \neq 0$, podemos dividir a equação~\eqref{eq:relafun}
+  por $\cos^2(x)$. Assim,
+  \[
+    \frac{\sin^2(x)}{\cos^2(x)}+ 1= \frac{1}{\cos^2(x)}
+  \]
+  Logo,
+  \[
+    \tan^2(x)+1=\sec^2(x).
+  \]
+  Para chegarmos na outra expressão basta dividirmos a relação fundamental por
+  $\sin^2(x)$.
+\end{example}
+%------------------------------------------------------------------------------%

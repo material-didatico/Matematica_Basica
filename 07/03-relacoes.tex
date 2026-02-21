@@ -1,0 +1,200 @@
+%------------------------------------------------------------------------------%
+\section{Relações no Triângulo Retângulo}
+
+Importantes relações são estabelecidas entre os ângulos e os lados de
+triângulos retângulos. Considere um triângulo retângulo que contém um ângulo
+$0<\theta<\pi/2$ conforme Figura~\ref{fig:triangulo-retangulo}.
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth,trim={1cm 20cm 19cm 9cm},clip]{figdeflados}
+  \caption{Triangulo retângulo}
+  \label{fig:triangulo-retangulo}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+Em relação ao ângulo $\theta$, os lados desse triângulo
+recebem os seguintes nomes:
+\begin{itemize}
+  \item \emph{cateto oposto}\index{Cateto!oposto}
+  \item \emph{cateto }\index{Cateto!adjacente}
+  \item \emph{hipotenusa}\index{Hipotenusa}
+\end{itemize}
+
+Como a soma dos ângulos internos de qualquer triângulo é $\pi$ radianos, o
+terceiro ângulo (que chamaremos de $\alpha$) desse triângulo mede
+$\pi/2-\theta$ (pois $\alpha+\theta+\pi/2=\pi$). Portanto, o cateto oposto ao
+ângulo $\theta$ é o cateto adjacente ao ângulo $\alpha$ e o cateto adjacente ao
+ângulo $\theta$ é o cateto oposto ao ângulo $\alpha$.
+
+Estudaremos as relações entre os lados de dois triângulos retângulos que
+possuem um mesmo ângulo $\theta$. Fixamos dois desses triângulos e nomeamos os
+lados desses triângulos da seguinte forma:
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5 \textwidth,trim={1cm 28cm 17cm 1cm} ,clip]{figdeffunc}
+  \caption{?}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+Como ambos os triângulos possuem um ângulo reto e um ângulo $\theta$, o
+terceiro ângulo desses dois triângulos mede $\pi/2-\theta$. Ou seja, eles são
+semelhantes pelo caso $AAA$ (ângulo ângulo ângulo) e podemos estabelecer as
+seguintes relações:
+\[
+  \frac{y_1}{z_1} = \frac{y_2}{z_2},  \qquad
+  \frac{x_1}{z_1} = \frac{x_2}{z_2},  \qquad
+  \frac{y_1}{x_1} = \frac{y_2}{x_2}.
+\]
+Ou seja, independente dos valores dos catetos e da hipotenusa, as razões entre
+os lados de um triângulo retângulo que contém um ângulos $\theta$ são
+constantes. Essas constantes (que dependem de $\theta$) recebem nomes, os
+principais deles são: (Outras razões recebem os nomes de secante,
+cosseno e cotangente.)
+
+\emph{Seno de $\theta$}
+\[
+  \sin\theta=\frac{\text{cateto oposto}}{\text{hipotenusa}}.
+\]
+
+\emph{Cosseno de $\theta$}
+\[
+  \cos\theta=\frac{\text{cateto adjacente}}{\text{hipotenusa}}.
+\]
+
+\emph{Tangente de $\theta$}
+\[
+  \tan\theta=\frac{\text{cateto oposto}}{\text{cateto adjacente}}.
+\]
+
+Assim definidos, seno, cosseno e tangente são funções cujo domínio é o
+intervalo \(\left(0, \sfrac{\pi}{2}\right)\).
+Para estendermos essas definições e obtermos funções com
+domínio real precisaremos generalizar a noção de ângulos para valores maiores
+que $2\pi$ e ângulos negativos e posteriormente, estender a noção de seno,
+cosseno e tangente desses ângulos através do círculo trigonométrico unitário.
+
+%------------------------------------------------------------------------------%
+\begin{observation}
+  É possível calcular os valores de seno, cosseno e tangente para os ângulos
+  \(\sfrac{\pi}{4}\),
+  \(\sfrac{\pi}{3}\) e
+  \(\sfrac{\pi}{6}\)
+  utilizando a relação de Pitágoras no quadrado de
+  lado 1 e no triângulo equilátero de lado 1. Esses ângulos são chamados de
+  notáveis porque para demais ângulos não existe uma maneira tão simples de
+  estabelecer os valores de seno, cosseno e tangente.
+\end{observation}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  \label{ex:angulos_notaveis}
+  Calcule os valores de seno, cosseno e tangente para os ângulos
+  \(\sfrac{\pi}{4}\),
+  \(\sfrac{\pi}{3}\) e
+  \(\sfrac{\pi}{6}\)
+  utilizando a relação de Pitágoras no quadrado de lado 1 e
+  no triângulo equilátero de lado 1, justificando a tabela a seguir.
+
+  \solution
+  Vamos mostrar as razões trigonométricas para o ângulo de \ang{45}. Para
+  isso, considere um quadrado de lado 1 e tracemos sua diagonal. Ao fazermos
+  esse procedimento, dividimos o quadrado em dois triângulos retângulos iguais
+  como mostra a figura.
+
+  \IncludeGraphicCentredEx{quadrado}[0.4][-1][-1]
+
+  Podemos observar que
+  \begin{description}
+      \item[] \qquad Cateto oposto a    \ang{45} vale 1;
+      \item[] \qquad Cateto adjacente a \ang{45} vale 1;
+      \item[] \qquad Hipotenusa desses triângulos retângulos é $\sqrt{2}$.
+  \end{description}
+  Assim,
+  \begin{align*}
+     \sin(\ang{45}) & = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}; \\[2mm]
+     \cos(\ang{45}) & = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2}; \\[2mm]
+     \tan(\ang{45}) & = \frac{1}{1}        = 1.
+  \end{align*}
+  Para encontrarmos as razões trigonométricas para os ângulos de \ang{30} e
+  \ang{60} basta traçarmos uma altura (que é mediana e bissetriz) em um
+  triângulo equilátero de lado $l$.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+
+A partir dos valores encontrados no Exemplo~\ref{ex:angulos_notaveis},
+construímos a seguinte tabela
+\begin{ceqn}
+\[
+  \begin{array}{c<{\quad}>{\quad}c<{\quad}>{\quad}c<{\quad}>{\quad}c}  \hline
+    \theta          & \sin\theta          & \cos\theta          & \tan\theta          \\ \hline
+    \dfrac{\pi}{6}  & \dfrac{1}{2}        & \dfrac{\sqrt{3}}2{} & \dfrac{\sqrt{3}}{3} \\[3mm]
+    \dfrac{\pi}{4}  & \dfrac{\sqrt{2}}{2} & \dfrac{\sqrt{2}}{2} &      1              \\[3mm]
+    \dfrac{\pi}{3}  & \dfrac{\sqrt{3}}{2} & \dfrac{1}{2}        &  \sqrt{3}           \\[3mm] \hline
+  \end{array}
+\]
+\end{ceqn}
+
+A seguir resolveremos alguns exercícios que envolvem as razões métricas em um
+triângulo retângulo.
+
+%------------------------------------------------------------------------------%
+\begin{example} \label{trigon1ex}
+  Um avião decola, percorrendo uma trajetória retilínea, formando com o solo,
+  um ângulo de \ang{30} (suponha que a região sobrevoada pelo avião seja
+  plana). Após percorrer 1000 metros, qual a altura atingida pelo avião?
+
+  \solution
+  A figura descreve a situação.
+
+  \IncludeGraphicCentredEx{exerc1t}[0.5]
+
+  Note que temos envolvidos no problema um ângulo (\ang{30}), o cateto
+  oposto a esse ângulo ($h$) e a hipotenusa (\SI{1000}{\meter}), assim,
+  é conveniente usar o seno para obtermos a medida desconhecida.
+  \begin{align*}
+    \sin(\ang{30}) & = \frac{h}{1000}   \\
+    \frac{1}{2}    & = \frac{h}{1000}   \\
+    h              & = \SI{500}{\meter}
+  \end{align*}
+  Assim, após percorrer \SI{1000}{\meter} o avião atinge \SI{500}{\meter}.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \caption{Figura para o exercício \ref{exerc34}.}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example} \label{exerc34}
+  Um sensor detecta a aproximação de veículos em uma rua. Determine uma função
+  $x(\theta)$ que forneça a distância do sensor ao veículo em relação a
+  $\theta$. Se o sensor só detecta objetos quando $\theta$ é menor ou igual a
+  $\sfrac{\pi}{3}$,
+  determine a distância máxima que o carro pode estar do sensor para
+  ser detectado.
+
+  \solution
+  \IncludeGraphicCentredEx{figexercar}[0.5]
+
+  A distância máxima ocorre quando o ângulo no qual o sensor detecta os objetos
+  é máxima. Como, no exercício, temos o valor do cateto adjacente ao ângulo
+  $\theta$ e queremos encontrar a hipotenusa. Portanto, iremos usar o cosseno.
+  \begin{align*}
+    \cos(\ang{60}) & = \frac{8}{x}     \\[2mm]
+    \frac{1}{2}    & = \frac{8}{x}     \\[2mm]
+    x              & = \SI{16}{\meter}
+  \end{align*}
+  Portanto, a distância máxima que o carro pode estar do sensor para ser
+  detectado é de \SI{16}{\meter}.
+\end{example}
+%------------------------------------------------------------------------------%

@@ -1,0 +1,254 @@
+%------------------------------------------------------------------------------%
+\section{Funções Trigonométricas Inversas}
+
+As funções seno, cosseno e tangente não são bijetoras, mas uma restrição no
+domínio das mesmas nos possibilita definir suas inversas. Essa escolha de
+domínio não é única, mas adotaremos as escolhas padrões, que são os intervalos
+que contém os ângulos notáveis e cujas imagens das funções restritas são iguais
+às imagens das funções sem restrição. Os gráficos das funções inversas são
+obtidos a partir dos gráficos das funções originais através da reflexão do
+gráfico da função original em torno da reta $y=x$. Por isso apresentaremos três
+imagens: o gráfico das funções trigonométricas restritas, esse gráfico
+juntamente com sua reflexão e o gráfico das funções trigonométricas inversas.
+
+%------------------------------------------------------------------------------%
+\subsection{Arco Seno}
+
+A função
+\[
+  \sin\colon \left[-\frac{\pi}{2}, \frac{\pi}{2}\right] \to [-1, 1]
+\]
+é bijetora e sua inversa é denominada arco seno
+\[
+  \arcsin\colon [-1, 1] \to \left[-\frac{\pi}{2}, \frac{\pi}{2}\right].
+\]
+Por definição,
+\[
+  \arcsin x=y \qquad\Leftrightarrow\qquad \sin y=x.
+\]
+
+Por serem inversas uma da outra, essas duas funções satisfazem:
+\begin{gather*}
+  \sin(\arcsin(x))=x, \quad\forall\quad x~\in [-1,1]. \\[2mm]
+  \arcsin(\sin(x))=x, \quad\forall\quad x~\in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right].
+\end{gather*}
+
+Para encontrarmos o gráfico da função arcoseno, vamos analisar o  gráfico da
+função seno em \(\left[-\sfrac{\pi}{2}, \sfrac{\pi}{2}\right]\) como dado a seguir:
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth,trim={1cm 10cm 12cm 3cm},clip]{sen1}
+  \caption{???}
+\end{figure}
+
+A reflexão do gráfico de seno em torno no eixo $x$:
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth,trim={1cm 4cm 12cm 2cm},clip]{sen2}
+  \caption{???}
+\end{figure}
+
+E finalmente, o gráfico do arco seno:
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth,trim={1cm 6cm 12cm 3cm},clip]{sen4}
+  \caption{???}
+\end{figure}
+
+\begin{example}
+  Calcule o valor de $\arcsin x$ para $x$ assumindo os seguintes valores:
+  \[
+    -\frac{\sqrt{3}}{2}, \quad
+    0,                   \quad
+    \frac{\sqrt{2}}{2},  \quad
+    \frac{1}{2},         \quad
+    1
+  \]
+
+  \solution
+  Temos que:
+  \begin{gather*}
+    \arcsin\left(-\frac{\sqrt{3}}{2}\right) = -\frac{\pi}{3} \\
+    \arcsin(0)                              = 0              \\
+    \arcsin\left(\frac{\sqrt{2}}{2}\right)  = \frac{\pi}{4}  \\
+    \arcsin\left(\frac{1}{2}\right)         = \frac{\pi}{6}  \\
+    \arcsin(1)                              = \frac{\pi}{2}
+  \end{gather*}
+  Vale lembrar que o valor de $\arcsin(x)$ está restrito ao intervalo
+  \[
+    \left[-\frac{\pi}{2}, \frac{\pi}{2}\right].
+  \]
+  Por exemplo, no caso de
+  \[
+    \arcsin\left(-\frac{\sqrt{3}}{2}\right),
+  \]
+  o valor $-\frac{\pi}{3}$ está
+  nesse intervalo, mas o valor $\frac{2\pi}{3}$ também é uma solução da equação
+  \[
+    \sin(x)=-\frac{\sqrt{3}}{2},
+  \]
+  porém não está no intervalo
+  \[
+    \left[-\frac{\pi}{2},\frac{\pi}{2}\right].
+  \]
+  Por isso, é importante sempre verificar se a solução encontrada está
+  dentro do intervalo de definição de $\arcsin(x)$.
+\end{example}
+
+%------------------------------------------------------------------------------%
+\subsection{Arco Cosseno}
+
+A função
+\[
+  \cos\colon [0, \pi] \to [-1, 1]
+\]
+é bijetora e sua inversa é denominada arco cosseno:
+\[
+  \arccos\colon [-1, 1] \to [0, \pi].
+\]
+Por definição,
+\[
+  \arccos x = y \Leftrightarrow \cos y = x.
+\]
+
+Por serem inversas uma da outra, essas duas funções satisfazem
+\begin{gather*}
+  \cos(\arccos(x))=x, \quad\forall\quad x~\in [-1, 1]. \\
+  \arccos(\cos(x))=x, \quad\forall\quad x~\in [0, \pi].
+\end{gather*}
+
+A seguir o gráfico da função cosseno em $[0, \pi]$
+e de sua reflexão em torno de $y=x$.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.4\textwidth,trim={1cm 4cm 12cm 2cm},clip]{cos2}
+  \qquad
+  \includegraphics[width=0.4\textwidth,trim={1cm 3cm 12cm 1cm},clip]{cos3}
+  \caption{???}
+\end{figure}
+
+O gráfico do arco cosseno.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth,trim={1cm 6cm 20cm 4cm},clip]{cos4}
+  \caption{???}
+\end{figure}
+
+\begin{example}
+  Calcule o valor de $\arccos x$ para $x$ assumindo os seguintes valores:
+  \[
+    -\frac{\sqrt{3}}{2}, \quad
+    0,                   \quad
+    \frac{\sqrt{2}}{2},  \quad
+    \frac{1}{2},         \quad
+    1
+  \]
+
+  \solution
+  Temos que:
+  \begin{gather*}
+    \arccos\left(-\frac{\sqrt{3}}{2}\right)=\frac{5\pi}{6}. \\
+    \arccos(0)=\frac{\pi}{2}.                               \\
+    \arccos\left(\frac{\sqrt{2}}{2}\right)=\frac{\pi}{4}.   \\
+    \arccos\left(\frac{1}{2}\right)=\frac{\pi}{3}.          \\
+    \arccos(1)=0.
+  \end{gather*}
+  Vale lembrar que o valor de $\arccos(x)$ está restrito ao intervalo $[0, \pi]$.
+  Por exemplo, no caso de
+  \[
+    \arccos\left(-\frac{\sqrt{3}}{2}\right),
+  \]
+  o valor
+  $\sfrac{7\pi}{6}$ é uma solução da equação
+  \[
+    \cos(x)=-\frac{\sqrt{3}}{2},
+  \]
+  porém não está no intervalo $[0, \pi]$.
+  Por isso, é importante sempre verificar se a
+  solução encontrada está dentro do intervalo de definição de $\arccos(x)$.
+\end{example}
+
+%------------------------------------------------------------------------------%
+\subsection{Arco Tangente}
+
+A função
+\[
+  \tan\colon (-\pi/2, \pi/2) \to \R
+\]
+é bijetora e sua inversa é denominada arco tangente
+\[
+  \arctan\colon \R \to (-\pi/2, \pi/2).
+\]
+Por definição,
+\[
+  \arctan x=y \Leftrightarrow \tan y=x.
+\]
+
+Por serem inversas uma da outra, essas duas funções satisfazem:
+\begin{align*}
+  \tan(\arctan(x))=x, \quad\forall\quad x~\in \R. \\
+  \arctan(\tan(x))=x, \quad\forall\quad x~\in \left(-\frac{\pi}{2}, \frac{\pi}{2}\right).
+\end{align*}
+
+A seguir o gráfico da função tangente em
+\(\left(-\sfrac{\pi}{2}, \sfrac{\pi}{2}\right)\)
+e de sua reflexão em torno de $y=x$
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.4\textwidth,trim={1cm 2cm 12cm 2cm},clip]{tg1} \qquad
+  \includegraphics[width=0.4\textwidth,trim={1cm 1cm 10cm 1cm},clip]{tg2}
+  \caption{???}
+\end{figure}
+
+O gráfico do arco tangente.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth,trim={1cm 6cm 10cm 3cm},clip]{tg4}
+  \caption{???}
+\end{figure}
+
+\begin{example}
+  Calcule o valor de $\arctan x$ para $x$ assumindo os seguintes valores:
+  \[
+    -\frac{\sqrt{3}}{3}, \quad
+    0,                   \quad
+    \sqrt{3},            \quad
+    1
+  \]
+
+  \solution
+  Temos que:
+  \begin{gather*}
+    \arctan\left(-\frac{\sqrt{3}}{3}\right)=-\frac{\pi}{6}. \\
+    \arctan\left(0\right)=0.                                \\
+    \arctan\left(\sqrt{3}\right)= \frac{\pi}{3}.            \\
+    \arctan\left(1\right)=\frac{\pi}{4}.
+  \end{gather*}
+  Vale lembrar que o valor de $\arctan(x)$ está restrito ao intervalo
+  \[
+    \left(-\frac{\pi}{2},\frac{\pi}{2}\right).
+  \]
+  Por exemplo, no caso de
+  \[
+    \arctan\left(-\frac{\sqrt{3}}{3}\right),
+  \]
+  a solução encontrada
+  \[
+    -\frac{\pi}{6}
+  \]
+  está dentro do intervalo
+  \[
+    \left(-\frac{\pi}{2},\frac{\pi}{2}\right),
+  \]
+  porém é importante sempre verificar se a solução encontrada está dentro
+  do intervalo de definição de $\arctan(x)$.
+\end{example}
+
+%------------------------------------------------------------------------------%

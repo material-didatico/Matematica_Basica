@@ -1,0 +1,248 @@
+%------------------------------------------------------------------------------%
+\section{Equações Trigonométricas}
+
+Uma equação trigonométrica é uma equação que envolve funções trigonométricas
+como seno, cosseno, tangente, cotangente, secante ou cossecante de uma variável
+trigonométrica. O objetivo da resolução de equações trigonométricas é encontrar
+todas as soluções possíveis para a equação.
+
+As equações abaixo são exemplos de equações trigonométricas:
+\begin{gather*}
+  \sin(x) = \frac{1}{2} \\[2mm]
+  \cos^2(x)-\cos(x) = 0 \\[3mm]
+  \cos(x)\left(\tan(x)-1\right) = 0
+\end{gather*}
+
+Para resolvermos uma equação trigonométrica, precisamos nos atentar em qual
+intervalo é pedida a solução.
+
+A resolução de equações trigonométricas pode ser feita por meio de diversas
+técnicas, dependendo da complexidade da equação. Alguns dos métodos mais comuns
+incluem:
+\begin{enumerate}
+  \item Equações simples: são aquelas que envolvem apenas uma função
+    trigonométrica. Nesse caso, é possível usar propriedades básicas das
+    funções trigonométricas para encontrar as soluções.
+
+  \item Equações quadráticas: são aquelas que envolvem o quadrado de uma função
+    trigonométrica. Nesse caso, é possível fazer uma substituição adequada para
+    transformar a equação em uma equação quadrática comum, que pode ser
+    resolvida usando as técnicas usuais.
+
+  \item Equações com produto nulo: são aquelas em que uma ou mais funções
+    trigonométricas multiplicadas entre si resultam em zero. Nesse caso, é
+    possível usar a propriedade do produto nulo para encontrar as soluções.
+
+  \item Uso de identidades: muitas vezes, as equações trigonométricas podem ser
+    resolvidas por meio da aplicação de identidades trigonométricas, como as
+    identidades de soma e diferença, identidades de produto e identidades de
+    duplo ângulo.
+\end{enumerate}
+
+Em geral, a resolução de equações trigonométricas requer um bom conhecimento
+das propriedades e identidades das funções trigonométricas, bem como das
+técnicas algébricas usadas para resolver equações. Vamos resolver alguns
+exemplos.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Resolva a seguinte equação trigonométrica \(\sin(\theta) = \frac{\sqrt{2}}{2}\).
+
+  \solution
+  \emph{No intervalo $[0, 2\pi]$}
+
+  Note que, nesse caso, queremos encontrar os arcos no intervalo
+  $[0, 2\pi]$, cujo seno vale $\sfrac{\sqrt{2}}{2}$. Sabemos que
+  $\sin(\theta)$ é positivo no primeiro e segundo quadrante. No primeiro
+  quadrante o ângulo é $\sfrac{\pi}{4}$ (usamos sempre o arco do 1\textsuperscript{o}
+  como referência). Para encontrar o arco no segundo quadrante, usamos a
+  expressão
+  \[
+    \pi-\frac{\pi}{4} = \frac{3\pi}{4},
+  \]
+  conforme mostra a figura.
+
+  \IncludeGraphicCentredEx{equa1png}[0.5][-1][-1]
+
+  Portanto, a solução da equação pedida é
+  \[
+    S = \left\{ \frac{\pi}{4}, \frac{3\pi}{4} \right\}.
+  \]
+
+  \emph{Solução geral}
+
+  A solução geral é dada por:
+  \[
+    S =
+    \left\{
+       x \in \R | x=\frac{\pi}{4}+2k\pi
+      \; \text{ ou } \;
+      x = \frac{3\pi}{4} +2k\pi, \quad k \in \Z
+    \right\}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Resolva a equação
+  \(2\cos\left(\frac{\theta}{3}\right) - \sqrt{3} = 0\),
+  onde $0 \leq \theta \leq 3\pi$.
+
+  \solution
+  A equação
+  \[
+    2\cos\left(\frac{\theta}{3}\right) - \sqrt{3} = 0
+  \]
+  é equivalente a
+  \[
+    \cos\left(\frac{\theta}{3}\right) = \frac{\sqrt{3}}{2}.
+  \]
+  Como $0 \leq \theta \leq 3\pi$, então,
+  \[
+    0 \leq \frac{\theta}{3} \leq \pi.
+  \]
+  Uma vez que o único arco no intervalo $[0, \pi]$,
+  que possui cosseno igual a
+  \[
+    \sfrac{\sqrt{3}}{2}$ é $\sfrac{\pi}{6},
+  \]
+  temos que
+  \begin{align*}
+    \frac{\theta}{3} & = \frac{\pi}{6}  \\
+    \theta           & = \frac{\pi}{2}.
+  \end{align*}
+  Portanto,
+  \[
+    S = \left\{\frac{\pi}{2} \right\}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Resolva a equação $2\cos(x)= -1$ no intervalo $[0,2\pi]$.
+
+  \solution
+  Primeiro, vamos isolar o $\cos(x)$ dividindo ambos os lados por 2:
+  \[
+    \cos(x)= -\frac{1}{2}
+  \]
+
+  Sabemos que o cosseno é negativo no segundo e terceiro quadrante, para
+  encontrarmos quais são esses arcos, pegamos como referência o arco no
+  primeiro quadrante que tem cosseno igual a
+  $\sfrac{1}{2}$, isto é,
+  $\sfrac{\pi}{3}$.
+
+  \IncludeGraphicCentredEx{equa2}[0.5][-1][-1]
+
+  Conforme mostra a figura, o arco no segundo quadrante é
+  \[
+    \pi-\frac{\pi}{3}= \frac{2\pi}{3}
+  \]
+  e o arco no terceiro quadrante é
+  \[
+    \pi+\frac{\pi}{3}= \frac{4\pi}{3}.
+  \]
+  Assim,
+  \[
+    \cos(x) = -\frac{1}{2}
+  \]
+  ocorre quando $x$ é um ângulo de
+  \[
+    \frac{2\pi}{3}
+    \quad\text{ ou }\quad
+    \frac{4\pi}{3}
+  \]
+  (ou seus equivalentes negativos).
+  Portanto, a solução da equação no intervalo $[0, 2\pi]$ é
+  \[
+    S= \left\{\frac{2\pi}{3}, \frac{4\pi}{3} \right\}
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Resolva a equação
+  \[
+    \left(\sin(\theta) -\frac{1}{2} \right)
+    \left(\tan(\theta) -1 \right) = 0,
+  \]
+  para $0 \leq \theta < \sfrac{\pi}{2}$.
+
+  \solution
+  Essa equação é do tipo produto nulo. Sabemos que produto $ab$ só é zero se
+  $a = 0$ ou $ b = 0$.
+  Portanto:
+  \[
+    \sin(\theta) -\frac{1}{2} = 0
+    \quad\text{ ou }\quad
+    \tan(\theta) -1 = 0
+  \]
+  Analisando cada caso, separadamente
+  \begin{align*}
+    \sin(\theta) -\frac{1}{2} & =0              \\
+    \sin(\theta)              & =\frac{1}{2}    \\
+    \theta                    & = \frac{\pi}{6}
+  \end{align*}
+  ou
+  \begin{align*}
+    \tan(\theta) -1 & = 0            \\
+    \tan(\theta)    & = 1            \\
+    \theta          & =\frac{\pi}{4}
+  \end{align*}
+  Assim, a solução da equação pedida é:
+  \[
+    S = \left\{ \frac{\pi}{6}, \frac{\pi}{4} \right\}.
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Resolva a equação  $2\sin^2 x - \sin x - 1 = 0$ no intervalo $[0, 2\pi]$.
+
+  \solution
+  Neste caso, temos uma equação quadrática trigonométrica que pode ser
+  resolvida através da mudança de variável $y = \sin(x)$. Dessa forma, obtemos
+  a equação do segundo grau
+  \[
+    2y^2  - y - 1 = 0,
+  \]
+  cujas raízes são
+  \[
+    y = 1
+    \quad\text{ e }\quad
+    y = -\frac{1}{2}.
+  \]
+  Portanto, podemos encontrar os valores de $x$
+  correspondentes da seguinte maneira.
+
+  Para $y = 1$, temos $\sin(x) = 1$, o que implica em
+  \(
+    x = \frac{\pi}{2}.
+  \)
+
+  Para $y = -\sfrac{1}{2}$, temos $\sin(x) = -\sfrac{1}{2}$.
+  Isso ocorre em dois
+  quadrantes, 3\textsuperscript{o} e 4\textsuperscript{o} quadrantes.
+  Portanto, os valores
+  possíveis de $x$ são
+  \[
+    \pi + \frac{\pi}{6} = \frac{7\pi}{6}
+    \qquad \text{(3\textsuperscript{o} Q)}
+  \]
+  ou
+  \[
+    2\pi - \frac{\pi}{6} = \frac{11\pi}{6}
+    \qquad \text{(4\textsuperscript{o} Q)}.
+  \]
+  Assim o conjunto solução da equação original é
+  \[
+    S = \left\{ \frac{\pi}{2}, \frac{7\pi}{6}, \frac{11\pi}{6} \right\}
+  \]
+\end{example}
+%------------------------------------------------------------------------------%
+

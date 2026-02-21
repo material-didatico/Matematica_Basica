@@ -1,0 +1,207 @@
+%------------------------------------------------------------------------------%
+\section{Gráficos de Funções Trigonométricas}
+
+Um fenômeno é chamado periódico se o mesmo se repete sempre após o mesmo
+intervalo de tempo. Um exemplo simples de fenômeno periódico é o dia,
+determinado pelo movimento do Sol. A observação do movimento periódico dos
+corpos celestes nos possibilitou a criação do nosso calendário. Para uma melhor
+compreensão dos fenômenos periódicos, faz-se necessário o estudo das funções
+periódicas.
+
+A repetição do valor numérico de uma função em um período determinado constitui
+uma função periódica. Mais precisamente, uma função $f$ é periódica de período
+$T$ se para todo $x$ real
+\[
+  f(x+T)=f(x).
+\]
+
+Observe que conhecido o gráfico de uma função periódica em um determinado
+intervalo de seu domínio, que tenha o tamanho de seu período, automaticamente
+conhecemos  o gráfico em todo o domínio, uma vez que podemos repetir o gráfico
+em outros intervalos de mesmo tamanho. As funções trigonométricas são
+periódicas e por isso apresentaremos os seus gráficos em intervalos do tamanho
+de seus períodos. O período das funções seno e cosseno é $2\pi$. O período
+da função tangente é $\pi$.
+
+As seguintes observações merecem destaque.
+
+As funções seno e cosseno são definidas em todo o conjunto dos
+números reais e seus valores variam entre $-1$ e 1, ou seja, a imagem
+dessas funções é o intervalo fechado de $[-1, 1]$. Isso significa que o
+valor máximo que a função pode atingir é 1, enquanto o valor mínimo é
+$-1$.
+
+É importante notar que, além de possuir valor máximo de 1 e valor
+mínimo de $-1$, as funções seno e cosseno atingem esses valores
+infinitas vezes ao longo de seus domínios.
+
+A função $y = \cos(x)$ é uma função par, o que significa que
+\[
+  \cos(-x) = \cos(x).
+\]
+Isso pode ser facilmente observado no círculo
+trigonométrico, já que a função cosseno representa a coordenada $x$ de um
+ponto na circunferência unitária, que é simétrica em relação ao eixo $y$.
+Portanto, quando o ângulo é negativo, o cosseno mantém o mesmo valor
+que quando o ângulo é positivo.
+
+Para fazer o esboço do gráfico das funções $y=\sin(x)$ e
+$y=\cos(x)$, utilizamos os arcos do eixo no círculo trigonométrico.
+
+A função $y = \sin(x)$ é uma função ímpar, o que significa que
+\[
+  \sin(-x) = -\sin(x).
+\]
+Isso pode ser facilmente observado no círculo
+trigonométrico.
+
+Detalhes sobre função $y=\tan(x)$, será apresentado posteriormente,
+no entanto, vale adiantar que essa função é ímpar, pois
+\[
+  \tan(-x)
+  = \frac{\sin(-x)}{\cos(-x)}
+  = \frac{-\sin(x)}{\cos(x)}
+  = -\tan(x).
+\]
+
+As Figuras~\ref{fig:senono} e \ref{fig:cossenono} mostram o gráfico das funções
+$y=\sin(x)$ e $y=\cos(x)$ em um período, ou seja, no intervalo $[0, 2\pi]$
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[height=45mm]{seno-1}
+    \caption{O gráfico da função seno em $[0, 2\pi]$.}
+    \label{fig:senono}
+  \end{subfigure}%
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[height=45mm]{cos}
+    \caption{O gráfico da função cosseno em $[0, 2\pi]$.}
+    \label{fig:cossenono}
+  \end{subfigure}
+  \caption{Funções seno e cosseno.}
+  \label{fig:sin_cos}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+Os próximos exemplos apresentam como construir gráficos de funções que são
+transformações nas funções $y=\sin(x)$ e $y=\cos(x)$.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Esboce o gráfico da função
+  \(f(x)= 2 \sin(x) +2\),
+  explicitando o domínio e a imagem.
+
+  \solution
+  Note que $D(f)=\R$, uma vez que não temos nenhuma restrição para $x$.
+
+  Para encontrarmos a imagem de $f$ devemos lembrar que
+  \[
+    -1 \leq \sin(x) \leq 1
+  \]
+  então se multiplicarmos por 2
+  e depois somarmos 2 em todos os
+  termos da desigualdade chegamos que
+  \begin{align*}
+    -2+2 & \leq 2 \sin(x) + 2 \leq 2+2 \\
+    0    & \leq 2 \sin(x) + 2 \leq 4
+  \end{align*}
+  Assim, $\Im(f) = [0, 4]$.
+
+  Uma vez que conhecemos o gráfico da função $y=\sin(x)$ podemos usar
+  transformações para obtermos o gráfico de $f$. Uma vez que para obtermos
+  a função $f$ multiplicamos a função $y=\sin(x)$ por 2 e depois somamos
+  2 unidades, então para fazermos o esboço do gráfico de $f$ precisamos
+  fazer uma expansão vertical de comprimento 2 e depois fazermos uma
+  translação vertical (subimos 2 unidades no eixo $y$).
+
+  \IncludeGraphicCentredEx{exemplo1seno}[0.5][-1][-1]
+
+  Em azul o gráfico da função $y=2\sin(x)+2$
+  e em vermelho gráfico da função $y=\sin(x)$.
+\end{example}
+%------------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Esboce o gráfico da função
+  \(
+   g(x) = \frac{1}{2} \cos\left( x + \frac{\pi}{2} \right) - 1
+  \),
+  explicitando o domínio e a imagem.
+
+  \solution
+  Note que $D(f)= \R$, uma vez que não temos nenhuma restrição para $x$.
+
+  Para encontrarmos a imagem de $f$ devemos lembrar que
+  \[
+    -1 \leq \cos\left(x+ \frac{\pi}{2} \right) \leq 1
+  \]
+  então se multiplicarmos por
+  \(\sfrac{1}{2}\) e depois subtraímos 1 em todos os termos dessa
+  desigualdade chegamos que
+  \begin{align*}
+    -1-\frac{1}{2} & \leq \frac{1}{2} \cos\left(x+ \frac{\pi}{2}\right) -1 \leq \frac{1}{2} -1 \\
+    - \frac{3}{2}  & \leq \frac{1}{2} \cos\left(x+ \frac{\pi}{2}\right) - \leq -\frac{1}{2}
+  \end{align*}
+  Assim, \(\Im(f)=\left[-\frac{3}{2},-\frac{1}{2}\right]\).
+
+  Conhecemos o gráfico da função $y=\cos(x)$ então para obtermos o gráfico
+  da função $f$ precisamos fazer três transformações na função $y=\cos(x)$:
+
+  Contração vertical, por conta do fator $\sfrac{1}{2}$.
+
+  Deslocamento horizontal, ou seja, ``andar para trás''
+  \(\sfrac{\pi}{2}\) unidades.
+
+  Fazer uma translação vertical, ou seja, ``descer'' uma unidade
+  no eixo $y$.
+
+  \IncludeGraphicCentredEx{exerciciocosseno}[0.5][-1][-1]
+
+  Em azul, o gráfico da função
+  \[
+    y = \frac{1}{2} \cos\left( x + \frac{\pi}{2} \right) - 1
+  \]
+  e em vermelho, gráfico da função $y=\cos(x)$.
+\end{example}
+%------------------------------------------------------------------------------%
+
+De modo geral, se temos uma função trigonométrica da forma
+\[
+  y = a + b \sin(kx+r)
+  y = a + b \cos(kx+r)
+\]
+a imagem de qualquer uma dessas funções
+é o intervalo $[a-b, a+b]$ e o período é
+\[
+  \frac{2\pi}{\vert k\vert}.
+\]
+No entanto, ao invés de olharmos só para essas fórmulas é interessante
+entender o porquê disso.
+
+A função $f(x) = \tan x$ não está definida entre
+$-\sfrac{\pi}{2}$ e $\sfrac{\pi}{2}$,
+e consequentemente (porque $f$ tem período $\pi$), em qualquer $x$
+da forma
+\[
+  x = \frac{\pi}{2} + k\pi, \text{ para } k \in \Z,
+\]
+logo, o domínio da função tangente é
+\[
+  \left\{
+    x \in \R \st x \neq \frac{\pi}{2+k\pi},
+    \text{ para todo } k \in \Z
+  \right\}
+\]
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth,trim={1cm 2cm 1cm 1cm},clip]{tg}
+  \caption{O gráfico da função tangente em $(-\pi/2, \pi/2)$.}
+\end{figure}
+
+%------------------------------------------------------------------------------%

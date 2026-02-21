@@ -1,0 +1,74 @@
+%------------------------------------------------------------------------------%
+\section{O conceito de Ângulo}
+
+Um \emph{ângulo}\index{Ângulo}
+é determinado por uma abertura entre duas retas de mesma
+origem. Para medirmos ângulos precisamos estabelecer o valor do ângulo total
+(uma volta completa no sentido anti-horário) e os demais ângulos são medidos de
+maneira proporcional. Existem duas formas usuais de medirmos ângulos: definindo
+o ângulo total como 360 \emph{graus}\index{Graus}
+ou como $2\pi$ \emph{radianos}\index{Radianos}.
+Vejamos algumas medições em cada um dos dois sistemas.
+
+%------------------------------------------------------------------------------%
+\begin{figure}
+  \centering
+  \includegraphics[width=0.3\textwidth,trim={0 0 10,5cm 1cm},clip]{circ1}
+  \qquad
+  \includegraphics[width=0.3\textwidth,trim={0 0 10,5cm 1cm},clip]{circ2}
+  \caption{Círculo 1 e 2}
+\end{figure}
+%------------------------------------------------------------------------------%
+
+Considere um ângulo $\theta$. Denotamos por $\theta_g$ a medida desse ângulo em
+graus e $\theta_r$ em radianos. Esses dois valores estão relacionados pela
+equação. Isso quer dizer que podemos obter $\theta_g$ se conhecemos
+$\theta_r$ ou vice versa.
+\[
+  \frac{360}{2\pi} = \frac{\theta_g}{\theta_r}.
+\]
+A unidade de medida padrão no ensino superior é radianos e para transformar
+para radianos é comum usar a relação equivalente $\ang{180}=\pi$ rad,
+conforme ilustra o exemplo que segue.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+  Converta $120^{\circ}$ para radianos.
+
+  \solution
+  Para fazermos essa conversão usamos que \ang{180} é equivalente
+  a $\pi rad$ e montamos a seguinte regra de três.
+  \[
+    \begin{array}{c<{\quad}c}
+      \text{graus} & \text{radianos} \\ \hline
+      \ang{180}    & \pi \text{ rad} \\
+      \ang{120}    & x
+    \end{array}
+  \]
+  Assim,
+  \begin{align*}
+    180 x & = 120\pi                       \\
+    x     & = \frac{2 \pi}{3} \text{ rad}.
+  \end{align*}
+  Logo, \ang{120} é equivalente a \(\frac{2 \pi}{3}\) rad.
+\end{example}
+%------------------------------------------------------------------------------%
+
+Pode ser que seja necessário voltar de radianos para graus.
+O exemplo seguinte ilustra essa situação.
+
+%------------------------------------------------------------------------------%
+\begin{example}
+ Converta $\frac{5\pi}{3}$ radianos para graus.
+
+ \solution
+ Para converter de radianos para graus, basta usarmos a relação
+ $\ang{180} = \pi$ rad. Assim,
+ \[
+   \frac{5\pi}{3}\text{ rad}
+   = 5\,\frac{\ang{180}}{3}
+   = \ang{300}.
+ \]
+\end{example}
+%------------------------------------------------------------------------------%
+
