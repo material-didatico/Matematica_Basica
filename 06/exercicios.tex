@@ -1,215 +1,347 @@
 %------------------------------------------------------------------------------%
 \section{Exercícios}
 
-\begin{enumerate}
-\item Use a definição de logarítmo e as propriedades para calcular o valor de A
-  \[A= \log_3{27}-\log1+ \log_{\frac{1}{5}}{125}\]
-\item Assumindo que $\log2=0,3$, $\log3=0,47$ e $log5=0,69$, calcule o valor de :
-\begin{enumerate}
+\begin{exercises*}
+
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Use a definição de logaritmo e as propriedades para calcular o valor de A
+  \[
+    A= \log_3{27}-\log1+ \log_{\frac{1}{5}}{125}
+  \]
+
+  \begin{answer}
+    $A=0$
+  \end{answer}
+\end{exercise}
+
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Assumindo que $\log2=0,3$, $\log3=0,47$ e $log5=0,69$, calcule o valor de
+  \begin{alphalist}
     \item $\log(\frac{2}{5})$
     \item $\log12+\log20-\log\sqrt{5}$
     \item $\log1800-\log30$
-\end{enumerate}
-\item Resolva as equações logarítimicas abaixo
+  \end{alphalist}
 
-\begin{enumerate}
-  \item $4-\log_2{(1-3x)}=3$
-  \item $2\log{x}=\log{3x}+\log{(x-4)}$
-  \item $2^{2x + 1} - 3.2^{x + 2} = 32$
-   \item $\log_{25} (2x-1)=\frac{1}{2}$
-          \item $(\log_4x)^2-2 \log_4x-3=0$
-\end{enumerate}
+  \begin{answer}
+    \begin{alphalist}
+      \item $-0,39$
+      \item $2,015$
+      \item $1,76$
+    \end{alphalist}
+  \end{answer}
+\end{exercise}
 
-\item Resolva as inequações abaixo
-\begin{enumerate}
-  \item $\ln(x^2-2x-2)\geq 0$
-   \item  $\log_{\frac{1}{2}}(x^2-4) \geq \log_{\frac{1}{2}}(2x)$
-   \item $\log_{\frac{1}{3}}(x^2-2) \geq \log_{\frac{1}{3}}(3x)+1$
-        \item $\ln(6x+5) \geq \ln(8x-12)$
-\end{enumerate}
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Resolva as equações logarítmicas abaixo
+  \begin{alphalist}
+    \item $4-\log_2{(1-3x)}=3$
+    \item $2\log{x}=\log{3x}+\log{(x-4)}$
+    \item $2^{2x + 1} - 3.2^{x + 2} = 32$
+    \item $\log_{25} (2x-1)=\frac{1}{2}$
+    \item $(\log_4x)^2-2 \log_4x-3=0$
+  \end{alphalist}
 
-\item Considere as funções $f(x)=\log_{2}\sqrt[3]{x} $ e  $g(x)=\frac{-x^2+9}{x+2}$
+  \begin{answer}
+    \begin{alphalist}
+      \item $x = -\frac{1}{3}$
+      \item $x = 6$
+      \item $x = 3$
+      \item $x = 3$
+      \item $x = 64$ ou $x = \frac{1}{4}$
+    \end{alphalist}
+  \end{answer}
+\end{exercise}
 
-\begin{enumerate}
-  \item Encontre $f\circ g$
-  \item Calcule $f\circ g (-1)$
-  \item Encontre o domínio da função $f\circ g$
-\end{enumerate}
-\item Determine o domínio de $f\circ g$, onde $f(x)=\ln(x-5)$ e $g(x)=x^3-7x-1$
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Resolva as inequações abaixo
+  \begin{alphalist}
+    \item $\ln(x^2-2x-2)\geq 0$
+    \item $\log_{\frac{1}{2}}(x^2-4) \geq \log_{\frac{1}{2}}(2x)$
+    \item $\log_{\frac{1}{3}}(x^2-2) \geq \log_{\frac{1}{3}}(3x)+1$
+    \item $\ln(6x+5) \geq \ln(8x-12)$
+  \end{alphalist}
 
-\item Considere $f(x)=\ln(x-2)$
+  \begin{answer}
+    \begin{alphalist}
+      \item $S=\{x \in \R : x \leq -1 \text{ ou } x \geq 3 \}$
+      \item $S=\{x \in \R : 2<x\leq1+\sqrt{5} \}$
+      \item $S=\{x \in \R : \sqrt{2} <x\leq2 \}$
+      \item $S=\{x \in \R : \frac{3}{2}<x\leq \frac{17}{2}\}$
+    \end{alphalist}
+  \end{answer}
+\end{exercise}
 
-\begin{enumerate}
-  \item Esboce o gráfico de $f$
-  \item Justifique que $f$ é invertível
-  \item Encontre a inversa de $f$ exibindo seu domínio e sua imagem
-  \item Esboce o gráfico de $f^{-1}$
-\end{enumerate}
 
-    \item Faça o estudo do domínio da função $f(x)= \ln(-x^2+2x+3)$
-   \item Considere a função $f(x)=\log_2(4-x^2)$ e responda o que se pede
-    \begin{enumerate}
-        \item Qual o domínio e a imagem de $f$?
-        \item A equação $f(x)=1$ possui solução? Justifique sua resposta
-        \item $f$ é injetora? Justifique sua resposta
-        \item Quanto a simetria, $f$ é par, ímpar ou nem par, nem ímpar. Justifique sua resposta
-        \end{enumerate}
-    \item  Faça o esboço do gráfico das funções : $f(x)= \left( \frac{1}{3} \right)^x$ e $g(x)=\log_{\frac{1}{3}}(x)$,  de duas maneira diferentes A primeira levando em consideração que $g(x)=f^{-1}(x)$, a segunda marcando pontos
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Considere as funções $f(x)=\log_{2}\sqrt[3]{x} $ e  $g(x)=\frac{-x^2+9}{x+2}$
+  \begin{alphalist}
+    \item Encontre $f\circ g$
+    \item Calcule $f\circ g (-1)$
+    \item Encontre o domínio da função $f\circ g$
+  \end{alphalist}
 
-     \item A partir do gráfico de $y=\log_2(x)$, faça o esboço do gráfico da função $y=\log_2(x-1)+2$
-  \item Sabendo que $\log_3(7x-1) = 3$ e que $\log_2(y^3 + 3) = 7$, pode-se afirmar que $\log_y(x^2 + 9)$ é igual a:
-  \begin{enumerate}
+  \begin{answer}
+    \begin{alphalist}
+      \item $f\circ g(x) = \log_2\sqrt[3]{\frac{-x^2+9}{x+2}}$
+      \item $f\circ g(-1)
+             = \log_2\sqrt[3]{\frac{8}{(-1)+2}}
+             = \log_2\sqrt[3]{\frac{8}{1}}
+             = \log_2 2
+             = 1$
+      \item O domínio de $f\circ g(x)$ é $x\in (-\infty,-3)\cup (-2,3)$
+    \end{alphalist}
+  \end{answer}
+\end{exercise}
+
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Determine o domínio de $f\circ g$, onde $f(x)=\ln(x-5)$ e $g(x)=x^3-7x-1$
+
+  \begin{answer}
+    $D =\{x \in \R: -2<x<-1 \,\, \text{ou} \,\,x>3 \}$
+  \end{answer}
+\end{exercise}
+
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Considere $f(x)=\ln(x-2)$
+  \begin{alphalist}
+    \item Esboce o gráfico de $f$
+    \item Justifique que $f$ é invertível
+    \item Encontre a inversa de $f$ exibindo seu domínio e sua imagem
+    \item Esboce o gráfico de $f^{-1}$
+  \end{alphalist}
+
+  \begin{answer}
+    \begin{alphalist}
+      \item \IncludeGraphicCentred{gabarito_aula3-7ad}[0.9]
+      \item $f$ é apenas crescente, logo é invertível.
+      \item A inversa de $f$ é $f^{-1}(x) = e^x+2$,
+            com domínio $(-\infty,\infty)$
+      \item
+    \end{alphalist}
+  \end{answer}
+\end{exercise}
+
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Faça o estudo do domínio da função $f(x)= \ln(-x^2+2x+3)$
+
+  \begin{answer}
+    $D =\{x \in \R: -1<x<3 \}$
+  \end{answer}
+\end{exercise}
+
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Considere a função $f(x)=\log_2(4-x^2)$ e responda o que se pede
+  \begin{alphalist}
+    \item Qual o domínio e a imagem de $f$?
+    \item A equação $f(x)=1$ possui solução? Justifique sua resposta
+    \item $f$ é injetora? Justifique sua resposta
+    \item Quanto a simetria, $f$ é par, ímpar ou nem par, nem ímpar.
+          Justifique sua resposta
+  \end{alphalist}
+
+  \begin{answer}
+    \begin{alphalist}
+      \item Domínio: $(-2, 2)$. Imagem: $(-\infty, \log_2 4)$
+      \item Sim, a equação $f(x)=1$ possui solução.
+            As soluções são $x=-\sqrt{2}$ ou $x=\sqrt{2}$
+      \item Não, $f$ não é injetora, pois para todo $x$
+            em $(-2,2)$ temos $f(x)=f(-x)$
+      \item A função $f$ é par.
+            $\log_2(4-x^2)=\log_2(4-(-x)^2)$, portanto $f(x)=f(-x)$
+    \end{alphalist}
+  \end{answer}
+\end{exercise}
+
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Faça o esboço do gráfico das funções:
+  $f(x)= \left( \frac{1}{3} \right)^x$ e
+  $g(x)=\log_{\frac{1}{3}}(x)$,
+  de duas maneira diferentes a primeira levando em consideração que
+  $g(x)=f^{-1}(x)$, a segunda marcando pontos.
+
+  \begin{answer}
+    \IncludeGraphicCentred{gabarito_aula4-10}[0.9]
+  \end{answer}
+\end{exercise}
+
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  A partir do gráfico de $y=\log_2(x)$, faça o esboço do gráfico da função
+  $y=\log_2(x-1)+2$
+
+  \begin{answer}
+    \IncludeGraphicCentred{gabarito_aula4-11}[0.9]
+  \end{answer}
+\end{exercise}
+
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Sabendo que
+  $\log_3(7x-1) = 3$ e que
+  $\log_2(y^3 + 3) = 7$, pode-se afirmar que
+  $\log_y(x^2 + 9)$ é igual a
+  \begin{alphalist}
     \item $6$
     \item $2$
     \item $4$
     \item $-2$
     \item $-4$
-  \end{enumerate}
+  \end{alphalist}
 
-  \item A soma $\log_{10}\frac23+\log_{10}\frac34+\cdots+\log_{10}\frac{18}{19}+\log_{10}\frac{19}{20}$
+  \begin{answer}
+    Opção b)
+  \end{answer}
+\end{exercise}
+
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  A soma
+  \(
+    \log_{10}\frac23 +
+    \log_{10}\frac34 +
+    \cdots +
+    \log_{10}\frac{18}{19} +
+    \log_{10}\frac{19}{20}
+  \)
   é igual a
-  \begin{enumerate}
+  \begin{alphalist}
     \item $-\log_{10}20$
     \item $-1$
     \item $\log_{10}2$
     \item $1$
     \item $2$
-  \end{enumerate}
+  \end{alphalist}
 
-  \item O valor da expressão $\log_3(5)\cdot\log_{125}(27)$ é:
+  \begin{answer}
+    Opção b)
+  \end{answer}
+\end{exercise}
 
-  \begin{enumerate}
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  O valor da expressão $\log_3(5)\cdot\log_{125}(27)$ é:
+  \begin{alphalist}
     \item $2/3$
     \item $2$
     \item $1$
     \item $3/2$
     \item um número irracional
-  \end{enumerate}
+  \end{alphalist}
 
-  \item O conjunto solução da equação $\log_2(x + 1) + \log_2(x-3) = 5$ é:
-  \begin{enumerate}
+  \begin{answer}
+    Opção c)
+  \end{answer}
+\end{exercise}
+
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  O conjunto solução da equação $\log_2(x + 1) + \log_2(x-3) = 5$ é:
+  \begin{alphalist}
     \item $ S = \{7\}$
     \item $S = \{7, - 5\}$
     \item $S = \{17,3\}$
     \item $S = \{7/2\}$
-  \end{enumerate}
+  \end{alphalist}
 
-  \item Na expressão $\ln 8-\ln 2 + 2\ln x = 0$, o valor de $x$ é:
-
-  \item Considere as afirmações dadas abaixo, referentes a funções exponenciais e logarítmicas
-  \begin{enumerate}
-    \item[I.] $\{x\in\R;\ln x\geq 0\}=[1,\infty)$
-
-    \item[II.] Se $8^{-2x}=27$, então $2^{-2x}=3$
-
-    \item[III.] $\log_{10}\sqrt{10000^3}=9/2$
-  \end{enumerate}
-
-  A alternativa correta é:
-  \begin{enumerate}
-    \item[(a)] Somente a afirmativa II é verdadeira
-    \item[(b)] Somente a afirmativa I é verdadeira
-    \item[(c)] Somente a afirmativa III é verdadeira
-    \item[(d)] Somente as afirmativas I e II são verdadeiras
-    \item[(e)] Somente as afirmativas I e III são verdadeiras
-  \end{enumerate}
-
-
-  \item Considere as afirmações dadas abaixo, referentes a funções exponenciais e logarítmicas
-  \begin{enumerate}
-    \item[I.] O valor de $\log_{0,25} 32$ é igual a $5/2$
-
-    \item[II.] O valor de $x$ que satisfaz à equação $4^x-2^x = 56$ é $x = 3$
-
-    \item[III.] As funções $y=\log (x^2)$ e $y=2\log (x)$ são iguais
-  \end{enumerate}
-
-  A alternativa correta é:
-  \begin{enumerate}
-    \item[(a)] Somente a afirmativa II é verdadeira
-    \item[(b)] Somente a afirmativa I é verdadeira
-    \item[(c)] Somente a afirmativa III é verdadeira
-    \item[(d)] Nenhuma afirmativa é verdadeira
-    \item[(e)] Somente as afirmativas I e III são verdadeiras
-  \end{enumerate}
-\item  Um vírus de um computador se espalha segundo a função \[c(t)= \frac{6500}{1+a.2^{bt}}\]
-    Em que $c(t)$ é o número de computadores infectados no instante $t$ (em horas), contando a partir do momento em que a infecção foi detectada. Sabendo que $c(0)=100$, $c(3)=500$ e que $\log_2 3=1,5850$, determine as constantes $a$ e $b$ e o número de computadores infectados para $t=6$
-
-    \item Faça o esboço do gráfico da função $f(x)=2^{x+1}$ e da sua inversa. Você deve inicialmente encontrar a inversa e depois fazer o esboço no mesmo plano cartesiano
-\end{enumerate}
+  \begin{answer}
+    Opção a)
+  \end{answer}
+\end{exercise}
 
 %------------------------------------------------------------------------------%
-\subsection{Gabarito}
+\begin{exercise}
+  Na expressão $\ln 8-\ln 2 + 2\ln x = 0$, o valor de $x$ é:
 
-\begin{enumerate}
-    \item $A=0$
-    \item
-    \begin{enumerate}
-\item $-0,39$
-\item $2,015$
-\item $1,76$
-\end{enumerate}
-\item
-\begin{enumerate}
-\item $x = -\frac{1}{3}$
-\item $x = 6$
-\item $x = 3$
-\item $x = 3$
-\item $x = 64$ ou $x = \frac{1}{4}$
-\end{enumerate}
-\item
-\begin{enumerate}
-\item $S=\{x \in \R : x \leq -1 \text{ ou } x \geq 3 \}$
-\item $S=\{x \in \R : 2<x\leq1+\sqrt{5} \}$
-\item $S=\{x \in \R : \sqrt{2} <x\leq2 \}$
-\item $S=\{x \in \R : \frac{3}{2}<x\leq \frac{17}{2}\}$
-\end{enumerate}
-\item
-\begin{enumerate}
-\item $f\circ g(x) = \log_2\sqrt[3]{\frac{-x^2+9}{x+2}}$
-\item $f\circ g(-1) = \log_2\sqrt[3]{\frac{8}{(-1)+2}}=\log_2\sqrt[3]{\frac{8}{1}}= \log_2 2 = 1$
-\item O domínio de $f\circ g(x)$ é $x\in (-\infty,-3)\cup (-2,3)$
-\end{enumerate}
-\item $D =\{x \in \R: -2<x<-1 \,\, \text{ou} \,\,x>3 \}$
+  \begin{answer}
+    $x =\frac{1}{2}$
+  \end{answer}
+\end{exercise}
 
-\item
-\begin{enumerate}
-    \item
-        \begin{center}
-        \includegraphics[width=0.5\textwidth]{gabarito_aula3-7ad}
-        \end{center}
-    \item $f$ é apenas crescente, logo é invertível.
-    \item A inversa de $f$ é $f^{-1}(x) = e^x+2$, com domínio $(-\infty,\infty)$
-    \item
-\end{enumerate}
-\item $D =\{x \in \R: -1<x<3 \}$
-\item
-\begin{enumerate}
-\item Domínio: $(-2, 2)$. Imagem: $(-\infty, \log_2 4)$
-\item Sim, a equação $f(x)=1$ possui solução. As soluções são $x=-\sqrt{2}$ ou $x=\sqrt{2}$
-\item Não, $f$ não é injetora, pois para todo $x$ em $(-2,2)$ temos $f(x)=f(-x)$
-\item A função $f$ é par. $\log_2(4-x^2)=\log_2(4-(-x)^2)$, portanto $f(x)=f(-x)$
-\end{enumerate}
-\item
-        \begin{center}
-        \includegraphics[width=0.5\textwidth]{gabarito_aula4-10}
-        \end{center}
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Considere as afirmações dadas abaixo,
+  referentes a funções exponenciais e logarítmicas
+  \begin{romanlist}
+    \item $\{x\in\R;\ln x\geq 0\}=[1,\infty)$
+    \item Se $8^{-2x}=27$, então $2^{-2x}=3$
+    \item $\log_{10}\sqrt{10000^3}=9/2$
+  \end{romanlist}
+  A alternativa correta é
+  \begin{alphalist}
+    \item Somente a afirmativa ii é verdadeira
+    \item Somente a afirmativa i é verdadeira
+    \item Somente a afirmativa iii é verdadeira
+    \item Somente as afirmativas i e ii são verdadeiras
+    \item Somente as afirmativas i e iii são verdadeiras
+  \end{alphalist}
 
-\item
-        \begin{center}
-        \includegraphics[width=0.5\textwidth]{gabarito_aula4-11}
-        \end{center}
+  \begin{answer}
+    Opção e)
+  \end{answer}
+\end{exercise}
 
-\item letra b)
-\item letra b)
-\item letra c)
-\item letra a)
-\item $x =\frac{1}{2}$
-\item letra e)
-\item letra a)
-\item $a = 64$; $b = -0,805$; $c(6) \approx2018,17$, como o número e computadores infectados é inteiro, o número de computadores infectados após $6$ horas é $2019$
-\item
-        \begin{center}
-        \includegraphics[width=0.5\textwidth]{gabarito_aula4-20}
-        \end{center}
-\end{enumerate}
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Considere as afirmações dadas abaixo, referentes a funções exponenciais e
+  logarítmicas
+  \begin{romanlist}
+    \item O valor de $\log_{0,25} 32$ é igual a $5/2$
+    \item O valor de $x$ que satisfaz à equação $4^x-2^x = 56$ é $x = 3$
+    \item As funções $y=\log (x^2)$ e $y=2\log (x)$ são iguais
+  \end{romanlist}
+  A alternativa correta é:
+  \begin{alphalist}
+    \item Somente a afirmativa ii é verdadeira
+    \item Somente a afirmativa i é verdadeira
+    \item Somente a afirmativa iii é verdadeira
+    \item Nenhuma afirmativa é verdadeira
+    \item Somente as afirmativas i e iii são verdadeiras
+  \end{alphalist}
+
+  \begin{answer}
+    Opção a)
+  \end{answer}
+\end{exercise}
+
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Um vírus de um computador se espalha segundo a função
+  \[
+    c(t) = \frac{6500}{1+a.2^{bt}}
+  \]
+  Em que $c(t)$ é o número de computadores infectados no instante $t$ (em horas),
+  contando a partir do momento em que a infecção foi detectada. Sabendo que
+  $c(0)=100$, $c(3)=500$ e que $\log_2 3=1,5850$, determine as constantes $a$ e
+  $b$ e o número de computadores infectados para $t=6$
+
+  \begin{answer}
+    $a = 64$; $b = -0,805$; $c(6) \approx 2018,17$, como o número e
+    computadores infectados é inteiro, o número de computadores
+    infectados após 6 horas é 2019
+  \end{answer}
+\end{exercise}
+
+%------------------------------------------------------------------------------%
+\begin{exercise}
+  Faça o esboço do gráfico da função $f(x)=2^{x+1}$ e da sua inversa. Você
+  deve inicialmente encontrar a inversa e depois fazer o esboço no mesmo plano
+  cartesiano
+
+  \begin{answer}
+    \IncludeGraphicCentred{gabarito_aula4-20}[0.9]
+  \end{answer}
+\end{exercise}
+
+\end{exercises*}
+
+%------------------------------------------------------------------------------%

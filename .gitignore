@@ -2,7 +2,7 @@ _*
 MatematicaBasica.pdf
 
 .vscode
-*.bbl-SAVE-ERROR
+*-SAVE-ERROR
 
 octave-workspace
 *.rubbercache
