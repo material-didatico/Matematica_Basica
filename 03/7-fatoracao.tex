@@ -249,16 +249,16 @@ candidatas as raízes do polinômio são inteiras.
   logo $x=2$ é uma raiz.
   De posse dessa raiz vamos dividir o polinômio $p(x)$ por $x-2$.
   \[
-    \begin{array}{r|r}
-      \dropsign{-} x^3-9x^2+26x-24 & x-2       \\ \cline{2-2}
-      \dropsign{-}( x^3-2x^2)      & x^2-7x+12 \\ \cline{1-1}
-                                   &  \\[\dimexpr-\normalbaselineskip+\jot]
-      \dropsign{-} -7x^2+26x-24    &  \\
-      (-7x^2+14x)                  &  \\ \cline{1-1}
-                                   &  \\[\dimexpr-\normalbaselineskip+\jot]
-      12x-24                       &  \\
-      \dropsign{-} (12x-24)        &  \\ \cline{1-1}
-      0                            &
+    \begin{array}{r|l}
+        x^3 - 9x^2            + 26x - 24 \; & \; x-2         \\ \cline{2-2}
+      -(x^3 - 2x^2) \hphantom{{}+ 26x - 24} & \; x^2 -7x +12 \\ \cline{1-1}
+                                            & \\[\dimexpr-\normalbaselineskip+\jot]
+            - 7x^2 + 26x            - 24 \; &  \\
+          -(- 7x^2 + 14x) \hphantom{{}- 24} &  \\ \cline{1-1}
+                                            &  \\[\dimexpr-\normalbaselineskip+\jot]
+                                12x - 24 \; &  \\
+                              -(12x - 24)   &  \\ \cline{1-1}
+                                       0 \; &
     \end{array}
   \]
   Para encontrar as outras raízes, basta resolver a equação
@@ -358,13 +358,14 @@ Vejamos os exemplos a seguir.
   \solution
   No numerador vamos colocar o número 2 em evidência, uma vez que é comum a
   todos os membros. Assim
-  \[
+  \begin{align*}
     \frac{2x-6}{x-3}
-    = \frac{2\cancel{(x-3)}}{\cancel{x-3}}
-    \stackrel{x \neq 3}{=}2.
-  \]
+    & = \frac{2(x-3)}{x-3} \\
+    & = \frac{2\cancel{(x-3)}}{\cancel{x-3}} &\text{usando que } x \neq 3 \\
+    & = 2.
+  \end{align*}
   Note que, podemos cancelar o termo $x-3$, pois é nos dito no enunciado que os
-  denominadores são não nulos, ou seja, $x-3 \neq 0$ e portanto $x \neq 3$.
+  denominadores são não nulos, ou seja, $x-3 \neq 0$ e, portanto, $x \neq 3$.
 \end{example}
 %------------------------------------------------------------------------------%
 
@@ -379,11 +380,12 @@ Vejamos os exemplos a seguir.
 
   \solution
   Nesse caso, vamos colocar $x^2$ em evidência no numerador.
-  \[
+  \begin{align*}
     \frac{x^2+x^4}{3x^3}
-    = \frac{\cancel{x^2}(1+x^2)}{3\cancel{x^2} x}
-    \stackrel{x \neq 0}{=}\frac{1+x^2}{3x}.
-  \]
+    & = \frac{x^2(1+x^2)}{3x^2 x} \\
+    & = \frac{\cancel{x^2}(1+x^2)}{3\cancel{x^2} x} & \text{usando que } x \neq 0 \\
+    & = \frac{1+x^2}{3x}.
+  \end{align*}
 \end{example}
 %------------------------------------------------------------------------------%
 
@@ -410,11 +412,12 @@ Vejamos os exemplos a seguir.
     x^2 - 3x = x(x-3).
   \]
   Logo,
-  \[
+  \begin{align*}
     \frac{x^2-9}{x^2-3x}
-    = \frac{\cancel{(x-3)}(x+3)}{x\cancel{(x-3)}}
-    = \stackrel{x \neq 3}{=} \frac{x+3}{x}.
-  \]
+    & = \frac{(x-3)(x+3)}{x(x-3)} \\
+    & = \frac{\cancel{(x-3)}(x+3)}{x\cancel{(x-3)}} & \text{usando que } x \neq 3 \\
+    & = \frac{x+3}{x}.
+  \end{align*}
   Mais uma vez vale ressaltar que para fazermos o cancelamento do termo $x-3$,
   teríamos que ter a informação (ou supor) que
   $x-3 \neq 0$, isto é, $x \neq 3$.
@@ -457,11 +460,12 @@ Vejamos os exemplos a seguir.
     = (x-1)(x-4).
   \]
   Logo,
-  \[
+  \begin{align*}
     \frac{x^2-5x+4}{x-4}
-    =\frac{\cancel{(x-4)}(x-1)}{\cancel{x-4}}
-    \stackrel{x \neq 4}{=} x-1.
-  \]
+    & = \frac{(x-4)(x-1)}{x-4}  \\
+    & = \frac{\cancel{(x-4)}(x-1)}{\cancel{x-4}} & \text{usando que } x \neq 4 \\
+    & = x-1.
+  \end{align*}
 \end{example}
 %------------------------------------------------------------------------------%
 
@@ -482,12 +486,12 @@ Vejamos os exemplos a seguir.
   \]
   Portanto,
   \begin{align*}
-    \left(\frac{x^2-4x-12}{x+2} \right)
-    \left( \frac{2x+1}{x-6}\right)
-    & = \left(\frac{(x+2)(x-6)}{x+2} \right)
-        \left( \frac{2x+1}{x-6}\right)
-    \\
-    & \stackrel{\substack{x \neq -2\\ x \neq 6}}{=} 2x + 1.
+    \left(   \frac{x^2-4x-12}{x+2} \right)
+    & \left( \frac{2x+1}{x-6}      \right)
+    = \frac{(x+2)(x-6)}{x+2} \; \frac{2x+1}{x-6}       \\
+    & = (x-6)
+      \; \frac{2x+1}{x-6} & & \text{usando que } x \neq -2   \\
+    & = 2x + 1.             & & \text{usando que } x \neq  6
   \end{align*}
 \end{example}
 %------------------------------------------------------------------------------%
