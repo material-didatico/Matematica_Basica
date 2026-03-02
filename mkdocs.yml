@@ -1,6 +1,10 @@
 
-site_name: Material Didático
-site_url: https://material-didatico.github.io
+site_name: Matemática Básica
+site_url:  https://material-didatico.github.io/Matematica_Basica
+
+nav:
+  - Material Didático: https://material-didatico.github.io
+  - Matemática Básica: index.md
 
 theme:
   name:       material

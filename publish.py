@@ -1,6 +1,7 @@
 #------------------------------------------------------------------------------#
 
-from pathlib import Path
+from pathlib  import Path
+from datetime import datetime
 import shutil as sh
 
 #------------------------------------------------------------------------------#
@@ -88,7 +89,9 @@ def write_pdf_link(f, file: Path, prefix: str = ''):
 def mk_index() -> None:
     with index.open("w", encoding="utf-8") as f:
 
-        f.write(f"# {title}\n\nMateriais para a disciplina {discipline}\n")
+        f.write(f"# {title}\n\n")
+        f.write(datetime.now().strftime("Última atualização: %Y-%m-%d %H:%M:%S\n\n"))
+        f.write(f"Materiais para a disciplina {discipline}\n\n")
 
         if add_book:
 
